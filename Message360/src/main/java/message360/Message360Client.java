@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/15/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/18/2016
  */
 package message360;
 
@@ -39,6 +39,14 @@ public class Message360Client {
      */
     public UsageController getUsage() {
         return UsageController.getInstance();
+    }
+
+    /**
+     * Singleton access to Email controller
+     * @return	Returns the EmailController instance 
+     */
+    public EmailController getEmail() {
+        return EmailController.getInstance();
     }
 
     /**
