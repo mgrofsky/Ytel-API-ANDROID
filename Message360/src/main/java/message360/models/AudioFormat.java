@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/18/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/21/2016
  */
 package message360.models;
 
@@ -9,26 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum AudioDirectionEnum {
-    IN, //TODO: Write general description for this element
-    OUT; //TODO: Write general description for this element
+public enum AudioFormat {
+    MP3, //mp3 file
+    WAV; //wav file
 
-    private static TreeMap<String, AudioDirectionEnum> valueMap = new TreeMap<String, AudioDirectionEnum>();
+    private static TreeMap<String, AudioFormat> valueMap = new TreeMap<String, AudioFormat>();
     private String value;
 
     static {
-        IN.value = "in";
-        OUT.value = "out";
+        MP3.value = "mp3";
+        WAV.value = "wav";
 
-        valueMap.put("in", IN);
-        valueMap.put("out", OUT);
+        valueMap.put("mp3", MP3);
+        valueMap.put("wav", WAV);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static AudioDirectionEnum fromString(String toConvert) {
+    public static AudioFormat fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +49,14 @@ public enum AudioDirectionEnum {
     }
 
     /**
-     * Convert list of AudioDirectionEnum values to list of string values
-     * @param toConvert The list of AudioDirectionEnum values to convert
+     * Convert list of AudioFormat values to list of string values
+     * @param toConvert The list of AudioFormat values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<AudioDirectionEnum> toConvert) {
+    public static List<String> toValue(List<AudioFormat> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (AudioDirectionEnum enumValue : toConvert) {
+        for (AudioFormat enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

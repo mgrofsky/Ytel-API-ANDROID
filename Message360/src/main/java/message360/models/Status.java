@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/18/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/21/2016
  */
 package message360.models;
 
@@ -9,26 +9,29 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum IfMachineEnum {
-    CONTINUE, //TODO: Write general description for this element
-    HANGUP; //TODO: Write general description for this element
+public enum Status {
+    INPROGRESS, //TODO: Write general description for this element
+    SUCCESS, //TODO: Write general description for this element
+    FAILURE; //TODO: Write general description for this element
 
-    private static TreeMap<String, IfMachineEnum> valueMap = new TreeMap<String, IfMachineEnum>();
+    private static TreeMap<String, Status> valueMap = new TreeMap<String, Status>();
     private String value;
 
     static {
-        CONTINUE.value = "continue";
-        HANGUP.value = "hangup";
+        INPROGRESS.value = "inprogress";
+        SUCCESS.value = "success";
+        FAILURE.value = "failure";
 
-        valueMap.put("continue", CONTINUE);
-        valueMap.put("hangup", HANGUP);
+        valueMap.put("inprogress", INPROGRESS);
+        valueMap.put("success", SUCCESS);
+        valueMap.put("failure", FAILURE);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static IfMachineEnum fromString(String toConvert) {
+    public static Status fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +52,14 @@ public enum IfMachineEnum {
     }
 
     /**
-     * Convert list of IfMachineEnum values to list of string values
-     * @param toConvert The list of IfMachineEnum values to convert
+     * Convert list of Status values to list of string values
+     * @param toConvert The list of Status values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<IfMachineEnum> toConvert) {
+    public static List<String> toValue(List<Status> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (IfMachineEnum enumValue : toConvert) {
+        for (Status enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;
