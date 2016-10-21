@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/18/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/21/2016
  */
 package message360.models;
 
@@ -9,29 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum StatusEnum {
-    INPROGRESS, //TODO: Write general description for this element
-    SUCCESS, //TODO: Write general description for this element
-    FAILURE; //TODO: Write general description for this element
+public enum InterruptedCallStatus {
+    CANCELED, //Interrupt Call will be cancel
+    COMPLETED; //Interrupt Call is complete
 
-    private static TreeMap<String, StatusEnum> valueMap = new TreeMap<String, StatusEnum>();
+    private static TreeMap<String, InterruptedCallStatus> valueMap = new TreeMap<String, InterruptedCallStatus>();
     private String value;
 
     static {
-        INPROGRESS.value = "inprogress";
-        SUCCESS.value = "success";
-        FAILURE.value = "failure";
+        CANCELED.value = "canceled";
+        COMPLETED.value = "completed";
 
-        valueMap.put("inprogress", INPROGRESS);
-        valueMap.put("success", SUCCESS);
-        valueMap.put("failure", FAILURE);
+        valueMap.put("canceled", CANCELED);
+        valueMap.put("completed", COMPLETED);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static StatusEnum fromString(String toConvert) {
+    public static InterruptedCallStatus fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -52,14 +49,14 @@ public enum StatusEnum {
     }
 
     /**
-     * Convert list of StatusEnum values to list of string values
-     * @param toConvert The list of StatusEnum values to convert
+     * Convert list of InterruptedCallStatus values to list of string values
+     * @param toConvert The list of InterruptedCallStatus values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<StatusEnum> toConvert) {
+    public static List<String> toValue(List<InterruptedCallStatus> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (StatusEnum enumValue : toConvert) {
+        for (InterruptedCallStatus enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

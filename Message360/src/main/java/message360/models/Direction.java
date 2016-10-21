@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/18/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/21/2016
  */
 package message360.models;
 
@@ -9,12 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum DirectionEnum {
+public enum Direction {
     IN, //in direction
     OUT, //out direction
     BOTH; //both
 
-    private static TreeMap<String, DirectionEnum> valueMap = new TreeMap<String, DirectionEnum>();
+    private static TreeMap<String, Direction> valueMap = new TreeMap<String, Direction>();
     private String value;
 
     static {
@@ -31,7 +31,7 @@ public enum DirectionEnum {
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static DirectionEnum fromString(String toConvert) {
+    public static Direction fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -52,14 +52,14 @@ public enum DirectionEnum {
     }
 
     /**
-     * Convert list of DirectionEnum values to list of string values
-     * @param toConvert The list of DirectionEnum values to convert
+     * Convert list of Direction values to list of string values
+     * @param toConvert The list of Direction values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<DirectionEnum> toConvert) {
+    public static List<String> toValue(List<Direction> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (DirectionEnum enumValue : toConvert) {
+        for (Direction enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;
