@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/21/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/01/2016
  */
 package message360.models;
 
@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum HttpMethod {
+public enum HttpAction {
     GET, //Get type
     POST; //Post Type
 
-    private static TreeMap<String, HttpMethod> valueMap = new TreeMap<String, HttpMethod>();
+    private static TreeMap<String, HttpAction> valueMap = new TreeMap<String, HttpAction>();
     private String value;
 
     static {
@@ -28,7 +28,7 @@ public enum HttpMethod {
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static HttpMethod fromString(String toConvert) {
+    public static HttpAction fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +49,14 @@ public enum HttpMethod {
     }
 
     /**
-     * Convert list of HttpMethod values to list of string values
-     * @param toConvert The list of HttpMethod values to convert
+     * Convert list of HttpAction values to list of string values
+     * @param toConvert The list of HttpAction values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<HttpMethod> toConvert) {
+    public static List<String> toValue(List<HttpAction> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (HttpMethod enumValue : toConvert) {
+        for (HttpAction enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

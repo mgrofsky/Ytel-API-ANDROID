@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/21/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/01/2016
  */
 package message360.controllers;
 
@@ -38,41 +38,37 @@ public class TranscriptionController extends BaseController {
     }
 
     /**
-     * Get All transcriptions
-     * @param    page    Optional parameter: Example: 
-     * @param    pageSize    Optional parameter: Example: 
-     * @param    status    Optional parameter: Example: 
-     * @param    dateTranscribed    Optional parameter: Example: 
-     * @param    responseType    Optional parameter: Response format, xml or json
+     * Audio URL Transcriptions
+     * @param    CreateAudioURLTranscriptionInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createListTranscriptionAsync(
-                final Integer page,
-                final Integer pageSize,
-                final Status status,
-                final String dateTranscribed,
-                final String responseType,
+    public void createAudioURLTranscriptionAsync(
+                final CreateAudioURLTranscriptionInput input,
                 final APICallBack<String> callBack
     ) {
+        //validating required parameters
+        if (null == input.getAudioUrl())
+            throw new NullPointerException("The property \"AudioUrl\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.baseUri;
-
+        
         //prepare query string for API call
         StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/transcriptions/listtranscription.{ResponseType}");
+        _queryBuilder.append("/transcriptions/audiourltranscription.{ResponseType}");
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5489737065699624387L;
+            private static final long serialVersionUID = 5225306087093593893L;
             {
-                    put( "ResponseType", (null != responseType) ? responseType : "json" );
+                    put( "ResponseType", input.getResponseType() );
             }});
         //validate and preprocess url
         String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4799341180421838462L;
+            private static final long serialVersionUID = 5648323320646889342L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -80,12 +76,9 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4717218046288309900L;
+            private static final long serialVersionUID = 5051357405984535805L;
             {
-                    put( "Page", page );
-                    put( "PageSize", pageSize );
-                    put( "Status", (null != status) ? status.value() : null );
-                    put( "DateTranscribed", dateTranscribed );
+                    put( "AudioUrl", input.getAudioUrl() );
             }
         };
 
@@ -148,38 +141,36 @@ public class TranscriptionController extends BaseController {
 
     /**
      * Recording Transcriptions
-     * @param    recordingSid    Required parameter: Unique Recording sid
-     * @param    responseType    Optional parameter: Response format, xml or json
+     * @param    CreateRecordingTranscriptionInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
     public void createRecordingTranscriptionAsync(
-                final String recordingSid,
-                final String responseType,
+                final CreateRecordingTranscriptionInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
-        if (null == recordingSid)
-            throw new NullPointerException("The parameter \"recordingSid\" is a required parameter and cannot be null.");
+        if (null == input.getRecordingSid())
+            throw new NullPointerException("The property \"RecordingSid\" in the input object cannot be null.");
 
         //the base uri for api requests
         String _baseUri = Configuration.baseUri;
-
+        
         //prepare query string for API call
         StringBuilder _queryBuilder = new StringBuilder(_baseUri);
         _queryBuilder.append("/transcriptions/recordingtranscription.{ResponseType}");
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5667962078322191125L;
+            private static final long serialVersionUID = 4798932403015053875L;
             {
-                    put( "ResponseType", (null != responseType) ? responseType : "json" );
+                    put( "ResponseType", input.getResponseType() );
             }});
         //validate and preprocess url
         String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5126999901308104425L;
+            private static final long serialVersionUID = 5480502826469376204L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -187,9 +178,9 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5729076877936113802L;
+            private static final long serialVersionUID = 4940203657389523985L;
             {
-                    put( "RecordingSid", recordingSid );
+                    put( "RecordingSid", input.getRecordingSid() );
             }
         };
 
@@ -252,38 +243,36 @@ public class TranscriptionController extends BaseController {
 
     /**
      * View Specific Transcriptions
-     * @param    transcriptionSid    Required parameter: Unique Transcription ID
-     * @param    responseType    Optional parameter: Response format, xml or json
+     * @param    CreateViewTranscriptionInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
     public void createViewTranscriptionAsync(
-                final String transcriptionSid,
-                final String responseType,
+                final CreateViewTranscriptionInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
-        if (null == transcriptionSid)
-            throw new NullPointerException("The parameter \"transcriptionSid\" is a required parameter and cannot be null.");
+        if (null == input.getTranscriptionSid())
+            throw new NullPointerException("The property \"TranscriptionSid\" in the input object cannot be null.");
 
         //the base uri for api requests
         String _baseUri = Configuration.baseUri;
-
+        
         //prepare query string for API call
         StringBuilder _queryBuilder = new StringBuilder(_baseUri);
         _queryBuilder.append("/transcriptions/viewtranscription.{ResponseType}");
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5423370918455210625L;
+            private static final long serialVersionUID = 4817103239893678881L;
             {
-                    put( "ResponseType", (null != responseType) ? responseType : "json" );
+                    put( "ResponseType", input.getResponseType() );
             }});
         //validate and preprocess url
         String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5719147017717098631L;
+            private static final long serialVersionUID = 5023298360954197239L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -291,9 +280,9 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5355060351576223335L;
+            private static final long serialVersionUID = 4861453816017036794L;
             {
-                    put( "TranscriptionSid", transcriptionSid );
+                    put( "TranscriptionSid", input.getTranscriptionSid() );
             }
         };
 
@@ -355,39 +344,33 @@ public class TranscriptionController extends BaseController {
     }
 
     /**
-     * Audio URL Transcriptions
-     * @param    audioUrl    Required parameter: Audio url
-     * @param    responseType    Optional parameter: Response format, xml or json
+     * Get All transcriptions
+     * @param    CreateListTranscriptionInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createAudioURLTranscriptionAsync(
-                final String audioUrl,
-                final String responseType,
+    public void createListTranscriptionAsync(
+                final CreateListTranscriptionInput input,
                 final APICallBack<String> callBack
     ) {
-        //validating required parameters
-        if (null == audioUrl)
-            throw new NullPointerException("The parameter \"audioUrl\" is a required parameter and cannot be null.");
-
         //the base uri for api requests
         String _baseUri = Configuration.baseUri;
-
+        
         //prepare query string for API call
         StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/transcriptions/audiourltranscription.{ResponseType}");
+        _queryBuilder.append("/transcriptions/listtranscription.{ResponseType}");
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4810483900160286512L;
+            private static final long serialVersionUID = 5512889580888239401L;
             {
-                    put( "ResponseType", (null != responseType) ? responseType : "json" );
+                    put( "ResponseType", input.getResponseType() );
             }});
         //validate and preprocess url
         String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4928225956084535609L;
+            private static final long serialVersionUID = 5328791125681680803L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -395,9 +378,12 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4901858224533630089L;
+            private static final long serialVersionUID = 5296368159462004558L;
             {
-                    put( "AudioUrl", audioUrl );
+                    put( "Page", input.getPage() );
+                    put( "PageSize", input.getPageSize() );
+                    put( "Status", (null != input.getStatus()) ? input.getStatus().value() : null );
+                    put( "DateTranscribed", input.getDateTranscribed() );
             }
         };
 

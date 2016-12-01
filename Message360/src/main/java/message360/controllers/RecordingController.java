@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/21/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/01/2016
  */
 package message360.controllers;
 
@@ -38,39 +38,33 @@ public class RecordingController extends BaseController {
     }
 
     /**
-     * Delete Recording Record
-     * @param    recordingSid    Required parameter: Unique Recording Sid to be delete
-     * @param    responseType    Optional parameter: Response format, xml or json
+     * List out Recordings
+     * @param    CreateListRecordingInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createDeleteRecordingAsync(
-                final String recordingSid,
-                final String responseType,
+    public void createListRecordingAsync(
+                final CreateListRecordingInput input,
                 final APICallBack<String> callBack
     ) {
-        //validating required parameters
-        if (null == recordingSid)
-            throw new NullPointerException("The parameter \"recordingSid\" is a required parameter and cannot be null.");
-
         //the base uri for api requests
         String _baseUri = Configuration.baseUri;
-
+        
         //prepare query string for API call
         StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/recording/deleterecording.{ResponseType}");
+        _queryBuilder.append("/recording/listrecording.{ResponseType}");
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4762341393040326375L;
+            private static final long serialVersionUID = 4681716263998570299L;
             {
-                    put( "ResponseType", (null != responseType) ? responseType : "json" );
+                    put( "ResponseType", input.getResponseType() );
             }});
         //validate and preprocess url
         String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5625982391694206466L;
+            private static final long serialVersionUID = 5353723864478207706L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -78,9 +72,114 @@ public class RecordingController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5264123665842473846L;
+            private static final long serialVersionUID = 5648264570503569014L;
             {
-                    put( "RecordingSid", recordingSid );
+                    put( "Page", input.getPage() );
+                    put( "PageSize", input.getPageSize() );
+                    put( "DateCreated", input.getDateCreated() );
+                    put( "CallSid", input.getCallSid() );
+            }
+        };
+
+        //prepare and invoke the API call request to fetch the response
+        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
+                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
+
+        //invoke the callback before request if its not null
+        if (getHttpCallBack() != null)
+        {
+            getHttpCallBack().OnBeforeRequest(_request);
+        }
+
+        //invoke request and get response
+        Runnable _responseTask = new Runnable() {
+            public void run() {
+                //make the API call
+                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
+                    public void onSuccess(HttpContext _context, HttpResponse _response) {
+                        try {
+
+                            //invoke the callback after response if its not null
+                            if (getHttpCallBack() != null)	
+                            {
+                                getHttpCallBack().OnAfterResponse(_context);
+                            }
+
+                            //handle errors defined at the API level
+                            validateResponse(_response, _context);
+
+                            //extract result from the http response
+                            String _result = ((HttpStringResponse)_response).getBody();
+                            //let the caller know of the success
+                            callBack.onSuccess(_context, _result);
+                        } catch (APIException error) {
+                            //let the caller know of the error
+                            callBack.onFailure(_context, error);
+                        } catch (Exception exception) {
+                            //let the caller know of the caught Exception
+                            callBack.onFailure(_context, exception);
+                        }
+                    }
+                    public void onFailure(HttpContext _context, Throwable _error) {
+                        //invoke the callback after response if its not null
+                        if (getHttpCallBack() != null)	
+                            {
+                            getHttpCallBack().OnAfterResponse(_context);
+                        }
+
+                        //let the caller know of the failure
+                        callBack.onFailure(_context, _error);
+                    }
+                });
+            }
+        };
+
+        //execute async using thread pool
+        APIHelper.getScheduler().execute(_responseTask);
+    }
+
+    /**
+     * Delete Recording Record
+     * @param    CreateDeleteRecordingInput    Object containing request parameters
+     * @return    Returns the void response from the API call 
+     */
+    public void createDeleteRecordingAsync(
+                final CreateDeleteRecordingInput input,
+                final APICallBack<String> callBack
+    ) {
+        //validating required parameters
+        if (null == input.getRecordingSid())
+            throw new NullPointerException("The property \"RecordingSid\" in the input object cannot be null.");
+
+        //the base uri for api requests
+        String _baseUri = Configuration.baseUri;
+        
+        //prepare query string for API call
+        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
+        _queryBuilder.append("/recording/deleterecording.{ResponseType}");
+
+        //process template parameters
+        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
+            private static final long serialVersionUID = 5175924189472488218L;
+            {
+                    put( "ResponseType", input.getResponseType() );
+            }});
+        //validate and preprocess url
+        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
+
+        //load all headers for the outgoing API request
+        Map<String, String> _headers = new HashMap<String, String>() {
+            private static final long serialVersionUID = 5064403439758513157L;
+            {
+                    put( "user-agent", "message360-api" );
+            }
+        };
+
+        //load all fields for the outgoing API request
+        Map<String, Object> _parameters = new HashMap<String, Object>() {
+            private static final long serialVersionUID = 5277058684467549862L;
+            {
+                    put( "RecordingSid", input.getRecordingSid() );
             }
         };
 
@@ -143,38 +242,36 @@ public class RecordingController extends BaseController {
 
     /**
      * View a specific Recording
-     * @param    recordingSid    Required parameter: Search Recording sid
-     * @param    responseType    Optional parameter: Response format, xml or json
+     * @param    CreateViewRecordingInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
     public void createViewRecordingAsync(
-                final String recordingSid,
-                final String responseType,
+                final CreateViewRecordingInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
-        if (null == recordingSid)
-            throw new NullPointerException("The parameter \"recordingSid\" is a required parameter and cannot be null.");
+        if (null == input.getRecordingSid())
+            throw new NullPointerException("The property \"RecordingSid\" in the input object cannot be null.");
 
         //the base uri for api requests
         String _baseUri = Configuration.baseUri;
-
+        
         //prepare query string for API call
         StringBuilder _queryBuilder = new StringBuilder(_baseUri);
         _queryBuilder.append("/recording/viewrecording.{ResponseType}");
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5715740692135291628L;
+            private static final long serialVersionUID = 5631298120338733829L;
             {
-                    put( "ResponseType", (null != responseType) ? responseType : "json" );
+                    put( "ResponseType", input.getResponseType() );
             }});
         //validate and preprocess url
         String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4689774475099600852L;
+            private static final long serialVersionUID = 4769087289118200582L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -182,118 +279,9 @@ public class RecordingController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5206622885014394461L;
+            private static final long serialVersionUID = 5762674368258410908L;
             {
-                    put( "RecordingSid", recordingSid );
-            }
-        };
-
-        //prepare and invoke the API call request to fetch the response
-        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
-                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
-
-        //invoke the callback before request if its not null
-        if (getHttpCallBack() != null)
-        {
-            getHttpCallBack().OnBeforeRequest(_request);
-        }
-
-        //invoke request and get response
-        Runnable _responseTask = new Runnable() {
-            public void run() {
-                //make the API call
-                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
-                    public void onSuccess(HttpContext _context, HttpResponse _response) {
-                        try {
-
-                            //invoke the callback after response if its not null
-                            if (getHttpCallBack() != null)	
-                            {
-                                getHttpCallBack().OnAfterResponse(_context);
-                            }
-
-                            //handle errors defined at the API level
-                            validateResponse(_response, _context);
-
-                            //extract result from the http response
-                            String _result = ((HttpStringResponse)_response).getBody();
-                            //let the caller know of the success
-                            callBack.onSuccess(_context, _result);
-                        } catch (APIException error) {
-                            //let the caller know of the error
-                            callBack.onFailure(_context, error);
-                        } catch (Exception exception) {
-                            //let the caller know of the caught Exception
-                            callBack.onFailure(_context, exception);
-                        }
-                    }
-                    public void onFailure(HttpContext _context, Throwable _error) {
-                        //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
-                            getHttpCallBack().OnAfterResponse(_context);
-                        }
-
-                        //let the caller know of the failure
-                        callBack.onFailure(_context, _error);
-                    }
-                });
-            }
-        };
-
-        //execute async using thread pool
-        APIHelper.getScheduler().execute(_responseTask);
-    }
-
-    /**
-     * List out Recordings
-     * @param    page    Optional parameter: Which page of the overall response will be returned. Zero indexed
-     * @param    pageSize    Optional parameter: Number of individual resources listed in the response per page
-     * @param    dateCreated    Optional parameter: Example: 
-     * @param    callSid    Optional parameter: Example: 
-     * @param    responseType    Optional parameter: Response format, xml or json
-     * @return    Returns the void response from the API call 
-     */
-    public void createListRecordingAsync(
-                final Integer page,
-                final Integer pageSize,
-                final String dateCreated,
-                final String callSid,
-                final String responseType,
-                final APICallBack<String> callBack
-    ) {
-        //the base uri for api requests
-        String _baseUri = Configuration.baseUri;
-
-        //prepare query string for API call
-        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/recording/listrecording.{ResponseType}");
-
-        //process template parameters
-        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5742561268815561416L;
-            {
-                    put( "ResponseType", (null != responseType) ? responseType : "json" );
-            }});
-        //validate and preprocess url
-        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
-
-        //load all headers for the outgoing API request
-        Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4747987019081951320L;
-            {
-                    put( "user-agent", "message360-api" );
-            }
-        };
-
-        //load all fields for the outgoing API request
-        Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5712232344750450685L;
-            {
-                    put( "Page", page );
-                    put( "PageSize", pageSize );
-                    put( "DateCreated", dateCreated );
-                    put( "CallSid", callSid );
+                    put( "RecordingSid", input.getRecordingSid() );
             }
         };
 

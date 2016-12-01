@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/21/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/01/2016
  */
 package message360;
 
@@ -18,35 +18,35 @@ public class Message360Client {
     }
 
     /**
-     * Singleton access to Transcription controller
-     * @return	Returns the TranscriptionController instance 
-     */
-    public TranscriptionController getTranscription() {
-        return TranscriptionController.getInstance();
-    }
-
-    /**
-     * Singleton access to PhoneNumber controller
-     * @return	Returns the PhoneNumberController instance 
-     */
-    public PhoneNumberController getPhoneNumber() {
-        return PhoneNumberController.getInstance();
-    }
-
-    /**
-     * Singleton access to Usage controller
-     * @return	Returns the UsageController instance 
-     */
-    public UsageController getUsage() {
-        return UsageController.getInstance();
-    }
-
-    /**
      * Singleton access to Email controller
      * @return	Returns the EmailController instance 
      */
     public EmailController getEmail() {
         return EmailController.getInstance();
+    }
+
+    /**
+     * Singleton access to NumberVerification controller
+     * @return	Returns the NumberVerificationController instance 
+     */
+    public NumberVerificationController getNumberVerification() {
+        return NumberVerificationController.getInstance();
+    }
+
+    /**
+     * Singleton access to Carrier controller
+     * @return	Returns the CarrierController instance 
+     */
+    public CarrierController getCarrier() {
+        return CarrierController.getInstance();
+    }
+
+    /**
+     * Singleton access to Call controller
+     * @return	Returns the CallController instance 
+     */
+    public CallController getCall() {
+        return CallController.getInstance();
     }
 
     /**
@@ -66,6 +66,38 @@ public class Message360Client {
     }
 
     /**
+     * Singleton access to WebRTC controller
+     * @return	Returns the WebRTCController instance 
+     */
+    public WebRTCController getWebRTC() {
+        return WebRTCController.getInstance();
+    }
+
+    /**
+     * Singleton access to SubAccount controller
+     * @return	Returns the SubAccountController instance 
+     */
+    public SubAccountController getSubAccount() {
+        return SubAccountController.getInstance();
+    }
+
+    /**
+     * Singleton access to Address controller
+     * @return	Returns the AddressController instance 
+     */
+    public AddressController getAddress() {
+        return AddressController.getInstance();
+    }
+
+    /**
+     * Singleton access to PhoneNumber controller
+     * @return	Returns the PhoneNumberController instance 
+     */
+    public PhoneNumberController getPhoneNumber() {
+        return PhoneNumberController.getInstance();
+    }
+
+    /**
      * Singleton access to Recording controller
      * @return	Returns the RecordingController instance 
      */
@@ -74,19 +106,19 @@ public class Message360Client {
     }
 
     /**
-     * Singleton access to Call controller
-     * @return	Returns the CallController instance 
+     * Singleton access to Transcription controller
+     * @return	Returns the TranscriptionController instance 
      */
-    public CallController getCall() {
-        return CallController.getInstance();
+    public TranscriptionController getTranscription() {
+        return TranscriptionController.getInstance();
     }
 
     /**
-     * Singleton access to Carrier controller
-     * @return	Returns the CarrierController instance 
+     * Singleton access to Usage controller
+     * @return	Returns the UsageController instance 
      */
-    public CarrierController getCarrier() {
-        return CarrierController.getInstance();
+    public UsageController getUsage() {
+        return UsageController.getInstance();
     }
 
     /**

@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/21/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/01/2016
  */
 package message360.controllers;
 
@@ -39,48 +39,42 @@ public class UsageController extends BaseController {
 
     /**
      * Get all usage 
-     * @param    productCode    Required parameter: Product Code
-     * @param    startDate    Required parameter: Start Usage Date
-     * @param    endDate    Required parameter: End Usage Date
-     * @param    responseType    Optional parameter: Response format, xml or json
+     * @param    CreateListUsageInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
     public void createListUsageAsync(
-                final String productCode,
-                final String startDate,
-                final String endDate,
-                final String responseType,
+                final CreateListUsageInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
-        if (null == productCode)
-            throw new NullPointerException("The parameter \"productCode\" is a required parameter and cannot be null.");
+        if (null == input.getProductCode())
+            throw new NullPointerException("The property \"ProductCode\" in the input object cannot be null.");
 
-        if (null == startDate)
-            throw new NullPointerException("The parameter \"startDate\" is a required parameter and cannot be null.");
+        if (null == input.getStartDate())
+            throw new NullPointerException("The property \"StartDate\" in the input object cannot be null.");
 
-        if (null == endDate)
-            throw new NullPointerException("The parameter \"endDate\" is a required parameter and cannot be null.");
+        if (null == input.getEndDate())
+            throw new NullPointerException("The property \"EndDate\" in the input object cannot be null.");
 
         //the base uri for api requests
         String _baseUri = Configuration.baseUri;
-
+        
         //prepare query string for API call
         StringBuilder _queryBuilder = new StringBuilder(_baseUri);
         _queryBuilder.append("/usage/listusage.{ResponseType}");
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5024838879913931210L;
+            private static final long serialVersionUID = 4662236465723991579L;
             {
-                    put( "ResponseType", (null != responseType) ? responseType : "json" );
+                    put( "ResponseType", input.getResponseType() );
             }});
         //validate and preprocess url
         String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4996194813743258586L;
+            private static final long serialVersionUID = 5599493352685940565L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -88,11 +82,11 @@ public class UsageController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4633656703089575421L;
+            private static final long serialVersionUID = 5274664216949150173L;
             {
-                    put( "ProductCode", productCode );
-                    put( "startDate", startDate );
-                    put( "endDate", endDate );
+                    put( "ProductCode", (null != input.getProductCode()) ? input.getProductCode().value() : 0 );
+                    put( "startDate", input.getStartDate() );
+                    put( "endDate", input.getEndDate() );
             }
         };
 

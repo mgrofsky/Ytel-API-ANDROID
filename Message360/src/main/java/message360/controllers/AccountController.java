@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/21/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/01/2016
  */
 package message360.controllers;
 
@@ -39,38 +39,36 @@ public class AccountController extends BaseController {
 
     /**
      * Display Account Description
-     * @param    date    Required parameter: Example: 
-     * @param    responseType    Optional parameter: Response type format xml or json
+     * @param    CreateViewAccountInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
     public void createViewAccountAsync(
-                final String date,
-                final String responseType,
+                final CreateViewAccountInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
-        if (null == date)
-            throw new NullPointerException("The parameter \"date\" is a required parameter and cannot be null.");
+        if (null == input.getDate())
+            throw new NullPointerException("The property \"Date\" in the input object cannot be null.");
 
         //the base uri for api requests
         String _baseUri = Configuration.baseUri;
-
+        
         //prepare query string for API call
         StringBuilder _queryBuilder = new StringBuilder(_baseUri);
         _queryBuilder.append("/accounts/viewaccount.{ResponseType}");
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4858705954376273851L;
+            private static final long serialVersionUID = 5435198736082397479L;
             {
-                    put( "ResponseType", (null != responseType) ? responseType : "json" );
+                    put( "ResponseType", input.getResponseType() );
             }});
         //validate and preprocess url
         String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5466607779758490181L;
+            private static final long serialVersionUID = 4805254091560916807L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -78,9 +76,9 @@ public class AccountController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5143407901224545304L;
+            private static final long serialVersionUID = 5669217733049103153L;
             {
-                    put( "date", date );
+                    put( "date", input.getDate() );
             }
         };
 
