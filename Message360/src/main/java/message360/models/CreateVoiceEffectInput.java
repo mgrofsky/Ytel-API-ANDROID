@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/01/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/02/2016
  */
 package message360.models;
 
@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateVoiceEffectInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5344186193781368885L;
+    private static final long serialVersionUID = 5288002190812149188L;
     private String callSid;
     private AudioDirection audioDirection;
     private Double pitchSemiTones;
