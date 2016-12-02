@@ -1,9 +1,11 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 10/21/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/02/2016
  */
 package message360.http.client;
+
+import android.util.Base64;
 
 import message360.Configuration;
 import message360.http.request.HttpBodyRequest;
@@ -334,7 +336,18 @@ public class VolleyClient implements HttpClient {
          */
         @Override
         public Map<String, String> getHeaders() throws AuthFailureError {
-            return (HashMap<String, String>) _request.getHeaders();
+            HashMap<String, String> headers = (HashMap<String, String>) _request.getHeaders();
+
+            // Add basic auth header if username,password is provided in request
+            if(_request.getUsername() != null && _request.getPassword() != null) {
+                String credentials = _request.getUsername() + ":" + _request.getPassword();
+                String auth = "Basic "
+                        + Base64.encodeToString(credentials.getBytes(),
+                        Base64.NO_WRAP);
+                headers.put("Authorization", auth);
+            }
+
+            return headers;
         }
 
         /**
