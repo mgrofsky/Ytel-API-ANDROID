@@ -3,35 +3,29 @@
  *
  * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/08/2016
  */
-package message360.models;
+package message360;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum Direction {
-    IN, //in direction
-    OUT, //out direction
-    BOTH; //both
+public enum Servers {
+    DEFAULT; //TODO: Write general description for this element
 
-    private static TreeMap<String, Direction> valueMap = new TreeMap<String, Direction>();
+    private static TreeMap<String, Servers> valueMap = new TreeMap<String, Servers>();
     private String value;
 
     static {
-        IN.value = "in";
-        OUT.value = "out";
-        BOTH.value = "both";
+        DEFAULT.value = "default";
 
-        valueMap.put("in", IN);
-        valueMap.put("out", OUT);
-        valueMap.put("both", BOTH);
+        valueMap.put("default", DEFAULT);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static Direction fromString(String toConvert) {
+    public static Servers fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -52,14 +46,14 @@ public enum Direction {
     }
 
     /**
-     * Convert list of Direction values to list of string values
-     * @param toConvert The list of Direction values to convert
+     * Convert list of Servers values to list of string values
+     * @param toConvert The list of Servers values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<Direction> toConvert) {
+    public static List<String> toValue(List<Servers> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (Direction enumValue : toConvert) {
+        for (Servers enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

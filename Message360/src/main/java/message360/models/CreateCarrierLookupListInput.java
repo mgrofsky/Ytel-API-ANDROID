@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/02/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/08/2016
  */
 package message360.models;
 
@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateCarrierLookupListInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5020023647665141146L;
+    private static final long serialVersionUID = 5446108154496352102L;
     private Integer page;
     private Integer pagesize;
     private String responseType = "json";

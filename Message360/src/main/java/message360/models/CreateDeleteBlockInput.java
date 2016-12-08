@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/02/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/08/2016
  */
 package message360.models;
 
@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateDeleteBlockInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5291427075407788518L;
+    private static final long serialVersionUID = 4808100696976369449L;
     private String email;
     private String responseType = "json";
     /** GETTER
