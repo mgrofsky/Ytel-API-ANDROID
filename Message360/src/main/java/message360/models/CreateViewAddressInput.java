@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/08/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
  */
 package message360.models;
 
@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateViewAddressInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4728991379803873706L;
+    private static final long serialVersionUID = 5696220159972776034L;
     private String addressId;
     private String responseType = "json";
     /** GETTER
