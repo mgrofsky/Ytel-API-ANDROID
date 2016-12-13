@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/08/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
  */
 package message360.controllers;
 
@@ -59,7 +59,7 @@ public class CarrierController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4862745751163085346L;
+            private static final long serialVersionUID = 4866090447922761633L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -68,7 +68,7 @@ public class CarrierController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4689911526629614338L;
+            private static final long serialVersionUID = 5178900742343388962L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -76,7 +76,7 @@ public class CarrierController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5064004705328961830L;
+            private static final long serialVersionUID = 4895473407663330000L;
             {
                     put( "phonenumber", input.getPhonenumber() );
             }
@@ -157,7 +157,7 @@ public class CarrierController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4672015693582574915L;
+            private static final long serialVersionUID = 5432690176332768694L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -166,7 +166,7 @@ public class CarrierController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5241017143921736577L;
+            private static final long serialVersionUID = 5501567275715336937L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -174,7 +174,7 @@ public class CarrierController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5411146439747202700L;
+            private static final long serialVersionUID = 5615078861463036115L;
             {
                     put( "page", input.getPage() );
                     put( "pagesize", input.getPagesize() );
