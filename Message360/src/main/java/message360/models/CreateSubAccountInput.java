@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,64 +12,64 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateSubAccountInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5520096229425405673L;
-    private String firstname;
-    private String lastname;
+    private static final long serialVersionUID = 4845895981122299036L;
+    private String firstName;
+    private String lastName;
     private String email;
     private String responseType = "json";
     /** GETTER
-     * TODO: Write general description for this method
+     * Sub account user first name
      */
-    @JsonGetter("firstname")
-    public String getFirstname ( ) { 
-        return this.firstname;
+    @JsonGetter("FirstName")
+    public String getFirstName ( ) { 
+        return this.firstName;
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * Sub account user first name
      */
-    @JsonSetter("firstname")
-    public void setFirstname (String value) { 
-        this.firstname = value;
-        notifyObservers(this.firstname);
+    @JsonSetter("FirstName")
+    public void setFirstName (String value) { 
+        this.firstName = value;
+        notifyObservers(this.firstName);
     }
  
     /** GETTER
-     * TODO: Write general description for this method
+     * sub account user last name
      */
-    @JsonGetter("lastname")
-    public String getLastname ( ) { 
-        return this.lastname;
+    @JsonGetter("LastName")
+    public String getLastName ( ) { 
+        return this.lastName;
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * sub account user last name
      */
-    @JsonSetter("lastname")
-    public void setLastname (String value) { 
-        this.lastname = value;
-        notifyObservers(this.lastname);
+    @JsonSetter("LastName")
+    public void setLastName (String value) { 
+        this.lastName = value;
+        notifyObservers(this.lastName);
     }
  
     /** GETTER
-     * TODO: Write general description for this method
+     * Sub account email address
      */
-    @JsonGetter("email")
+    @JsonGetter("Email")
     public String getEmail ( ) { 
         return this.email;
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * Sub account email address
      */
-    @JsonSetter("email")
+    @JsonSetter("Email")
     public void setEmail (String value) { 
         this.email = value;
         notifyObservers(this.email);
     }
  
     /** GETTER
-     * ResponseType Format either json or xml
+     * Response type format xml or json
      */
     @JsonGetter("ResponseType")
     public String getResponseType ( ) { 
@@ -77,7 +77,7 @@ public class CreateSubAccountInput
     }
     
     /** SETTER
-     * ResponseType Format either json or xml
+     * Response type format xml or json
      */
     @JsonSetter("ResponseType")
     public void setResponseType (String value) { 

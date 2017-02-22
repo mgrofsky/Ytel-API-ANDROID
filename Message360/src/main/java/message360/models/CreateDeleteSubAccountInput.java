@@ -9,15 +9,15 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
-public class CreateSuspendSubAccountInput 
+public class CreateDeleteSubAccountInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4735910265846333452L;
+    private static final long serialVersionUID = 4741981285282469314L;
     private String subAccountSID;
-    private ActivateStatus activate = ActivateStatus.DEACTIVATE;
-    private String responseType;
+    private MergeNumberStatus mergeNumber = MergeNumberStatus.DELETE;
+    private String responseType = "json";
     /** GETTER
-     * The SubaccountSid to be activated or suspended
+     * The SubaccountSid to be deleted
      */
     @JsonGetter("SubAccountSID")
     public String getSubAccountSID ( ) { 
@@ -25,7 +25,7 @@ public class CreateSuspendSubAccountInput
     }
     
     /** SETTER
-     * The SubaccountSid to be activated or suspended
+     * The SubaccountSid to be deleted
      */
     @JsonSetter("SubAccountSID")
     public void setSubAccountSID (String value) { 
@@ -34,24 +34,24 @@ public class CreateSuspendSubAccountInput
     }
  
     /** GETTER
-     * 0 to suspend or 1 to activate
+     * 0 to delete or 1 to merge numbers to parent account.
      */
-    @JsonGetter("Activate")
-    public ActivateStatus getActivate ( ) { 
-        return this.activate;
+    @JsonGetter("MergeNumber")
+    public MergeNumberStatus getMergeNumber ( ) { 
+        return this.mergeNumber;
     }
     
     /** SETTER
-     * 0 to suspend or 1 to activate
+     * 0 to delete or 1 to merge numbers to parent account.
      */
-    @JsonSetter("Activate")
-    public void setActivate (ActivateStatus value) { 
-        this.activate = value;
-        notifyObservers(this.activate);
+    @JsonSetter("MergeNumber")
+    public void setMergeNumber (MergeNumberStatus value) { 
+        this.mergeNumber = value;
+        notifyObservers(this.mergeNumber);
     }
  
     /** GETTER
-     * TODO: Write general description for this method
+     * Response type format xml or json
      */
     @JsonGetter("ResponseType")
     public String getResponseType ( ) { 
@@ -59,7 +59,7 @@ public class CreateSuspendSubAccountInput
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * Response type format xml or json
      */
     @JsonSetter("ResponseType")
     public void setResponseType (String value) { 

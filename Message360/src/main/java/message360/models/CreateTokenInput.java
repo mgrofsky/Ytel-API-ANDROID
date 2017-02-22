@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,9 +12,11 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateTokenInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5140592568077920541L;
+    private static final long serialVersionUID = 4924293662404731252L;
     private String accountSid;
     private String authToken;
+    private String username;
+    private String password;
     /** GETTER
      * Your message360 Account SID
      */
@@ -47,6 +49,40 @@ public class CreateTokenInput
     public void setAuthToken (String value) { 
         this.authToken = value;
         notifyObservers(this.authToken);
+    }
+ 
+    /** GETTER
+     * WebRTC username authentication
+     */
+    @JsonGetter("username")
+    public String getUsername ( ) { 
+        return this.username;
+    }
+    
+    /** SETTER
+     * WebRTC username authentication
+     */
+    @JsonSetter("username")
+    public void setUsername (String value) { 
+        this.username = value;
+        notifyObservers(this.username);
+    }
+ 
+    /** GETTER
+     * WebRTC password authentication
+     */
+    @JsonGetter("password")
+    public String getPassword ( ) { 
+        return this.password;
+    }
+    
+    /** SETTER
+     * WebRTC password authentication
+     */
+    @JsonSetter("password")
+    public void setPassword (String value) { 
+        this.password = value;
+        notifyObservers(this.password);
     }
  
 }

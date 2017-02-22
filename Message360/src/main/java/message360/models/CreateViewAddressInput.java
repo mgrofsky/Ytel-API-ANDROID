@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,24 +12,24 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateViewAddressInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5696220159972776034L;
-    private String addressId;
+    private static final long serialVersionUID = 5485916197034262188L;
+    private String addressSID;
     private String responseType = "json";
     /** GETTER
      * The identifier of the address to be retrieved.
      */
-    @JsonGetter("addressId")
-    public String getAddressId ( ) { 
-        return this.addressId;
+    @JsonGetter("AddressSID")
+    public String getAddressSID ( ) { 
+        return this.addressSID;
     }
     
     /** SETTER
      * The identifier of the address to be retrieved.
      */
-    @JsonSetter("addressId")
-    public void setAddressId (String value) { 
-        this.addressId = value;
-        notifyObservers(this.addressId);
+    @JsonSetter("AddressSID")
+    public void setAddressSID (String value) { 
+        this.addressSID = value;
+        notifyObservers(this.addressSID);
     }
  
     /** GETTER

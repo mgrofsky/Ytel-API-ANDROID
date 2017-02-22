@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,16 +12,16 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListAddressInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5749065949160683032L;
+    private static final long serialVersionUID = 4642660359951308889L;
     private Integer page = 1;
     private Integer pageSize = 10;
-    private String addressId;
+    private String addressSID;
     private String dateCreated;
     private String responseType = "json";
     /** GETTER
      * Return requested # of items starting the value, default=0, must be an integer
      */
-    @JsonGetter("page")
+    @JsonGetter("Page")
     public Integer getPage ( ) { 
         return this.page;
     }
@@ -29,24 +29,24 @@ public class CreateListAddressInput
     /** SETTER
      * Return requested # of items starting the value, default=0, must be an integer
      */
-    @JsonSetter("page")
+    @JsonSetter("Page")
     public void setPage (Integer value) { 
         this.page = value;
         notifyObservers(this.page);
     }
  
     /** GETTER
-     * How many results to return, default=10, max 100, must be an integer
+     * How many results to return, default is 10, max is 100, must be an integer
      */
-    @JsonGetter("pageSize")
+    @JsonGetter("PageSize")
     public Integer getPageSize ( ) { 
         return this.pageSize;
     }
     
     /** SETTER
-     * How many results to return, default=10, max 100, must be an integer
+     * How many results to return, default is 10, max is 100, must be an integer
      */
-    @JsonSetter("pageSize")
+    @JsonSetter("PageSize")
     public void setPageSize (Integer value) { 
         this.pageSize = value;
         notifyObservers(this.pageSize);
@@ -55,24 +55,24 @@ public class CreateListAddressInput
     /** GETTER
      * addresses Sid
      */
-    @JsonGetter("addressId")
-    public String getAddressId ( ) { 
-        return this.addressId;
+    @JsonGetter("AddressSID")
+    public String getAddressSID ( ) { 
+        return this.addressSID;
     }
     
     /** SETTER
      * addresses Sid
      */
-    @JsonSetter("addressId")
-    public void setAddressId (String value) { 
-        this.addressId = value;
-        notifyObservers(this.addressId);
+    @JsonSetter("AddressSID")
+    public void setAddressSID (String value) { 
+        this.addressSID = value;
+        notifyObservers(this.addressSID);
     }
  
     /** GETTER
      * date created address.
      */
-    @JsonGetter("dateCreated")
+    @JsonGetter("DateCreated")
     public String getDateCreated ( ) { 
         return this.dateCreated;
     }
@@ -80,7 +80,7 @@ public class CreateListAddressInput
     /** SETTER
      * date created address.
      */
-    @JsonSetter("dateCreated")
+    @JsonSetter("DateCreated")
     public void setDateCreated (String value) { 
         this.dateCreated = value;
         notifyObservers(this.dateCreated);

@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.controllers;
 
@@ -75,7 +75,7 @@ public abstract class BaseController {
             throws APIException {
         //get response status code to validate
         int responseCode = response.getStatusCode();
-        if ((responseCode < 200) || (responseCode > 206)) //[200,206] = HTTP OK
+        if ((responseCode < 200) || (responseCode > 208)) //[200,208] = HTTP OK
             throw new APIException("HTTP Response Not OK", context);
     }
 }
