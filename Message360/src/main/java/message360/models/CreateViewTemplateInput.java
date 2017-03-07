@@ -9,45 +9,27 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
-public class CreateCarrierLookupListInput 
+public class CreateViewTemplateInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5712406863133076757L;
-    private Integer page;
-    private Integer pagesize;
+    private static final long serialVersionUID = 4954414416677626306L;
+    private UUID templateid;
     private String responseType = "json";
     /** GETTER
-     * Page Number
+     * The unique identifier for a template object
      */
-    @JsonGetter("page")
-    public Integer getPage ( ) { 
-        return this.page;
+    @JsonGetter("templateid")
+    public UUID getTemplateid ( ) { 
+        return this.templateid;
     }
     
     /** SETTER
-     * Page Number
+     * The unique identifier for a template object
      */
-    @JsonSetter("page")
-    public void setPage (Integer value) { 
-        this.page = value;
-        notifyObservers(this.page);
-    }
- 
-    /** GETTER
-     * Page Size
-     */
-    @JsonGetter("pagesize")
-    public Integer getPagesize ( ) { 
-        return this.pagesize;
-    }
-    
-    /** SETTER
-     * Page Size
-     */
-    @JsonSetter("pagesize")
-    public void setPagesize (Integer value) { 
-        this.pagesize = value;
-        notifyObservers(this.pagesize);
+    @JsonSetter("templateid")
+    public void setTemplateid (UUID value) { 
+        this.templateid = value;
+        notifyObservers(this.templateid);
     }
  
     /** GETTER

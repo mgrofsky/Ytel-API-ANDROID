@@ -12,10 +12,10 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateAvailablePhoneNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5661602474221757903L;
+    private static final long serialVersionUID = 5607032467000441629L;
     private NumberType numberType;
     private String areaCode;
-    private Integer pageSize;
+    private Integer pageSize = 10;
     private String responseType = "json";
     /** GETTER
      * Number type either SMS,Voice or all

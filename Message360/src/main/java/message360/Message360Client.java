@@ -10,6 +10,14 @@ import message360.http.client.HttpClient;
 
 public class Message360Client {
     /**
+     * Singleton access to ShortCode controller
+     * @return	Returns the ShortCodeController instance 
+     */
+    public ShortCodeController getShortCode() {
+        return ShortCodeController.getInstance();
+    }
+
+    /**
      * Singleton access to Conference controller
      * @return	Returns the ConferenceController instance 
      */
@@ -50,14 +58,6 @@ public class Message360Client {
     }
 
     /**
-     * Singleton access to SMS controller
-     * @return	Returns the SMSController instance 
-     */
-    public SMSController getSMS() {
-        return SMSController.getInstance();
-    }
-
-    /**
      * Singleton access to WebRTC controller
      * @return	Returns the WebRTCController instance 
      */
@@ -95,6 +95,14 @@ public class Message360Client {
      */
     public RecordingController getRecording() {
         return RecordingController.getInstance();
+    }
+
+    /**
+     * Singleton access to SMS controller
+     * @return	Returns the SMSController instance 
+     */
+    public SMSController getSMS() {
+        return SMSController.getInstance();
     }
 
     /**

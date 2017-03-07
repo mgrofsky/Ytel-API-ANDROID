@@ -9,15 +9,15 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
-public class CreateListSMSInput 
+public class CreateListInboundShortCodeInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5633515947362268979L;
+    private static final long serialVersionUID = 4642263558916792745L;
     private Integer page;
-    private Integer pagesize;
+    private Integer pagesize = 10;
     private String from;
-    private String to;
-    private String datesent;
+    private String shortcode;
+    private String dateReceived;
     private String responseType = "json";
     /** GETTER
      * Which page of the overall response will be returned. Zero indexed
@@ -54,7 +54,7 @@ public class CreateListSMSInput
     }
  
     /** GETTER
-     * Messages sent from this number
+     * From Number to Inbound ShortCode
      */
     @JsonGetter("from")
     public String getFrom ( ) { 
@@ -62,7 +62,7 @@ public class CreateListSMSInput
     }
     
     /** SETTER
-     * Messages sent from this number
+     * From Number to Inbound ShortCode
      */
     @JsonSetter("from")
     public void setFrom (String value) { 
@@ -71,37 +71,37 @@ public class CreateListSMSInput
     }
  
     /** GETTER
-     * Messages sent to this number
+     * Only list messages sent to this Short Code
      */
-    @JsonGetter("to")
-    public String getTo ( ) { 
-        return this.to;
+    @JsonGetter("Shortcode")
+    public String getShortcode ( ) { 
+        return this.shortcode;
     }
     
     /** SETTER
-     * Messages sent to this number
+     * Only list messages sent to this Short Code
      */
-    @JsonSetter("to")
-    public void setTo (String value) { 
-        this.to = value;
-        notifyObservers(this.to);
+    @JsonSetter("Shortcode")
+    public void setShortcode (String value) { 
+        this.shortcode = value;
+        notifyObservers(this.shortcode);
     }
  
     /** GETTER
-     * Only list SMS messages sent in the specified date range
+     * Only list messages sent with the specified date
      */
-    @JsonGetter("datesent")
-    public String getDatesent ( ) { 
-        return this.datesent;
+    @JsonGetter("DateReceived")
+    public String getDateReceived ( ) { 
+        return this.dateReceived;
     }
     
     /** SETTER
-     * Only list SMS messages sent in the specified date range
+     * Only list messages sent with the specified date
      */
-    @JsonSetter("datesent")
-    public void setDatesent (String value) { 
-        this.datesent = value;
-        notifyObservers(this.datesent);
+    @JsonSetter("DateReceived")
+    public void setDateReceived (String value) { 
+        this.dateReceived = value;
+        notifyObservers(this.dateReceived);
     }
  
     /** GETTER

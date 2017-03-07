@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateMakeCallInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5032013826275424775L;
+    private static final long serialVersionUID = 5245883881649371263L;
     private String fromCountryCode;
     private String from;
     private String toCountryCode;

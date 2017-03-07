@@ -62,7 +62,7 @@ public class ConferenceController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4933273493378279014L;
+            private static final long serialVersionUID = 5718741308778882703L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -71,7 +71,7 @@ public class ConferenceController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5403880440696560532L;
+            private static final long serialVersionUID = 4704591109547178796L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -79,7 +79,7 @@ public class ConferenceController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5572783778295535622L;
+            private static final long serialVersionUID = 4967463889782984994L;
             {
                     put( "conferenceSid", input.getConferenceSid() );
                     put( "ParticipantSid", input.getParticipantSid() );
@@ -163,7 +163,7 @@ public class ConferenceController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5094120514506514319L;
+            private static final long serialVersionUID = 5737681107050536450L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -172,7 +172,7 @@ public class ConferenceController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5381495434913425318L;
+            private static final long serialVersionUID = 5719651375887132089L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -180,12 +180,12 @@ public class ConferenceController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4694513970542957131L;
+            private static final long serialVersionUID = 4705824063054034347L;
             {
                     put( "Page", input.getPage() );
                     put( "PageSize", input.getPageSize() );
                     put( "FriendlyName", input.getFriendlyName() );
-                    put( "Status", (null != input.getStatus()) ? input.getStatus().value() : null );
+                    put( "Status", (input.getStatus() != null) ? input.getStatus().value() : null );
                     put( "DateCreated", input.getDateCreated() );
                     put( "DateUpdated", input.getDateUpdated() );
             }
@@ -270,7 +270,7 @@ public class ConferenceController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4979634715389802380L;
+            private static final long serialVersionUID = 5729635049423621105L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -279,7 +279,7 @@ public class ConferenceController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4964485280687648179L;
+            private static final long serialVersionUID = 5500752382235885943L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -287,7 +287,7 @@ public class ConferenceController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5552526530825454694L;
+            private static final long serialVersionUID = 5216702388928931855L;
             {
                     put( "conferencesid", input.getConferencesid() );
             }
@@ -375,7 +375,7 @@ public class ConferenceController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5639980837478235968L;
+            private static final long serialVersionUID = 4891194073409450547L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -384,7 +384,7 @@ public class ConferenceController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4875351660424963784L;
+            private static final long serialVersionUID = 4678100364530538684L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -392,7 +392,7 @@ public class ConferenceController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5436381855137543052L;
+            private static final long serialVersionUID = 5586067820997334791L;
             {
                     put( "conferencesid", input.getConferencesid() );
                     put( "participantnumber", input.getParticipantnumber() );
@@ -481,7 +481,7 @@ public class ConferenceController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4708335397220065038L;
+            private static final long serialVersionUID = 5279437335424447539L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -490,7 +490,7 @@ public class ConferenceController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5266892904804835491L;
+            private static final long serialVersionUID = 5594970979101680488L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -498,7 +498,7 @@ public class ConferenceController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4707941039524440623L;
+            private static final long serialVersionUID = 5373128607067359392L;
             {
                     put( "ConferenceSid", input.getConferenceSid() );
                     put( "Page", input.getPage() );
@@ -590,7 +590,7 @@ public class ConferenceController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5024336539067088773L;
+            private static final long serialVersionUID = 5649542559913113095L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -599,7 +599,7 @@ public class ConferenceController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4910201349618244887L;
+            private static final long serialVersionUID = 4847463360632376632L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -607,7 +607,7 @@ public class ConferenceController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5269399801793326656L;
+            private static final long serialVersionUID = 5380298885961257958L;
             {
                     put( "ConferenceSid", input.getConferenceSid() );
                     put( "ParticipantSid", input.getParticipantSid() );

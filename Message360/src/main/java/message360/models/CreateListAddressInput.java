@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListAddressInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4642660359951308889L;
+    private static final long serialVersionUID = 4831279980427800906L;
     private Integer page = 1;
     private Integer pageSize = 10;
     private String addressSID;

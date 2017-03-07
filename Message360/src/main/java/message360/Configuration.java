@@ -55,7 +55,7 @@ public class Configuration {
     public static String getBaseUri(Servers server) {
         StringBuilder baseUrl = new StringBuilder(environmentsMap.get(Configuration.environment).get(server));
         Map<String, Object> parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5747222492044891916L;
+            private static final long serialVersionUID = 5115360632890534777L;
             {
             }
         };
@@ -75,22 +75,22 @@ public class Configuration {
      * Map of all base URLs by environments and server aliases 
      */
     private static EnumMap<Environments, EnumMap<Servers, String>> environmentsMap = new EnumMap<Environments, EnumMap<Servers,String>>(Environments.class) {
-        private static final long serialVersionUID = 4808297068092951099L;
+        private static final long serialVersionUID = 4729065773182176467L;
         {
             put(Environments.PRODUCTION , new EnumMap<Servers, String>(Servers.class) {
-                private static final long serialVersionUID = 5481382370995800144L;
+                private static final long serialVersionUID = 4728400039212624025L;
                 {
                     put(Servers.DEFAULT, "https://api.message360.com/api/v2");
                 }
             });
             put(Environments.PREPRODUCTION , new EnumMap<Servers, String>(Servers.class) {
-                private static final long serialVersionUID = 5250157976159804490L;
+                private static final long serialVersionUID = 4889670745842133677L;
                 {
                     put(Servers.DEFAULT, "https://api-preprod.message360.com/api/v2");
                 }
             });
             put(Environments.DEVELOPMENT , new EnumMap<Servers, String>(Servers.class) {
-                private static final long serialVersionUID = 4974728963034847695L;
+                private static final long serialVersionUID = 4909345752748450702L;
                 {
                     put(Servers.DEFAULT, "https://lara-dev.message360.com/api/v2");
                 }

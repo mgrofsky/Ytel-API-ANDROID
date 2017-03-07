@@ -9,45 +9,27 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
-public class CreateCarrierLookupListInput 
+public class CreateViewShortCodeInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5712406863133076757L;
-    private Integer page;
-    private Integer pagesize;
+    private static final long serialVersionUID = 5015956818529612568L;
+    private String messagesid;
     private String responseType = "json";
     /** GETTER
-     * Page Number
+     * Message sid
      */
-    @JsonGetter("page")
-    public Integer getPage ( ) { 
-        return this.page;
+    @JsonGetter("messagesid")
+    public String getMessagesid ( ) { 
+        return this.messagesid;
     }
     
     /** SETTER
-     * Page Number
+     * Message sid
      */
-    @JsonSetter("page")
-    public void setPage (Integer value) { 
-        this.page = value;
-        notifyObservers(this.page);
-    }
- 
-    /** GETTER
-     * Page Size
-     */
-    @JsonGetter("pagesize")
-    public Integer getPagesize ( ) { 
-        return this.pagesize;
-    }
-    
-    /** SETTER
-     * Page Size
-     */
-    @JsonSetter("pagesize")
-    public void setPagesize (Integer value) { 
-        this.pagesize = value;
-        notifyObservers(this.pagesize);
+    @JsonSetter("messagesid")
+    public void setMessagesid (String value) { 
+        this.messagesid = value;
+        notifyObservers(this.messagesid);
     }
  
     /** GETTER

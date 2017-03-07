@@ -12,9 +12,9 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5643360370544450200L;
+    private static final long serialVersionUID = 4833382884412310740L;
     private Integer page;
-    private Integer pageSize;
+    private Integer pageSize = 10;
     private NumberType numberType;
     private String friendlyName;
     private String responseType = "json";
