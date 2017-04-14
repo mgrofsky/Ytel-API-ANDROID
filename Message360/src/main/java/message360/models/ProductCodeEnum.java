@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum ProductCode {
+public enum ProductCodeEnum {
     ALL, //TODO: Write general description for this element
     OUTBOUND_CALL, //TODO: Write general description for this element
     INBOUND_CALL, //TODO: Write general description for this element
@@ -25,7 +25,7 @@ public enum ProductCode {
     DIRECT_MAIL_LETTERS, //TODO: Write general description for this element
     DIRECT_MAIL_VERIFIED_ADDRESS; //TODO: Write general description for this element
 
-    private static TreeMap<Integer, ProductCode> valueMap = new TreeMap<Integer, ProductCode>();
+    private static TreeMap<Integer, ProductCodeEnum> valueMap = new TreeMap<Integer, ProductCodeEnum>();
     private Integer value;
 
     static {
@@ -64,7 +64,7 @@ public enum ProductCode {
      * Returns the enum member associated with the given integer value
      * @return The enum member against the given integer value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static ProductCode fromInteger(Integer toConvert) {
+    public static ProductCodeEnum fromInteger(Integer toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -85,14 +85,14 @@ public enum ProductCode {
     }
 
     /**
-     * Convert list of ProductCode values to list of integer values
-     * @param toConvert The list of ProductCode values to convert
+     * Convert list of ProductCodeEnum values to list of integer values
+     * @param toConvert The list of ProductCodeEnum values to convert
      * @return List of representative integer values */
-    public static List<Integer> toValue(List<ProductCode> toConvert) {
+    public static List<Integer> toValue(List<ProductCodeEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<Integer> convertedValues = new ArrayList<Integer>();
-        for (ProductCode enumValue : toConvert) {
+        for (ProductCodeEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

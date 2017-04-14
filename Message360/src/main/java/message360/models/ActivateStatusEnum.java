@@ -9,26 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum MergeNumberStatus {
-    DELETE, //TODO: Write general description for this element
-    MERGE; //TODO: Write general description for this element
+public enum ActivateStatusEnum {
+    ACTIVATE, //TODO: Write general description for this element
+    DEACTIVATE; //TODO: Write general description for this element
 
-    private static TreeMap<Integer, MergeNumberStatus> valueMap = new TreeMap<Integer, MergeNumberStatus>();
+    private static TreeMap<Integer, ActivateStatusEnum> valueMap = new TreeMap<Integer, ActivateStatusEnum>();
     private Integer value;
 
     static {
-        DELETE.value = 0;
-        MERGE.value = 1;
+        ACTIVATE.value = 1;
+        DEACTIVATE.value = 0;
 
-        valueMap.put(0, DELETE);
-        valueMap.put(1, MERGE);
+        valueMap.put(1, ACTIVATE);
+        valueMap.put(0, DEACTIVATE);
     }
 
     /**
      * Returns the enum member associated with the given integer value
      * @return The enum member against the given integer value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static MergeNumberStatus fromInteger(Integer toConvert) {
+    public static ActivateStatusEnum fromInteger(Integer toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +49,14 @@ public enum MergeNumberStatus {
     }
 
     /**
-     * Convert list of MergeNumberStatus values to list of integer values
-     * @param toConvert The list of MergeNumberStatus values to convert
+     * Convert list of ActivateStatusEnum values to list of integer values
+     * @param toConvert The list of ActivateStatusEnum values to convert
      * @return List of representative integer values */
-    public static List<Integer> toValue(List<MergeNumberStatus> toConvert) {
+    public static List<Integer> toValue(List<ActivateStatusEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<Integer> convertedValues = new ArrayList<Integer>();
-        for (MergeNumberStatus enumValue : toConvert) {
+        for (ActivateStatusEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

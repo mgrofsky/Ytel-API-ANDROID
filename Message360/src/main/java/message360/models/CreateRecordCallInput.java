@@ -12,13 +12,13 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateRecordCallInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5484685944814741336L;
+    private static final long serialVersionUID = 4629140057589954332L;
     private String callSid;
     private boolean record;
-    private Direction direction;
+    private DirectionEnum direction;
     private Integer timeLimit;
     private String callBackUrl;
-    private AudioFormat fileformat;
+    private AudioFormatEnum fileformat;
     private String responseType = "json";
     /** GETTER
      * The unique identifier of each call resource
@@ -58,7 +58,7 @@ public class CreateRecordCallInput
      * The leg of the call to record
      */
     @JsonGetter("Direction")
-    public Direction getDirection ( ) { 
+    public DirectionEnum getDirection ( ) { 
         return this.direction;
     }
     
@@ -66,7 +66,7 @@ public class CreateRecordCallInput
      * The leg of the call to record
      */
     @JsonSetter("Direction")
-    public void setDirection (Direction value) { 
+    public void setDirection (DirectionEnum value) { 
         this.direction = value;
         notifyObservers(this.direction);
     }
@@ -109,7 +109,7 @@ public class CreateRecordCallInput
      * Format of the recording file. Can be .mp3 or .wav
      */
     @JsonGetter("Fileformat")
-    public AudioFormat getFileformat ( ) { 
+    public AudioFormatEnum getFileformat ( ) { 
         return this.fileformat;
     }
     
@@ -117,7 +117,7 @@ public class CreateRecordCallInput
      * Format of the recording file. Can be .mp3 or .wav
      */
     @JsonSetter("Fileformat")
-    public void setFileformat (AudioFormat value) { 
+    public void setFileformat (AudioFormatEnum value) { 
         this.fileformat = value;
         notifyObservers(this.fileformat);
     }

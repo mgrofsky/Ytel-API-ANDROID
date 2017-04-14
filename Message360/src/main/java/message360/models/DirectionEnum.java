@@ -9,29 +9,29 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum Status {
-    INPROGRESS, //TODO: Write general description for this element
-    SUCCESS, //TODO: Write general description for this element
-    FAILURE; //TODO: Write general description for this element
+public enum DirectionEnum {
+    IN, //in direction
+    OUT, //out direction
+    BOTH; //both
 
-    private static TreeMap<String, Status> valueMap = new TreeMap<String, Status>();
+    private static TreeMap<String, DirectionEnum> valueMap = new TreeMap<String, DirectionEnum>();
     private String value;
 
     static {
-        INPROGRESS.value = "inprogress";
-        SUCCESS.value = "success";
-        FAILURE.value = "failure";
+        IN.value = "in";
+        OUT.value = "out";
+        BOTH.value = "both";
 
-        valueMap.put("inprogress", INPROGRESS);
-        valueMap.put("success", SUCCESS);
-        valueMap.put("failure", FAILURE);
+        valueMap.put("in", IN);
+        valueMap.put("out", OUT);
+        valueMap.put("both", BOTH);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static Status fromString(String toConvert) {
+    public static DirectionEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -52,14 +52,14 @@ public enum Status {
     }
 
     /**
-     * Convert list of Status values to list of string values
-     * @param toConvert The list of Status values to convert
+     * Convert list of DirectionEnum values to list of string values
+     * @param toConvert The list of DirectionEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<Status> toConvert) {
+    public static List<String> toValue(List<DirectionEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (Status enumValue : toConvert) {
+        for (DirectionEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

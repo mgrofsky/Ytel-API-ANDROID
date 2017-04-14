@@ -12,10 +12,10 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateSendEmailInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4887211171963344857L;
+    private static final long serialVersionUID = 5310129643111226658L;
     private String to;
     private String from;
-    private SendEmailAs type = SendEmailAs.HTML;
+    private SendEmailAsEnum type = SendEmailAsEnum.HTML;
     private String subject;
     private String message;
     private String cc;
@@ -60,7 +60,7 @@ public class CreateSendEmailInput
      * email format type, html or text
      */
     @JsonGetter("type")
-    public SendEmailAs getType ( ) { 
+    public SendEmailAsEnum getType ( ) { 
         return this.type;
     }
     
@@ -68,7 +68,7 @@ public class CreateSendEmailInput
      * email format type, html or text
      */
     @JsonSetter("type")
-    public void setType (SendEmailAs value) { 
+    public void setType (SendEmailAsEnum value) { 
         this.type = value;
         notifyObservers(this.type);
     }

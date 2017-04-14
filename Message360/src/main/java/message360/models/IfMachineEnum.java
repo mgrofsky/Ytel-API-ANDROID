@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum IfMachine {
+public enum IfMachineEnum {
     CONTINUE, //TODO: Write general description for this element
     HANGUP; //TODO: Write general description for this element
 
-    private static TreeMap<String, IfMachine> valueMap = new TreeMap<String, IfMachine>();
+    private static TreeMap<String, IfMachineEnum> valueMap = new TreeMap<String, IfMachineEnum>();
     private String value;
 
     static {
@@ -28,7 +28,7 @@ public enum IfMachine {
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static IfMachine fromString(String toConvert) {
+    public static IfMachineEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +49,14 @@ public enum IfMachine {
     }
 
     /**
-     * Convert list of IfMachine values to list of string values
-     * @param toConvert The list of IfMachine values to convert
+     * Convert list of IfMachineEnum values to list of string values
+     * @param toConvert The list of IfMachineEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<IfMachine> toConvert) {
+    public static List<String> toValue(List<IfMachineEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (IfMachine enumValue : toConvert) {
+        for (IfMachineEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

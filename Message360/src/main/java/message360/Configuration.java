@@ -55,7 +55,7 @@ public class Configuration {
     public static String getBaseUri(Servers server) {
         StringBuilder baseUrl = new StringBuilder(environmentsMap.get(Configuration.environment).get(server));
         Map<String, Object> parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5115360632890534777L;
+            private static final long serialVersionUID = 4641226234104754455L;
             {
             }
         };
@@ -75,22 +75,22 @@ public class Configuration {
      * Map of all base URLs by environments and server aliases 
      */
     private static EnumMap<Environments, EnumMap<Servers, String>> environmentsMap = new EnumMap<Environments, EnumMap<Servers,String>>(Environments.class) {
-        private static final long serialVersionUID = 4729065773182176467L;
+        private static final long serialVersionUID = 5425958622430286617L;
         {
             put(Environments.PRODUCTION , new EnumMap<Servers, String>(Servers.class) {
-                private static final long serialVersionUID = 4728400039212624025L;
+                private static final long serialVersionUID = 5366717092628942489L;
                 {
-                    put(Servers.DEFAULT, "https://api.message360.com/api/v2");
+                    put(Servers.DEFAULT, "https://api.message360.com/api/v3");
                 }
             });
             put(Environments.PREPRODUCTION , new EnumMap<Servers, String>(Servers.class) {
-                private static final long serialVersionUID = 4889670745842133677L;
+                private static final long serialVersionUID = 4799767786085106742L;
                 {
                     put(Servers.DEFAULT, "https://api-preprod.message360.com/api/v2");
                 }
             });
             put(Environments.DEVELOPMENT , new EnumMap<Servers, String>(Servers.class) {
-                private static final long serialVersionUID = 4909345752748450702L;
+                private static final long serialVersionUID = 5740193433642267391L;
                 {
                     put(Servers.DEFAULT, "https://lara-dev.message360.com/api/v2");
                 }

@@ -12,8 +12,8 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListUsageInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4808429349445111263L;
-    private ProductCode productCode = ProductCode.ALL;
+    private static final long serialVersionUID = 5735046292467345076L;
+    private ProductCodeEnum productCode = ProductCodeEnum.ALL;
     private String startDate = "2016-09-06";
     private String endDate = "2016-09-06";
     private String responseType = "json";
@@ -21,7 +21,7 @@ public class CreateListUsageInput
      * Product Code
      */
     @JsonGetter("ProductCode")
-    public ProductCode getProductCode ( ) { 
+    public ProductCodeEnum getProductCode ( ) { 
         return this.productCode;
     }
     
@@ -29,7 +29,7 @@ public class CreateListUsageInput
      * Product Code
      */
     @JsonSetter("ProductCode")
-    public void setProductCode (ProductCode value) { 
+    public void setProductCode (ProductCodeEnum value) { 
         this.productCode = value;
         notifyObservers(this.productCode);
     }

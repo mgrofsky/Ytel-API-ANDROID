@@ -12,9 +12,9 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateDeleteSubAccountInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5425160298354477137L;
+    private static final long serialVersionUID = 5305436652917037200L;
     private String subAccountSID;
-    private MergeNumberStatus mergeNumber = MergeNumberStatus.DELETE;
+    private MergeNumberStatusEnum mergeNumber = MergeNumberStatusEnum.DELETE;
     private String responseType = "json";
     /** GETTER
      * The SubaccountSid to be deleted
@@ -37,7 +37,7 @@ public class CreateDeleteSubAccountInput
      * 0 to delete or 1 to merge numbers to parent account.
      */
     @JsonGetter("MergeNumber")
-    public MergeNumberStatus getMergeNumber ( ) { 
+    public MergeNumberStatusEnum getMergeNumber ( ) { 
         return this.mergeNumber;
     }
     
@@ -45,7 +45,7 @@ public class CreateDeleteSubAccountInput
      * 0 to delete or 1 to merge numbers to parent account.
      */
     @JsonSetter("MergeNumber")
-    public void setMergeNumber (MergeNumberStatus value) { 
+    public void setMergeNumber (MergeNumberStatusEnum value) { 
         this.mergeNumber = value;
         notifyObservers(this.mergeNumber);
     }

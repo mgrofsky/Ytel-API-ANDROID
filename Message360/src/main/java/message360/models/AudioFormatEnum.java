@@ -9,29 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum NumberType {
-    ALL, //Get all phone Number type
-    VOICE, //Get only voice number type
-    SMS; //Get Only SMs number type
+public enum AudioFormatEnum {
+    MP3, //mp3 file
+    WAV; //wav file
 
-    private static TreeMap<String, NumberType> valueMap = new TreeMap<String, NumberType>();
+    private static TreeMap<String, AudioFormatEnum> valueMap = new TreeMap<String, AudioFormatEnum>();
     private String value;
 
     static {
-        ALL.value = "all";
-        VOICE.value = "voice";
-        SMS.value = "sms";
+        MP3.value = "mp3";
+        WAV.value = "wav";
 
-        valueMap.put("all", ALL);
-        valueMap.put("voice", VOICE);
-        valueMap.put("sms", SMS);
+        valueMap.put("mp3", MP3);
+        valueMap.put("wav", WAV);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static NumberType fromString(String toConvert) {
+    public static AudioFormatEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -52,14 +49,14 @@ public enum NumberType {
     }
 
     /**
-     * Convert list of NumberType values to list of string values
-     * @param toConvert The list of NumberType values to convert
+     * Convert list of AudioFormatEnum values to list of string values
+     * @param toConvert The list of AudioFormatEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<NumberType> toConvert) {
+    public static List<String> toValue(List<AudioFormatEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (NumberType enumValue : toConvert) {
+        for (AudioFormatEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

@@ -9,26 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum HttpAction {
-    GET, //Get type
-    POST; //Post Type
+public enum AudioDirectionEnum {
+    IN, //TODO: Write general description for this element
+    OUT; //TODO: Write general description for this element
 
-    private static TreeMap<String, HttpAction> valueMap = new TreeMap<String, HttpAction>();
+    private static TreeMap<String, AudioDirectionEnum> valueMap = new TreeMap<String, AudioDirectionEnum>();
     private String value;
 
     static {
-        GET.value = "GET";
-        POST.value = "POST";
+        IN.value = "in";
+        OUT.value = "out";
 
-        valueMap.put("GET", GET);
-        valueMap.put("POST", POST);
+        valueMap.put("in", IN);
+        valueMap.put("out", OUT);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static HttpAction fromString(String toConvert) {
+    public static AudioDirectionEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +49,14 @@ public enum HttpAction {
     }
 
     /**
-     * Convert list of HttpAction values to list of string values
-     * @param toConvert The list of HttpAction values to convert
+     * Convert list of AudioDirectionEnum values to list of string values
+     * @param toConvert The list of AudioDirectionEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<HttpAction> toConvert) {
+    public static List<String> toValue(List<AudioDirectionEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (HttpAction enumValue : toConvert) {
+        for (AudioDirectionEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

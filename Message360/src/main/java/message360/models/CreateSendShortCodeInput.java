@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateSendShortCodeInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5763280451783624913L;
+    private static final long serialVersionUID = 5738624126862941130L;
     private String shortcode;
     private String tocountrycode = "1";
     private String to;

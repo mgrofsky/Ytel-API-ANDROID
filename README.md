@@ -279,7 +279,7 @@ void createListInboundShortCodeAsync(
 ```java
 CreateListInboundShortCodeInput collect = new CreateListInboundShortCodeInput();
 
-Integer page = 236;
+Integer page = 149;
 collect.setPage(page);
 
 Integer pagesize = 10;
@@ -339,7 +339,7 @@ void createListShortCodeAsync(
 ```java
 CreateListShortCodeInput collect = new CreateListShortCodeInput();
 
-Integer page = 236;
+Integer page = 149;
 collect.setPage(page);
 
 Integer pagesize = 10;
@@ -400,7 +400,7 @@ CreateListTemplatesInput collect = new CreateListTemplatesInput();
 String type = "authorization";
 collect.setType(type);
 
-Integer page = 236;
+Integer page = 149;
 collect.setPage(page);
 
 Integer pagesize = 10;
@@ -564,16 +564,16 @@ void createListConferenceAsync(
 ```java
 CreateListConferenceInput collect = new CreateListConferenceInput();
 
-Integer page = 236;
+Integer page = 149;
 collect.setPage(page);
 
-Integer pageSize = 236;
+Integer pageSize = 149;
 collect.setPageSize(pageSize);
 
 String friendlyName = "FriendlyName";
 collect.setFriendlyName(friendlyName);
 
-InterruptedCallStatus status = InterruptedCallStatus.fromString("CANCELED");
+InterruptedCallStatusEnum status = InterruptedCallStatusEnum.fromString("CANCELED");
 collect.setStatus(status);
 
 String dateCreated = "DateCreated";
@@ -677,7 +677,7 @@ collect.setConferencesid(conferencesid);
 String participantnumber = "participantnumber";
 collect.setParticipantnumber(participantnumber);
 
-int tocountrycode = 236;
+int tocountrycode = 149;
 collect.setTocountrycode(tocountrycode);
 
 Boolean muted = true;
@@ -734,10 +734,10 @@ CreateListParticipantInput collect = new CreateListParticipantInput();
 String conferenceSid = "ConferenceSid";
 collect.setConferenceSid(conferenceSid);
 
-Integer page = 194;
+Integer page = 149;
 collect.setPage(page);
 
-Integer pagesize = 194;
+Integer pagesize = 149;
 collect.setPagesize(pagesize);
 
 Boolean muted = true;
@@ -1364,7 +1364,7 @@ collect.setTo(to);
 String from = "from";
 collect.setFrom(from);
 
-SendEmailAs type = SendEmailAs.fromString("HTML");
+SendEmailAsEnum type = SendEmailAsEnum.fromString("HTML");
 collect.setType(type);
 
 String subject = "subject";
@@ -1540,10 +1540,10 @@ void createCarrierLookupListAsync(
 ```java
 CreateCarrierLookupListInput collect = new CreateCarrierLookupListInput();
 
-Integer page = 194;
+Integer page = 107;
 collect.setPage(page);
 
-Integer pagesize = 194;
+Integer pagesize = 107;
 collect.setPagesize(pagesize);
 
 String responseType = "json";
@@ -1677,28 +1677,28 @@ collect.setTo(to);
 String url = "Url";
 collect.setUrl(url);
 
-HttpAction method = HttpAction.fromString("GET");
+HttpActionEnum method = HttpActionEnum.fromString("GET");
 collect.setMethod(method);
 
 String statusCallBackUrl = "StatusCallBackUrl";
 collect.setStatusCallBackUrl(statusCallBackUrl);
 
-HttpAction statusCallBackMethod = HttpAction.fromString("GET");
+HttpActionEnum statusCallBackMethod = HttpActionEnum.fromString("GET");
 collect.setStatusCallBackMethod(statusCallBackMethod);
 
 String fallBackUrl = "FallBackUrl";
 collect.setFallBackUrl(fallBackUrl);
 
-HttpAction fallBackMethod = HttpAction.fromString("GET");
+HttpActionEnum fallBackMethod = HttpActionEnum.fromString("GET");
 collect.setFallBackMethod(fallBackMethod);
 
 String heartBeatUrl = "HeartBeatUrl";
 collect.setHeartBeatUrl(heartBeatUrl);
 
-HttpAction heartBeatMethod = HttpAction.fromString("GET");
+HttpActionEnum heartBeatMethod = HttpActionEnum.fromString("GET");
 collect.setHeartBeatMethod(heartBeatMethod);
 
-Integer timeout = 194;
+Integer timeout = 107;
 collect.setTimeout(timeout);
 
 String playDtmf = "PlayDtmf";
@@ -1707,16 +1707,16 @@ collect.setPlayDtmf(playDtmf);
 String hideCallerId = "HideCallerId";
 collect.setHideCallerId(hideCallerId);
 
-Boolean record = true;
+Boolean record = false;
 collect.setRecord(record);
 
 String recordCallBackUrl = "RecordCallBackUrl";
 collect.setRecordCallBackUrl(recordCallBackUrl);
 
-HttpAction recordCallBackMethod = HttpAction.fromString("GET");
+HttpActionEnum recordCallBackMethod = HttpActionEnum.fromString("GET");
 collect.setRecordCallBackMethod(recordCallBackMethod);
 
-Boolean transcribe = true;
+Boolean transcribe = false;
 collect.setTranscribe(transcribe);
 
 String transcribeCallBackUrl = "TranscribeCallBackUrl";
@@ -1772,22 +1772,22 @@ CreateVoiceEffectInput collect = new CreateVoiceEffectInput();
 String callSid = "CallSid";
 collect.setCallSid(callSid);
 
-AudioDirection audioDirection = AudioDirection.fromString("IN");
+AudioDirectionEnum audioDirection = AudioDirectionEnum.fromString("IN");
 collect.setAudioDirection(audioDirection);
 
-Double pitchSemiTones = 194.790064457241;
+Double pitchSemiTones = 107.819889095994;
 collect.setPitchSemiTones(pitchSemiTones);
 
-Double pitchOctaves = 194.790064457241;
+Double pitchOctaves = 107.819889095994;
 collect.setPitchOctaves(pitchOctaves);
 
-Double pitch = 194.790064457241;
+Double pitch = 107.819889095994;
 collect.setPitch(pitch);
 
-Double rate = 194.790064457241;
+Double rate = 107.819889095994;
 collect.setRate(rate);
 
-Double tempo = 194.790064457241;
+Double tempo = 107.819889095994;
 collect.setTempo(tempo);
 
 String responseType = "json";
@@ -1839,19 +1839,19 @@ CreateRecordCallInput collect = new CreateRecordCallInput();
 String callSid = "CallSid";
 collect.setCallSid(callSid);
 
-boolean record = true;
+boolean record = false;
 collect.setRecord(record);
 
-Direction direction = Direction.fromString("IN");
+DirectionEnum direction = DirectionEnum.fromString("IN");
 collect.setDirection(direction);
 
-Integer timeLimit = 194;
+Integer timeLimit = 107;
 collect.setTimeLimit(timeLimit);
 
 String callBackUrl = "CallBackUrl";
 collect.setCallBackUrl(callBackUrl);
 
-AudioFormat fileformat = AudioFormat.fromString("mp3");
+AudioFormatEnum fileformat = AudioFormatEnum.fromString("mp3");
 collect.setFileformat(fileformat);
 
 String responseType = "json";
@@ -1906,16 +1906,16 @@ collect.setCallSid(callSid);
 String audioUrl = "AudioUrl";
 collect.setAudioUrl(audioUrl);
 
-Integer length = 194;
+Integer length = 107;
 collect.setLength(length);
 
-Direction direction = Direction.fromString("IN");
+DirectionEnum direction = DirectionEnum.fromString("IN");
 collect.setDirection(direction);
 
-Boolean loop = true;
+Boolean loop = false;
 collect.setLoop(loop);
 
-Boolean mix = true;
+Boolean mix = false;
 collect.setMix(mix);
 
 String responseType = "json";
@@ -1968,10 +1968,10 @@ collect.setCallSid(callSid);
 String url = "Url";
 collect.setUrl(url);
 
-HttpAction method = HttpAction.fromString("GET");
+HttpActionEnum method = HttpActionEnum.fromString("GET");
 collect.setMethod(method);
 
-InterruptedCallStatus status = InterruptedCallStatus.fromString("CANCELED");
+InterruptedCallStatusEnum status = InterruptedCallStatusEnum.fromString("CANCELED");
 collect.setStatus(status);
 
 String responseType = "json";
@@ -2023,7 +2023,7 @@ collect.setCallSid(callSid);
 String playDtmf = "PlayDtmf";
 collect.setPlayDtmf(playDtmf);
 
-Direction playDtmfDirection = Direction.fromString("IN");
+DirectionEnum playDtmfDirection = DirectionEnum.fromString("IN");
 collect.setPlayDtmfDirection(playDtmfDirection);
 
 String responseType = "json";
@@ -2102,52 +2102,52 @@ collect.setTo(to);
 String url = "Url";
 collect.setUrl(url);
 
-HttpAction method = HttpAction.fromString("GET");
+HttpActionEnum method = HttpActionEnum.fromString("GET");
 collect.setMethod(method);
 
 String statusCallBackUrl = "StatusCallBackUrl";
 collect.setStatusCallBackUrl(statusCallBackUrl);
 
-HttpAction statusCallBackMethod = HttpAction.fromString("GET");
+HttpActionEnum statusCallBackMethod = HttpActionEnum.fromString("GET");
 collect.setStatusCallBackMethod(statusCallBackMethod);
 
 String fallBackUrl = "FallBackUrl";
 collect.setFallBackUrl(fallBackUrl);
 
-HttpAction fallBackMethod = HttpAction.fromString("GET");
+HttpActionEnum fallBackMethod = HttpActionEnum.fromString("GET");
 collect.setFallBackMethod(fallBackMethod);
 
 String heartBeatUrl = "HeartBeatUrl";
 collect.setHeartBeatUrl(heartBeatUrl);
 
-Boolean heartBeatMethod = true;
+Boolean heartBeatMethod = false;
 collect.setHeartBeatMethod(heartBeatMethod);
 
-Integer timeout = 194;
+Integer timeout = 107;
 collect.setTimeout(timeout);
 
 String playDtmf = "PlayDtmf";
 collect.setPlayDtmf(playDtmf);
 
-Boolean hideCallerId = true;
+Boolean hideCallerId = false;
 collect.setHideCallerId(hideCallerId);
 
-Boolean record = true;
+Boolean record = false;
 collect.setRecord(record);
 
 String recordCallBackUrl = "RecordCallBackUrl";
 collect.setRecordCallBackUrl(recordCallBackUrl);
 
-HttpAction recordCallBackMethod = HttpAction.fromString("GET");
+HttpActionEnum recordCallBackMethod = HttpActionEnum.fromString("GET");
 collect.setRecordCallBackMethod(recordCallBackMethod);
 
-Boolean transcribe = true;
+Boolean transcribe = false;
 collect.setTranscribe(transcribe);
 
 String transcribeCallBackUrl = "TranscribeCallBackUrl";
 collect.setTranscribeCallBackUrl(transcribeCallBackUrl);
 
-IfMachine ifMachine = IfMachine.fromString("CONTINUE");
+IfMachineEnum ifMachine = IfMachineEnum.fromString("CONTINUE");
 collect.setIfMachine(ifMachine);
 
 String responseType = "json";
@@ -2195,7 +2195,7 @@ void createListCallsAsync(
 ```java
 CreateListCallsInput collect = new CreateListCallsInput();
 
-Integer page = 194;
+Integer page = 107;
 collect.setPage(page);
 
 Integer pageSize = 10;
@@ -2215,6 +2215,78 @@ collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
 call.createListCallsAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_send_ringless_vm_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createSendRinglessVMAsync") createSendRinglessVMAsync
+
+> API endpoint used to send a Ringless Voicemail
+
+
+```java
+void createSendRinglessVMAsync(
+        final CreateSendRinglessVMInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| fromCountryCode |  ``` Required ```  | From country code |
+| from |  ``` Required ```  | This number to display on Caller ID as calling |
+| toCountryCode |  ``` Required ```  | To country code |
+| to |  ``` Required ```  | To number |
+| voiceMailURL |  ``` Required ```  | URL to an audio file |
+| method |  ``` Required ```  ``` DefaultValue ```  | Not currently used in this version |
+| statusCallBackUrl |  ``` Optional ```  | URL to post the status of the Ringless request |
+| statsCallBackMethod |  ``` Optional ```  | POST or GET |
+| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```java
+CreateSendRinglessVMInput collect = new CreateSendRinglessVMInput();
+
+String fromCountryCode = "FromCountryCode";
+collect.setFromCountryCode(fromCountryCode);
+
+String from = "From";
+collect.setFrom(from);
+
+String toCountryCode = "ToCountryCode";
+collect.setToCountryCode(toCountryCode);
+
+String to = "To";
+collect.setTo(to);
+
+String voiceMailURL = "VoiceMailURL";
+collect.setVoiceMailURL(voiceMailURL);
+
+String method = "GET";
+collect.setMethod(method);
+
+String statusCallBackUrl = "StatusCallBackUrl";
+collect.setStatusCallBackUrl(statusCallBackUrl);
+
+String statsCallBackMethod = "StatsCallBackMethod";
+collect.setStatsCallBackMethod(statsCallBackMethod);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+// Invoking the API call with sample inputs
+call.createSendRinglessVMAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2427,7 +2499,7 @@ CreateSuspendSubAccountInput collect = new CreateSuspendSubAccountInput();
 String subAccountSID = "SubAccountSID";
 collect.setSubAccountSID(subAccountSID);
 
-ActivateStatus activate = ActivateStatus.fromInteger(0);
+ActivateStatusEnum activate = ActivateStatusEnum.fromInteger(0);
 collect.setActivate(activate);
 
 String responseType = "ResponseType";
@@ -2475,7 +2547,7 @@ CreateDeleteSubAccountInput collect = new CreateDeleteSubAccountInput();
 String subAccountSID = "SubAccountSID";
 collect.setSubAccountSID(subAccountSID);
 
-MergeNumberStatus mergeNumber = MergeNumberStatus.fromInteger(0);
+MergeNumberStatusEnum mergeNumber = MergeNumberStatusEnum.fromInteger(0);
 collect.setMergeNumber(mergeNumber);
 
 String responseType = "json";
@@ -2829,37 +2901,37 @@ collect.setFriendlyName(friendlyName);
 String voiceUrl = "VoiceUrl";
 collect.setVoiceUrl(voiceUrl);
 
-HttpAction voiceMethod = HttpAction.fromString("GET");
+HttpActionEnum voiceMethod = HttpActionEnum.fromString("GET");
 collect.setVoiceMethod(voiceMethod);
 
 String voiceFallbackUrl = "VoiceFallbackUrl";
 collect.setVoiceFallbackUrl(voiceFallbackUrl);
 
-HttpAction voiceFallbackMethod = HttpAction.fromString("GET");
+HttpActionEnum voiceFallbackMethod = HttpActionEnum.fromString("GET");
 collect.setVoiceFallbackMethod(voiceFallbackMethod);
 
 String hangupCallback = "HangupCallback";
 collect.setHangupCallback(hangupCallback);
 
-HttpAction hangupCallbackMethod = HttpAction.fromString("GET");
+HttpActionEnum hangupCallbackMethod = HttpActionEnum.fromString("GET");
 collect.setHangupCallbackMethod(hangupCallbackMethod);
 
 String heartbeatUrl = "HeartbeatUrl";
 collect.setHeartbeatUrl(heartbeatUrl);
 
-HttpAction heartbeatMethod = HttpAction.fromString("GET");
+HttpActionEnum heartbeatMethod = HttpActionEnum.fromString("GET");
 collect.setHeartbeatMethod(heartbeatMethod);
 
 String smsUrl = "SmsUrl";
 collect.setSmsUrl(smsUrl);
 
-HttpAction smsMethod = HttpAction.fromString("GET");
+HttpActionEnum smsMethod = HttpActionEnum.fromString("GET");
 collect.setSmsMethod(smsMethod);
 
 String smsFallbackUrl = "SmsFallbackUrl";
 collect.setSmsFallbackUrl(smsFallbackUrl);
 
-HttpAction smsFallbackMethod = HttpAction.fromString("GET");
+HttpActionEnum smsFallbackMethod = HttpActionEnum.fromString("GET");
 collect.setSmsFallbackMethod(smsFallbackMethod);
 
 String responseType = "json";
@@ -3038,13 +3110,13 @@ void createListNumberAsync(
 ```java
 CreateListNumberInput collect = new CreateListNumberInput();
 
-Integer page = 194;
+Integer page = 199;
 collect.setPage(page);
 
 Integer pageSize = 10;
 collect.setPageSize(pageSize);
 
-NumberType numberType = NumberType.fromString("ALL");
+NumberTypeEnum numberType = NumberTypeEnum.fromString("ALL");
 collect.setNumberType(numberType);
 
 String friendlyName = "FriendlyName";
@@ -3093,7 +3165,7 @@ void createAvailablePhoneNumberAsync(
 ```java
 CreateAvailablePhoneNumberInput collect = new CreateAvailablePhoneNumberInput();
 
-NumberType numberType = NumberType.fromString("ALL");
+NumberTypeEnum numberType = NumberTypeEnum.fromString("ALL");
 collect.setNumberType(numberType);
 
 String areaCode = "AreaCode";
@@ -3158,10 +3230,10 @@ void createListRecordingAsync(
 ```java
 CreateListRecordingInput collect = new CreateListRecordingInput();
 
-Integer page = 194;
+Integer page = 199;
 collect.setPage(page);
 
-Integer pageSize = 194;
+Integer pageSize = 199;
 collect.setPageSize(pageSize);
 
 String dateCreated = "DateCreated";
@@ -3314,7 +3386,7 @@ void createListInboundSMSAsync(
 ```java
 CreateListInboundSMSInput collect = new CreateListInboundSMSInput();
 
-Integer page = 194;
+Integer page = 199;
 collect.setPage(page);
 
 String pagesize = "pagesize";
@@ -3371,10 +3443,10 @@ void createListSMSAsync(
 ```java
 CreateListSMSInput collect = new CreateListSMSInput();
 
-Integer page = 31;
+Integer page = 199;
 collect.setPage(page);
 
-Integer pagesize = 31;
+Integer pagesize = 199;
 collect.setPagesize(pagesize);
 
 String from = "from";
@@ -3448,7 +3520,7 @@ collect.setTo(to);
 String body = "body";
 collect.setBody(body);
 
-HttpAction method = HttpAction.fromString("GET");
+HttpActionEnum method = HttpActionEnum.fromString("GET");
 collect.setMethod(method);
 
 String messagestatuscallback = "messagestatuscallback";
@@ -3686,13 +3758,13 @@ void createListTranscriptionAsync(
 ```java
 CreateListTranscriptionInput collect = new CreateListTranscriptionInput();
 
-Integer page = 31;
+Integer page = 199;
 collect.setPage(page);
 
-Integer pageSize = 31;
+Integer pageSize = 199;
 collect.setPageSize(pageSize);
 
-Status status = Status.fromString("INPROGRESS");
+StatusEnum status = StatusEnum.fromString("INPROGRESS");
 collect.setStatus(status);
 
 String dateTranscribed = "DateTranscribed";
@@ -3753,7 +3825,7 @@ void createListUsageAsync(
 ```java
 CreateListUsageInput collect = new CreateListUsageInput();
 
-ProductCode productCode = ProductCode.fromInteger(0);
+ProductCodeEnum productCode = ProductCodeEnum.fromInteger(0);
 collect.setProductCode(productCode);
 
 String startDate = "2016-09-06";

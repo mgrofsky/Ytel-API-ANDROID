@@ -9,26 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum SendEmailAs {
-    TEXT, //Email send as text format
-    HTML; //Email send as HTML format
+public enum HttpActionEnum {
+    GET, //Get type
+    POST; //Post Type
 
-    private static TreeMap<String, SendEmailAs> valueMap = new TreeMap<String, SendEmailAs>();
+    private static TreeMap<String, HttpActionEnum> valueMap = new TreeMap<String, HttpActionEnum>();
     private String value;
 
     static {
-        TEXT.value = "text";
-        HTML.value = "html";
+        GET.value = "GET";
+        POST.value = "POST";
 
-        valueMap.put("text", TEXT);
-        valueMap.put("html", HTML);
+        valueMap.put("GET", GET);
+        valueMap.put("POST", POST);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static SendEmailAs fromString(String toConvert) {
+    public static HttpActionEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +49,14 @@ public enum SendEmailAs {
     }
 
     /**
-     * Convert list of SendEmailAs values to list of string values
-     * @param toConvert The list of SendEmailAs values to convert
+     * Convert list of HttpActionEnum values to list of string values
+     * @param toConvert The list of HttpActionEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<SendEmailAs> toConvert) {
+    public static List<String> toValue(List<HttpActionEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (SendEmailAs enumValue : toConvert) {
+        for (HttpActionEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

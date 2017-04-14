@@ -12,10 +12,10 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListTranscriptionInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5628725878205130891L;
+    private static final long serialVersionUID = 4990913231748100436L;
     private Integer page;
     private Integer pageSize;
-    private Status status;
+    private StatusEnum status;
     private String dateTranscribed;
     private String responseType = "json";
     /** GETTER
@@ -56,7 +56,7 @@ public class CreateListTranscriptionInput
      * TODO: Write general description for this method
      */
     @JsonGetter("Status")
-    public Status getStatus ( ) { 
+    public StatusEnum getStatus ( ) { 
         return this.status;
     }
     
@@ -64,7 +64,7 @@ public class CreateListTranscriptionInput
      * TODO: Write general description for this method
      */
     @JsonSetter("Status")
-    public void setStatus (Status value) { 
+    public void setStatus (StatusEnum value) { 
         this.status = value;
         notifyObservers(this.status);
     }

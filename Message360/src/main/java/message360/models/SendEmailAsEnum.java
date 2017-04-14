@@ -9,26 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum AudioFormat {
-    MP3, //mp3 file
-    WAV; //wav file
+public enum SendEmailAsEnum {
+    TEXT, //Email send as text format
+    HTML; //Email send as HTML format
 
-    private static TreeMap<String, AudioFormat> valueMap = new TreeMap<String, AudioFormat>();
+    private static TreeMap<String, SendEmailAsEnum> valueMap = new TreeMap<String, SendEmailAsEnum>();
     private String value;
 
     static {
-        MP3.value = "mp3";
-        WAV.value = "wav";
+        TEXT.value = "text";
+        HTML.value = "html";
 
-        valueMap.put("mp3", MP3);
-        valueMap.put("wav", WAV);
+        valueMap.put("text", TEXT);
+        valueMap.put("html", HTML);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static AudioFormat fromString(String toConvert) {
+    public static SendEmailAsEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +49,14 @@ public enum AudioFormat {
     }
 
     /**
-     * Convert list of AudioFormat values to list of string values
-     * @param toConvert The list of AudioFormat values to convert
+     * Convert list of SendEmailAsEnum values to list of string values
+     * @param toConvert The list of SendEmailAsEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<AudioFormat> toConvert) {
+    public static List<String> toValue(List<SendEmailAsEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (AudioFormat enumValue : toConvert) {
+        for (SendEmailAsEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

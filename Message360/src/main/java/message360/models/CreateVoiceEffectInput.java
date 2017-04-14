@@ -12,9 +12,9 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateVoiceEffectInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5619056340085201111L;
+    private static final long serialVersionUID = 5574411696213386144L;
     private String callSid;
-    private AudioDirection audioDirection;
+    private AudioDirectionEnum audioDirection;
     private Double pitchSemiTones;
     private Double pitchOctaves;
     private Double pitch;
@@ -42,7 +42,7 @@ public class CreateVoiceEffectInput
      * TODO: Write general description for this method
      */
     @JsonGetter("AudioDirection")
-    public AudioDirection getAudioDirection ( ) { 
+    public AudioDirectionEnum getAudioDirection ( ) { 
         return this.audioDirection;
     }
     
@@ -50,7 +50,7 @@ public class CreateVoiceEffectInput
      * TODO: Write general description for this method
      */
     @JsonSetter("AudioDirection")
-    public void setAudioDirection (AudioDirection value) { 
+    public void setAudioDirection (AudioDirectionEnum value) { 
         this.audioDirection = value;
         notifyObservers(this.audioDirection);
     }

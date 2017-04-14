@@ -9,26 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum AudioDirection {
-    IN, //TODO: Write general description for this element
-    OUT; //TODO: Write general description for this element
+public enum InterruptedCallStatusEnum {
+    CANCELED, //Interrupt Call will be cancel
+    COMPLETED; //Interrupt Call is complete
 
-    private static TreeMap<String, AudioDirection> valueMap = new TreeMap<String, AudioDirection>();
+    private static TreeMap<String, InterruptedCallStatusEnum> valueMap = new TreeMap<String, InterruptedCallStatusEnum>();
     private String value;
 
     static {
-        IN.value = "in";
-        OUT.value = "out";
+        CANCELED.value = "canceled";
+        COMPLETED.value = "completed";
 
-        valueMap.put("in", IN);
-        valueMap.put("out", OUT);
+        valueMap.put("canceled", CANCELED);
+        valueMap.put("completed", COMPLETED);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static AudioDirection fromString(String toConvert) {
+    public static InterruptedCallStatusEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +49,14 @@ public enum AudioDirection {
     }
 
     /**
-     * Convert list of AudioDirection values to list of string values
-     * @param toConvert The list of AudioDirection values to convert
+     * Convert list of InterruptedCallStatusEnum values to list of string values
+     * @param toConvert The list of InterruptedCallStatusEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<AudioDirection> toConvert) {
+    public static List<String> toValue(List<InterruptedCallStatusEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (AudioDirection enumValue : toConvert) {
+        for (InterruptedCallStatusEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

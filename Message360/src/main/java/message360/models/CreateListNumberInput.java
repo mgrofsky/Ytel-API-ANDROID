@@ -12,10 +12,10 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4833382884412310740L;
+    private static final long serialVersionUID = 4698509434358087768L;
     private Integer page;
     private Integer pageSize = 10;
-    private NumberType numberType;
+    private NumberTypeEnum numberType;
     private String friendlyName;
     private String responseType = "json";
     /** GETTER
@@ -56,7 +56,7 @@ public class CreateListNumberInput
      * TODO: Write general description for this method
      */
     @JsonGetter("NumberType")
-    public NumberType getNumberType ( ) { 
+    public NumberTypeEnum getNumberType ( ) { 
         return this.numberType;
     }
     
@@ -64,7 +64,7 @@ public class CreateListNumberInput
      * TODO: Write general description for this method
      */
     @JsonSetter("NumberType")
-    public void setNumberType (NumberType value) { 
+    public void setNumberType (NumberTypeEnum value) { 
         this.numberType = value;
         notifyObservers(this.numberType);
     }

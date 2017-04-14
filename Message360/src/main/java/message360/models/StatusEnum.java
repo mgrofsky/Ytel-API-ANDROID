@@ -9,26 +9,29 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum InterruptedCallStatus {
-    CANCELED, //Interrupt Call will be cancel
-    COMPLETED; //Interrupt Call is complete
+public enum StatusEnum {
+    INPROGRESS, //TODO: Write general description for this element
+    SUCCESS, //TODO: Write general description for this element
+    FAILURE; //TODO: Write general description for this element
 
-    private static TreeMap<String, InterruptedCallStatus> valueMap = new TreeMap<String, InterruptedCallStatus>();
+    private static TreeMap<String, StatusEnum> valueMap = new TreeMap<String, StatusEnum>();
     private String value;
 
     static {
-        CANCELED.value = "canceled";
-        COMPLETED.value = "completed";
+        INPROGRESS.value = "inprogress";
+        SUCCESS.value = "success";
+        FAILURE.value = "failure";
 
-        valueMap.put("canceled", CANCELED);
-        valueMap.put("completed", COMPLETED);
+        valueMap.put("inprogress", INPROGRESS);
+        valueMap.put("success", SUCCESS);
+        valueMap.put("failure", FAILURE);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static InterruptedCallStatus fromString(String toConvert) {
+    public static StatusEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +52,14 @@ public enum InterruptedCallStatus {
     }
 
     /**
-     * Convert list of InterruptedCallStatus values to list of string values
-     * @param toConvert The list of InterruptedCallStatus values to convert
+     * Convert list of StatusEnum values to list of string values
+     * @param toConvert The list of StatusEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<InterruptedCallStatus> toConvert) {
+    public static List<String> toValue(List<StatusEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (InterruptedCallStatus enumValue : toConvert) {
+        for (StatusEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

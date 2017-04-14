@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateAddressInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5400193860651359236L;
+    private static final long serialVersionUID = 5502122725005234138L;
     private String name;
     private String address;
     private String country;
