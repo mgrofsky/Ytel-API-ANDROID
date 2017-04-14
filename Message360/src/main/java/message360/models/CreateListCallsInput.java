@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,9 +12,9 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListCallsInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4988141760843930736L;
+    private static final long serialVersionUID = 4689909587493749395L;
     private Integer page;
-    private Integer pageSize;
+    private Integer pageSize = 10;
     private String to;
     private String from;
     private String dateCreated;

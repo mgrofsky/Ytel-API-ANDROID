@@ -9,17 +9,33 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
-public class CreateListInboundSMSInput 
+public class CreateListTemplatesInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5327762112662740577L;
+    private static final long serialVersionUID = 4829759347189985736L;
+    private String type = "authorization";
     private Integer page;
-    private String pagesize;
-    private String from;
-    private String to;
+    private Integer pagesize = 10;
     private String responseType = "json";
     /** GETTER
-     * Which page of the overall response will be returned. Zero indexed
+     * The type (category) of template Valid values: marketing, authorization
+     */
+    @JsonGetter("type")
+    public String getType ( ) { 
+        return this.type;
+    }
+    
+    /** SETTER
+     * The type (category) of template Valid values: marketing, authorization
+     */
+    @JsonSetter("type")
+    public void setType (String value) { 
+        this.type = value;
+        notifyObservers(this.type);
+    }
+ 
+    /** GETTER
+     * The page count to retrieve from the total results in the collection. Page indexing starts at 1.
      */
     @JsonGetter("page")
     public Integer getPage ( ) { 
@@ -27,7 +43,7 @@ public class CreateListInboundSMSInput
     }
     
     /** SETTER
-     * Which page of the overall response will be returned. Zero indexed
+     * The page count to retrieve from the total results in the collection. Page indexing starts at 1.
      */
     @JsonSetter("page")
     public void setPage (Integer value) { 
@@ -36,54 +52,20 @@ public class CreateListInboundSMSInput
     }
  
     /** GETTER
-     * Number of individual resources listed in the response per page
+     * The count of objects to return per page.
      */
     @JsonGetter("pagesize")
-    public String getPagesize ( ) { 
+    public Integer getPagesize ( ) { 
         return this.pagesize;
     }
     
     /** SETTER
-     * Number of individual resources listed in the response per page
+     * The count of objects to return per page.
      */
     @JsonSetter("pagesize")
-    public void setPagesize (String value) { 
+    public void setPagesize (Integer value) { 
         this.pagesize = value;
         notifyObservers(this.pagesize);
-    }
- 
-    /** GETTER
-     * From Number to Inbound SMS
-     */
-    @JsonGetter("from")
-    public String getFrom ( ) { 
-        return this.from;
-    }
-    
-    /** SETTER
-     * From Number to Inbound SMS
-     */
-    @JsonSetter("from")
-    public void setFrom (String value) { 
-        this.from = value;
-        notifyObservers(this.from);
-    }
- 
-    /** GETTER
-     * To Number to get Inbound SMS
-     */
-    @JsonGetter("to")
-    public String getTo ( ) { 
-        return this.to;
-    }
-    
-    /** SETTER
-     * To Number to get Inbound SMS
-     */
-    @JsonSetter("to")
-    public void setTo (String value) { 
-        this.to = value;
-        notifyObservers(this.to);
     }
  
     /** GETTER

@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,25 +12,25 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateGroupCallInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4726515492576407259L;
+    private static final long serialVersionUID = 4866208527319961668L;
     private String fromCountryCode = "1";
     private String from;
     private String toCountryCode = "1";
     private String to;
     private String url;
-    private HttpAction method;
+    private HttpActionEnum method;
     private String statusCallBackUrl;
-    private HttpAction statusCallBackMethod;
+    private HttpActionEnum statusCallBackMethod;
     private String fallBackUrl;
-    private HttpAction fallBackMethod;
+    private HttpActionEnum fallBackMethod;
     private String heartBeatUrl;
-    private HttpAction heartBeatMethod;
+    private HttpActionEnum heartBeatMethod;
     private Integer timeout;
     private String playDtmf;
     private String hideCallerId;
     private Boolean record;
     private String recordCallBackUrl;
-    private HttpAction recordCallBackMethod;
+    private HttpActionEnum recordCallBackMethod;
     private Boolean transcribe;
     private String transcribeCallBackUrl;
     private String responseType = "json";
@@ -123,7 +123,7 @@ public class CreateGroupCallInput
      * TODO: Write general description for this method
      */
     @JsonGetter("Method")
-    public HttpAction getMethod ( ) { 
+    public HttpActionEnum getMethod ( ) { 
         return this.method;
     }
     
@@ -131,7 +131,7 @@ public class CreateGroupCallInput
      * TODO: Write general description for this method
      */
     @JsonSetter("Method")
-    public void setMethod (HttpAction value) { 
+    public void setMethod (HttpActionEnum value) { 
         this.method = value;
         notifyObservers(this.method);
     }
@@ -157,7 +157,7 @@ public class CreateGroupCallInput
      * TODO: Write general description for this method
      */
     @JsonGetter("StatusCallBackMethod")
-    public HttpAction getStatusCallBackMethod ( ) { 
+    public HttpActionEnum getStatusCallBackMethod ( ) { 
         return this.statusCallBackMethod;
     }
     
@@ -165,7 +165,7 @@ public class CreateGroupCallInput
      * TODO: Write general description for this method
      */
     @JsonSetter("StatusCallBackMethod")
-    public void setStatusCallBackMethod (HttpAction value) { 
+    public void setStatusCallBackMethod (HttpActionEnum value) { 
         this.statusCallBackMethod = value;
         notifyObservers(this.statusCallBackMethod);
     }
@@ -191,7 +191,7 @@ public class CreateGroupCallInput
      * TODO: Write general description for this method
      */
     @JsonGetter("FallBackMethod")
-    public HttpAction getFallBackMethod ( ) { 
+    public HttpActionEnum getFallBackMethod ( ) { 
         return this.fallBackMethod;
     }
     
@@ -199,7 +199,7 @@ public class CreateGroupCallInput
      * TODO: Write general description for this method
      */
     @JsonSetter("FallBackMethod")
-    public void setFallBackMethod (HttpAction value) { 
+    public void setFallBackMethod (HttpActionEnum value) { 
         this.fallBackMethod = value;
         notifyObservers(this.fallBackMethod);
     }
@@ -225,7 +225,7 @@ public class CreateGroupCallInput
      * TODO: Write general description for this method
      */
     @JsonGetter("HeartBeatMethod")
-    public HttpAction getHeartBeatMethod ( ) { 
+    public HttpActionEnum getHeartBeatMethod ( ) { 
         return this.heartBeatMethod;
     }
     
@@ -233,7 +233,7 @@ public class CreateGroupCallInput
      * TODO: Write general description for this method
      */
     @JsonSetter("HeartBeatMethod")
-    public void setHeartBeatMethod (HttpAction value) { 
+    public void setHeartBeatMethod (HttpActionEnum value) { 
         this.heartBeatMethod = value;
         notifyObservers(this.heartBeatMethod);
     }
@@ -327,7 +327,7 @@ public class CreateGroupCallInput
      * TODO: Write general description for this method
      */
     @JsonGetter("RecordCallBackMethod")
-    public HttpAction getRecordCallBackMethod ( ) { 
+    public HttpActionEnum getRecordCallBackMethod ( ) { 
         return this.recordCallBackMethod;
     }
     
@@ -335,7 +335,7 @@ public class CreateGroupCallInput
      * TODO: Write general description for this method
      */
     @JsonSetter("RecordCallBackMethod")
-    public void setRecordCallBackMethod (HttpAction value) { 
+    public void setRecordCallBackMethod (HttpActionEnum value) { 
         this.recordCallBackMethod = value;
         notifyObservers(this.recordCallBackMethod);
     }

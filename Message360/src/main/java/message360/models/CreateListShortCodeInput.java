@@ -9,14 +9,15 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
-public class CreateListInboundSMSInput 
+public class CreateListShortCodeInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5327762112662740577L;
+    private static final long serialVersionUID = 5452618433958588513L;
     private Integer page;
-    private String pagesize;
+    private Integer pagesize = 10;
     private String from;
     private String to;
+    private String datesent;
     private String responseType = "json";
     /** GETTER
      * Which page of the overall response will be returned. Zero indexed
@@ -39,7 +40,7 @@ public class CreateListInboundSMSInput
      * Number of individual resources listed in the response per page
      */
     @JsonGetter("pagesize")
-    public String getPagesize ( ) { 
+    public Integer getPagesize ( ) { 
         return this.pagesize;
     }
     
@@ -47,13 +48,13 @@ public class CreateListInboundSMSInput
      * Number of individual resources listed in the response per page
      */
     @JsonSetter("pagesize")
-    public void setPagesize (String value) { 
+    public void setPagesize (Integer value) { 
         this.pagesize = value;
         notifyObservers(this.pagesize);
     }
  
     /** GETTER
-     * From Number to Inbound SMS
+     * Messages sent from this number
      */
     @JsonGetter("from")
     public String getFrom ( ) { 
@@ -61,7 +62,7 @@ public class CreateListInboundSMSInput
     }
     
     /** SETTER
-     * From Number to Inbound SMS
+     * Messages sent from this number
      */
     @JsonSetter("from")
     public void setFrom (String value) { 
@@ -70,7 +71,7 @@ public class CreateListInboundSMSInput
     }
  
     /** GETTER
-     * To Number to get Inbound SMS
+     * Messages sent to this number
      */
     @JsonGetter("to")
     public String getTo ( ) { 
@@ -78,12 +79,29 @@ public class CreateListInboundSMSInput
     }
     
     /** SETTER
-     * To Number to get Inbound SMS
+     * Messages sent to this number
      */
     @JsonSetter("to")
     public void setTo (String value) { 
         this.to = value;
         notifyObservers(this.to);
+    }
+ 
+    /** GETTER
+     * Only list SMS messages sent in the specified date range
+     */
+    @JsonGetter("datesent")
+    public String getDatesent ( ) { 
+        return this.datesent;
+    }
+    
+    /** SETTER
+     * Only list SMS messages sent in the specified date range
+     */
+    @JsonSetter("datesent")
+    public void setDatesent (String value) { 
+        this.datesent = value;
+        notifyObservers(this.datesent);
     }
  
     /** GETTER

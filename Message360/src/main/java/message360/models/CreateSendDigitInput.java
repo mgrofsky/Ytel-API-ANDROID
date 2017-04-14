@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,10 +12,10 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateSendDigitInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4826504229685230954L;
+    private static final long serialVersionUID = 4659883563875579653L;
     private String callSid;
     private String playDtmf;
-    private Direction playDtmfDirection;
+    private DirectionEnum playDtmfDirection;
     private String responseType = "json";
     /** GETTER
      * The unique identifier of each call resource
@@ -55,7 +55,7 @@ public class CreateSendDigitInput
      * The leg of the call DTMF digits should be sent to
      */
     @JsonGetter("PlayDtmfDirection")
-    public Direction getPlayDtmfDirection ( ) { 
+    public DirectionEnum getPlayDtmfDirection ( ) { 
         return this.playDtmfDirection;
     }
     
@@ -63,7 +63,7 @@ public class CreateSendDigitInput
      * The leg of the call DTMF digits should be sent to
      */
     @JsonSetter("PlayDtmfDirection")
-    public void setPlayDtmfDirection (Direction value) { 
+    public void setPlayDtmfDirection (DirectionEnum value) { 
         this.playDtmfDirection = value;
         notifyObservers(this.playDtmfDirection);
     }

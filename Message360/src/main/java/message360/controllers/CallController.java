@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.controllers;
 
@@ -59,7 +59,7 @@ public class CallController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5049676672539467123L;
+            private static final long serialVersionUID = 5527111866252557941L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -68,7 +68,7 @@ public class CallController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5152529276270959944L;
+            private static final long serialVersionUID = 4926015894048045179L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -76,7 +76,7 @@ public class CallController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4641832575384945659L;
+            private static final long serialVersionUID = 5513613289724815306L;
             {
                     put( "callsid", input.getCallsid() );
             }
@@ -173,7 +173,7 @@ public class CallController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5660984654940044882L;
+            private static final long serialVersionUID = 4781745310505411364L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -182,7 +182,7 @@ public class CallController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4685074411054528649L;
+            private static final long serialVersionUID = 5614813486819174088L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -190,26 +190,26 @@ public class CallController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4874567830549138904L;
+            private static final long serialVersionUID = 5137066269262238354L;
             {
                     put( "FromCountryCode", input.getFromCountryCode() );
                     put( "From", input.getFrom() );
                     put( "ToCountryCode", input.getToCountryCode() );
                     put( "To", input.getTo() );
                     put( "Url", input.getUrl() );
-                    put( "Method", (null != input.getMethod()) ? input.getMethod().value() : null );
+                    put( "Method", (input.getMethod() != null) ? input.getMethod().value() : null );
                     put( "StatusCallBackUrl", input.getStatusCallBackUrl() );
-                    put( "StatusCallBackMethod", (null != input.getStatusCallBackMethod()) ? input.getStatusCallBackMethod().value() : null );
+                    put( "StatusCallBackMethod", (input.getStatusCallBackMethod() != null) ? input.getStatusCallBackMethod().value() : null );
                     put( "FallBackUrl", input.getFallBackUrl() );
-                    put( "FallBackMethod", (null != input.getFallBackMethod()) ? input.getFallBackMethod().value() : null );
+                    put( "FallBackMethod", (input.getFallBackMethod() != null) ? input.getFallBackMethod().value() : null );
                     put( "HeartBeatUrl", input.getHeartBeatUrl() );
-                    put( "HeartBeatMethod", (null != input.getHeartBeatMethod()) ? input.getHeartBeatMethod().value() : null );
+                    put( "HeartBeatMethod", (input.getHeartBeatMethod() != null) ? input.getHeartBeatMethod().value() : null );
                     put( "Timeout", input.getTimeout() );
                     put( "PlayDtmf", input.getPlayDtmf() );
                     put( "HideCallerId", input.getHideCallerId() );
                     put( "Record", input.getRecord() );
                     put( "RecordCallBackUrl", input.getRecordCallBackUrl() );
-                    put( "RecordCallBackMethod", (null != input.getRecordCallBackMethod()) ? input.getRecordCallBackMethod().value() : null );
+                    put( "RecordCallBackMethod", (input.getRecordCallBackMethod() != null) ? input.getRecordCallBackMethod().value() : null );
                     put( "Transcribe", input.getTranscribe() );
                     put( "TranscribeCallBackUrl", input.getTranscribeCallBackUrl() );
             }
@@ -294,7 +294,7 @@ public class CallController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5317353391157314902L;
+            private static final long serialVersionUID = 4951584976305652803L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -303,7 +303,7 @@ public class CallController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5394167372598130265L;
+            private static final long serialVersionUID = 5749030171429579385L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -311,10 +311,10 @@ public class CallController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5104458950359450934L;
+            private static final long serialVersionUID = 4717708513961277939L;
             {
                     put( "CallSid", input.getCallSid() );
-                    put( "AudioDirection", (null != input.getAudioDirection()) ? input.getAudioDirection().value() : null );
+                    put( "AudioDirection", (input.getAudioDirection() != null) ? input.getAudioDirection().value() : null );
                     put( "PitchSemiTones", input.getPitchSemiTones() );
                     put( "PitchOctaves", input.getPitchOctaves() );
                     put( "Pitch", input.getPitch() );
@@ -402,7 +402,7 @@ public class CallController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4866207708222944390L;
+            private static final long serialVersionUID = 5625281785641998113L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -411,7 +411,7 @@ public class CallController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4812611843159143423L;
+            private static final long serialVersionUID = 5010366829817270616L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -419,14 +419,14 @@ public class CallController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4867795030184582555L;
+            private static final long serialVersionUID = 5614659208398761332L;
             {
                     put( "CallSid", input.getCallSid() );
                     put( "Record", input.getRecord() );
-                    put( "Direction", (null != input.getDirection()) ? input.getDirection().value() : null );
+                    put( "Direction", (input.getDirection() != null) ? input.getDirection().value() : null );
                     put( "TimeLimit", input.getTimeLimit() );
                     put( "CallBackUrl", input.getCallBackUrl() );
-                    put( "Fileformat", (null != input.getFileformat()) ? input.getFileformat().value() : null );
+                    put( "Fileformat", (input.getFileformat() != null) ? input.getFileformat().value() : null );
             }
         };
 
@@ -512,7 +512,7 @@ public class CallController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5527961100840074456L;
+            private static final long serialVersionUID = 5753988178363243139L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -521,7 +521,7 @@ public class CallController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5504776832157984660L;
+            private static final long serialVersionUID = 5555405356763084543L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -529,116 +529,14 @@ public class CallController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5390745751463089438L;
+            private static final long serialVersionUID = 4946806822992153833L;
             {
                     put( "CallSid", input.getCallSid() );
                     put( "AudioUrl", input.getAudioUrl() );
                     put( "Length", input.getLength() );
-                    put( "Direction", (null != input.getDirection()) ? input.getDirection().value() : null );
+                    put( "Direction", (input.getDirection() != null) ? input.getDirection().value() : null );
                     put( "Loop", input.getLoop() );
                     put( "Mix", input.getMix() );
-            }
-        };
-
-        //prepare and invoke the API call request to fetch the response
-        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
-                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
-
-        //invoke the callback before request if its not null
-        if (getHttpCallBack() != null)
-        {
-            getHttpCallBack().OnBeforeRequest(_request);
-        }
-
-        //invoke request and get response
-        Runnable _responseTask = new Runnable() {
-            public void run() {
-                //make the API call
-                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
-                    public void onSuccess(HttpContext _context, HttpResponse _response) {
-                        try {
-
-                            //invoke the callback after response if its not null
-                            if (getHttpCallBack() != null)	
-                            {
-                                getHttpCallBack().OnAfterResponse(_context);
-                            }
-
-                            //handle errors defined at the API level
-                            validateResponse(_response, _context);
-
-                            //extract result from the http response
-                            String _result = ((HttpStringResponse)_response).getBody();
-                            //let the caller know of the success
-                            callBack.onSuccess(_context, _result);
-                        } catch (APIException error) {
-                            //let the caller know of the error
-                            callBack.onFailure(_context, error);
-                        } catch (Exception exception) {
-                            //let the caller know of the caught Exception
-                            callBack.onFailure(_context, exception);
-                        }
-                    }
-                    public void onFailure(HttpContext _context, Throwable _error) {
-                        //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
-                            getHttpCallBack().OnAfterResponse(_context);
-                        }
-
-                        //let the caller know of the failure
-                        callBack.onFailure(_context, _error);
-                    }
-                });
-            }
-        };
-
-        //execute async using thread pool
-        APIHelper.getScheduler().execute(_responseTask);
-    }
-
-    /**
-     * A list of calls associated with your Message360 account
-     * @param    CreateListCallsInput    Object containing request parameters
-     * @return    Returns the void response from the API call 
-     */
-    public void createListCallsAsync(
-                final CreateListCallsInput input,
-                final APICallBack<String> callBack
-    ) {
-        //the base uri for api requests
-        String _baseUri = Configuration.getBaseUri();
-        
-        //prepare query string for API call
-        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/calls/listcalls.{ResponseType}");
-
-        //process template parameters
-        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5719380877850263595L;
-            {
-                    put( "ResponseType", input.getResponseType() );
-            }});
-        //validate and preprocess url
-        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
-
-        //load all headers for the outgoing API request
-        Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5754980649946682791L;
-            {
-                    put( "user-agent", "message360-api" );
-            }
-        };
-
-        //load all fields for the outgoing API request
-        Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5143041634551814929L;
-            {
-                    put( "Page", input.getPage() );
-                    put( "PageSize", input.getPageSize() );
-                    put( "To", input.getTo() );
-                    put( "From", input.getFrom() );
-                    put( "DateCreated", input.getDateCreated() );
             }
         };
 
@@ -721,7 +619,7 @@ public class CallController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4766883653282745545L;
+            private static final long serialVersionUID = 4745423782618983283L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -730,7 +628,7 @@ public class CallController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4960837229771146506L;
+            private static final long serialVersionUID = 5334117762580810484L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -738,12 +636,12 @@ public class CallController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5682210605308218617L;
+            private static final long serialVersionUID = 5601756986670169624L;
             {
                     put( "CallSid", input.getCallSid() );
                     put( "Url", input.getUrl() );
-                    put( "Method", (null != input.getMethod()) ? input.getMethod().value() : null );
-                    put( "Status", (null != input.getStatus()) ? input.getStatus().value() : null );
+                    put( "Method", (input.getMethod() != null) ? input.getMethod().value() : null );
+                    put( "Status", (input.getStatus() != null) ? input.getStatus().value() : null );
             }
         };
 
@@ -829,7 +727,7 @@ public class CallController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4823622352930741732L;
+            private static final long serialVersionUID = 5518228449047937568L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -838,7 +736,7 @@ public class CallController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5514527519461164092L;
+            private static final long serialVersionUID = 4628930052826425073L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -846,11 +744,11 @@ public class CallController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5728389713632825856L;
+            private static final long serialVersionUID = 5129510037371798522L;
             {
                     put( "CallSid", input.getCallSid() );
                     put( "PlayDtmf", input.getPlayDtmf() );
-                    put( "PlayDtmfDirection", (null != input.getPlayDtmfDirection()) ? input.getPlayDtmfDirection().value() : null );
+                    put( "PlayDtmfDirection", (input.getPlayDtmfDirection() != null) ? input.getPlayDtmfDirection().value() : null );
             }
         };
 
@@ -945,23 +843,23 @@ public class CallController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4923361763601957146L;
+            private static final long serialVersionUID = 5571863405531291972L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
 
         //process query parameters
         APIHelper.appendUrlWithQueryParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4953200132018562615L;
+            private static final long serialVersionUID = 5035568280251205499L;
             {
-                    put( "Method", (null != input.getMethod()) ? input.getMethod().value() : null );
+                    put( "Method", (input.getMethod() != null) ? input.getMethod().value() : null );
             }});
         //validate and preprocess url
         String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5608473237198332709L;
+            private static final long serialVersionUID = 5475982098088679353L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -969,7 +867,7 @@ public class CallController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5243777968166674329L;
+            private static final long serialVersionUID = 4672568652654574186L;
             {
                     put( "FromCountryCode", input.getFromCountryCode() );
                     put( "From", input.getFrom() );
@@ -977,9 +875,9 @@ public class CallController extends BaseController {
                     put( "To", input.getTo() );
                     put( "Url", input.getUrl() );
                     put( "StatusCallBackUrl", input.getStatusCallBackUrl() );
-                    put( "StatusCallBackMethod", (null != input.getStatusCallBackMethod()) ? input.getStatusCallBackMethod().value() : null );
+                    put( "StatusCallBackMethod", (input.getStatusCallBackMethod() != null) ? input.getStatusCallBackMethod().value() : null );
                     put( "FallBackUrl", input.getFallBackUrl() );
-                    put( "FallBackMethod", (null != input.getFallBackMethod()) ? input.getFallBackMethod().value() : null );
+                    put( "FallBackMethod", (input.getFallBackMethod() != null) ? input.getFallBackMethod().value() : null );
                     put( "HeartBeatUrl", input.getHeartBeatUrl() );
                     put( "HeartBeatMethod", input.getHeartBeatMethod() );
                     put( "Timeout", input.getTimeout() );
@@ -987,10 +885,236 @@ public class CallController extends BaseController {
                     put( "HideCallerId", input.getHideCallerId() );
                     put( "Record", input.getRecord() );
                     put( "RecordCallBackUrl", input.getRecordCallBackUrl() );
-                    put( "RecordCallBackMethod", (null != input.getRecordCallBackMethod()) ? input.getRecordCallBackMethod().value() : null );
+                    put( "RecordCallBackMethod", (input.getRecordCallBackMethod() != null) ? input.getRecordCallBackMethod().value() : null );
                     put( "Transcribe", input.getTranscribe() );
                     put( "TranscribeCallBackUrl", input.getTranscribeCallBackUrl() );
-                    put( "IfMachine", (null != input.getIfMachine()) ? input.getIfMachine().value() : null );
+                    put( "IfMachine", (input.getIfMachine() != null) ? input.getIfMachine().value() : null );
+            }
+        };
+
+        //prepare and invoke the API call request to fetch the response
+        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
+                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
+
+        //invoke the callback before request if its not null
+        if (getHttpCallBack() != null)
+        {
+            getHttpCallBack().OnBeforeRequest(_request);
+        }
+
+        //invoke request and get response
+        Runnable _responseTask = new Runnable() {
+            public void run() {
+                //make the API call
+                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
+                    public void onSuccess(HttpContext _context, HttpResponse _response) {
+                        try {
+
+                            //invoke the callback after response if its not null
+                            if (getHttpCallBack() != null)	
+                            {
+                                getHttpCallBack().OnAfterResponse(_context);
+                            }
+
+                            //handle errors defined at the API level
+                            validateResponse(_response, _context);
+
+                            //extract result from the http response
+                            String _result = ((HttpStringResponse)_response).getBody();
+                            //let the caller know of the success
+                            callBack.onSuccess(_context, _result);
+                        } catch (APIException error) {
+                            //let the caller know of the error
+                            callBack.onFailure(_context, error);
+                        } catch (Exception exception) {
+                            //let the caller know of the caught Exception
+                            callBack.onFailure(_context, exception);
+                        }
+                    }
+                    public void onFailure(HttpContext _context, Throwable _error) {
+                        //invoke the callback after response if its not null
+                        if (getHttpCallBack() != null)	
+                            {
+                            getHttpCallBack().OnAfterResponse(_context);
+                        }
+
+                        //let the caller know of the failure
+                        callBack.onFailure(_context, _error);
+                    }
+                });
+            }
+        };
+
+        //execute async using thread pool
+        APIHelper.getScheduler().execute(_responseTask);
+    }
+
+    /**
+     * A list of calls associated with your Message360 account
+     * @param    CreateListCallsInput    Object containing request parameters
+     * @return    Returns the void response from the API call 
+     */
+    public void createListCallsAsync(
+                final CreateListCallsInput input,
+                final APICallBack<String> callBack
+    ) {
+        //the base uri for api requests
+        String _baseUri = Configuration.getBaseUri();
+        
+        //prepare query string for API call
+        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
+        _queryBuilder.append("/calls/listcalls.{ResponseType}");
+
+        //process template parameters
+        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
+            private static final long serialVersionUID = 4943071607725903294L;
+            {
+                    put( "ResponseType", input.getResponseType() );
+            }});
+        //validate and preprocess url
+        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
+
+        //load all headers for the outgoing API request
+        Map<String, String> _headers = new HashMap<String, String>() {
+            private static final long serialVersionUID = 5393858289956656322L;
+            {
+                    put( "user-agent", "message360-api" );
+            }
+        };
+
+        //load all fields for the outgoing API request
+        Map<String, Object> _parameters = new HashMap<String, Object>() {
+            private static final long serialVersionUID = 5185989870217128474L;
+            {
+                    put( "Page", input.getPage() );
+                    put( "PageSize", input.getPageSize() );
+                    put( "To", input.getTo() );
+                    put( "From", input.getFrom() );
+                    put( "DateCreated", input.getDateCreated() );
+            }
+        };
+
+        //prepare and invoke the API call request to fetch the response
+        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
+                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
+
+        //invoke the callback before request if its not null
+        if (getHttpCallBack() != null)
+        {
+            getHttpCallBack().OnBeforeRequest(_request);
+        }
+
+        //invoke request and get response
+        Runnable _responseTask = new Runnable() {
+            public void run() {
+                //make the API call
+                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
+                    public void onSuccess(HttpContext _context, HttpResponse _response) {
+                        try {
+
+                            //invoke the callback after response if its not null
+                            if (getHttpCallBack() != null)	
+                            {
+                                getHttpCallBack().OnAfterResponse(_context);
+                            }
+
+                            //handle errors defined at the API level
+                            validateResponse(_response, _context);
+
+                            //extract result from the http response
+                            String _result = ((HttpStringResponse)_response).getBody();
+                            //let the caller know of the success
+                            callBack.onSuccess(_context, _result);
+                        } catch (APIException error) {
+                            //let the caller know of the error
+                            callBack.onFailure(_context, error);
+                        } catch (Exception exception) {
+                            //let the caller know of the caught Exception
+                            callBack.onFailure(_context, exception);
+                        }
+                    }
+                    public void onFailure(HttpContext _context, Throwable _error) {
+                        //invoke the callback after response if its not null
+                        if (getHttpCallBack() != null)	
+                            {
+                            getHttpCallBack().OnAfterResponse(_context);
+                        }
+
+                        //let the caller know of the failure
+                        callBack.onFailure(_context, _error);
+                    }
+                });
+            }
+        };
+
+        //execute async using thread pool
+        APIHelper.getScheduler().execute(_responseTask);
+    }
+
+    /**
+     * API endpoint used to send a Ringless Voicemail
+     * @param    CreateSendRinglessVMInput    Object containing request parameters
+     * @return    Returns the void response from the API call 
+     */
+    public void createSendRinglessVMAsync(
+                final CreateSendRinglessVMInput input,
+                final APICallBack<String> callBack
+    ) {
+        //validating required parameters
+        if (null == input.getFromCountryCode())
+            throw new NullPointerException("The property \"FromCountryCode\" in the input object cannot be null.");
+
+        if (null == input.getFrom())
+            throw new NullPointerException("The property \"From\" in the input object cannot be null.");
+
+        if (null == input.getToCountryCode())
+            throw new NullPointerException("The property \"ToCountryCode\" in the input object cannot be null.");
+
+        if (null == input.getTo())
+            throw new NullPointerException("The property \"To\" in the input object cannot be null.");
+
+        if (null == input.getVoiceMailURL())
+            throw new NullPointerException("The property \"VoiceMailURL\" in the input object cannot be null.");
+
+        if (null == input.getMethod())
+            throw new NullPointerException("The property \"Method\" in the input object cannot be null.");
+
+        //the base uri for api requests
+        String _baseUri = Configuration.getBaseUri();
+        
+        //prepare query string for API call
+        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
+        _queryBuilder.append("/calls/makeringlessvoicemailcall.{ResponseType}");
+
+        //process template parameters
+        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
+            private static final long serialVersionUID = 4640372642297897154L;
+            {
+                    put( "ResponseType", input.getResponseType() );
+            }});
+        //validate and preprocess url
+        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
+
+        //load all headers for the outgoing API request
+        Map<String, String> _headers = new HashMap<String, String>() {
+            private static final long serialVersionUID = 5206811822365056679L;
+            {
+                    put( "user-agent", "message360-api" );
+            }
+        };
+
+        //load all fields for the outgoing API request
+        Map<String, Object> _parameters = new HashMap<String, Object>() {
+            private static final long serialVersionUID = 5488824681683274967L;
+            {
+                    put( "FromCountryCode", input.getFromCountryCode() );
+                    put( "From", input.getFrom() );
+                    put( "ToCountryCode", input.getToCountryCode() );
+                    put( "To", input.getTo() );
+                    put( "VoiceMailURL", input.getVoiceMailURL() );
+                    put( "Method", input.getMethod() );
+                    put( "StatusCallBackUrl", input.getStatusCallBackUrl() );
+                    put( "StatsCallBackMethod", input.getStatsCallBackMethod() );
             }
         };
 

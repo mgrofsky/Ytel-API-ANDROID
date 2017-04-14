@@ -9,27 +9,27 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
-public class CreateAudioURLTranscriptionInput 
+public class CreateViewTemplateInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5103661224135103528L;
-    private String audioUrl;
+    private static final long serialVersionUID = 5025554278907290066L;
+    private UUID templateid;
     private String responseType = "json";
     /** GETTER
-     * Audio url
+     * The unique identifier for a template object
      */
-    @JsonGetter("AudioUrl")
-    public String getAudioUrl ( ) { 
-        return this.audioUrl;
+    @JsonGetter("templateid")
+    public UUID getTemplateid ( ) { 
+        return this.templateid;
     }
     
     /** SETTER
-     * Audio url
+     * The unique identifier for a template object
      */
-    @JsonSetter("AudioUrl")
-    public void setAudioUrl (String value) { 
-        this.audioUrl = value;
-        notifyObservers(this.audioUrl);
+    @JsonSetter("templateid")
+    public void setTemplateid (UUID value) { 
+        this.templateid = value;
+        notifyObservers(this.templateid);
     }
  
     /** GETTER

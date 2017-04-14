@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -9,29 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum NumberType {
-    ALL, //Get all phone Number type
-    VOICE, //Get only voice number type
-    SMS; //Get Only SMs number type
+public enum IfMachineEnum {
+    CONTINUE, //TODO: Write general description for this element
+    HANGUP; //TODO: Write general description for this element
 
-    private static TreeMap<String, NumberType> valueMap = new TreeMap<String, NumberType>();
+    private static TreeMap<String, IfMachineEnum> valueMap = new TreeMap<String, IfMachineEnum>();
     private String value;
 
     static {
-        ALL.value = "all";
-        VOICE.value = "voice";
-        SMS.value = "sms";
+        CONTINUE.value = "continue";
+        HANGUP.value = "hangup";
 
-        valueMap.put("all", ALL);
-        valueMap.put("voice", VOICE);
-        valueMap.put("sms", SMS);
+        valueMap.put("continue", CONTINUE);
+        valueMap.put("hangup", HANGUP);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static NumberType fromString(String toConvert) {
+    public static IfMachineEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -52,14 +49,14 @@ public enum NumberType {
     }
 
     /**
-     * Convert list of NumberType values to list of string values
-     * @param toConvert The list of NumberType values to convert
+     * Convert list of IfMachineEnum values to list of string values
+     * @param toConvert The list of IfMachineEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<NumberType> toConvert) {
+    public static List<String> toValue(List<IfMachineEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (NumberType enumValue : toConvert) {
+        for (IfMachineEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

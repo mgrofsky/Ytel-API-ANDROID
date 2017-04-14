@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.controllers;
 
@@ -59,7 +59,7 @@ public class TranscriptionController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4760068532555962269L;
+            private static final long serialVersionUID = 5728140297451248809L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -68,7 +68,7 @@ public class TranscriptionController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4753374943684139786L;
+            private static final long serialVersionUID = 5259292155234825146L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -76,7 +76,7 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5348462010642330972L;
+            private static final long serialVersionUID = 5271224740735123035L;
             {
                     put( "AudioUrl", input.getAudioUrl() );
             }
@@ -161,7 +161,7 @@ public class TranscriptionController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5527618642389087241L;
+            private static final long serialVersionUID = 4956574686096308523L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -170,7 +170,7 @@ public class TranscriptionController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5401211314270984341L;
+            private static final long serialVersionUID = 5370023764951730340L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -178,7 +178,7 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4979319332053295047L;
+            private static final long serialVersionUID = 5392917324130402954L;
             {
                     put( "RecordingSid", input.getRecordingSid() );
             }
@@ -263,7 +263,7 @@ public class TranscriptionController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5299987171351978917L;
+            private static final long serialVersionUID = 5662185906861370232L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -272,7 +272,7 @@ public class TranscriptionController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5056081693989926770L;
+            private static final long serialVersionUID = 5640261874389527068L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -280,7 +280,7 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5348816544873446554L;
+            private static final long serialVersionUID = 5257994259884743412L;
             {
                     put( "TranscriptionSid", input.getTranscriptionSid() );
             }
@@ -361,7 +361,7 @@ public class TranscriptionController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5363782323838848102L;
+            private static final long serialVersionUID = 5040103604833259944L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -370,7 +370,7 @@ public class TranscriptionController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4731981534011357120L;
+            private static final long serialVersionUID = 5612180144160273047L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -378,11 +378,11 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4947028854134233446L;
+            private static final long serialVersionUID = 4836126413193304337L;
             {
                     put( "Page", input.getPage() );
                     put( "PageSize", input.getPageSize() );
-                    put( "Status", (null != input.getStatus()) ? input.getStatus().value() : null );
+                    put( "Status", (input.getStatus() != null) ? input.getStatus().value() : null );
                     put( "DateTranscribed", input.getDateTranscribed() );
             }
         };

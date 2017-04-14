@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,11 +12,11 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreatePlayAudioInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5303304466230475224L;
+    private static final long serialVersionUID = 5743268645049806767L;
     private String callSid;
     private String audioUrl;
     private Integer length;
-    private Direction direction;
+    private DirectionEnum direction;
     private Boolean loop;
     private Boolean mix;
     private String responseType = "json";
@@ -75,7 +75,7 @@ public class CreatePlayAudioInput
      * The leg of the call audio will be played to
      */
     @JsonGetter("Direction")
-    public Direction getDirection ( ) { 
+    public DirectionEnum getDirection ( ) { 
         return this.direction;
     }
     
@@ -83,7 +83,7 @@ public class CreatePlayAudioInput
      * The leg of the call audio will be played to
      */
     @JsonSetter("Direction")
-    public void setDirection (Direction value) { 
+    public void setDirection (DirectionEnum value) { 
         this.direction = value;
         notifyObservers(this.direction);
     }

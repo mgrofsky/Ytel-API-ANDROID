@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -9,26 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum InterruptedCallStatus {
-    CANCELED, //Interrupt Call will be cancel
-    COMPLETED; //Interrupt Call is complete
+public enum HttpActionEnum {
+    GET, //Get type
+    POST; //Post Type
 
-    private static TreeMap<String, InterruptedCallStatus> valueMap = new TreeMap<String, InterruptedCallStatus>();
+    private static TreeMap<String, HttpActionEnum> valueMap = new TreeMap<String, HttpActionEnum>();
     private String value;
 
     static {
-        CANCELED.value = "canceled";
-        COMPLETED.value = "completed";
+        GET.value = "GET";
+        POST.value = "POST";
 
-        valueMap.put("canceled", CANCELED);
-        valueMap.put("completed", COMPLETED);
+        valueMap.put("GET", GET);
+        valueMap.put("POST", POST);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static InterruptedCallStatus fromString(String toConvert) {
+    public static HttpActionEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +49,14 @@ public enum InterruptedCallStatus {
     }
 
     /**
-     * Convert list of InterruptedCallStatus values to list of string values
-     * @param toConvert The list of InterruptedCallStatus values to convert
+     * Convert list of HttpActionEnum values to list of string values
+     * @param toConvert The list of HttpActionEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<InterruptedCallStatus> toConvert) {
+    public static List<String> toValue(List<HttpActionEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (InterruptedCallStatus enumValue : toConvert) {
+        for (HttpActionEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,28 +12,28 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateVerifyAddressInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5688362122621685715L;
-    private String addressid;
+    private static final long serialVersionUID = 4940646947142426993L;
+    private String addressSID;
     private String responseType = "json";
     /** GETTER
      * The identifier of the address to be verified.
      */
-    @JsonGetter("addressid")
-    public String getAddressid ( ) { 
-        return this.addressid;
+    @JsonGetter("AddressSID")
+    public String getAddressSID ( ) { 
+        return this.addressSID;
     }
     
     /** SETTER
      * The identifier of the address to be verified.
      */
-    @JsonSetter("addressid")
-    public void setAddressid (String value) { 
-        this.addressid = value;
-        notifyObservers(this.addressid);
+    @JsonSetter("AddressSID")
+    public void setAddressSID (String value) { 
+        this.addressSID = value;
+        notifyObservers(this.addressSID);
     }
  
     /** GETTER
-     * Response type either JSON or xml
+     * Response type either json or xml
      */
     @JsonGetter("ResponseType")
     public String getResponseType ( ) { 
@@ -41,7 +41,7 @@ public class CreateVerifyAddressInput
     }
     
     /** SETTER
-     * Response type either JSON or xml
+     * Response type either json or xml
      */
     @JsonSetter("ResponseType")
     public void setResponseType (String value) { 

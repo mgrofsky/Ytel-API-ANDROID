@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360;
 
@@ -9,6 +9,14 @@ import message360.controllers.*;
 import message360.http.client.HttpClient;
 
 public class Message360Client {
+    /**
+     * Singleton access to ShortCode controller
+     * @return	Returns the ShortCodeController instance 
+     */
+    public ShortCodeController getShortCode() {
+        return ShortCodeController.getInstance();
+    }
+
     /**
      * Singleton access to Conference controller
      * @return	Returns the ConferenceController instance 
@@ -47,22 +55,6 @@ public class Message360Client {
      */
     public CallController getCall() {
         return CallController.getInstance();
-    }
-
-    /**
-     * Singleton access to SMS controller
-     * @return	Returns the SMSController instance 
-     */
-    public SMSController getSMS() {
-        return SMSController.getInstance();
-    }
-
-    /**
-     * Singleton access to Account controller
-     * @return	Returns the AccountController instance 
-     */
-    public AccountController getAccount() {
-        return AccountController.getInstance();
     }
 
     /**
@@ -106,6 +98,14 @@ public class Message360Client {
     }
 
     /**
+     * Singleton access to SMS controller
+     * @return	Returns the SMSController instance 
+     */
+    public SMSController getSMS() {
+        return SMSController.getInstance();
+    }
+
+    /**
      * Singleton access to Transcription controller
      * @return	Returns the TranscriptionController instance 
      */
@@ -119,6 +119,14 @@ public class Message360Client {
      */
     public UsageController getUsage() {
         return UsageController.getInstance();
+    }
+
+    /**
+     * Singleton access to Account controller
+     * @return	Returns the AccountController instance 
+     */
+    public AccountController getAccount() {
+        return AccountController.getInstance();
     }
 
     /**

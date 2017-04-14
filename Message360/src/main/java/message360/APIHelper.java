@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360;
 
@@ -391,9 +391,9 @@ public class APIHelper {
         //wrapper types are autoboxed, so reference checking is not needed
         if(!isWrapperType(obj.getClass())) {
             //avoid infinite recursion
-            if(processed.contains(obj.hashCode()))
+            if(processed.contains(objName.hashCode()))
                 return;
-            processed.add(obj.hashCode());
+            processed.add(objName.hashCode());
         }
 
         //process arrays

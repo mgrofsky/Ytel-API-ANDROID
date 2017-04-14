@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,24 +12,24 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateDeleteAddressInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4641761042317411728L;
-    private String addressid;
+    private static final long serialVersionUID = 4657908360792046286L;
+    private String addressSID;
     private String responseType = "json";
     /** GETTER
      * The identifier of the address to be deleted.
      */
-    @JsonGetter("addressid")
-    public String getAddressid ( ) { 
-        return this.addressid;
+    @JsonGetter("AddressSID")
+    public String getAddressSID ( ) { 
+        return this.addressSID;
     }
     
     /** SETTER
      * The identifier of the address to be deleted.
      */
-    @JsonSetter("addressid")
-    public void setAddressid (String value) { 
-        this.addressid = value;
-        notifyObservers(this.addressid);
+    @JsonSetter("AddressSID")
+    public void setAddressSID (String value) { 
+        this.addressSID = value;
+        notifyObservers(this.addressSID);
     }
  
     /** GETTER

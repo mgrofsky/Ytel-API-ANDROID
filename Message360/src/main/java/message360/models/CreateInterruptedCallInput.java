@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,11 +12,11 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateInterruptedCallInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5233283141859840022L;
+    private static final long serialVersionUID = 5749166646048494378L;
     private String callSid;
     private String url;
-    private HttpAction method;
-    private InterruptedCallStatus status;
+    private HttpActionEnum method;
+    private InterruptedCallStatusEnum status;
     private String responseType = "json";
     /** GETTER
      * Call SId
@@ -56,7 +56,7 @@ public class CreateInterruptedCallInput
      * The method used to request the above Url parameter
      */
     @JsonGetter("Method")
-    public HttpAction getMethod ( ) { 
+    public HttpActionEnum getMethod ( ) { 
         return this.method;
     }
     
@@ -64,7 +64,7 @@ public class CreateInterruptedCallInput
      * The method used to request the above Url parameter
      */
     @JsonSetter("Method")
-    public void setMethod (HttpAction value) { 
+    public void setMethod (HttpActionEnum value) { 
         this.method = value;
         notifyObservers(this.method);
     }
@@ -73,7 +73,7 @@ public class CreateInterruptedCallInput
      * Status to set the in-progress call to
      */
     @JsonGetter("Status")
-    public InterruptedCallStatus getStatus ( ) { 
+    public InterruptedCallStatusEnum getStatus ( ) { 
         return this.status;
     }
     
@@ -81,7 +81,7 @@ public class CreateInterruptedCallInput
      * Status to set the in-progress call to
      */
     @JsonSetter("Status")
-    public void setStatus (InterruptedCallStatus value) { 
+    public void setStatus (InterruptedCallStatusEnum value) { 
         this.status = value;
         notifyObservers(this.status);
     }

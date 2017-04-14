@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -9,29 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum Status {
-    INPROGRESS, //TODO: Write general description for this element
-    SUCCESS, //TODO: Write general description for this element
-    FAILURE; //TODO: Write general description for this element
+public enum AudioDirectionEnum {
+    IN, //TODO: Write general description for this element
+    OUT; //TODO: Write general description for this element
 
-    private static TreeMap<String, Status> valueMap = new TreeMap<String, Status>();
+    private static TreeMap<String, AudioDirectionEnum> valueMap = new TreeMap<String, AudioDirectionEnum>();
     private String value;
 
     static {
-        INPROGRESS.value = "inprogress";
-        SUCCESS.value = "success";
-        FAILURE.value = "failure";
+        IN.value = "in";
+        OUT.value = "out";
 
-        valueMap.put("inprogress", INPROGRESS);
-        valueMap.put("success", SUCCESS);
-        valueMap.put("failure", FAILURE);
+        valueMap.put("in", IN);
+        valueMap.put("out", OUT);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static Status fromString(String toConvert) {
+    public static AudioDirectionEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -52,14 +49,14 @@ public enum Status {
     }
 
     /**
-     * Convert list of Status values to list of string values
-     * @param toConvert The list of Status values to convert
+     * Convert list of AudioDirectionEnum values to list of string values
+     * @param toConvert The list of AudioDirectionEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<Status> toConvert) {
+    public static List<String> toValue(List<AudioDirectionEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (Status enumValue : toConvert) {
+        for (AudioDirectionEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

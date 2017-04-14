@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -9,26 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public enum HttpAction {
-    GET, //Get type
-    POST; //Post Type
+public enum AudioFormatEnum {
+    MP3, //mp3 file
+    WAV; //wav file
 
-    private static TreeMap<String, HttpAction> valueMap = new TreeMap<String, HttpAction>();
+    private static TreeMap<String, AudioFormatEnum> valueMap = new TreeMap<String, AudioFormatEnum>();
     private String value;
 
     static {
-        GET.value = "GET";
-        POST.value = "POST";
+        MP3.value = "mp3";
+        WAV.value = "wav";
 
-        valueMap.put("GET", GET);
-        valueMap.put("POST", POST);
+        valueMap.put("mp3", MP3);
+        valueMap.put("wav", WAV);
     }
 
     /**
      * Returns the enum member associated with the given string value
      * @return The enum member against the given string value */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static HttpAction fromString(String toConvert) {
+    public static AudioFormatEnum fromString(String toConvert) {
         return valueMap.get(toConvert);
     }
 
@@ -49,14 +49,14 @@ public enum HttpAction {
     }
 
     /**
-     * Convert list of HttpAction values to list of string values
-     * @param toConvert The list of HttpAction values to convert
+     * Convert list of AudioFormatEnum values to list of string values
+     * @param toConvert The list of AudioFormatEnum values to convert
      * @return List of representative string values */
-    public static List<String> toValue(List<HttpAction> toConvert) {
+    public static List<String> toValue(List<AudioFormatEnum> toConvert) {
         if(toConvert == null)
             return null;
         List<String> convertedValues = new ArrayList<String>();
-        for (HttpAction enumValue : toConvert) {
+        for (AudioFormatEnum enumValue : toConvert) {
             convertedValues.add(enumValue.value);
         }
         return convertedValues;

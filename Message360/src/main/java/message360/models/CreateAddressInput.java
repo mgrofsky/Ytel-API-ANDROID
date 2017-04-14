@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateAddressInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5236435620586402610L;
+    private static final long serialVersionUID = 5502122725005234138L;
     private String name;
     private String address;
     private String country;
@@ -26,7 +26,7 @@ public class CreateAddressInput
     /** GETTER
      * Name of user
      */
-    @JsonGetter("name")
+    @JsonGetter("Name")
     public String getName ( ) { 
         return this.name;
     }
@@ -34,7 +34,7 @@ public class CreateAddressInput
     /** SETTER
      * Name of user
      */
-    @JsonSetter("name")
+    @JsonSetter("Name")
     public void setName (String value) { 
         this.name = value;
         notifyObservers(this.name);
@@ -43,7 +43,7 @@ public class CreateAddressInput
     /** GETTER
      * Address of user.
      */
-    @JsonGetter("address")
+    @JsonGetter("Address")
     public String getAddress ( ) { 
         return this.address;
     }
@@ -51,7 +51,7 @@ public class CreateAddressInput
     /** SETTER
      * Address of user.
      */
-    @JsonSetter("address")
+    @JsonSetter("Address")
     public void setAddress (String value) { 
         this.address = value;
         notifyObservers(this.address);
@@ -60,7 +60,7 @@ public class CreateAddressInput
     /** GETTER
      * Must be a 2 letter country short-name code (ISO 3166)
      */
-    @JsonGetter("country")
+    @JsonGetter("Country")
     public String getCountry ( ) { 
         return this.country;
     }
@@ -68,7 +68,7 @@ public class CreateAddressInput
     /** SETTER
      * Must be a 2 letter country short-name code (ISO 3166)
      */
-    @JsonSetter("country")
+    @JsonSetter("Country")
     public void setCountry (String value) { 
         this.country = value;
         notifyObservers(this.country);
@@ -77,7 +77,7 @@ public class CreateAddressInput
     /** GETTER
      * Must be a 2 letter State eg. CA for US. For Some Countries it can be greater than 2 letters.
      */
-    @JsonGetter("state")
+    @JsonGetter("State")
     public String getState ( ) { 
         return this.state;
     }
@@ -85,7 +85,7 @@ public class CreateAddressInput
     /** SETTER
      * Must be a 2 letter State eg. CA for US. For Some Countries it can be greater than 2 letters.
      */
-    @JsonSetter("state")
+    @JsonSetter("State")
     public void setState (String value) { 
         this.state = value;
         notifyObservers(this.state);
@@ -94,7 +94,7 @@ public class CreateAddressInput
     /** GETTER
      * City Name.
      */
-    @JsonGetter("city")
+    @JsonGetter("City")
     public String getCity ( ) { 
         return this.city;
     }
@@ -102,7 +102,7 @@ public class CreateAddressInput
     /** SETTER
      * City Name.
      */
-    @JsonSetter("city")
+    @JsonSetter("City")
     public void setCity (String value) { 
         this.city = value;
         notifyObservers(this.city);
@@ -111,7 +111,7 @@ public class CreateAddressInput
     /** GETTER
      * Zip code of city.
      */
-    @JsonGetter("zip")
+    @JsonGetter("Zip")
     public String getZip ( ) { 
         return this.zip;
     }
@@ -119,7 +119,7 @@ public class CreateAddressInput
     /** SETTER
      * Zip code of city.
      */
-    @JsonSetter("zip")
+    @JsonSetter("Zip")
     public void setZip (String value) { 
         this.zip = value;
         notifyObservers(this.zip);
@@ -128,7 +128,7 @@ public class CreateAddressInput
     /** GETTER
      * Description of addresses.
      */
-    @JsonGetter("description")
+    @JsonGetter("Description")
     public String getDescription ( ) { 
         return this.description;
     }
@@ -136,7 +136,7 @@ public class CreateAddressInput
     /** SETTER
      * Description of addresses.
      */
-    @JsonSetter("description")
+    @JsonSetter("Description")
     public void setDescription (String value) { 
         this.description = value;
         notifyObservers(this.description);
@@ -162,7 +162,7 @@ public class CreateAddressInput
     /** GETTER
      * Phone number of user.
      */
-    @JsonGetter("phone")
+    @JsonGetter("Phone")
     public String getPhone ( ) { 
         return this.phone;
     }
@@ -170,14 +170,14 @@ public class CreateAddressInput
     /** SETTER
      * Phone number of user.
      */
-    @JsonSetter("phone")
+    @JsonSetter("Phone")
     public void setPhone (String value) { 
         this.phone = value;
         notifyObservers(this.phone);
     }
  
     /** GETTER
-     * Response Type Either json or xml
+     * Response type either json or xml
      */
     @JsonGetter("ResponseType")
     public String getResponseType ( ) { 
@@ -185,7 +185,7 @@ public class CreateAddressInput
     }
     
     /** SETTER
-     * Response Type Either json or xml
+     * Response type either json or xml
      */
     @JsonSetter("ResponseType")
     public void setResponseType (String value) { 

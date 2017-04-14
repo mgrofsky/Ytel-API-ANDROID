@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.models;
 
@@ -12,16 +12,16 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateAvailablePhoneNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5718637328141253804L;
-    private NumberType numberType;
+    private static final long serialVersionUID = 4949688399388858358L;
+    private NumberTypeEnum numberType;
     private String areaCode;
-    private Integer pageSize;
+    private Integer pageSize = 10;
     private String responseType = "json";
     /** GETTER
      * Number type either SMS,Voice or all
      */
     @JsonGetter("NumberType")
-    public NumberType getNumberType ( ) { 
+    public NumberTypeEnum getNumberType ( ) { 
         return this.numberType;
     }
     
@@ -29,7 +29,7 @@ public class CreateAvailablePhoneNumberInput
      * Number type either SMS,Voice or all
      */
     @JsonSetter("NumberType")
-    public void setNumberType (NumberType value) { 
+    public void setNumberType (NumberTypeEnum value) { 
         this.numberType = value;
         notifyObservers(this.numberType);
     }

@@ -1,7 +1,7 @@
 /*
  * Message360
  *
- * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ) on 12/12/2016
+ * This file was automatically generated for message360 by APIMATIC v2.0 ( https://apimatic.io ).
  */
 package message360.controllers;
 
@@ -59,7 +59,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5188599737239682949L;
+            private static final long serialVersionUID = 4895850660605771518L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -68,7 +68,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4894306402006489655L;
+            private static final long serialVersionUID = 5663420893050063480L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -76,7 +76,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5467399931112237501L;
+            private static final long serialVersionUID = 5278077821313688110L;
             {
                     put( "email", input.getEmail() );
             }
@@ -157,7 +157,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5151644091968926830L;
+            private static final long serialVersionUID = 5645323244126930428L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -166,7 +166,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5026461256008204124L;
+            private static final long serialVersionUID = 4944974496532956184L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -174,7 +174,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5311521964137541839L;
+            private static final long serialVersionUID = 5693706847384711595L;
             {
                     put( "offset", input.getOffset() );
                     put( "limit", input.getLimit() );
@@ -256,7 +256,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4626073531597354105L;
+            private static final long serialVersionUID = 4907732153618486882L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -265,7 +265,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5471172902543461136L;
+            private static final long serialVersionUID = 5151451000212117058L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -273,7 +273,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4658795332200503399L;
+            private static final long serialVersionUID = 5095437239362903957L;
             {
                     put( "offset", input.getOffset() );
                     put( "limit", input.getLimit() );
@@ -355,7 +355,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5273696233844377396L;
+            private static final long serialVersionUID = 4789444409890293323L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -364,7 +364,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5553346272541648634L;
+            private static final long serialVersionUID = 4790986767093402459L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -372,7 +372,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5405161643181096836L;
+            private static final long serialVersionUID = 4698947688213205909L;
             {
                     put( "offset", input.getOffset() );
                     put( "limit", input.getLimit() );
@@ -458,7 +458,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4903059025964164793L;
+            private static final long serialVersionUID = 4763314064513118402L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -467,7 +467,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5225887111612598361L;
+            private static final long serialVersionUID = 5193147820621192664L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -475,7 +475,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5056587687444860659L;
+            private static final long serialVersionUID = 4764530960644278930L;
             {
                     put( "email", input.getEmail() );
             }
@@ -556,7 +556,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5744970273346777928L;
+            private static final long serialVersionUID = 5397399409766378960L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -565,7 +565,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5652005219575905470L;
+            private static final long serialVersionUID = 4637009471463323759L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -573,7 +573,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5279125739440621835L;
+            private static final long serialVersionUID = 5591391489555952893L;
             {
                     put( "offet", input.getOffet() );
                     put( "limit", input.getLimit() );
@@ -655,7 +655,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4952782416802154371L;
+            private static final long serialVersionUID = 5575308747026392630L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -664,7 +664,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5512846402995369202L;
+            private static final long serialVersionUID = 4894948140991825214L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -672,7 +672,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5419795656581762334L;
+            private static final long serialVersionUID = 5526803617567109313L;
             {
                     put( "offset", input.getOffset() );
                     put( "limit", input.getLimit() );
@@ -758,7 +758,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4639064019452423689L;
+            private static final long serialVersionUID = 5584590899718263847L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -767,7 +767,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5605103512552548819L;
+            private static final long serialVersionUID = 5259431937254138695L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -775,7 +775,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5046404796104035225L;
+            private static final long serialVersionUID = 5695471817790193673L;
             {
                     put( "email", input.getEmail() );
             }
@@ -860,7 +860,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4625069586008268641L;
+            private static final long serialVersionUID = 5111401741441847943L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -869,7 +869,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5199578443591651524L;
+            private static final long serialVersionUID = 5763430845341791887L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -877,7 +877,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5156401334655539212L;
+            private static final long serialVersionUID = 4690159809186941607L;
             {
                     put( "email", input.getEmail() );
             }
@@ -962,7 +962,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4822171952279010557L;
+            private static final long serialVersionUID = 5031724625957604494L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -971,7 +971,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5542622088736029844L;
+            private static final long serialVersionUID = 5383597623791302119L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -979,7 +979,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5206637055813826651L;
+            private static final long serialVersionUID = 5117904002080014743L;
             {
                     put( "email", input.getEmail() );
             }
@@ -1064,7 +1064,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4666073955845948365L;
+            private static final long serialVersionUID = 5101878392122596479L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -1073,7 +1073,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4997654511999573626L;
+            private static final long serialVersionUID = 4830087662651489249L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -1081,7 +1081,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5581289178301242949L;
+            private static final long serialVersionUID = 5145575585813538363L;
             {
                     put( "email", input.getEmail() );
             }
@@ -1178,7 +1178,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5308290512645567743L;
+            private static final long serialVersionUID = 5036616644963931010L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -1187,7 +1187,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4771099736371624263L;
+            private static final long serialVersionUID = 5518115118828759325L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -1195,11 +1195,11 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4906306819686641266L;
+            private static final long serialVersionUID = 5659201854102356691L;
             {
                     put( "to", input.getTo() );
                     put( "from", input.getFrom() );
-                    put( "type", (null != input.getType()) ? input.getType().value() : "html" );
+                    put( "type", (input.getType() != null) ? input.getType().value() : "html" );
                     put( "subject", input.getSubject() );
                     put( "message", input.getMessage() );
                     put( "cc", input.getCc() );
