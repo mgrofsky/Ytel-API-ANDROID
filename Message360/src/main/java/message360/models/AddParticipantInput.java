@@ -12,13 +12,13 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class AddParticipantInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5750568670926715937L;
+    private static final long serialVersionUID = 4778484784909548728L;
     private String conferencesid;
     private String participantnumber;
     private int tocountrycode;
+    private String responseType = "json";
     private Boolean muted;
     private Boolean deaf;
-    private String responseType = "json";
     /** GETTER
      * Unique Conference Sid
      */
@@ -71,6 +71,23 @@ public class AddParticipantInput
     }
  
     /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
+    }
+ 
+    /** GETTER
      * TODO: Write general description for this method
      */
     @JsonGetter("muted")
@@ -102,23 +119,6 @@ public class AddParticipantInput
     public void setDeaf (Boolean value) { 
         this.deaf = value;
         notifyObservers(this.deaf);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

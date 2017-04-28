@@ -12,12 +12,29 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListTranscriptionInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4990913231748100436L;
+    private static final long serialVersionUID = 5603278187505407220L;
+    private String responseType = "json";
     private Integer page;
     private Integer pageSize;
     private StatusEnum status;
     private String dateTranscribed;
-    private String responseType = "json";
+    /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
+    }
+ 
     /** GETTER
      * TODO: Write general description for this method
      */
@@ -84,23 +101,6 @@ public class CreateListTranscriptionInput
     public void setDateTranscribed (String value) { 
         this.dateTranscribed = value;
         notifyObservers(this.dateTranscribed);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

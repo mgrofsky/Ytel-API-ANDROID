@@ -12,11 +12,11 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateAvailablePhoneNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4949688399388858358L;
+    private static final long serialVersionUID = 4843337502998984033L;
     private NumberTypeEnum numberType;
     private String areaCode;
-    private Integer pageSize = 10;
     private String responseType = "json";
+    private Integer pageSize = 10;
     /** GETTER
      * Number type either SMS,Voice or all
      */
@@ -52,23 +52,6 @@ public class CreateAvailablePhoneNumberInput
     }
  
     /** GETTER
-     * Page Size
-     */
-    @JsonGetter("PageSize")
-    public Integer getPageSize ( ) { 
-        return this.pageSize;
-    }
-    
-    /** SETTER
-     * Page Size
-     */
-    @JsonSetter("PageSize")
-    public void setPageSize (Integer value) { 
-        this.pageSize = value;
-        notifyObservers(this.pageSize);
-    }
- 
-    /** GETTER
      * Response type format xml or json
      */
     @JsonGetter("ResponseType")
@@ -83,6 +66,23 @@ public class CreateAvailablePhoneNumberInput
     public void setResponseType (String value) { 
         this.responseType = value;
         notifyObservers(this.responseType);
+    }
+ 
+    /** GETTER
+     * Page Size
+     */
+    @JsonGetter("PageSize")
+    public Integer getPageSize ( ) { 
+        return this.pageSize;
+    }
+    
+    /** SETTER
+     * Page Size
+     */
+    @JsonSetter("PageSize")
+    public void setPageSize (Integer value) { 
+        this.pageSize = value;
+        notifyObservers(this.pageSize);
     }
  
 }

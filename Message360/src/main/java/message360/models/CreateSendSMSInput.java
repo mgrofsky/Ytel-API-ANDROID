@@ -12,15 +12,15 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateSendSMSInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4689580529073305395L;
+    private static final long serialVersionUID = 5237379827803243507L;
     private int fromcountrycode = 1;
     private String from;
     private int tocountrycode = 1;
     private String to;
     private String body;
+    private String responseType = "json";
     private HttpActionEnum method;
     private String messagestatuscallback;
-    private String responseType = "json";
     /** GETTER
      * From Country Code
      */
@@ -107,6 +107,23 @@ public class CreateSendSMSInput
     }
  
     /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
+    }
+ 
+    /** GETTER
      * Specifies the HTTP method used to request the required URL once SMS sent.
      */
     @JsonGetter("method")
@@ -138,23 +155,6 @@ public class CreateSendSMSInput
     public void setMessagestatuscallback (String value) { 
         this.messagestatuscallback = value;
         notifyObservers(this.messagestatuscallback);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

@@ -12,12 +12,13 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateGroupCallInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4866208527319961668L;
+    private static final long serialVersionUID = 5220313571062083438L;
     private String fromCountryCode = "1";
     private String from;
     private String toCountryCode = "1";
     private String to;
     private String url;
+    private String responseType = "json";
     private HttpActionEnum method;
     private String statusCallBackUrl;
     private HttpActionEnum statusCallBackMethod;
@@ -33,7 +34,6 @@ public class CreateGroupCallInput
     private HttpActionEnum recordCallBackMethod;
     private Boolean transcribe;
     private String transcribeCallBackUrl;
-    private String responseType = "json";
     /** GETTER
      * TODO: Write general description for this method
      */
@@ -117,6 +117,23 @@ public class CreateGroupCallInput
     public void setUrl (String value) { 
         this.url = value;
         notifyObservers(this.url);
+    }
+ 
+    /** GETTER
+     * TODO: Write general description for this method
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * TODO: Write general description for this method
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
     }
  
     /** GETTER
@@ -372,23 +389,6 @@ public class CreateGroupCallInput
     public void setTranscribeCallBackUrl (String value) { 
         this.transcribeCallBackUrl = value;
         notifyObservers(this.transcribeCallBackUrl);
-    }
- 
-    /** GETTER
-     * TODO: Write general description for this method
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * TODO: Write general description for this method
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

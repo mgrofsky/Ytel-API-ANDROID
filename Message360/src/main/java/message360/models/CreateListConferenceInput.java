@@ -12,14 +12,31 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListConferenceInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5009312406264380424L;
+    private static final long serialVersionUID = 5043807712052525149L;
+    private String responseType = "json";
     private Integer page;
     private Integer pageSize;
     private String friendlyName;
     private InterruptedCallStatusEnum status;
     private String dateCreated;
     private String dateUpdated;
-    private String responseType = "json";
+    /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
+    }
+ 
     /** GETTER
      * Which page of the overall response will be returned. Zero indexed
      */
@@ -120,23 +137,6 @@ public class CreateListConferenceInput
     public void setDateUpdated (String value) { 
         this.dateUpdated = value;
         notifyObservers(this.dateUpdated);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

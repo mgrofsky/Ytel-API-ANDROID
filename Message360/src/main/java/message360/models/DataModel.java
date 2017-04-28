@@ -9,44 +9,44 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
-public class CreateDeleteInvalidInput 
+public class DataModel 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5596108205209798984L;
-    private String email;
-    private String responseType = "json";
+    private static final long serialVersionUID = 5206971904148240691L;
+    private String companyname;
+    private int otpcode;
     /** GETTER
      * TODO: Write general description for this method
      */
-    @JsonGetter("email")
-    public String getEmail ( ) { 
-        return this.email;
+    @JsonGetter("companyname")
+    public String getCompanyname ( ) { 
+        return this.companyname;
     }
     
     /** SETTER
      * TODO: Write general description for this method
      */
-    @JsonSetter("email")
-    public void setEmail (String value) { 
-        this.email = value;
-        notifyObservers(this.email);
+    @JsonSetter("companyname")
+    public void setCompanyname (String value) { 
+        this.companyname = value;
+        notifyObservers(this.companyname);
     }
  
     /** GETTER
      * TODO: Write general description for this method
      */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
+    @JsonGetter("otpcode")
+    public int getOtpcode ( ) { 
+        return this.otpcode;
     }
     
     /** SETTER
      * TODO: Write general description for this method
      */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
+    @JsonSetter("otpcode")
+    public void setOtpcode (int value) { 
+        this.otpcode = value;
+        notifyObservers(this.otpcode);
     }
  
 }

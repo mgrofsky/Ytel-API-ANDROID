@@ -12,11 +12,11 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateSendDigitInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4659883563875579653L;
+    private static final long serialVersionUID = 5637424851722207909L;
     private String callSid;
     private String playDtmf;
-    private DirectionEnum playDtmfDirection;
     private String responseType = "json";
+    private DirectionEnum playDtmfDirection;
     /** GETTER
      * The unique identifier of each call resource
      */
@@ -52,23 +52,6 @@ public class CreateSendDigitInput
     }
  
     /** GETTER
-     * The leg of the call DTMF digits should be sent to
-     */
-    @JsonGetter("PlayDtmfDirection")
-    public DirectionEnum getPlayDtmfDirection ( ) { 
-        return this.playDtmfDirection;
-    }
-    
-    /** SETTER
-     * The leg of the call DTMF digits should be sent to
-     */
-    @JsonSetter("PlayDtmfDirection")
-    public void setPlayDtmfDirection (DirectionEnum value) { 
-        this.playDtmfDirection = value;
-        notifyObservers(this.playDtmfDirection);
-    }
- 
-    /** GETTER
      * Response type format xml or json
      */
     @JsonGetter("ResponseType")
@@ -83,6 +66,23 @@ public class CreateSendDigitInput
     public void setResponseType (String value) { 
         this.responseType = value;
         notifyObservers(this.responseType);
+    }
+ 
+    /** GETTER
+     * The leg of the call DTMF digits should be sent to
+     */
+    @JsonGetter("PlayDtmfDirection")
+    public DirectionEnum getPlayDtmfDirection ( ) { 
+        return this.playDtmfDirection;
+    }
+    
+    /** SETTER
+     * The leg of the call DTMF digits should be sent to
+     */
+    @JsonSetter("PlayDtmfDirection")
+    public void setPlayDtmfDirection (DirectionEnum value) { 
+        this.playDtmfDirection = value;
+        notifyObservers(this.playDtmfDirection);
     }
  
 }

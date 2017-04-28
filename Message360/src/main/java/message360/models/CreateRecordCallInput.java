@@ -12,14 +12,14 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateRecordCallInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4629140057589954332L;
+    private static final long serialVersionUID = 5198005744938784855L;
     private String callSid;
     private boolean record;
+    private String responseType = "json";
     private DirectionEnum direction;
     private Integer timeLimit;
     private String callBackUrl;
     private AudioFormatEnum fileformat;
-    private String responseType = "json";
     /** GETTER
      * The unique identifier of each call resource
      */
@@ -52,6 +52,23 @@ public class CreateRecordCallInput
     public void setRecord (boolean value) { 
         this.record = value;
         notifyObservers(this.record);
+    }
+ 
+    /** GETTER
+     * Response format, xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response format, xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
     }
  
     /** GETTER
@@ -120,23 +137,6 @@ public class CreateRecordCallInput
     public void setFileformat (AudioFormatEnum value) { 
         this.fileformat = value;
         notifyObservers(this.fileformat);
-    }
- 
-    /** GETTER
-     * Response format, xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response format, xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

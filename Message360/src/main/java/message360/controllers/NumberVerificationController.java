@@ -53,6 +53,9 @@ public class NumberVerificationController extends BaseController {
         if (null == input.getType())
             throw new NullPointerException("The property \"Type\" in the input object cannot be null.");
 
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -62,7 +65,7 @@ public class NumberVerificationController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4680735802656337115L;
+            private static final long serialVersionUID = 4877868877847145286L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -71,7 +74,7 @@ public class NumberVerificationController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5288005842570943397L;
+            private static final long serialVersionUID = 5012341903762539233L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -79,7 +82,7 @@ public class NumberVerificationController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4795278976064903259L;
+            private static final long serialVersionUID = 4929849293514397197L;
             {
                     put( "phonenumber", input.getPhonenumber() );
                     put( "type", input.getType() );

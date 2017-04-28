@@ -12,13 +12,30 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListShortCodeInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5452618433958588513L;
+    private static final long serialVersionUID = 5344931900646349783L;
+    private String responseType = "json";
     private Integer page;
     private Integer pagesize = 10;
     private String from;
     private String to;
     private String datesent;
-    private String responseType = "json";
+    /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
+    }
+ 
     /** GETTER
      * Which page of the overall response will be returned. Zero indexed
      */
@@ -102,23 +119,6 @@ public class CreateListShortCodeInput
     public void setDatesent (String value) { 
         this.datesent = value;
         notifyObservers(this.datesent);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

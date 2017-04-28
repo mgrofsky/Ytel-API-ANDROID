@@ -115,16 +115,16 @@ Message360Client client = new Message360Client(basicAuthUserName, basicAuthPassw
 
 * [ShortCodeController](#short_code_controller)
 * [ConferenceController](#conference_controller)
-* [EmailController](#email_controller)
 * [NumberVerificationController](#number_verification_controller)
-* [CarrierController](#carrier_controller)
-* [CallController](#call_controller)
 * [WebRTCController](#web_rtc_controller)
+* [CallController](#call_controller)
 * [SubAccountController](#sub_account_controller)
 * [AddressController](#address_controller)
-* [PhoneNumberController](#phone_number_controller)
-* [RecordingController](#recording_controller)
+* [EmailController](#email_controller)
 * [SMSController](#sms_controller)
+* [RecordingController](#recording_controller)
+* [CarrierController](#carrier_controller)
+* [PhoneNumberController](#phone_number_controller)
 * [TranscriptionController](#transcription_controller)
 * [UsageController](#usage_controller)
 * [AccountController](#account_controller)
@@ -191,7 +191,6 @@ shortCode.createViewTemplateAsync(collect, new APICallBack<String>() {
 ```java
 void createSendShortCodeAsync(
         final CreateSendShortCodeInput input,
-        Map<String, Object> fieldParameters,
         final APICallBack<String> callBack)
 ```
 
@@ -203,10 +202,10 @@ void createSendShortCodeAsync(
 | tocountrycode |  ``` Required ```  ``` DefaultValue ```  | The country code for sending this message |
 | to |  ``` Required ```  | A valid 10-digit number that should receive the message+ |
 | templateid |  ``` Required ```  | The unique identifier for the template used for the message |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| data |  ``` Required ```  | format of your data, example: {companyname}:test,{otpcode}:1234 |
 | method |  ``` Optional ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent. |
 | messageStatusCallback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
 
 
 #### Example Usage
@@ -226,19 +225,20 @@ collect.setTo(to);
 UUID templateid = UUID.randomUUID();
 collect.setTemplateid(templateid);
 
+String responseType = "json";
+collect.setResponseType(responseType);
+
+String data = "data";
+collect.setData(data);
+
 String method = "GET";
 collect.setMethod(method);
 
 String messageStatusCallback = "MessageStatusCallback";
 collect.setMessageStatusCallback(messageStatusCallback);
 
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// key-value map for optional form parameters
-Map<String, Object> formParams = new LinkedHashMap<String, Object>();
 // Invoking the API call with sample inputs
-shortCode.createSendShortCodeAsync(collect, , formParams, new APICallBack<String>() {
+shortCode.createSendShortCodeAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -266,12 +266,12 @@ void createListInboundShortCodeAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
 | pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
 | from |  ``` Optional ```  | From Number to Inbound ShortCode |
 | shortcode |  ``` Optional ```  | Only list messages sent to this Short Code |
 | dateReceived |  ``` Optional ```  | Only list messages sent with the specified date |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -279,7 +279,10 @@ void createListInboundShortCodeAsync(
 ```java
 CreateListInboundShortCodeInput collect = new CreateListInboundShortCodeInput();
 
-Integer page = 149;
+String responseType = "json";
+collect.setResponseType(responseType);
+
+Integer page = 49;
 collect.setPage(page);
 
 Integer pagesize = 10;
@@ -293,9 +296,6 @@ collect.setShortcode(shortcode);
 
 String dateReceived = "DateReceived";
 collect.setDateReceived(dateReceived);
-
-String responseType = "json";
-collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
 shortCode.createListInboundShortCodeAsync(collect, new APICallBack<String>() {
@@ -326,12 +326,12 @@ void createListShortCodeAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
 | pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
 | from |  ``` Optional ```  | Messages sent from this number |
 | to |  ``` Optional ```  | Messages sent to this number |
 | datesent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -339,7 +339,10 @@ void createListShortCodeAsync(
 ```java
 CreateListShortCodeInput collect = new CreateListShortCodeInput();
 
-Integer page = 149;
+String responseType = "json";
+collect.setResponseType(responseType);
+
+Integer page = 49;
 collect.setPage(page);
 
 Integer pagesize = 10;
@@ -353,9 +356,6 @@ collect.setTo(to);
 
 String datesent = "datesent";
 collect.setDatesent(datesent);
-
-String responseType = "json";
-collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
 shortCode.createListShortCodeAsync(collect, new APICallBack<String>() {
@@ -386,10 +386,10 @@ void createListTemplatesAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | type |  ``` Optional ```  ``` DefaultValue ```  | The type (category) of template Valid values: marketing, authorization |
 | page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
 | pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -397,17 +397,17 @@ void createListTemplatesAsync(
 ```java
 CreateListTemplatesInput collect = new CreateListTemplatesInput();
 
+String responseType = "json";
+collect.setResponseType(responseType);
+
 String type = "authorization";
 collect.setType(type);
 
-Integer page = 149;
+Integer page = 49;
 collect.setPage(page);
 
 Integer pagesize = 10;
 collect.setPagesize(pagesize);
-
-String responseType = "json";
-collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
 shortCode.createListTemplatesAsync(collect, new APICallBack<String>() {
@@ -439,7 +439,7 @@ void createViewShortCodeAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | messagesid |  ``` Required ```  | Message sid |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -496,9 +496,9 @@ void createDeafMuteParticipantAsync(
 |-----------|------|-------------|
 | conferenceSid |  ``` Required ```  | TODO: Add a parameter description |
 | participantSid |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
 | muted |  ``` Optional ```  | TODO: Add a parameter description |
 | deaf |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response Type either json or xml |
 
 
 #### Example Usage
@@ -512,14 +512,14 @@ collect.setConferenceSid(conferenceSid);
 String participantSid = "ParticipantSid";
 collect.setParticipantSid(participantSid);
 
-Boolean muted = true;
-collect.setMuted(muted);
-
-Boolean deaf = true;
-collect.setDeaf(deaf);
-
 String responseType = "json";
 collect.setResponseType(responseType);
+
+Boolean muted = false;
+collect.setMuted(muted);
+
+Boolean deaf = false;
+collect.setDeaf(deaf);
 
 // Invoking the API call with sample inputs
 conference.createDeafMuteParticipantAsync(collect, new APICallBack<String>() {
@@ -550,13 +550,13 @@ void createListConferenceAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
 | pageSize |  ``` Optional ```  | Number of individual resources listed in the response per page |
 | friendlyName |  ``` Optional ```  | Only return conferences with the specified FriendlyName |
 | status |  ``` Optional ```  | TODO: Add a parameter description |
 | dateCreated |  ``` Optional ```  | TODO: Add a parameter description |
 | dateUpdated |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -564,10 +564,13 @@ void createListConferenceAsync(
 ```java
 CreateListConferenceInput collect = new CreateListConferenceInput();
 
-Integer page = 149;
+String responseType = "json";
+collect.setResponseType(responseType);
+
+Integer page = 7;
 collect.setPage(page);
 
-Integer pageSize = 149;
+Integer pageSize = 7;
 collect.setPageSize(pageSize);
 
 String friendlyName = "FriendlyName";
@@ -581,9 +584,6 @@ collect.setDateCreated(dateCreated);
 
 String dateUpdated = "DateUpdated";
 collect.setDateUpdated(dateUpdated);
-
-String responseType = "json";
-collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
 conference.createListConferenceAsync(collect, new APICallBack<String>() {
@@ -615,7 +615,7 @@ void createViewConferenceAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | conferencesid |  ``` Required ```  | The unique identifier of each conference resource |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -661,9 +661,9 @@ void addParticipantAsync(
 | conferencesid |  ``` Required ```  | Unique Conference Sid |
 | participantnumber |  ``` Required ```  | Particiant Number |
 | tocountrycode |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | muted |  ``` Optional ```  | TODO: Add a parameter description |
 | deaf |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -677,17 +677,17 @@ collect.setConferencesid(conferencesid);
 String participantnumber = "participantnumber";
 collect.setParticipantnumber(participantnumber);
 
-int tocountrycode = 149;
+int tocountrycode = 7;
 collect.setTocountrycode(tocountrycode);
-
-Boolean muted = true;
-collect.setMuted(muted);
-
-Boolean deaf = true;
-collect.setDeaf(deaf);
 
 String responseType = "json";
 collect.setResponseType(responseType);
+
+Boolean muted = false;
+collect.setMuted(muted);
+
+Boolean deaf = false;
+collect.setDeaf(deaf);
 
 // Invoking the API call with sample inputs
 conference.addParticipantAsync(collect, new APICallBack<String>() {
@@ -719,11 +719,11 @@ void createListParticipantAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | conferenceSid |  ``` Required ```  | unique conference sid |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response format, xml or json |
 | page |  ``` Optional ```  | page number |
 | pagesize |  ``` Optional ```  | TODO: Add a parameter description |
 | muted |  ``` Optional ```  | TODO: Add a parameter description |
 | deaf |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
 
 
 #### Example Usage
@@ -734,20 +734,20 @@ CreateListParticipantInput collect = new CreateListParticipantInput();
 String conferenceSid = "ConferenceSid";
 collect.setConferenceSid(conferenceSid);
 
-Integer page = 149;
-collect.setPage(page);
-
-Integer pagesize = 149;
-collect.setPagesize(pagesize);
-
-Boolean muted = true;
-collect.setMuted(muted);
-
-Boolean deaf = true;
-collect.setDeaf(deaf);
-
 String responseType = "json";
 collect.setResponseType(responseType);
+
+Integer page = 7;
+collect.setPage(page);
+
+Integer pagesize = 7;
+collect.setPagesize(pagesize);
+
+Boolean muted = false;
+collect.setMuted(muted);
+
+Boolean deaf = false;
+collect.setDeaf(deaf);
 
 // Invoking the API call with sample inputs
 conference.createListParticipantAsync(collect, new APICallBack<String>() {
@@ -780,7 +780,7 @@ void createViewParticipantAsync(
 |-----------|------|-------------|
 | conferenceSid |  ``` Required ```  | unique conference sid |
 | participantSid |  ``` Required ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -799,594 +799,6 @@ collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
 conference.createViewParticipantAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-### <a name="email_controller"></a>![Class: ](https://apidocs.io/img/class.png "message360.controllers.EmailController") EmailController
-
-#### Get singleton instance
-
-The singleton instance of the ``` EmailController ``` class can be accessed from the API Client.
-
-```java
-EmailController email = client.getEmail();
-```
-
-#### <a name="create_delete_invalid_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createDeleteInvalidAsync") createDeleteInvalidAsync
-
-> This endpoint allows you to delete entries in the Invalid Emails list.
-
-
-```java
-void createDeleteInvalidAsync(
-        final CreateDeleteInvalidInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| email |  ``` Required ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-CreateDeleteInvalidInput collect = new CreateDeleteInvalidInput();
-
-String email = "email";
-collect.setEmail(email);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-email.createDeleteInvalidAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_list_blocks_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createListBlocksAsync") createListBlocksAsync
-
-> Outputs email addresses on your blocklist
-
-
-```java
-void createListBlocksAsync(
-        final CreateListBlocksInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| offset |  ``` Optional ```  | Where to start in the output list |
-| limit |  ``` Optional ```  | Maximum number of records to return |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateListBlocksInput collect = new CreateListBlocksInput();
-
-String offset = "offset";
-collect.setOffset(offset);
-
-String limit = "limit";
-collect.setLimit(limit);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-email.createListBlocksAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_list_spam_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createListSpamAsync") createListSpamAsync
-
-> List out all email addresses marked as spam
-
-
-```java
-void createListSpamAsync(
-        final CreateListSpamInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-| offset |  ``` Optional ```  | The record number to start the list at |
-| limit |  ``` Optional ```  | Maximum number of records to return |
-
-
-#### Example Usage
-
-```java
-CreateListSpamInput collect = new CreateListSpamInput();
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-String offset = "offset";
-collect.setOffset(offset);
-
-String limit = "limit";
-collect.setLimit(limit);
-
-// Invoking the API call with sample inputs
-email.createListSpamAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_list_bounces_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createListBouncesAsync") createListBouncesAsync
-
-> List out all email addresses that have bounced
-
-
-```java
-void createListBouncesAsync(
-        final CreateListBouncesInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-| offset |  ``` Optional ```  | The record to start the list at |
-| limit |  ``` Optional ```  | The maximum number of records to return |
-
-
-#### Example Usage
-
-```java
-CreateListBouncesInput collect = new CreateListBouncesInput();
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-String offset = "offset";
-collect.setOffset(offset);
-
-String limit = "limit";
-collect.setLimit(limit);
-
-// Invoking the API call with sample inputs
-email.createListBouncesAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_delete_bounces_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createDeleteBouncesAsync") createDeleteBouncesAsync
-
-> Delete an email address from the bounced address list
-
-
-```java
-void createDeleteBouncesAsync(
-        final CreateDeleteBouncesInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| email |  ``` Required ```  | The email address to remove from the bounce list |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateDeleteBouncesInput collect = new CreateDeleteBouncesInput();
-
-String email = "email";
-collect.setEmail(email);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-email.createDeleteBouncesAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_list_invalid_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createListInvalidAsync") createListInvalidAsync
-
-> List out all invalid email addresses
-
-
-```java
-void createListInvalidAsync(
-        final CreateListInvalidInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-| offet |  ``` Optional ```  | Starting record for listing out emails |
-| limit |  ``` Optional ```  | Maximum number of records to return |
-
-
-#### Example Usage
-
-```java
-CreateListInvalidInput collect = new CreateListInvalidInput();
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-String offet = "offet";
-collect.setOffet(offet);
-
-String limit = "limit";
-collect.setLimit(limit);
-
-// Invoking the API call with sample inputs
-email.createListInvalidAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_list_unsubscribes_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createListUnsubscribesAsync") createListUnsubscribesAsync
-
-> List all unsubscribed email addresses
-
-
-```java
-void createListUnsubscribesAsync(
-        final CreateListUnsubscribesInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-| offset |  ``` Optional ```  | Starting record of the list |
-| limit |  ``` Optional ```  | Maximum number of records to be returned |
-
-
-#### Example Usage
-
-```java
-CreateListUnsubscribesInput collect = new CreateListUnsubscribesInput();
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-String offset = "offset";
-collect.setOffset(offset);
-
-String limit = "limit";
-collect.setLimit(limit);
-
-// Invoking the API call with sample inputs
-email.createListUnsubscribesAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_delete_unsubscribes_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createDeleteUnsubscribesAsync") createDeleteUnsubscribesAsync
-
-> Delete emails from the unsubscribe list
-
-
-```java
-void createDeleteUnsubscribesAsync(
-        final CreateDeleteUnsubscribesInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| email |  ``` Required ```  | The email to remove from the unsubscribe list |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateDeleteUnsubscribesInput collect = new CreateDeleteUnsubscribesInput();
-
-String email = "email";
-collect.setEmail(email);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-email.createDeleteUnsubscribesAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="add_unsubscribes_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.addUnsubscribesAsync") addUnsubscribesAsync
-
-> Add an email to the unsubscribe list
-
-
-```java
-void addUnsubscribesAsync(
-        final AddUnsubscribesInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| email |  ``` Required ```  | The email to add to the unsubscribe list |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-AddUnsubscribesInput collect = new AddUnsubscribesInput();
-
-String email = "email";
-collect.setEmail(email);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-email.addUnsubscribesAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_delete_block_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createDeleteBlockAsync") createDeleteBlockAsync
-
-> Deletes a blocked email
-
-
-```java
-void createDeleteBlockAsync(
-        final CreateDeleteBlockInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| email |  ``` Required ```  | Email address to remove from block list |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateDeleteBlockInput collect = new CreateDeleteBlockInput();
-
-String email = "email";
-collect.setEmail(email);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-email.createDeleteBlockAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_delete_spam_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createDeleteSpamAsync") createDeleteSpamAsync
-
-> Deletes a email address marked as spam from the spam list
-
-
-```java
-void createDeleteSpamAsync(
-        final CreateDeleteSpamInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| email |  ``` Required ```  | Email address |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateDeleteSpamInput collect = new CreateDeleteSpamInput();
-
-String email = "email";
-collect.setEmail(email);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-email.createDeleteSpamAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_send_email_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createSendEmailAsync") createSendEmailAsync
-
-> Send out an email
-
-
-```java
-void createSendEmailAsync(
-        final CreateSendEmailInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| to |  ``` Required ```  | The to email address |
-| from |  ``` Required ```  | The from email address |
-| type |  ``` Required ```  ``` DefaultValue ```  | email format type, html or text |
-| subject |  ``` Required ```  | Email subject |
-| message |  ``` Required ```  | The body of the email message |
-| cc |  ``` Optional ```  | CC Email address |
-| bcc |  ``` Optional ```  | BCC Email address |
-| attachment |  ``` Optional ```  | File to be attached.File must be less than 7MB. |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateSendEmailInput collect = new CreateSendEmailInput();
-
-String to = "to";
-collect.setTo(to);
-
-String from = "from";
-collect.setFrom(from);
-
-SendEmailAsEnum type = SendEmailAsEnum.fromString("HTML");
-collect.setType(type);
-
-String subject = "subject";
-collect.setSubject(subject);
-
-String message = "message";
-collect.setMessage(message);
-
-String cc = "cc";
-collect.setCc(cc);
-
-String bcc = "bcc";
-collect.setBcc(bcc);
-
-String attachment = "attachment";
-collect.setAttachment(attachment);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-email.createSendEmailAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -1428,7 +840,7 @@ void createVerifyNumberAsync(
 |-----------|------|-------------|
 | phonenumber |  ``` Required ```  | TODO: Add a parameter description |
 | type |  ``` Required ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response Type either json or xml |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
 
 
 #### Example Usage
@@ -1447,846 +859,6 @@ collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
 numberVerification.createVerifyNumberAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-### <a name="carrier_controller"></a>![Class: ](https://apidocs.io/img/class.png "message360.controllers.CarrierController") CarrierController
-
-#### Get singleton instance
-
-The singleton instance of the ``` CarrierController ``` class can be accessed from the API Client.
-
-```java
-CarrierController carrier = client.getCarrier();
-```
-
-#### <a name="create_carrier_lookup_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CarrierController.createCarrierLookupAsync") createCarrierLookupAsync
-
-> Get the Carrier Lookup
-
-
-```java
-void createCarrierLookupAsync(
-        final CreateCarrierLookupInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| phonenumber |  ``` Required ```  | The number to lookup |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateCarrierLookupInput collect = new CreateCarrierLookupInput();
-
-String phonenumber = "phonenumber";
-collect.setPhonenumber(phonenumber);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-carrier.createCarrierLookupAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_carrier_lookup_list_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CarrierController.createCarrierLookupListAsync") createCarrierLookupListAsync
-
-> Get the All Purchase Number's Carrier lookup
-
-
-```java
-void createCarrierLookupListAsync(
-        final CreateCarrierLookupListInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  | Page Number |
-| pagesize |  ``` Optional ```  | Page Size |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateCarrierLookupListInput collect = new CreateCarrierLookupListInput();
-
-Integer page = 107;
-collect.setPage(page);
-
-Integer pagesize = 107;
-collect.setPagesize(pagesize);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-carrier.createCarrierLookupListAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-### <a name="call_controller"></a>![Class: ](https://apidocs.io/img/class.png "message360.controllers.CallController") CallController
-
-#### Get singleton instance
-
-The singleton instance of the ``` CallController ``` class can be accessed from the API Client.
-
-```java
-CallController call = client.getCall();
-```
-
-#### <a name="create_view_call_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createViewCallAsync") createViewCallAsync
-
-> View Call Response
-
-
-```java
-void createViewCallAsync(
-        final CreateViewCallInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callsid |  ``` Required ```  | Call Sid id for particular Call |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateViewCallInput collect = new CreateViewCallInput();
-
-String callsid = "callsid";
-collect.setCallsid(callsid);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-call.createViewCallAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_group_call_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createGroupCallAsync") createGroupCallAsync
-
-> Group Call
-
-
-```java
-void createGroupCallAsync(
-        final CreateGroupCallInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| fromCountryCode |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
-| from |  ``` Required ```  | TODO: Add a parameter description |
-| toCountryCode |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| url |  ``` Required ```  | TODO: Add a parameter description |
-| method |  ``` Optional ```  | TODO: Add a parameter description |
-| statusCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
-| statusCallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| fallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
-| fallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| heartBeatUrl |  ``` Optional ```  | TODO: Add a parameter description |
-| heartBeatMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| timeout |  ``` Optional ```  | TODO: Add a parameter description |
-| playDtmf |  ``` Optional ```  | TODO: Add a parameter description |
-| hideCallerId |  ``` Optional ```  | TODO: Add a parameter description |
-| record |  ``` Optional ```  | TODO: Add a parameter description |
-| recordCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
-| recordCallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| transcribe |  ``` Optional ```  | TODO: Add a parameter description |
-| transcribeCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-CreateGroupCallInput collect = new CreateGroupCallInput();
-
-String fromCountryCode = "1";
-collect.setFromCountryCode(fromCountryCode);
-
-String from = "From";
-collect.setFrom(from);
-
-String toCountryCode = "1";
-collect.setToCountryCode(toCountryCode);
-
-String to = "To";
-collect.setTo(to);
-
-String url = "Url";
-collect.setUrl(url);
-
-HttpActionEnum method = HttpActionEnum.fromString("GET");
-collect.setMethod(method);
-
-String statusCallBackUrl = "StatusCallBackUrl";
-collect.setStatusCallBackUrl(statusCallBackUrl);
-
-HttpActionEnum statusCallBackMethod = HttpActionEnum.fromString("GET");
-collect.setStatusCallBackMethod(statusCallBackMethod);
-
-String fallBackUrl = "FallBackUrl";
-collect.setFallBackUrl(fallBackUrl);
-
-HttpActionEnum fallBackMethod = HttpActionEnum.fromString("GET");
-collect.setFallBackMethod(fallBackMethod);
-
-String heartBeatUrl = "HeartBeatUrl";
-collect.setHeartBeatUrl(heartBeatUrl);
-
-HttpActionEnum heartBeatMethod = HttpActionEnum.fromString("GET");
-collect.setHeartBeatMethod(heartBeatMethod);
-
-Integer timeout = 107;
-collect.setTimeout(timeout);
-
-String playDtmf = "PlayDtmf";
-collect.setPlayDtmf(playDtmf);
-
-String hideCallerId = "HideCallerId";
-collect.setHideCallerId(hideCallerId);
-
-Boolean record = false;
-collect.setRecord(record);
-
-String recordCallBackUrl = "RecordCallBackUrl";
-collect.setRecordCallBackUrl(recordCallBackUrl);
-
-HttpActionEnum recordCallBackMethod = HttpActionEnum.fromString("GET");
-collect.setRecordCallBackMethod(recordCallBackMethod);
-
-Boolean transcribe = false;
-collect.setTranscribe(transcribe);
-
-String transcribeCallBackUrl = "TranscribeCallBackUrl";
-collect.setTranscribeCallBackUrl(transcribeCallBackUrl);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-call.createGroupCallAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_voice_effect_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createVoiceEffectAsync") createVoiceEffectAsync
-
-> Voice Effect
-
-
-```java
-void createVoiceEffectAsync(
-        final CreateVoiceEffectInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | TODO: Add a parameter description |
-| audioDirection |  ``` Optional ```  | TODO: Add a parameter description |
-| pitchSemiTones |  ``` Optional ```  | value between -14 and 14 |
-| pitchOctaves |  ``` Optional ```  | value between -1 and 1 |
-| pitch |  ``` Optional ```  | value greater than 0 |
-| rate |  ``` Optional ```  | value greater than 0 |
-| tempo |  ``` Optional ```  | value greater than 0 |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateVoiceEffectInput collect = new CreateVoiceEffectInput();
-
-String callSid = "CallSid";
-collect.setCallSid(callSid);
-
-AudioDirectionEnum audioDirection = AudioDirectionEnum.fromString("IN");
-collect.setAudioDirection(audioDirection);
-
-Double pitchSemiTones = 107.819889095994;
-collect.setPitchSemiTones(pitchSemiTones);
-
-Double pitchOctaves = 107.819889095994;
-collect.setPitchOctaves(pitchOctaves);
-
-Double pitch = 107.819889095994;
-collect.setPitch(pitch);
-
-Double rate = 107.819889095994;
-collect.setRate(rate);
-
-Double tempo = 107.819889095994;
-collect.setTempo(tempo);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-call.createVoiceEffectAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_record_call_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createRecordCallAsync") createRecordCallAsync
-
-> Record a Call
-
-
-```java
-void createRecordCallAsync(
-        final CreateRecordCallInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | The unique identifier of each call resource |
-| record |  ``` Required ```  | Set true to initiate recording or false to terminate recording |
-| direction |  ``` Optional ```  | The leg of the call to record |
-| timeLimit |  ``` Optional ```  | Time in seconds the recording duration should not exceed |
-| callBackUrl |  ``` Optional ```  | URL consulted after the recording completes |
-| fileformat |  ``` Optional ```  | Format of the recording file. Can be .mp3 or .wav |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response format, xml or json |
-
-
-#### Example Usage
-
-```java
-CreateRecordCallInput collect = new CreateRecordCallInput();
-
-String callSid = "CallSid";
-collect.setCallSid(callSid);
-
-boolean record = false;
-collect.setRecord(record);
-
-DirectionEnum direction = DirectionEnum.fromString("IN");
-collect.setDirection(direction);
-
-Integer timeLimit = 107;
-collect.setTimeLimit(timeLimit);
-
-String callBackUrl = "CallBackUrl";
-collect.setCallBackUrl(callBackUrl);
-
-AudioFormatEnum fileformat = AudioFormatEnum.fromString("mp3");
-collect.setFileformat(fileformat);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-call.createRecordCallAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_play_audio_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createPlayAudioAsync") createPlayAudioAsync
-
-> Play Dtmf and send the Digit
-
-
-```java
-void createPlayAudioAsync(
-        final CreatePlayAudioInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | The unique identifier of each call resource |
-| audioUrl |  ``` Required ```  | URL to sound that should be played. You also can add more than one audio file using semicolons e.g. http://example.com/audio1.mp3;http://example.com/audio2.wav |
-| length |  ``` Optional ```  | Time limit in seconds for audio play back |
-| direction |  ``` Optional ```  | The leg of the call audio will be played to |
-| loop |  ``` Optional ```  | Repeat audio playback indefinitely |
-| mix |  ``` Optional ```  | If false, all other audio will be muted |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreatePlayAudioInput collect = new CreatePlayAudioInput();
-
-String callSid = "CallSid";
-collect.setCallSid(callSid);
-
-String audioUrl = "AudioUrl";
-collect.setAudioUrl(audioUrl);
-
-Integer length = 107;
-collect.setLength(length);
-
-DirectionEnum direction = DirectionEnum.fromString("IN");
-collect.setDirection(direction);
-
-Boolean loop = false;
-collect.setLoop(loop);
-
-Boolean mix = false;
-collect.setMix(mix);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-call.createPlayAudioAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_interrupted_call_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createInterruptedCallAsync") createInterruptedCallAsync
-
-> Interrupt the Call by Call Sid
-
-
-```java
-void createInterruptedCallAsync(
-        final CreateInterruptedCallInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | Call SId |
-| url |  ``` Optional ```  | URL the in-progress call will be redirected to |
-| method |  ``` Optional ```  | The method used to request the above Url parameter |
-| status |  ``` Optional ```  | Status to set the in-progress call to |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateInterruptedCallInput collect = new CreateInterruptedCallInput();
-
-String callSid = "CallSid";
-collect.setCallSid(callSid);
-
-String url = "Url";
-collect.setUrl(url);
-
-HttpActionEnum method = HttpActionEnum.fromString("GET");
-collect.setMethod(method);
-
-InterruptedCallStatusEnum status = InterruptedCallStatusEnum.fromString("CANCELED");
-collect.setStatus(status);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-call.createInterruptedCallAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_send_digit_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createSendDigitAsync") createSendDigitAsync
-
-> Play Dtmf and send the Digit
-
-
-```java
-void createSendDigitAsync(
-        final CreateSendDigitInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | The unique identifier of each call resource |
-| playDtmf |  ``` Required ```  | DTMF digits to play to the call. 0-9, #, *, W, or w |
-| playDtmfDirection |  ``` Optional ```  | The leg of the call DTMF digits should be sent to |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateSendDigitInput collect = new CreateSendDigitInput();
-
-String callSid = "CallSid";
-collect.setCallSid(callSid);
-
-String playDtmf = "PlayDtmf";
-collect.setPlayDtmf(playDtmf);
-
-DirectionEnum playDtmfDirection = DirectionEnum.fromString("IN");
-collect.setPlayDtmfDirection(playDtmfDirection);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-call.createSendDigitAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_make_call_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createMakeCallAsync") createMakeCallAsync
-
-> You can experiment with initiating a call through Message360 and view the request response generated when doing so and get the response in json
-
-
-```java
-void createMakeCallAsync(
-        final CreateMakeCallInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| fromCountryCode |  ``` Required ```  | from country code |
-| from |  ``` Required ```  | This number to display on Caller ID as calling |
-| toCountryCode |  ``` Required ```  | To cuntry code number |
-| to |  ``` Required ```  | To number |
-| url |  ``` Required ```  | URL requested once the call connects |
-| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
-| statusCallBackUrl |  ``` Optional ```  | specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
-| statusCallBackMethod |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
-| fallBackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
-| fallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
-| heartBeatUrl |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed tim |
-| heartBeatMethod |  ``` Optional ```  | Specifies the HTTP method used to request HeartbeatUrl. |
-| timeout |  ``` Optional ```  | Time (in seconds) Message360 should wait while the call is ringing before canceling the call |
-| playDtmf |  ``` Optional ```  | DTMF Digits to play to the call once it connects. 0-9, #, or * |
-| hideCallerId |  ``` Optional ```  | Specifies if the caller id will be hidden |
-| record |  ``` Optional ```  | Specifies if the call should be recorded |
-| recordCallBackUrl |  ``` Optional ```  | Recording parameters will be sent here upon completion |
-| recordCallBackMethod |  ``` Optional ```  | Method used to request the RecordCallback URL. |
-| transcribe |  ``` Optional ```  | Specifies if the call recording should be transcribed |
-| transcribeCallBackUrl |  ``` Optional ```  | Transcription parameters will be sent here upon completion |
-| ifMachine |  ``` Optional ```  | How Message360 should handle the receiving numbers voicemail machine |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateMakeCallInput collect = new CreateMakeCallInput();
-
-String fromCountryCode = "FromCountryCode";
-collect.setFromCountryCode(fromCountryCode);
-
-String from = "From";
-collect.setFrom(from);
-
-String toCountryCode = "ToCountryCode";
-collect.setToCountryCode(toCountryCode);
-
-String to = "To";
-collect.setTo(to);
-
-String url = "Url";
-collect.setUrl(url);
-
-HttpActionEnum method = HttpActionEnum.fromString("GET");
-collect.setMethod(method);
-
-String statusCallBackUrl = "StatusCallBackUrl";
-collect.setStatusCallBackUrl(statusCallBackUrl);
-
-HttpActionEnum statusCallBackMethod = HttpActionEnum.fromString("GET");
-collect.setStatusCallBackMethod(statusCallBackMethod);
-
-String fallBackUrl = "FallBackUrl";
-collect.setFallBackUrl(fallBackUrl);
-
-HttpActionEnum fallBackMethod = HttpActionEnum.fromString("GET");
-collect.setFallBackMethod(fallBackMethod);
-
-String heartBeatUrl = "HeartBeatUrl";
-collect.setHeartBeatUrl(heartBeatUrl);
-
-Boolean heartBeatMethod = false;
-collect.setHeartBeatMethod(heartBeatMethod);
-
-Integer timeout = 107;
-collect.setTimeout(timeout);
-
-String playDtmf = "PlayDtmf";
-collect.setPlayDtmf(playDtmf);
-
-Boolean hideCallerId = false;
-collect.setHideCallerId(hideCallerId);
-
-Boolean record = false;
-collect.setRecord(record);
-
-String recordCallBackUrl = "RecordCallBackUrl";
-collect.setRecordCallBackUrl(recordCallBackUrl);
-
-HttpActionEnum recordCallBackMethod = HttpActionEnum.fromString("GET");
-collect.setRecordCallBackMethod(recordCallBackMethod);
-
-Boolean transcribe = false;
-collect.setTranscribe(transcribe);
-
-String transcribeCallBackUrl = "TranscribeCallBackUrl";
-collect.setTranscribeCallBackUrl(transcribeCallBackUrl);
-
-IfMachineEnum ifMachine = IfMachineEnum.fromString("CONTINUE");
-collect.setIfMachine(ifMachine);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-call.createMakeCallAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_list_calls_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createListCallsAsync") createListCallsAsync
-
-> A list of calls associated with your Message360 account
-
-
-```java
-void createListCallsAsync(
-        final CreateListCallsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| pageSize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| to |  ``` Optional ```  | Only list calls to this number |
-| from |  ``` Optional ```  | Only list calls from this number |
-| dateCreated |  ``` Optional ```  | Only list calls starting within the specified date range |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateListCallsInput collect = new CreateListCallsInput();
-
-Integer page = 107;
-collect.setPage(page);
-
-Integer pageSize = 10;
-collect.setPageSize(pageSize);
-
-String to = "To";
-collect.setTo(to);
-
-String from = "From";
-collect.setFrom(from);
-
-String dateCreated = "DateCreated";
-collect.setDateCreated(dateCreated);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-call.createListCallsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-#### <a name="create_send_ringless_vm_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createSendRinglessVMAsync") createSendRinglessVMAsync
-
-> API endpoint used to send a Ringless Voicemail
-
-
-```java
-void createSendRinglessVMAsync(
-        final CreateSendRinglessVMInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| fromCountryCode |  ``` Required ```  | From country code |
-| from |  ``` Required ```  | This number to display on Caller ID as calling |
-| toCountryCode |  ``` Required ```  | To country code |
-| to |  ``` Required ```  | To number |
-| voiceMailURL |  ``` Required ```  | URL to an audio file |
-| method |  ``` Required ```  ``` DefaultValue ```  | Not currently used in this version |
-| statusCallBackUrl |  ``` Optional ```  | URL to post the status of the Ringless request |
-| statsCallBackMethod |  ``` Optional ```  | POST or GET |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-#### Example Usage
-
-```java
-CreateSendRinglessVMInput collect = new CreateSendRinglessVMInput();
-
-String fromCountryCode = "FromCountryCode";
-collect.setFromCountryCode(fromCountryCode);
-
-String from = "From";
-collect.setFrom(from);
-
-String toCountryCode = "ToCountryCode";
-collect.setToCountryCode(toCountryCode);
-
-String to = "To";
-collect.setTo(to);
-
-String voiceMailURL = "VoiceMailURL";
-collect.setVoiceMailURL(voiceMailURL);
-
-String method = "GET";
-collect.setMethod(method);
-
-String statusCallBackUrl = "StatusCallBackUrl";
-collect.setStatusCallBackUrl(statusCallBackUrl);
-
-String statsCallBackMethod = "StatsCallBackMethod";
-collect.setStatsCallBackMethod(statsCallBackMethod);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
-// Invoking the API call with sample inputs
-call.createSendRinglessVMAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2409,6 +981,742 @@ webRTC.createTokenAsync(collect, new APICallBack<String>() {
 
 [Back to List of Controllers](#list_of_controllers)
 
+### <a name="call_controller"></a>![Class: ](https://apidocs.io/img/class.png "message360.controllers.CallController") CallController
+
+#### Get singleton instance
+
+The singleton instance of the ``` CallController ``` class can be accessed from the API Client.
+
+```java
+CallController call = client.getCall();
+```
+
+#### <a name="create_group_call_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createGroupCallAsync") createGroupCallAsync
+
+> Group Call
+
+
+```java
+void createGroupCallAsync(
+        final CreateGroupCallInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| fromCountryCode |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
+| from |  ``` Required ```  | TODO: Add a parameter description |
+| toCountryCode |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
+| to |  ``` Required ```  | TODO: Add a parameter description |
+| url |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
+| method |  ``` Optional ```  | TODO: Add a parameter description |
+| statusCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
+| statusCallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| fallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
+| fallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| heartBeatUrl |  ``` Optional ```  | TODO: Add a parameter description |
+| heartBeatMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| timeout |  ``` Optional ```  | TODO: Add a parameter description |
+| playDtmf |  ``` Optional ```  | TODO: Add a parameter description |
+| hideCallerId |  ``` Optional ```  | TODO: Add a parameter description |
+| record |  ``` Optional ```  | TODO: Add a parameter description |
+| recordCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
+| recordCallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| transcribe |  ``` Optional ```  | TODO: Add a parameter description |
+| transcribeCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```java
+CreateGroupCallInput collect = new CreateGroupCallInput();
+
+String fromCountryCode = "1";
+collect.setFromCountryCode(fromCountryCode);
+
+String from = "From";
+collect.setFrom(from);
+
+String toCountryCode = "1";
+collect.setToCountryCode(toCountryCode);
+
+String to = "To";
+collect.setTo(to);
+
+String url = "Url";
+collect.setUrl(url);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+HttpActionEnum method = HttpActionEnum.fromString("GET");
+collect.setMethod(method);
+
+String statusCallBackUrl = "StatusCallBackUrl";
+collect.setStatusCallBackUrl(statusCallBackUrl);
+
+HttpActionEnum statusCallBackMethod = HttpActionEnum.fromString("GET");
+collect.setStatusCallBackMethod(statusCallBackMethod);
+
+String fallBackUrl = "FallBackUrl";
+collect.setFallBackUrl(fallBackUrl);
+
+HttpActionEnum fallBackMethod = HttpActionEnum.fromString("GET");
+collect.setFallBackMethod(fallBackMethod);
+
+String heartBeatUrl = "HeartBeatUrl";
+collect.setHeartBeatUrl(heartBeatUrl);
+
+HttpActionEnum heartBeatMethod = HttpActionEnum.fromString("GET");
+collect.setHeartBeatMethod(heartBeatMethod);
+
+Integer timeout = 7;
+collect.setTimeout(timeout);
+
+String playDtmf = "PlayDtmf";
+collect.setPlayDtmf(playDtmf);
+
+String hideCallerId = "HideCallerId";
+collect.setHideCallerId(hideCallerId);
+
+Boolean record = false;
+collect.setRecord(record);
+
+String recordCallBackUrl = "RecordCallBackUrl";
+collect.setRecordCallBackUrl(recordCallBackUrl);
+
+HttpActionEnum recordCallBackMethod = HttpActionEnum.fromString("GET");
+collect.setRecordCallBackMethod(recordCallBackMethod);
+
+Boolean transcribe = false;
+collect.setTranscribe(transcribe);
+
+String transcribeCallBackUrl = "TranscribeCallBackUrl";
+collect.setTranscribeCallBackUrl(transcribeCallBackUrl);
+
+// Invoking the API call with sample inputs
+call.createGroupCallAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_voice_effect_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createVoiceEffectAsync") createVoiceEffectAsync
+
+> Voice Effect
+
+
+```java
+void createVoiceEffectAsync(
+        final CreateVoiceEffectInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| audioDirection |  ``` Optional ```  | TODO: Add a parameter description |
+| pitchSemiTones |  ``` Optional ```  | value between -14 and 14 |
+| pitchOctaves |  ``` Optional ```  | value between -1 and 1 |
+| pitch |  ``` Optional ```  | value greater than 0 |
+| rate |  ``` Optional ```  | value greater than 0 |
+| tempo |  ``` Optional ```  | value greater than 0 |
+
+
+#### Example Usage
+
+```java
+CreateVoiceEffectInput collect = new CreateVoiceEffectInput();
+
+String callSid = "CallSid";
+collect.setCallSid(callSid);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+AudioDirectionEnum audioDirection = AudioDirectionEnum.fromString("IN");
+collect.setAudioDirection(audioDirection);
+
+Double pitchSemiTones = 7.51938314760075;
+collect.setPitchSemiTones(pitchSemiTones);
+
+Double pitchOctaves = 7.51938314760075;
+collect.setPitchOctaves(pitchOctaves);
+
+Double pitch = 7.51938314760075;
+collect.setPitch(pitch);
+
+Double rate = 7.51938314760075;
+collect.setRate(rate);
+
+Double tempo = 7.51938314760075;
+collect.setTempo(tempo);
+
+// Invoking the API call with sample inputs
+call.createVoiceEffectAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_record_call_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createRecordCallAsync") createRecordCallAsync
+
+> Record a Call
+
+
+```java
+void createRecordCallAsync(
+        final CreateRecordCallInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | The unique identifier of each call resource |
+| record |  ``` Required ```  | Set true to initiate recording or false to terminate recording |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response format, xml or json |
+| direction |  ``` Optional ```  | The leg of the call to record |
+| timeLimit |  ``` Optional ```  | Time in seconds the recording duration should not exceed |
+| callBackUrl |  ``` Optional ```  | URL consulted after the recording completes |
+| fileformat |  ``` Optional ```  | Format of the recording file. Can be .mp3 or .wav |
+
+
+#### Example Usage
+
+```java
+CreateRecordCallInput collect = new CreateRecordCallInput();
+
+String callSid = "CallSid";
+collect.setCallSid(callSid);
+
+boolean record = false;
+collect.setRecord(record);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+DirectionEnum direction = DirectionEnum.fromString("IN");
+collect.setDirection(direction);
+
+Integer timeLimit = 7;
+collect.setTimeLimit(timeLimit);
+
+String callBackUrl = "CallBackUrl";
+collect.setCallBackUrl(callBackUrl);
+
+AudioFormatEnum fileformat = AudioFormatEnum.fromString("mp3");
+collect.setFileformat(fileformat);
+
+// Invoking the API call with sample inputs
+call.createRecordCallAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_play_audio_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createPlayAudioAsync") createPlayAudioAsync
+
+> Play Dtmf and send the Digit
+
+
+```java
+void createPlayAudioAsync(
+        final CreatePlayAudioInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | The unique identifier of each call resource |
+| audioUrl |  ``` Required ```  | URL to sound that should be played. You also can add more than one audio file using semicolons e.g. http://example.com/audio1.mp3;http://example.com/audio2.wav |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| length |  ``` Optional ```  | Time limit in seconds for audio play back |
+| direction |  ``` Optional ```  | The leg of the call audio will be played to |
+| loop |  ``` Optional ```  | Repeat audio playback indefinitely |
+| mix |  ``` Optional ```  | If false, all other audio will be muted |
+
+
+#### Example Usage
+
+```java
+CreatePlayAudioInput collect = new CreatePlayAudioInput();
+
+String callSid = "CallSid";
+collect.setCallSid(callSid);
+
+String audioUrl = "AudioUrl";
+collect.setAudioUrl(audioUrl);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+Integer length = 7;
+collect.setLength(length);
+
+DirectionEnum direction = DirectionEnum.fromString("IN");
+collect.setDirection(direction);
+
+Boolean loop = false;
+collect.setLoop(loop);
+
+Boolean mix = false;
+collect.setMix(mix);
+
+// Invoking the API call with sample inputs
+call.createPlayAudioAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_interrupted_call_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createInterruptedCallAsync") createInterruptedCallAsync
+
+> Interrupt the Call by Call Sid
+
+
+```java
+void createInterruptedCallAsync(
+        final CreateInterruptedCallInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | Call SId |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| url |  ``` Optional ```  | URL the in-progress call will be redirected to |
+| method |  ``` Optional ```  | The method used to request the above Url parameter |
+| status |  ``` Optional ```  | Status to set the in-progress call to |
+
+
+#### Example Usage
+
+```java
+CreateInterruptedCallInput collect = new CreateInterruptedCallInput();
+
+String callSid = "CallSid";
+collect.setCallSid(callSid);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+String url = "Url";
+collect.setUrl(url);
+
+HttpActionEnum method = HttpActionEnum.fromString("GET");
+collect.setMethod(method);
+
+InterruptedCallStatusEnum status = InterruptedCallStatusEnum.fromString("CANCELED");
+collect.setStatus(status);
+
+// Invoking the API call with sample inputs
+call.createInterruptedCallAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_send_digit_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createSendDigitAsync") createSendDigitAsync
+
+> Play Dtmf and send the Digit
+
+
+```java
+void createSendDigitAsync(
+        final CreateSendDigitInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | The unique identifier of each call resource |
+| playDtmf |  ``` Required ```  | DTMF digits to play to the call. 0-9, #, *, W, or w |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| playDtmfDirection |  ``` Optional ```  | The leg of the call DTMF digits should be sent to |
+
+
+#### Example Usage
+
+```java
+CreateSendDigitInput collect = new CreateSendDigitInput();
+
+String callSid = "CallSid";
+collect.setCallSid(callSid);
+
+String playDtmf = "PlayDtmf";
+collect.setPlayDtmf(playDtmf);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+DirectionEnum playDtmfDirection = DirectionEnum.fromString("IN");
+collect.setPlayDtmfDirection(playDtmfDirection);
+
+// Invoking the API call with sample inputs
+call.createSendDigitAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_make_call_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createMakeCallAsync") createMakeCallAsync
+
+> You can experiment with initiating a call through Message360 and view the request response generated when doing so and get the response in json
+
+
+```java
+void createMakeCallAsync(
+        final CreateMakeCallInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| fromCountryCode |  ``` Required ```  | from country code |
+| from |  ``` Required ```  | This number to display on Caller ID as calling |
+| toCountryCode |  ``` Required ```  | To cuntry code number |
+| to |  ``` Required ```  | To number |
+| url |  ``` Required ```  | URL requested once the call connects |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
+| statusCallBackUrl |  ``` Optional ```  | specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
+| statusCallBackMethod |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
+| fallBackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
+| fallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
+| heartBeatUrl |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed tim |
+| heartBeatMethod |  ``` Optional ```  | Specifies the HTTP method used to request HeartbeatUrl. |
+| timeout |  ``` Optional ```  | Time (in seconds) Message360 should wait while the call is ringing before canceling the call |
+| playDtmf |  ``` Optional ```  | DTMF Digits to play to the call once it connects. 0-9, #, or * |
+| hideCallerId |  ``` Optional ```  | Specifies if the caller id will be hidden |
+| record |  ``` Optional ```  | Specifies if the call should be recorded |
+| recordCallBackUrl |  ``` Optional ```  | Recording parameters will be sent here upon completion |
+| recordCallBackMethod |  ``` Optional ```  | Method used to request the RecordCallback URL. |
+| transcribe |  ``` Optional ```  | Specifies if the call recording should be transcribed |
+| transcribeCallBackUrl |  ``` Optional ```  | Transcription parameters will be sent here upon completion |
+| ifMachine |  ``` Optional ```  | How Message360 should handle the receiving numbers voicemail machine |
+
+
+#### Example Usage
+
+```java
+CreateMakeCallInput collect = new CreateMakeCallInput();
+
+String fromCountryCode = "FromCountryCode";
+collect.setFromCountryCode(fromCountryCode);
+
+String from = "From";
+collect.setFrom(from);
+
+String toCountryCode = "ToCountryCode";
+collect.setToCountryCode(toCountryCode);
+
+String to = "To";
+collect.setTo(to);
+
+String url = "Url";
+collect.setUrl(url);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+HttpActionEnum method = HttpActionEnum.fromString("GET");
+collect.setMethod(method);
+
+String statusCallBackUrl = "StatusCallBackUrl";
+collect.setStatusCallBackUrl(statusCallBackUrl);
+
+HttpActionEnum statusCallBackMethod = HttpActionEnum.fromString("GET");
+collect.setStatusCallBackMethod(statusCallBackMethod);
+
+String fallBackUrl = "FallBackUrl";
+collect.setFallBackUrl(fallBackUrl);
+
+HttpActionEnum fallBackMethod = HttpActionEnum.fromString("GET");
+collect.setFallBackMethod(fallBackMethod);
+
+String heartBeatUrl = "HeartBeatUrl";
+collect.setHeartBeatUrl(heartBeatUrl);
+
+Boolean heartBeatMethod = false;
+collect.setHeartBeatMethod(heartBeatMethod);
+
+Integer timeout = 7;
+collect.setTimeout(timeout);
+
+String playDtmf = "PlayDtmf";
+collect.setPlayDtmf(playDtmf);
+
+Boolean hideCallerId = false;
+collect.setHideCallerId(hideCallerId);
+
+Boolean record = false;
+collect.setRecord(record);
+
+String recordCallBackUrl = "RecordCallBackUrl";
+collect.setRecordCallBackUrl(recordCallBackUrl);
+
+HttpActionEnum recordCallBackMethod = HttpActionEnum.fromString("GET");
+collect.setRecordCallBackMethod(recordCallBackMethod);
+
+Boolean transcribe = false;
+collect.setTranscribe(transcribe);
+
+String transcribeCallBackUrl = "TranscribeCallBackUrl";
+collect.setTranscribeCallBackUrl(transcribeCallBackUrl);
+
+IfMachineEnum ifMachine = IfMachineEnum.fromString("CONTINUE");
+collect.setIfMachine(ifMachine);
+
+// Invoking the API call with sample inputs
+call.createMakeCallAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_list_calls_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createListCallsAsync") createListCallsAsync
+
+> A list of calls associated with your Message360 account
+
+
+```java
+void createListCallsAsync(
+        final CreateListCallsInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| pageSize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| to |  ``` Optional ```  | Only list calls to this number |
+| from |  ``` Optional ```  | Only list calls from this number |
+| dateCreated |  ``` Optional ```  | Only list calls starting within the specified date range |
+
+
+#### Example Usage
+
+```java
+CreateListCallsInput collect = new CreateListCallsInput();
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+Integer page = 7;
+collect.setPage(page);
+
+Integer pageSize = 10;
+collect.setPageSize(pageSize);
+
+String to = "To";
+collect.setTo(to);
+
+String from = "From";
+collect.setFrom(from);
+
+String dateCreated = "DateCreated";
+collect.setDateCreated(dateCreated);
+
+// Invoking the API call with sample inputs
+call.createListCallsAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_send_ringless_vm_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createSendRinglessVMAsync") createSendRinglessVMAsync
+
+> API endpoint used to send a Ringless Voicemail
+
+
+```java
+void createSendRinglessVMAsync(
+        final CreateSendRinglessVMInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| fromCountryCode |  ``` Required ```  | From country code |
+| from |  ``` Required ```  | This number to display on Caller ID as calling |
+| toCountryCode |  ``` Required ```  | To country code |
+| to |  ``` Required ```  | To number |
+| voiceMailURL |  ``` Required ```  | URL to an audio file |
+| method |  ``` Required ```  ``` DefaultValue ```  | Not currently used in this version |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| statusCallBackUrl |  ``` Optional ```  | URL to post the status of the Ringless request |
+| statsCallBackMethod |  ``` Optional ```  | POST or GET |
+
+
+#### Example Usage
+
+```java
+CreateSendRinglessVMInput collect = new CreateSendRinglessVMInput();
+
+String fromCountryCode = "FromCountryCode";
+collect.setFromCountryCode(fromCountryCode);
+
+String from = "From";
+collect.setFrom(from);
+
+String toCountryCode = "ToCountryCode";
+collect.setToCountryCode(toCountryCode);
+
+String to = "To";
+collect.setTo(to);
+
+String voiceMailURL = "VoiceMailURL";
+collect.setVoiceMailURL(voiceMailURL);
+
+String method = "GET";
+collect.setMethod(method);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+String statusCallBackUrl = "StatusCallBackUrl";
+collect.setStatusCallBackUrl(statusCallBackUrl);
+
+String statsCallBackMethod = "StatsCallBackMethod";
+collect.setStatsCallBackMethod(statsCallBackMethod);
+
+// Invoking the API call with sample inputs
+call.createSendRinglessVMAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_view_call_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CallController.createViewCallAsync") createViewCallAsync
+
+> View Call Response
+
+
+```java
+void createViewCallAsync(
+        final CreateViewCallInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callsid |  ``` Required ```  | Call Sid id for particular Call |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```java
+CreateViewCallInput collect = new CreateViewCallInput();
+
+String callsid = "callsid";
+collect.setCallsid(callsid);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+// Invoking the API call with sample inputs
+call.createViewCallAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
 ### <a name="sub_account_controller"></a>![Class: ](https://apidocs.io/img/class.png "message360.controllers.SubAccountController") SubAccountController
 
 #### Get singleton instance
@@ -2437,7 +1745,7 @@ void createSubAccountAsync(
 | firstName |  ``` Required ```  | Sub account user first name |
 | lastName |  ``` Required ```  | sub account user last name |
 | email |  ``` Required ```  | Sub account email address |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -2488,7 +1796,7 @@ void createSuspendSubAccountAsync(
 |-----------|------|-------------|
 | subAccountSID |  ``` Required ```  | The SubaccountSid to be activated or suspended |
 | activate |  ``` Required ```  ``` DefaultValue ```  | 0 to suspend or 1 to activate |
-| responseType |  ``` Optional ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -2536,7 +1844,7 @@ void createDeleteSubAccountAsync(
 |-----------|------|-------------|
 | subAccountSID |  ``` Required ```  | The SubaccountSid to be deleted |
 | mergeNumber |  ``` Required ```  ``` DefaultValue ```  | 0 to delete or 1 to merge numbers to parent account. |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -2600,10 +1908,10 @@ void createAddressAsync(
 | state |  ``` Required ```  | Must be a 2 letter State eg. CA for US. For Some Countries it can be greater than 2 letters. |
 | city |  ``` Required ```  | City Name. |
 | zip |  ``` Required ```  | Zip code of city. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type either json or xml |
 | description |  ``` Optional ```  | Description of addresses. |
 | email |  ``` Optional ```  | Email Id of user. |
 | phone |  ``` Optional ```  | Phone number of user. |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type either json or xml |
 
 
 #### Example Usage
@@ -2629,6 +1937,9 @@ collect.setCity(city);
 String zip = "Zip";
 collect.setZip(zip);
 
+String responseType = "json";
+collect.setResponseType(responseType);
+
 String description = "Description";
 collect.setDescription(description);
 
@@ -2637,9 +1948,6 @@ collect.setEmail(email);
 
 String phone = "Phone";
 collect.setPhone(phone);
-
-String responseType = "json";
-collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
 address.createAddressAsync(collect, new APICallBack<String>() {
@@ -2671,7 +1979,7 @@ void createDeleteAddressAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | addressSID |  ``` Required ```  | The identifier of the address to be deleted. |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type either json or xml |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type either json or xml |
 
 
 #### Example Usage
@@ -2715,7 +2023,7 @@ void createVerifyAddressAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | addressSID |  ``` Required ```  | The identifier of the address to be verified. |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type either json or xml |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type either json or xml |
 
 
 #### Example Usage
@@ -2758,17 +2066,20 @@ void createListAddressAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
 | page |  ``` Optional ```  ``` DefaultValue ```  | Return requested # of items starting the value, default=0, must be an integer |
 | pageSize |  ``` Optional ```  ``` DefaultValue ```  | How many results to return, default is 10, max is 100, must be an integer |
 | addressSID |  ``` Optional ```  | addresses Sid |
 | dateCreated |  ``` Optional ```  | date created address. |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response Type either json or xml |
 
 
 #### Example Usage
 
 ```java
 CreateListAddressInput collect = new CreateListAddressInput();
+
+String responseType = "json";
+collect.setResponseType(responseType);
 
 Integer page = 1;
 collect.setPage(page);
@@ -2781,9 +2092,6 @@ collect.setAddressSID(addressSID);
 
 String dateCreated = "DateCreated";
 collect.setDateCreated(dateCreated);
-
-String responseType = "json";
-collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
 address.createListAddressAsync(collect, new APICallBack<String>() {
@@ -2815,7 +2123,7 @@ void createViewAddressAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | addressSID |  ``` Required ```  | The identifier of the address to be retrieved. |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response Type either json or xml |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
 
 
 #### Example Usage
@@ -2845,24 +2153,24 @@ address.createViewAddressAsync(collect, new APICallBack<String>() {
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="phone_number_controller"></a>![Class: ](https://apidocs.io/img/class.png "message360.controllers.PhoneNumberController") PhoneNumberController
+### <a name="email_controller"></a>![Class: ](https://apidocs.io/img/class.png "message360.controllers.EmailController") EmailController
 
 #### Get singleton instance
 
-The singleton instance of the ``` PhoneNumberController ``` class can be accessed from the API Client.
+The singleton instance of the ``` EmailController ``` class can be accessed from the API Client.
 
 ```java
-PhoneNumberController phoneNumber = client.getPhoneNumber();
+EmailController email = client.getEmail();
 ```
 
-#### <a name="update_phone_number_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.updatePhoneNumberAsync") updatePhoneNumberAsync
+#### <a name="create_list_blocks_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createListBlocksAsync") createListBlocksAsync
 
-> Update Phone Number Details
+> Outputs email addresses on your blocklist
 
 
 ```java
-void updatePhoneNumberAsync(
-        final UpdatePhoneNumberInput input,
+void createListBlocksAsync(
+        final CreateListBlocksInput input,
         final APICallBack<String> callBack)
 ```
 
@@ -2870,75 +2178,27 @@ void updatePhoneNumberAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phoneNumber |  ``` Required ```  | TODO: Add a parameter description |
-| friendlyName |  ``` Optional ```  | TODO: Add a parameter description |
-| voiceUrl |  ``` Optional ```  | URL requested once the call connects |
-| voiceMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| voiceFallbackUrl |  ``` Optional ```  | URL requested if the voice URL is not available |
-| voiceFallbackMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| hangupCallback |  ``` Optional ```  | TODO: Add a parameter description |
-| hangupCallbackMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| heartbeatUrl |  ``` Optional ```  | URL requested once the call connects |
-| heartbeatMethod |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed time |
-| smsUrl |  ``` Optional ```  | URL requested when an SMS is received |
-| smsMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| smsFallbackUrl |  ``` Optional ```  | URL requested once the call connects |
-| smsFallbackMethod |  ``` Optional ```  | URL requested if the sms URL is not available |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| offset |  ``` Optional ```  | Where to start in the output list |
+| limit |  ``` Optional ```  | Maximum number of records to return |
 
 
 #### Example Usage
 
 ```java
-UpdatePhoneNumberInput collect = new UpdatePhoneNumberInput();
-
-String phoneNumber = "PhoneNumber";
-collect.setPhoneNumber(phoneNumber);
-
-String friendlyName = "FriendlyName";
-collect.setFriendlyName(friendlyName);
-
-String voiceUrl = "VoiceUrl";
-collect.setVoiceUrl(voiceUrl);
-
-HttpActionEnum voiceMethod = HttpActionEnum.fromString("GET");
-collect.setVoiceMethod(voiceMethod);
-
-String voiceFallbackUrl = "VoiceFallbackUrl";
-collect.setVoiceFallbackUrl(voiceFallbackUrl);
-
-HttpActionEnum voiceFallbackMethod = HttpActionEnum.fromString("GET");
-collect.setVoiceFallbackMethod(voiceFallbackMethod);
-
-String hangupCallback = "HangupCallback";
-collect.setHangupCallback(hangupCallback);
-
-HttpActionEnum hangupCallbackMethod = HttpActionEnum.fromString("GET");
-collect.setHangupCallbackMethod(hangupCallbackMethod);
-
-String heartbeatUrl = "HeartbeatUrl";
-collect.setHeartbeatUrl(heartbeatUrl);
-
-HttpActionEnum heartbeatMethod = HttpActionEnum.fromString("GET");
-collect.setHeartbeatMethod(heartbeatMethod);
-
-String smsUrl = "SmsUrl";
-collect.setSmsUrl(smsUrl);
-
-HttpActionEnum smsMethod = HttpActionEnum.fromString("GET");
-collect.setSmsMethod(smsMethod);
-
-String smsFallbackUrl = "SmsFallbackUrl";
-collect.setSmsFallbackUrl(smsFallbackUrl);
-
-HttpActionEnum smsFallbackMethod = HttpActionEnum.fromString("GET");
-collect.setSmsFallbackMethod(smsFallbackMethod);
+CreateListBlocksInput collect = new CreateListBlocksInput();
 
 String responseType = "json";
 collect.setResponseType(responseType);
 
+String offset = "offset";
+collect.setOffset(offset);
+
+String limit = "limit";
+collect.setLimit(limit);
+
 // Invoking the API call with sample inputs
-phoneNumber.updatePhoneNumberAsync(collect, new APICallBack<String>() {
+email.createListBlocksAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2951,14 +2211,14 @@ phoneNumber.updatePhoneNumberAsync(collect, new APICallBack<String>() {
 ```
 
 
-#### <a name="create_buy_number_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.createBuyNumberAsync") createBuyNumberAsync
+#### <a name="create_list_spam_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createListSpamAsync") createListSpamAsync
 
-> Buy Phone Number 
+> List out all email addresses marked as spam
 
 
 ```java
-void createBuyNumberAsync(
-        final CreateBuyNumberInput input,
+void createListSpamAsync(
+        final CreateListSpamInput input,
         final APICallBack<String> callBack)
 ```
 
@@ -2966,23 +2226,27 @@ void createBuyNumberAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phoneNumber |  ``` Required ```  | Phone number to be purchase |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| offset |  ``` Optional ```  | The record number to start the list at |
+| limit |  ``` Optional ```  | Maximum number of records to return |
 
 
 #### Example Usage
 
 ```java
-CreateBuyNumberInput collect = new CreateBuyNumberInput();
-
-String phoneNumber = "PhoneNumber";
-collect.setPhoneNumber(phoneNumber);
+CreateListSpamInput collect = new CreateListSpamInput();
 
 String responseType = "json";
 collect.setResponseType(responseType);
 
+String offset = "offset";
+collect.setOffset(offset);
+
+String limit = "limit";
+collect.setLimit(limit);
+
 // Invoking the API call with sample inputs
-phoneNumber.createBuyNumberAsync(collect, new APICallBack<String>() {
+email.createListSpamAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2995,14 +2259,14 @@ phoneNumber.createBuyNumberAsync(collect, new APICallBack<String>() {
 ```
 
 
-#### <a name="create_release_number_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.createReleaseNumberAsync") createReleaseNumberAsync
+#### <a name="create_list_bounces_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createListBouncesAsync") createListBouncesAsync
 
-> Release number from account
+> List out all email addresses that have bounced
 
 
 ```java
-void createReleaseNumberAsync(
-        final CreateReleaseNumberInput input,
+void createListBouncesAsync(
+        final CreateListBouncesInput input,
         final APICallBack<String> callBack)
 ```
 
@@ -3010,23 +2274,27 @@ void createReleaseNumberAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phoneNumber |  ``` Required ```  | Phone number to be relase |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| offset |  ``` Optional ```  | The record to start the list at |
+| limit |  ``` Optional ```  | The maximum number of records to return |
 
 
 #### Example Usage
 
 ```java
-CreateReleaseNumberInput collect = new CreateReleaseNumberInput();
-
-String phoneNumber = "PhoneNumber";
-collect.setPhoneNumber(phoneNumber);
+CreateListBouncesInput collect = new CreateListBouncesInput();
 
 String responseType = "json";
 collect.setResponseType(responseType);
 
+String offset = "offset";
+collect.setOffset(offset);
+
+String limit = "limit";
+collect.setLimit(limit);
+
 // Invoking the API call with sample inputs
-phoneNumber.createReleaseNumberAsync(collect, new APICallBack<String>() {
+email.createListBouncesAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3039,14 +2307,14 @@ phoneNumber.createReleaseNumberAsync(collect, new APICallBack<String>() {
 ```
 
 
-#### <a name="create_view_number_details_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.createViewNumberDetailsAsync") createViewNumberDetailsAsync
+#### <a name="create_delete_bounces_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createDeleteBouncesAsync") createDeleteBouncesAsync
 
-> Get Phone Number Details
+> Delete an email address from the bounced address list
 
 
 ```java
-void createViewNumberDetailsAsync(
-        final CreateViewNumberDetailsInput input,
+void createDeleteBouncesAsync(
+        final CreateDeleteBouncesInput input,
         final APICallBack<String> callBack)
 ```
 
@@ -3054,23 +2322,23 @@ void createViewNumberDetailsAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phoneNumber |  ``` Required ```  | Get Phone number Detail |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| email |  ``` Required ```  | The email address to remove from the bounce list |
 
 
 #### Example Usage
 
 ```java
-CreateViewNumberDetailsInput collect = new CreateViewNumberDetailsInput();
-
-String phoneNumber = "PhoneNumber";
-collect.setPhoneNumber(phoneNumber);
+CreateDeleteBouncesInput collect = new CreateDeleteBouncesInput();
 
 String responseType = "json";
 collect.setResponseType(responseType);
 
+String email = "email";
+collect.setEmail(email);
+
 // Invoking the API call with sample inputs
-phoneNumber.createViewNumberDetailsAsync(collect, new APICallBack<String>() {
+email.createDeleteBouncesAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3083,14 +2351,14 @@ phoneNumber.createViewNumberDetailsAsync(collect, new APICallBack<String>() {
 ```
 
 
-#### <a name="create_list_number_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.createListNumberAsync") createListNumberAsync
+#### <a name="create_list_invalid_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createListInvalidAsync") createListInvalidAsync
 
-> List Account's Phone number details
+> List out all invalid email addresses
 
 
 ```java
-void createListNumberAsync(
-        final CreateListNumberInput input,
+void createListInvalidAsync(
+        final CreateListInvalidInput input,
         final APICallBack<String> callBack)
 ```
 
@@ -3098,35 +2366,439 @@ void createListNumberAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| offet |  ``` Optional ```  | Starting record for listing out emails |
+| limit |  ``` Optional ```  | Maximum number of records to return |
+
+
+#### Example Usage
+
+```java
+CreateListInvalidInput collect = new CreateListInvalidInput();
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+String offet = "offet";
+collect.setOffet(offet);
+
+String limit = "limit";
+collect.setLimit(limit);
+
+// Invoking the API call with sample inputs
+email.createListInvalidAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_list_unsubscribes_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createListUnsubscribesAsync") createListUnsubscribesAsync
+
+> List all unsubscribed email addresses
+
+
+```java
+void createListUnsubscribesAsync(
+        final CreateListUnsubscribesInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| offset |  ``` Optional ```  | Starting record of the list |
+| limit |  ``` Optional ```  | Maximum number of records to be returned |
+
+
+#### Example Usage
+
+```java
+CreateListUnsubscribesInput collect = new CreateListUnsubscribesInput();
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+String offset = "offset";
+collect.setOffset(offset);
+
+String limit = "limit";
+collect.setLimit(limit);
+
+// Invoking the API call with sample inputs
+email.createListUnsubscribesAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_delete_unsubscribes_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createDeleteUnsubscribesAsync") createDeleteUnsubscribesAsync
+
+> Delete emails from the unsubscribe list
+
+
+```java
+void createDeleteUnsubscribesAsync(
+        final CreateDeleteUnsubscribesInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | The email to remove from the unsubscribe list |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```java
+CreateDeleteUnsubscribesInput collect = new CreateDeleteUnsubscribesInput();
+
+String email = "email";
+collect.setEmail(email);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+// Invoking the API call with sample inputs
+email.createDeleteUnsubscribesAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="add_unsubscribes_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.addUnsubscribesAsync") addUnsubscribesAsync
+
+> Add an email to the unsubscribe list
+
+
+```java
+void addUnsubscribesAsync(
+        final AddUnsubscribesInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | The email to add to the unsubscribe list |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```java
+AddUnsubscribesInput collect = new AddUnsubscribesInput();
+
+String email = "email";
+collect.setEmail(email);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+// Invoking the API call with sample inputs
+email.addUnsubscribesAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_delete_block_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createDeleteBlockAsync") createDeleteBlockAsync
+
+> Deletes a blocked email
+
+
+```java
+void createDeleteBlockAsync(
+        final CreateDeleteBlockInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | Email address to remove from block list |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```java
+CreateDeleteBlockInput collect = new CreateDeleteBlockInput();
+
+String email = "email";
+collect.setEmail(email);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+// Invoking the API call with sample inputs
+email.createDeleteBlockAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_delete_spam_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createDeleteSpamAsync") createDeleteSpamAsync
+
+> Deletes a email address marked as spam from the spam list
+
+
+```java
+void createDeleteSpamAsync(
+        final CreateDeleteSpamInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| email |  ``` Required ```  | Email address |
+
+
+#### Example Usage
+
+```java
+CreateDeleteSpamInput collect = new CreateDeleteSpamInput();
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+String email = "email";
+collect.setEmail(email);
+
+// Invoking the API call with sample inputs
+email.createDeleteSpamAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_send_email_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createSendEmailAsync") createSendEmailAsync
+
+> Send out an email
+
+
+```java
+void createSendEmailAsync(
+        final CreateSendEmailInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| to |  ``` Required ```  | The to email address |
+| from |  ``` Required ```  | The from email address |
+| type |  ``` Required ```  ``` DefaultValue ```  | email format type, html or text |
+| subject |  ``` Required ```  | Email subject |
+| message |  ``` Required ```  | The body of the email message |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| cc |  ``` Optional ```  | CC Email address |
+| bcc |  ``` Optional ```  | BCC Email address |
+| attachment |  ``` Optional ```  | File to be attached.File must be less than 7MB. |
+
+
+#### Example Usage
+
+```java
+CreateSendEmailInput collect = new CreateSendEmailInput();
+
+String to = "to";
+collect.setTo(to);
+
+String from = "from";
+collect.setFrom(from);
+
+SendEmailAsEnum type = SendEmailAsEnum.fromString("HTML");
+collect.setType(type);
+
+String subject = "subject";
+collect.setSubject(subject);
+
+String message = "message";
+collect.setMessage(message);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+String cc = "cc";
+collect.setCc(cc);
+
+String bcc = "bcc";
+collect.setBcc(bcc);
+
+String attachment = "attachment";
+collect.setAttachment(attachment);
+
+// Invoking the API call with sample inputs
+email.createSendEmailAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_delete_invalid_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.EmailController.createDeleteInvalidAsync") createDeleteInvalidAsync
+
+> This endpoint allows you to delete entries in the Invalid Emails list.
+
+
+```java
+void createDeleteInvalidAsync(
+        final CreateDeleteInvalidInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| email |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```java
+CreateDeleteInvalidInput collect = new CreateDeleteInvalidInput();
+
+String email = "email";
+collect.setEmail(email);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+// Invoking the API call with sample inputs
+email.createDeleteInvalidAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="sms_controller"></a>![Class: ](https://apidocs.io/img/class.png "message360.controllers.SMSController") SMSController
+
+#### Get singleton instance
+
+The singleton instance of the ``` SMSController ``` class can be accessed from the API Client.
+
+```java
+SMSController sMS = client.getSMS();
+```
+
+#### <a name="create_list_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.SMSController.createListSMSAsync") createListSMSAsync
+
+> List All SMS
+
+
+```java
+void createListSMSAsync(
+        final CreateListSMSInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| pageSize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| numberType |  ``` Optional ```  | TODO: Add a parameter description |
-| friendlyName |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | Messages sent from this number |
+| to |  ``` Optional ```  | Messages sent to this number |
+| datesent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
 
 
 #### Example Usage
 
 ```java
-CreateListNumberInput collect = new CreateListNumberInput();
+CreateListSMSInput collect = new CreateListSMSInput();
 
-Integer page = 199;
+String responseType = "json";
+collect.setResponseType(responseType);
+
+Integer page = 99;
 collect.setPage(page);
 
-Integer pageSize = 10;
-collect.setPageSize(pageSize);
+Integer pagesize = 99;
+collect.setPagesize(pagesize);
 
-NumberTypeEnum numberType = NumberTypeEnum.fromString("ALL");
-collect.setNumberType(numberType);
+String from = "from";
+collect.setFrom(from);
 
-String friendlyName = "FriendlyName";
-collect.setFriendlyName(friendlyName);
+String to = "to";
+collect.setTo(to);
 
-String responseType = "json";
-collect.setResponseType(responseType);
+String datesent = "datesent";
+collect.setDatesent(datesent);
 
 // Invoking the API call with sample inputs
-phoneNumber.createListNumberAsync(collect, new APICallBack<String>() {
+sMS.createListSMSAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3139,14 +2811,14 @@ phoneNumber.createListNumberAsync(collect, new APICallBack<String>() {
 ```
 
 
-#### <a name="create_available_phone_number_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.createAvailablePhoneNumberAsync") createAvailablePhoneNumberAsync
+#### <a name="create_list_inbound_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.SMSController.createListInboundSMSAsync") createListInboundSMSAsync
 
-> Available Phone Number
+> List All Inbound SMS
 
 
 ```java
-void createAvailablePhoneNumberAsync(
-        final CreateAvailablePhoneNumberInput input,
+void createListInboundSMSAsync(
+        final CreateListInboundSMSInput input,
         final APICallBack<String> callBack)
 ```
 
@@ -3154,31 +2826,147 @@ void createAvailablePhoneNumberAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| numberType |  ``` Required ```  | Number type either SMS,Voice or all |
-| areaCode |  ``` Required ```  | Phone Number Area Code |
-| pageSize |  ``` Optional ```  ``` DefaultValue ```  | Page Size |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | From Number to Inbound SMS |
+| to |  ``` Optional ```  | To Number to get Inbound SMS |
 
 
 #### Example Usage
 
 ```java
-CreateAvailablePhoneNumberInput collect = new CreateAvailablePhoneNumberInput();
+CreateListInboundSMSInput collect = new CreateListInboundSMSInput();
 
-NumberTypeEnum numberType = NumberTypeEnum.fromString("ALL");
-collect.setNumberType(numberType);
+String responseType = "json";
+collect.setResponseType(responseType);
 
-String areaCode = "AreaCode";
-collect.setAreaCode(areaCode);
+Integer page = 99;
+collect.setPage(page);
 
-Integer pageSize = 10;
-collect.setPageSize(pageSize);
+String pagesize = "pagesize";
+collect.setPagesize(pagesize);
+
+String from = "from";
+collect.setFrom(from);
+
+String to = "to";
+collect.setTo(to);
+
+// Invoking the API call with sample inputs
+sMS.createListInboundSMSAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_send_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.SMSController.createSendSMSAsync") createSendSMSAsync
+
+> Send an SMS from a message360 number
+
+
+```java
+void createSendSMSAsync(
+        final CreateSendSMSInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| fromcountrycode |  ``` Required ```  ``` DefaultValue ```  | From Country Code |
+| from |  ``` Required ```  | SMS enabled Message360 number to send this message from |
+| tocountrycode |  ``` Required ```  ``` DefaultValue ```  | To country code |
+| to |  ``` Required ```  | Number to send the SMS to |
+| body |  ``` Required ```  | Text Message To Send |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once SMS sent. |
+| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished. |
+
+
+#### Example Usage
+
+```java
+CreateSendSMSInput collect = new CreateSendSMSInput();
+
+int fromcountrycode = 1;
+collect.setFromcountrycode(fromcountrycode);
+
+String from = "from";
+collect.setFrom(from);
+
+int tocountrycode = 1;
+collect.setTocountrycode(tocountrycode);
+
+String to = "to";
+collect.setTo(to);
+
+String body = "body";
+collect.setBody(body);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+HttpActionEnum method = HttpActionEnum.fromString("GET");
+collect.setMethod(method);
+
+String messagestatuscallback = "messagestatuscallback";
+collect.setMessagestatuscallback(messagestatuscallback);
+
+// Invoking the API call with sample inputs
+sMS.createSendSMSAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_view_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.SMSController.createViewSMSAsync") createViewSMSAsync
+
+> View a Particular SMS
+
+
+```java
+void createViewSMSAsync(
+        final CreateViewSMSInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| messagesid |  ``` Required ```  | Message sid |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```java
+CreateViewSMSInput collect = new CreateViewSMSInput();
+
+String messagesid = "messagesid";
+collect.setMessagesid(messagesid);
 
 String responseType = "json";
 collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
-phoneNumber.createAvailablePhoneNumberAsync(collect, new APICallBack<String>() {
+sMS.createViewSMSAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3218,11 +3006,11 @@ void createListRecordingAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
 | pageSize |  ``` Optional ```  | Number of individual resources listed in the response per page |
 | dateCreated |  ``` Optional ```  | TODO: Add a parameter description |
 | callSid |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -3230,10 +3018,13 @@ void createListRecordingAsync(
 ```java
 CreateListRecordingInput collect = new CreateListRecordingInput();
 
-Integer page = 199;
+String responseType = "json";
+collect.setResponseType(responseType);
+
+Integer page = 99;
 collect.setPage(page);
 
-Integer pageSize = 199;
+Integer pageSize = 99;
 collect.setPageSize(pageSize);
 
 String dateCreated = "DateCreated";
@@ -3241,9 +3032,6 @@ collect.setDateCreated(dateCreated);
 
 String callSid = "CallSid";
 collect.setCallSid(callSid);
-
-String responseType = "json";
-collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
 recording.createListRecordingAsync(collect, new APICallBack<String>() {
@@ -3275,7 +3063,7 @@ void createDeleteRecordingAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | recordingSid |  ``` Required ```  | Unique Recording Sid to be delete |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -3319,7 +3107,7 @@ void createViewRecordingAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | recordingSid |  ``` Required ```  | Search Recording sid |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -3349,24 +3137,24 @@ recording.createViewRecordingAsync(collect, new APICallBack<String>() {
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="sms_controller"></a>![Class: ](https://apidocs.io/img/class.png "message360.controllers.SMSController") SMSController
+### <a name="carrier_controller"></a>![Class: ](https://apidocs.io/img/class.png "message360.controllers.CarrierController") CarrierController
 
 #### Get singleton instance
 
-The singleton instance of the ``` SMSController ``` class can be accessed from the API Client.
+The singleton instance of the ``` CarrierController ``` class can be accessed from the API Client.
 
 ```java
-SMSController sMS = client.getSMS();
+CarrierController carrier = client.getCarrier();
 ```
 
-#### <a name="create_list_inbound_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.SMSController.createListInboundSMSAsync") createListInboundSMSAsync
+#### <a name="create_carrier_lookup_list_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CarrierController.createCarrierLookupListAsync") createCarrierLookupListAsync
 
-> List All Inbound SMS
+> Get the All Purchase Number's Carrier lookup
 
 
 ```java
-void createListInboundSMSAsync(
-        final CreateListInboundSMSInput input,
+void createCarrierLookupListAsync(
+        final CreateCarrierLookupListInput input,
         final APICallBack<String> callBack)
 ```
 
@@ -3374,35 +3162,27 @@ void createListInboundSMSAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | From Number to Inbound SMS |
-| to |  ``` Optional ```  | To Number to get Inbound SMS |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| page |  ``` Optional ```  | Page Number |
+| pagesize |  ``` Optional ```  | Page Size |
 
 
 #### Example Usage
 
 ```java
-CreateListInboundSMSInput collect = new CreateListInboundSMSInput();
+CreateCarrierLookupListInput collect = new CreateCarrierLookupListInput();
 
-Integer page = 199;
+String responseType = "json";
+collect.setResponseType(responseType);
+
+Integer page = 99;
 collect.setPage(page);
 
-String pagesize = "pagesize";
+Integer pagesize = 99;
 collect.setPagesize(pagesize);
 
-String from = "from";
-collect.setFrom(from);
-
-String to = "to";
-collect.setTo(to);
-
-String responseType = "json";
-collect.setResponseType(responseType);
-
 // Invoking the API call with sample inputs
-sMS.createListInboundSMSAsync(collect, new APICallBack<String>() {
+carrier.createCarrierLookupListAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3415,14 +3195,14 @@ sMS.createListInboundSMSAsync(collect, new APICallBack<String>() {
 ```
 
 
-#### <a name="create_list_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.SMSController.createListSMSAsync") createListSMSAsync
+#### <a name="create_carrier_lookup_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.CarrierController.createCarrierLookupAsync") createCarrierLookupAsync
 
-> List All SMS
+> Get the Carrier Lookup
 
 
 ```java
-void createListSMSAsync(
-        final CreateListSMSInput input,
+void createCarrierLookupAsync(
+        final CreateCarrierLookupInput input,
         final APICallBack<String> callBack)
 ```
 
@@ -3430,39 +3210,223 @@ void createListSMSAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | Messages sent from this number |
-| to |  ``` Optional ```  | Messages sent to this number |
-| datesent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| phonenumber |  ``` Required ```  | The number to lookup |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
 
 ```java
-CreateListSMSInput collect = new CreateListSMSInput();
+CreateCarrierLookupInput collect = new CreateCarrierLookupInput();
 
-Integer page = 199;
+String phonenumber = "phonenumber";
+collect.setPhonenumber(phonenumber);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+// Invoking the API call with sample inputs
+carrier.createCarrierLookupAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="phone_number_controller"></a>![Class: ](https://apidocs.io/img/class.png "message360.controllers.PhoneNumberController") PhoneNumberController
+
+#### Get singleton instance
+
+The singleton instance of the ``` PhoneNumberController ``` class can be accessed from the API Client.
+
+```java
+PhoneNumberController phoneNumber = client.getPhoneNumber();
+```
+
+#### <a name="create_buy_number_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.createBuyNumberAsync") createBuyNumberAsync
+
+> Buy Phone Number 
+
+
+```java
+void createBuyNumberAsync(
+        final CreateBuyNumberInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phoneNumber |  ``` Required ```  | Phone number to be purchase |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```java
+CreateBuyNumberInput collect = new CreateBuyNumberInput();
+
+String phoneNumber = "PhoneNumber";
+collect.setPhoneNumber(phoneNumber);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+// Invoking the API call with sample inputs
+phoneNumber.createBuyNumberAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_release_number_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.createReleaseNumberAsync") createReleaseNumberAsync
+
+> Release number from account
+
+
+```java
+void createReleaseNumberAsync(
+        final CreateReleaseNumberInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phoneNumber |  ``` Required ```  | Phone number to be relase |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```java
+CreateReleaseNumberInput collect = new CreateReleaseNumberInput();
+
+String phoneNumber = "PhoneNumber";
+collect.setPhoneNumber(phoneNumber);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+// Invoking the API call with sample inputs
+phoneNumber.createReleaseNumberAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_view_number_details_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.createViewNumberDetailsAsync") createViewNumberDetailsAsync
+
+> Get Phone Number Details
+
+
+```java
+void createViewNumberDetailsAsync(
+        final CreateViewNumberDetailsInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phoneNumber |  ``` Required ```  | Get Phone number Detail |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+#### Example Usage
+
+```java
+CreateViewNumberDetailsInput collect = new CreateViewNumberDetailsInput();
+
+String phoneNumber = "PhoneNumber";
+collect.setPhoneNumber(phoneNumber);
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+// Invoking the API call with sample inputs
+phoneNumber.createViewNumberDetailsAsync(collect, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+}
+);
+
+```
+
+
+#### <a name="create_list_number_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.createListNumberAsync") createListNumberAsync
+
+> List Account's Phone number details
+
+
+```java
+void createListNumberAsync(
+        final CreateListNumberInput input,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| pageSize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| numberType |  ``` Optional ```  | TODO: Add a parameter description |
+| friendlyName |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```java
+CreateListNumberInput collect = new CreateListNumberInput();
+
+String responseType = "json";
+collect.setResponseType(responseType);
+
+Integer page = 99;
 collect.setPage(page);
 
-Integer pagesize = 199;
-collect.setPagesize(pagesize);
+Integer pageSize = 10;
+collect.setPageSize(pageSize);
 
-String from = "from";
-collect.setFrom(from);
+NumberTypeEnum numberType = NumberTypeEnum.fromString("ALL");
+collect.setNumberType(numberType);
 
-String to = "to";
-collect.setTo(to);
-
-String datesent = "datesent";
-collect.setDatesent(datesent);
-
-String responseType = "json";
-collect.setResponseType(responseType);
+String friendlyName = "FriendlyName";
+collect.setFriendlyName(friendlyName);
 
 // Invoking the API call with sample inputs
-sMS.createListSMSAsync(collect, new APICallBack<String>() {
+phoneNumber.createListNumberAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3475,14 +3439,14 @@ sMS.createListSMSAsync(collect, new APICallBack<String>() {
 ```
 
 
-#### <a name="create_send_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.SMSController.createSendSMSAsync") createSendSMSAsync
+#### <a name="create_available_phone_number_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.createAvailablePhoneNumberAsync") createAvailablePhoneNumberAsync
 
-> Send an SMS from a message360 number
+> Available Phone Number
 
 
 ```java
-void createSendSMSAsync(
-        final CreateSendSMSInput input,
+void createAvailablePhoneNumberAsync(
+        final CreateAvailablePhoneNumberInput input,
         final APICallBack<String> callBack)
 ```
 
@@ -3490,47 +3454,31 @@ void createSendSMSAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| fromcountrycode |  ``` Required ```  ``` DefaultValue ```  | From Country Code |
-| from |  ``` Required ```  | SMS enabled Message360 number to send this message from |
-| tocountrycode |  ``` Required ```  ``` DefaultValue ```  | To country code |
-| to |  ``` Required ```  | Number to send the SMS to |
-| body |  ``` Required ```  | Text Message To Send |
-| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once SMS sent. |
-| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished. |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| numberType |  ``` Required ```  | Number type either SMS,Voice or all |
+| areaCode |  ``` Required ```  | Phone Number Area Code |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| pageSize |  ``` Optional ```  ``` DefaultValue ```  | Page Size |
 
 
 #### Example Usage
 
 ```java
-CreateSendSMSInput collect = new CreateSendSMSInput();
+CreateAvailablePhoneNumberInput collect = new CreateAvailablePhoneNumberInput();
 
-int fromcountrycode = 1;
-collect.setFromcountrycode(fromcountrycode);
+NumberTypeEnum numberType = NumberTypeEnum.fromString("ALL");
+collect.setNumberType(numberType);
 
-String from = "from";
-collect.setFrom(from);
-
-int tocountrycode = 1;
-collect.setTocountrycode(tocountrycode);
-
-String to = "to";
-collect.setTo(to);
-
-String body = "body";
-collect.setBody(body);
-
-HttpActionEnum method = HttpActionEnum.fromString("GET");
-collect.setMethod(method);
-
-String messagestatuscallback = "messagestatuscallback";
-collect.setMessagestatuscallback(messagestatuscallback);
+String areaCode = "AreaCode";
+collect.setAreaCode(areaCode);
 
 String responseType = "json";
 collect.setResponseType(responseType);
 
+Integer pageSize = 10;
+collect.setPageSize(pageSize);
+
 // Invoking the API call with sample inputs
-sMS.createSendSMSAsync(collect, new APICallBack<String>() {
+phoneNumber.createAvailablePhoneNumberAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3543,14 +3491,14 @@ sMS.createSendSMSAsync(collect, new APICallBack<String>() {
 ```
 
 
-#### <a name="create_view_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.SMSController.createViewSMSAsync") createViewSMSAsync
+#### <a name="update_phone_number_async"></a>![Method: ](https://apidocs.io/img/method.png "message360.controllers.PhoneNumberController.updatePhoneNumberAsync") updatePhoneNumberAsync
 
-> View a Particular SMS
+> Update Phone Number Details
 
 
 ```java
-void createViewSMSAsync(
-        final CreateViewSMSInput input,
+void updatePhoneNumberAsync(
+        final UpdatePhoneNumberInput input,
         final APICallBack<String> callBack)
 ```
 
@@ -3558,23 +3506,75 @@ void createViewSMSAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| messagesid |  ``` Required ```  | Message sid |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| phoneNumber |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| friendlyName |  ``` Optional ```  | TODO: Add a parameter description |
+| voiceUrl |  ``` Optional ```  | URL requested once the call connects |
+| voiceMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| voiceFallbackUrl |  ``` Optional ```  | URL requested if the voice URL is not available |
+| voiceFallbackMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| hangupCallback |  ``` Optional ```  | TODO: Add a parameter description |
+| hangupCallbackMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| heartbeatUrl |  ``` Optional ```  | URL requested once the call connects |
+| heartbeatMethod |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed time |
+| smsUrl |  ``` Optional ```  | URL requested when an SMS is received |
+| smsMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| smsFallbackUrl |  ``` Optional ```  | URL requested once the call connects |
+| smsFallbackMethod |  ``` Optional ```  | URL requested if the sms URL is not available |
 
 
 #### Example Usage
 
 ```java
-CreateViewSMSInput collect = new CreateViewSMSInput();
+UpdatePhoneNumberInput collect = new UpdatePhoneNumberInput();
 
-String messagesid = "messagesid";
-collect.setMessagesid(messagesid);
+String phoneNumber = "PhoneNumber";
+collect.setPhoneNumber(phoneNumber);
 
 String responseType = "json";
 collect.setResponseType(responseType);
 
+String friendlyName = "FriendlyName";
+collect.setFriendlyName(friendlyName);
+
+String voiceUrl = "VoiceUrl";
+collect.setVoiceUrl(voiceUrl);
+
+HttpActionEnum voiceMethod = HttpActionEnum.fromString("GET");
+collect.setVoiceMethod(voiceMethod);
+
+String voiceFallbackUrl = "VoiceFallbackUrl";
+collect.setVoiceFallbackUrl(voiceFallbackUrl);
+
+HttpActionEnum voiceFallbackMethod = HttpActionEnum.fromString("GET");
+collect.setVoiceFallbackMethod(voiceFallbackMethod);
+
+String hangupCallback = "HangupCallback";
+collect.setHangupCallback(hangupCallback);
+
+HttpActionEnum hangupCallbackMethod = HttpActionEnum.fromString("GET");
+collect.setHangupCallbackMethod(hangupCallbackMethod);
+
+String heartbeatUrl = "HeartbeatUrl";
+collect.setHeartbeatUrl(heartbeatUrl);
+
+HttpActionEnum heartbeatMethod = HttpActionEnum.fromString("GET");
+collect.setHeartbeatMethod(heartbeatMethod);
+
+String smsUrl = "SmsUrl";
+collect.setSmsUrl(smsUrl);
+
+HttpActionEnum smsMethod = HttpActionEnum.fromString("GET");
+collect.setSmsMethod(smsMethod);
+
+String smsFallbackUrl = "SmsFallbackUrl";
+collect.setSmsFallbackUrl(smsFallbackUrl);
+
+HttpActionEnum smsFallbackMethod = HttpActionEnum.fromString("GET");
+collect.setSmsFallbackMethod(smsFallbackMethod);
+
 // Invoking the API call with sample inputs
-sMS.createViewSMSAsync(collect, new APICallBack<String>() {
+phoneNumber.updatePhoneNumberAsync(collect, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3615,7 +3615,7 @@ void createAudioURLTranscriptionAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | audioUrl |  ``` Required ```  | Audio url |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -3659,7 +3659,7 @@ void createRecordingTranscriptionAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | recordingSid |  ``` Required ```  | Unique Recording sid |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -3703,7 +3703,7 @@ void createViewTranscriptionAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | transcriptionSid |  ``` Required ```  | Unique Transcription ID |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -3746,11 +3746,11 @@ void createListTranscriptionAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | page |  ``` Optional ```  | TODO: Add a parameter description |
 | pageSize |  ``` Optional ```  | TODO: Add a parameter description |
 | status |  ``` Optional ```  | TODO: Add a parameter description |
 | dateTranscribed |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -3758,10 +3758,13 @@ void createListTranscriptionAsync(
 ```java
 CreateListTranscriptionInput collect = new CreateListTranscriptionInput();
 
-Integer page = 199;
+String responseType = "json";
+collect.setResponseType(responseType);
+
+Integer page = 99;
 collect.setPage(page);
 
-Integer pageSize = 199;
+Integer pageSize = 99;
 collect.setPageSize(pageSize);
 
 StatusEnum status = StatusEnum.fromString("INPROGRESS");
@@ -3769,9 +3772,6 @@ collect.setStatus(status);
 
 String dateTranscribed = "DateTranscribed";
 collect.setDateTranscribed(dateTranscribed);
-
-String responseType = "json";
-collect.setResponseType(responseType);
 
 // Invoking the API call with sample inputs
 transcription.createListTranscriptionAsync(collect, new APICallBack<String>() {
@@ -3817,7 +3817,7 @@ void createListUsageAsync(
 | productCode |  ``` Required ```  ``` DefaultValue ```  | Product Code |
 | startDate |  ``` Required ```  ``` DefaultValue ```  | Start Usage Date |
 | endDate |  ``` Required ```  ``` DefaultValue ```  | End Usage Date |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage
@@ -3879,7 +3879,7 @@ void createViewAccountAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | date |  ``` Required ```  | TODO: Add a parameter description |
-| responseType |  ``` Optional ```  ``` DefaultValue ```  | Response type format xml or json |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 #### Example Usage

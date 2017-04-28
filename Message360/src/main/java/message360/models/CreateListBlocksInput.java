@@ -12,10 +12,27 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListBlocksInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5663107857421774247L;
+    private static final long serialVersionUID = 4945759868353578552L;
+    private String responseType = "json";
     private String offset;
     private String limit;
-    private String responseType = "json";
+    /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
+    }
+ 
     /** GETTER
      * Where to start in the output list
      */
@@ -48,23 +65,6 @@ public class CreateListBlocksInput
     public void setLimit (String value) { 
         this.limit = value;
         notifyObservers(this.limit);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }
