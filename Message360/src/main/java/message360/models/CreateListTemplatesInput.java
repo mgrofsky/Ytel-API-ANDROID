@@ -12,11 +12,28 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListTemplatesInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4829759347189985736L;
+    private static final long serialVersionUID = 5706377217050014343L;
+    private String responseType = "json";
     private String type = "authorization";
     private Integer page;
     private Integer pagesize = 10;
-    private String responseType = "json";
+    /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
+    }
+ 
     /** GETTER
      * The type (category) of template Valid values: marketing, authorization
      */
@@ -66,23 +83,6 @@ public class CreateListTemplatesInput
     public void setPagesize (Integer value) { 
         this.pagesize = value;
         notifyObservers(this.pagesize);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

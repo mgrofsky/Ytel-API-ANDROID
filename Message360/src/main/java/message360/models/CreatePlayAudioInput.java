@@ -12,14 +12,14 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreatePlayAudioInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5743268645049806767L;
+    private static final long serialVersionUID = 4672043147566646640L;
     private String callSid;
     private String audioUrl;
+    private String responseType = "json";
     private Integer length;
     private DirectionEnum direction;
     private Boolean loop;
     private Boolean mix;
-    private String responseType = "json";
     /** GETTER
      * The unique identifier of each call resource
      */
@@ -52,6 +52,23 @@ public class CreatePlayAudioInput
     public void setAudioUrl (String value) { 
         this.audioUrl = value;
         notifyObservers(this.audioUrl);
+    }
+ 
+    /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
     }
  
     /** GETTER
@@ -120,23 +137,6 @@ public class CreatePlayAudioInput
     public void setMix (Boolean value) { 
         this.mix = value;
         notifyObservers(this.mix);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

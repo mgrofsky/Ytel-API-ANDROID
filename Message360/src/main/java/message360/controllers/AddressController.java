@@ -65,6 +65,9 @@ public class AddressController extends BaseController {
         if (null == input.getZip())
             throw new NullPointerException("The property \"Zip\" in the input object cannot be null.");
 
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -74,7 +77,7 @@ public class AddressController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5058350501788396698L;
+            private static final long serialVersionUID = 5508210476043212367L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -83,7 +86,7 @@ public class AddressController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4855098195969451687L;
+            private static final long serialVersionUID = 5701908561586877609L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -91,7 +94,7 @@ public class AddressController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5209373752216357804L;
+            private static final long serialVersionUID = 5606083675900623230L;
             {
                     put( "Name", input.getName() );
                     put( "Address", input.getAddress() );
@@ -175,6 +178,9 @@ public class AddressController extends BaseController {
         if (null == input.getAddressSID())
             throw new NullPointerException("The property \"AddressSID\" in the input object cannot be null.");
 
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -184,7 +190,7 @@ public class AddressController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4616130167203512168L;
+            private static final long serialVersionUID = 4695625354522014724L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -193,7 +199,7 @@ public class AddressController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4678949557711511490L;
+            private static final long serialVersionUID = 5092980186751513611L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -201,7 +207,7 @@ public class AddressController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4697493194018107951L;
+            private static final long serialVersionUID = 4740821738024467538L;
             {
                     put( "AddressSID", input.getAddressSID() );
             }
@@ -277,6 +283,9 @@ public class AddressController extends BaseController {
         if (null == input.getAddressSID())
             throw new NullPointerException("The property \"AddressSID\" in the input object cannot be null.");
 
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -286,7 +295,7 @@ public class AddressController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5463746687495485405L;
+            private static final long serialVersionUID = 5463788098340345809L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -295,7 +304,7 @@ public class AddressController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4639092124744965486L;
+            private static final long serialVersionUID = 5273865130764592336L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -303,7 +312,7 @@ public class AddressController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5573431656823062423L;
+            private static final long serialVersionUID = 5194799037357727100L;
             {
                     put( "AddressSID", input.getAddressSID() );
             }
@@ -375,6 +384,10 @@ public class AddressController extends BaseController {
                 final CreateListAddressInput input,
                 final APICallBack<String> callBack
     ) {
+        //validating required parameters
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -384,7 +397,7 @@ public class AddressController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4760309825111434577L;
+            private static final long serialVersionUID = 4852039586733912342L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -393,7 +406,7 @@ public class AddressController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5249410311807869196L;
+            private static final long serialVersionUID = 5303119852071284246L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -401,7 +414,7 @@ public class AddressController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4733829287605482700L;
+            private static final long serialVersionUID = 4715744611402928267L;
             {
                     put( "Page", input.getPage() );
                     put( "PageSize", input.getPageSize() );
@@ -480,6 +493,9 @@ public class AddressController extends BaseController {
         if (null == input.getAddressSID())
             throw new NullPointerException("The property \"AddressSID\" in the input object cannot be null.");
 
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -489,7 +505,7 @@ public class AddressController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4632399460968649259L;
+            private static final long serialVersionUID = 5713804730935576246L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -498,7 +514,7 @@ public class AddressController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5325900022076592872L;
+            private static final long serialVersionUID = 5256590550370519473L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -506,7 +522,7 @@ public class AddressController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5019362460177662456L;
+            private static final long serialVersionUID = 5564806754157787098L;
             {
                     put( "AddressSID", input.getAddressSID() );
             }

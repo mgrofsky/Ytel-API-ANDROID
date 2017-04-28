@@ -12,8 +12,9 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class UpdatePhoneNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5069974988173121401L;
+    private static final long serialVersionUID = 5351355549383764704L;
     private String phoneNumber;
+    private String responseType = "json";
     private String friendlyName;
     private String voiceUrl;
     private HttpActionEnum voiceMethod;
@@ -27,7 +28,6 @@ public class UpdatePhoneNumberInput
     private HttpActionEnum smsMethod;
     private String smsFallbackUrl;
     private HttpActionEnum smsFallbackMethod;
-    private String responseType = "json";
     /** GETTER
      * TODO: Write general description for this method
      */
@@ -43,6 +43,23 @@ public class UpdatePhoneNumberInput
     public void setPhoneNumber (String value) { 
         this.phoneNumber = value;
         notifyObservers(this.phoneNumber);
+    }
+ 
+    /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
     }
  
     /** GETTER
@@ -264,23 +281,6 @@ public class UpdatePhoneNumberInput
     public void setSmsFallbackMethod (HttpActionEnum value) { 
         this.smsFallbackMethod = value;
         notifyObservers(this.smsFallbackMethod);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

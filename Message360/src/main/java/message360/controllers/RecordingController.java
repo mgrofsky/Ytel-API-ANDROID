@@ -46,6 +46,10 @@ public class RecordingController extends BaseController {
                 final CreateListRecordingInput input,
                 final APICallBack<String> callBack
     ) {
+        //validating required parameters
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -55,7 +59,7 @@ public class RecordingController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5724849102645463013L;
+            private static final long serialVersionUID = 4774291417246782930L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -64,7 +68,7 @@ public class RecordingController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5478292216710877971L;
+            private static final long serialVersionUID = 4911669678377105347L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -72,7 +76,7 @@ public class RecordingController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5315365739535856146L;
+            private static final long serialVersionUID = 5700895098532044689L;
             {
                     put( "Page", input.getPage() );
                     put( "PageSize", input.getPageSize() );
@@ -151,6 +155,9 @@ public class RecordingController extends BaseController {
         if (null == input.getRecordingSid())
             throw new NullPointerException("The property \"RecordingSid\" in the input object cannot be null.");
 
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -160,7 +167,7 @@ public class RecordingController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4876981385616232184L;
+            private static final long serialVersionUID = 4669441157057594495L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -169,7 +176,7 @@ public class RecordingController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5573530136083338161L;
+            private static final long serialVersionUID = 5469802373855217629L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -177,7 +184,7 @@ public class RecordingController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5108280765954343529L;
+            private static final long serialVersionUID = 5204383271878172553L;
             {
                     put( "RecordingSid", input.getRecordingSid() );
             }
@@ -253,6 +260,9 @@ public class RecordingController extends BaseController {
         if (null == input.getRecordingSid())
             throw new NullPointerException("The property \"RecordingSid\" in the input object cannot be null.");
 
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -262,7 +272,7 @@ public class RecordingController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5684855574872244955L;
+            private static final long serialVersionUID = 5261989809989777828L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -271,7 +281,7 @@ public class RecordingController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4759170799748890970L;
+            private static final long serialVersionUID = 5529257343664311134L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -279,7 +289,7 @@ public class RecordingController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5455589846148135738L;
+            private static final long serialVersionUID = 5671312319011936980L;
             {
                     put( "RecordingSid", input.getRecordingSid() );
             }

@@ -26,14 +26,6 @@ public class Message360Client {
     }
 
     /**
-     * Singleton access to Email controller
-     * @return	Returns the EmailController instance 
-     */
-    public EmailController getEmail() {
-        return EmailController.getInstance();
-    }
-
-    /**
      * Singleton access to NumberVerification controller
      * @return	Returns the NumberVerificationController instance 
      */
@@ -42,11 +34,11 @@ public class Message360Client {
     }
 
     /**
-     * Singleton access to Carrier controller
-     * @return	Returns the CarrierController instance 
+     * Singleton access to WebRTC controller
+     * @return	Returns the WebRTCController instance 
      */
-    public CarrierController getCarrier() {
-        return CarrierController.getInstance();
+    public WebRTCController getWebRTC() {
+        return WebRTCController.getInstance();
     }
 
     /**
@@ -55,14 +47,6 @@ public class Message360Client {
      */
     public CallController getCall() {
         return CallController.getInstance();
-    }
-
-    /**
-     * Singleton access to WebRTC controller
-     * @return	Returns the WebRTCController instance 
-     */
-    public WebRTCController getWebRTC() {
-        return WebRTCController.getInstance();
     }
 
     /**
@@ -82,11 +66,19 @@ public class Message360Client {
     }
 
     /**
-     * Singleton access to PhoneNumber controller
-     * @return	Returns the PhoneNumberController instance 
+     * Singleton access to Email controller
+     * @return	Returns the EmailController instance 
      */
-    public PhoneNumberController getPhoneNumber() {
-        return PhoneNumberController.getInstance();
+    public EmailController getEmail() {
+        return EmailController.getInstance();
+    }
+
+    /**
+     * Singleton access to SMS controller
+     * @return	Returns the SMSController instance 
+     */
+    public SMSController getSMS() {
+        return SMSController.getInstance();
     }
 
     /**
@@ -98,11 +90,19 @@ public class Message360Client {
     }
 
     /**
-     * Singleton access to SMS controller
-     * @return	Returns the SMSController instance 
+     * Singleton access to Carrier controller
+     * @return	Returns the CarrierController instance 
      */
-    public SMSController getSMS() {
-        return SMSController.getInstance();
+    public CarrierController getCarrier() {
+        return CarrierController.getInstance();
+    }
+
+    /**
+     * Singleton access to PhoneNumber controller
+     * @return	Returns the PhoneNumberController instance 
+     */
+    public PhoneNumberController getPhoneNumber() {
+        return PhoneNumberController.getInstance();
     }
 
     /**

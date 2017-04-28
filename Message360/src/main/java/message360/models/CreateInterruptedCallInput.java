@@ -12,12 +12,12 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateInterruptedCallInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5749166646048494378L;
+    private static final long serialVersionUID = 4701316275103981751L;
     private String callSid;
+    private String responseType = "json";
     private String url;
     private HttpActionEnum method;
     private InterruptedCallStatusEnum status;
-    private String responseType = "json";
     /** GETTER
      * Call SId
      */
@@ -33,6 +33,23 @@ public class CreateInterruptedCallInput
     public void setCallSid (String value) { 
         this.callSid = value;
         notifyObservers(this.callSid);
+    }
+ 
+    /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
     }
  
     /** GETTER
@@ -84,23 +101,6 @@ public class CreateInterruptedCallInput
     public void setStatus (InterruptedCallStatusEnum value) { 
         this.status = value;
         notifyObservers(this.status);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

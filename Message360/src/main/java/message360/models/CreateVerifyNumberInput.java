@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateVerifyNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5514765259394515573L;
+    private static final long serialVersionUID = 5465884728321280908L;
     private String phonenumber;
     private String type;
     private String responseType = "json";

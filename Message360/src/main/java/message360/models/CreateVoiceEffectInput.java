@@ -12,15 +12,15 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateVoiceEffectInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5574411696213386144L;
+    private static final long serialVersionUID = 4938558944341003236L;
     private String callSid;
+    private String responseType = "json";
     private AudioDirectionEnum audioDirection;
     private Double pitchSemiTones;
     private Double pitchOctaves;
     private Double pitch;
     private Double rate;
     private Double tempo;
-    private String responseType = "json";
     /** GETTER
      * TODO: Write general description for this method
      */
@@ -36,6 +36,23 @@ public class CreateVoiceEffectInput
     public void setCallSid (String value) { 
         this.callSid = value;
         notifyObservers(this.callSid);
+    }
+ 
+    /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
     }
  
     /** GETTER
@@ -138,23 +155,6 @@ public class CreateVoiceEffectInput
     public void setTempo (Double value) { 
         this.tempo = value;
         notifyObservers(this.tempo);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

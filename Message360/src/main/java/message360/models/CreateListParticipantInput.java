@@ -12,13 +12,13 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListParticipantInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5400718108410789668L;
+    private static final long serialVersionUID = 4848790375909465336L;
     private String conferenceSid;
+    private String responseType = "json";
     private Integer page;
     private Integer pagesize;
     private Boolean muted;
     private Boolean deaf;
-    private String responseType = "json";
     /** GETTER
      * unique conference sid
      */
@@ -34,6 +34,23 @@ public class CreateListParticipantInput
     public void setConferenceSid (String value) { 
         this.conferenceSid = value;
         notifyObservers(this.conferenceSid);
+    }
+ 
+    /** GETTER
+     * Response format, xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response format, xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
     }
  
     /** GETTER
@@ -102,23 +119,6 @@ public class CreateListParticipantInput
     public void setDeaf (Boolean value) { 
         this.deaf = value;
         notifyObservers(this.deaf);
-    }
- 
-    /** GETTER
-     * Response format, xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response format, xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateVerifyAddressInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4940646947142426993L;
+    private static final long serialVersionUID = 4636450246431367189L;
     private String addressSID;
     private String responseType = "json";
     /** GETTER

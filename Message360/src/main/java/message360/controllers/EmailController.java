@@ -38,108 +38,6 @@ public class EmailController extends BaseController {
     }
 
     /**
-     * This endpoint allows you to delete entries in the Invalid Emails list.
-     * @param    CreateDeleteInvalidInput    Object containing request parameters
-     * @return    Returns the void response from the API call 
-     */
-    public void createDeleteInvalidAsync(
-                final CreateDeleteInvalidInput input,
-                final APICallBack<String> callBack
-    ) {
-        //validating required parameters
-        if (null == input.getEmail())
-            throw new NullPointerException("The property \"Email\" in the input object cannot be null.");
-
-        //the base uri for api requests
-        String _baseUri = Configuration.getBaseUri();
-        
-        //prepare query string for API call
-        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/email/deleteinvalidemail.{ResponseType}");
-
-        //process template parameters
-        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4895850660605771518L;
-            {
-                    put( "ResponseType", input.getResponseType() );
-            }});
-        //validate and preprocess url
-        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
-
-        //load all headers for the outgoing API request
-        Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5663420893050063480L;
-            {
-                    put( "user-agent", "message360-api" );
-            }
-        };
-
-        //load all fields for the outgoing API request
-        Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5278077821313688110L;
-            {
-                    put( "email", input.getEmail() );
-            }
-        };
-
-        //prepare and invoke the API call request to fetch the response
-        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
-                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
-
-        //invoke the callback before request if its not null
-        if (getHttpCallBack() != null)
-        {
-            getHttpCallBack().OnBeforeRequest(_request);
-        }
-
-        //invoke request and get response
-        Runnable _responseTask = new Runnable() {
-            public void run() {
-                //make the API call
-                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
-                    public void onSuccess(HttpContext _context, HttpResponse _response) {
-                        try {
-
-                            //invoke the callback after response if its not null
-                            if (getHttpCallBack() != null)	
-                            {
-                                getHttpCallBack().OnAfterResponse(_context);
-                            }
-
-                            //handle errors defined at the API level
-                            validateResponse(_response, _context);
-
-                            //extract result from the http response
-                            String _result = ((HttpStringResponse)_response).getBody();
-                            //let the caller know of the success
-                            callBack.onSuccess(_context, _result);
-                        } catch (APIException error) {
-                            //let the caller know of the error
-                            callBack.onFailure(_context, error);
-                        } catch (Exception exception) {
-                            //let the caller know of the caught Exception
-                            callBack.onFailure(_context, exception);
-                        }
-                    }
-                    public void onFailure(HttpContext _context, Throwable _error) {
-                        //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
-                            getHttpCallBack().OnAfterResponse(_context);
-                        }
-
-                        //let the caller know of the failure
-                        callBack.onFailure(_context, _error);
-                    }
-                });
-            }
-        };
-
-        //execute async using thread pool
-        APIHelper.getScheduler().execute(_responseTask);
-    }
-
-    /**
      * Outputs email addresses on your blocklist
      * @param    CreateListBlocksInput    Object containing request parameters
      * @return    Returns the void response from the API call 
@@ -148,6 +46,10 @@ public class EmailController extends BaseController {
                 final CreateListBlocksInput input,
                 final APICallBack<String> callBack
     ) {
+        //validating required parameters
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -157,7 +59,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5645323244126930428L;
+            private static final long serialVersionUID = 5253466819814062155L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -166,7 +68,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4944974496532956184L;
+            private static final long serialVersionUID = 5185805294148964838L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -174,7 +76,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5693706847384711595L;
+            private static final long serialVersionUID = 5323930283232311129L;
             {
                     put( "offset", input.getOffset() );
                     put( "limit", input.getLimit() );
@@ -247,6 +149,10 @@ public class EmailController extends BaseController {
                 final CreateListSpamInput input,
                 final APICallBack<String> callBack
     ) {
+        //validating required parameters
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -256,7 +162,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4907732153618486882L;
+            private static final long serialVersionUID = 5669201847986476841L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -265,7 +171,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5151451000212117058L;
+            private static final long serialVersionUID = 4640965902058008814L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -273,7 +179,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5095437239362903957L;
+            private static final long serialVersionUID = 5402408925836043028L;
             {
                     put( "offset", input.getOffset() );
                     put( "limit", input.getLimit() );
@@ -346,6 +252,10 @@ public class EmailController extends BaseController {
                 final CreateListBouncesInput input,
                 final APICallBack<String> callBack
     ) {
+        //validating required parameters
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -355,7 +265,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4789444409890293323L;
+            private static final long serialVersionUID = 4879688799843746179L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -364,7 +274,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4790986767093402459L;
+            private static final long serialVersionUID = 4659411147779625791L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -372,7 +282,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4698947688213205909L;
+            private static final long serialVersionUID = 5255401650136855300L;
             {
                     put( "offset", input.getOffset() );
                     put( "limit", input.getLimit() );
@@ -446,6 +356,9 @@ public class EmailController extends BaseController {
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         if (null == input.getEmail())
             throw new NullPointerException("The property \"Email\" in the input object cannot be null.");
 
@@ -458,7 +371,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4763314064513118402L;
+            private static final long serialVersionUID = 4809937035415447694L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -467,7 +380,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5193147820621192664L;
+            private static final long serialVersionUID = 5350411339501801093L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -475,7 +388,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4764530960644278930L;
+            private static final long serialVersionUID = 4889036202378781686L;
             {
                     put( "email", input.getEmail() );
             }
@@ -547,6 +460,10 @@ public class EmailController extends BaseController {
                 final CreateListInvalidInput input,
                 final APICallBack<String> callBack
     ) {
+        //validating required parameters
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -556,7 +473,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5397399409766378960L;
+            private static final long serialVersionUID = 4767409527707365149L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -565,7 +482,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4637009471463323759L;
+            private static final long serialVersionUID = 5557655145842070591L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -573,7 +490,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5591391489555952893L;
+            private static final long serialVersionUID = 5084502605808414795L;
             {
                     put( "offet", input.getOffet() );
                     put( "limit", input.getLimit() );
@@ -646,6 +563,10 @@ public class EmailController extends BaseController {
                 final CreateListUnsubscribesInput input,
                 final APICallBack<String> callBack
     ) {
+        //validating required parameters
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -655,7 +576,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5575308747026392630L;
+            private static final long serialVersionUID = 5681622686477659514L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -664,7 +585,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4894948140991825214L;
+            private static final long serialVersionUID = 4788021735595028488L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -672,7 +593,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5526803617567109313L;
+            private static final long serialVersionUID = 5618786364575061902L;
             {
                     put( "offset", input.getOffset() );
                     put( "limit", input.getLimit() );
@@ -749,6 +670,9 @@ public class EmailController extends BaseController {
         if (null == input.getEmail())
             throw new NullPointerException("The property \"Email\" in the input object cannot be null.");
 
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -758,7 +682,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5584590899718263847L;
+            private static final long serialVersionUID = 5238825400230664992L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -767,7 +691,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5259431937254138695L;
+            private static final long serialVersionUID = 5411435922188993644L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -775,7 +699,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5695471817790193673L;
+            private static final long serialVersionUID = 5012468173458880683L;
             {
                     put( "email", input.getEmail() );
             }
@@ -851,6 +775,9 @@ public class EmailController extends BaseController {
         if (null == input.getEmail())
             throw new NullPointerException("The property \"Email\" in the input object cannot be null.");
 
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -860,7 +787,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5111401741441847943L;
+            private static final long serialVersionUID = 5607234381174588706L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -869,7 +796,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5763430845341791887L;
+            private static final long serialVersionUID = 5091607458519659415L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -877,7 +804,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4690159809186941607L;
+            private static final long serialVersionUID = 4791981497958265330L;
             {
                     put( "email", input.getEmail() );
             }
@@ -953,6 +880,9 @@ public class EmailController extends BaseController {
         if (null == input.getEmail())
             throw new NullPointerException("The property \"Email\" in the input object cannot be null.");
 
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -962,7 +892,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5031724625957604494L;
+            private static final long serialVersionUID = 4984884845315914027L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -971,7 +901,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5383597623791302119L;
+            private static final long serialVersionUID = 4721402156257251827L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -979,7 +909,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5117904002080014743L;
+            private static final long serialVersionUID = 4877942401509988940L;
             {
                     put( "email", input.getEmail() );
             }
@@ -1052,6 +982,9 @@ public class EmailController extends BaseController {
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         if (null == input.getEmail())
             throw new NullPointerException("The property \"Email\" in the input object cannot be null.");
 
@@ -1064,7 +997,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5101878392122596479L;
+            private static final long serialVersionUID = 4704041266192091749L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -1073,7 +1006,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4830087662651489249L;
+            private static final long serialVersionUID = 5679091865993695608L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -1081,7 +1014,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5145575585813538363L;
+            private static final long serialVersionUID = 4672663378997016600L;
             {
                     put( "email", input.getEmail() );
             }
@@ -1169,6 +1102,9 @@ public class EmailController extends BaseController {
         if (null == input.getMessage())
             throw new NullPointerException("The property \"Message\" in the input object cannot be null.");
 
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
         //the base uri for api requests
         String _baseUri = Configuration.getBaseUri();
         
@@ -1178,7 +1114,7 @@ public class EmailController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5036616644963931010L;
+            private static final long serialVersionUID = 4776375788652843125L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -1187,7 +1123,7 @@ public class EmailController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5518115118828759325L;
+            private static final long serialVersionUID = 5730328658836015344L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -1195,7 +1131,7 @@ public class EmailController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5659201854102356691L;
+            private static final long serialVersionUID = 4943588115202784141L;
             {
                     put( "to", input.getTo() );
                     put( "from", input.getFrom() );
@@ -1205,6 +1141,111 @@ public class EmailController extends BaseController {
                     put( "cc", input.getCc() );
                     put( "bcc", input.getBcc() );
                     put( "attachment", input.getAttachment() );
+            }
+        };
+
+        //prepare and invoke the API call request to fetch the response
+        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
+                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
+
+        //invoke the callback before request if its not null
+        if (getHttpCallBack() != null)
+        {
+            getHttpCallBack().OnBeforeRequest(_request);
+        }
+
+        //invoke request and get response
+        Runnable _responseTask = new Runnable() {
+            public void run() {
+                //make the API call
+                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
+                    public void onSuccess(HttpContext _context, HttpResponse _response) {
+                        try {
+
+                            //invoke the callback after response if its not null
+                            if (getHttpCallBack() != null)	
+                            {
+                                getHttpCallBack().OnAfterResponse(_context);
+                            }
+
+                            //handle errors defined at the API level
+                            validateResponse(_response, _context);
+
+                            //extract result from the http response
+                            String _result = ((HttpStringResponse)_response).getBody();
+                            //let the caller know of the success
+                            callBack.onSuccess(_context, _result);
+                        } catch (APIException error) {
+                            //let the caller know of the error
+                            callBack.onFailure(_context, error);
+                        } catch (Exception exception) {
+                            //let the caller know of the caught Exception
+                            callBack.onFailure(_context, exception);
+                        }
+                    }
+                    public void onFailure(HttpContext _context, Throwable _error) {
+                        //invoke the callback after response if its not null
+                        if (getHttpCallBack() != null)	
+                            {
+                            getHttpCallBack().OnAfterResponse(_context);
+                        }
+
+                        //let the caller know of the failure
+                        callBack.onFailure(_context, _error);
+                    }
+                });
+            }
+        };
+
+        //execute async using thread pool
+        APIHelper.getScheduler().execute(_responseTask);
+    }
+
+    /**
+     * This endpoint allows you to delete entries in the Invalid Emails list.
+     * @param    CreateDeleteInvalidInput    Object containing request parameters
+     * @return    Returns the void response from the API call 
+     */
+    public void createDeleteInvalidAsync(
+                final CreateDeleteInvalidInput input,
+                final APICallBack<String> callBack
+    ) {
+        //validating required parameters
+        if (null == input.getEmail())
+            throw new NullPointerException("The property \"Email\" in the input object cannot be null.");
+
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
+        //the base uri for api requests
+        String _baseUri = Configuration.getBaseUri();
+        
+        //prepare query string for API call
+        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
+        _queryBuilder.append("/email/deleteinvalidemail.{ResponseType}");
+
+        //process template parameters
+        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
+            private static final long serialVersionUID = 4643649121985579112L;
+            {
+                    put( "ResponseType", input.getResponseType() );
+            }});
+        //validate and preprocess url
+        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
+
+        //load all headers for the outgoing API request
+        Map<String, String> _headers = new HashMap<String, String>() {
+            private static final long serialVersionUID = 5584170754622236102L;
+            {
+                    put( "user-agent", "message360-api" );
+            }
+        };
+
+        //load all fields for the outgoing API request
+        Map<String, Object> _parameters = new HashMap<String, Object>() {
+            private static final long serialVersionUID = 5491743861447124810L;
+            {
+                    put( "email", input.getEmail() );
             }
         };
 

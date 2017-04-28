@@ -12,12 +12,12 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateDeafMuteParticipantInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5593559182009146051L;
+    private static final long serialVersionUID = 4652930619207383291L;
     private String conferenceSid;
     private String participantSid;
+    private String responseType = "json";
     private Boolean muted;
     private Boolean deaf;
-    private String responseType = "json";
     /** GETTER
      * TODO: Write general description for this method
      */
@@ -53,6 +53,23 @@ public class CreateDeafMuteParticipantInput
     }
  
     /** GETTER
+     * Response Type either json or xml
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response Type either json or xml
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
+    }
+ 
+    /** GETTER
      * TODO: Write general description for this method
      */
     @JsonGetter("Muted")
@@ -84,23 +101,6 @@ public class CreateDeafMuteParticipantInput
     public void setDeaf (Boolean value) { 
         this.deaf = value;
         notifyObservers(this.deaf);
-    }
- 
-    /** GETTER
-     * Response Type either json or xml
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response Type either json or xml
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

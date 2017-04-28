@@ -12,12 +12,29 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateListNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4698509434358087768L;
+    private static final long serialVersionUID = 4829767424338574713L;
+    private String responseType = "json";
     private Integer page;
     private Integer pageSize = 10;
     private NumberTypeEnum numberType;
     private String friendlyName;
-    private String responseType = "json";
+    /** GETTER
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
+    }
+ 
     /** GETTER
      * Which page of the overall response will be returned. Zero indexed
      */
@@ -84,23 +101,6 @@ public class CreateListNumberInput
     public void setFriendlyName (String value) { 
         this.friendlyName = value;
         notifyObservers(this.friendlyName);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }

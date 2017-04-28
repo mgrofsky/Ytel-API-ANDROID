@@ -12,17 +12,17 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CreateAddressInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5502122725005234138L;
+    private static final long serialVersionUID = 5503568752941760865L;
     private String name;
     private String address;
     private String country;
     private String state;
     private String city;
     private String zip;
+    private String responseType = "json";
     private String description;
     private String email;
     private String phone;
-    private String responseType = "json";
     /** GETTER
      * Name of user
      */
@@ -126,6 +126,23 @@ public class CreateAddressInput
     }
  
     /** GETTER
+     * Response type either json or xml
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type either json or xml
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
+    }
+ 
+    /** GETTER
      * Description of addresses.
      */
     @JsonGetter("Description")
@@ -174,23 +191,6 @@ public class CreateAddressInput
     public void setPhone (String value) { 
         this.phone = value;
         notifyObservers(this.phone);
-    }
- 
-    /** GETTER
-     * Response type either json or xml
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type either json or xml
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
     }
  
 }
