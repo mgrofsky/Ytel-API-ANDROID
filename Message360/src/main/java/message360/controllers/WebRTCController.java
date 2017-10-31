@@ -39,11 +39,11 @@ public class WebRTCController extends BaseController {
 
     /**
      * TODO: type endpoint description here
-     * @param    CreateCheckFundsInput    Object containing request parameters
+     * @param    CheckFundsInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createCheckFundsAsync(
-                final CreateCheckFundsInput input,
+    public void checkFundsAsync(
+                final CheckFundsInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
@@ -64,7 +64,7 @@ public class WebRTCController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5222347278656218590L;
+            private static final long serialVersionUID = 5233806321298638573L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -72,7 +72,7 @@ public class WebRTCController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4955779561176524830L;
+            private static final long serialVersionUID = 4706998693269811259L;
             {
                     put( "account_sid", input.getAccountSid() );
                     put( "auth_token", input.getAuthToken() );
@@ -120,8 +120,8 @@ public class WebRTCController extends BaseController {
                     }
                     public void onFailure(HttpContext _context, Throwable _error) {
                         //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
+                        if (getHttpCallBack() != null)
+                        {
                             getHttpCallBack().OnAfterResponse(_context);
                         }
 
@@ -169,7 +169,7 @@ public class WebRTCController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5586988653136986526L;
+            private static final long serialVersionUID = 5251039189377528371L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -177,7 +177,7 @@ public class WebRTCController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4757147209994309826L;
+            private static final long serialVersionUID = 5538196674781954187L;
             {
                     put( "account_sid", input.getAccountSid() );
                     put( "auth_token", input.getAuthToken() );
@@ -227,8 +227,8 @@ public class WebRTCController extends BaseController {
                     }
                     public void onFailure(HttpContext _context, Throwable _error) {
                         //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
+                        if (getHttpCallBack() != null)
+                        {
                             getHttpCallBack().OnAfterResponse(_context);
                         }
 

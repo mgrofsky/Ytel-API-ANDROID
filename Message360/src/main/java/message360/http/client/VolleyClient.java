@@ -27,7 +27,9 @@ import java.io.File;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.AbstractMap.SimpleEntry;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class VolleyClient implements HttpClient {
@@ -148,7 +150,7 @@ public class VolleyClient implements HttpClient {
      * Create a simple HTTP GET request with basic authentication
      */
     public HttpRequest get(String _queryUrl,
-                           Map<String, String> _headers, Map<String, Object> _parameters,
+                           Map<String, String> _headers, List<SimpleEntry<String, Object>> _parameters,
                            String _username, String _password) {
         return new HttpRequest(HttpMethod.GET, _queryUrl, _headers, _parameters, _username, _password);
     }
@@ -157,7 +159,7 @@ public class VolleyClient implements HttpClient {
      * Create a simple HTTP GET request
      */
     public HttpRequest get(String _queryUrl,
-                           Map<String, String> _headers, Map<String, Object> _parameters) {
+                           Map<String, String> _headers, List<SimpleEntry<String, Object>> _parameters) {
         return new HttpRequest(HttpMethod.GET, _queryUrl, _headers, _parameters);
     }
 
@@ -165,7 +167,7 @@ public class VolleyClient implements HttpClient {
      * Create an HTTP POST request with parameters
      */
     public HttpRequest post(String _queryUrl,
-                            Map<String, String> _headers, Map<String, Object> _parameters) {
+                            Map<String, String> _headers, List<SimpleEntry<String, Object>> _parameters) {
         return new HttpRequest(HttpMethod.POST, _queryUrl, _headers, _parameters);
     }
 
@@ -173,7 +175,7 @@ public class VolleyClient implements HttpClient {
      * Create an HTTP POST request with parameters and with basic authentication
      */
     public HttpRequest post(String _queryUrl,
-                            Map<String, String> _headers, Map<String, Object> _parameters,
+                            Map<String, String> _headers, List<SimpleEntry<String, Object>> _parameters,
                             String _username, String _password) {
         return new HttpRequest(HttpMethod.POST, _queryUrl, _headers, _parameters, _username, _password);
     }
@@ -199,7 +201,7 @@ public class VolleyClient implements HttpClient {
      * Create an HTTP PUT request with parameters
      */
     public HttpRequest put(String _queryUrl,
-                           Map<String, String> _headers, Map<String, Object> _parameters) {
+                           Map<String, String> _headers, List<SimpleEntry<String, Object>> _parameters) {
         return new HttpRequest(HttpMethod.PUT, _queryUrl, _headers, _parameters);
     }
 
@@ -207,7 +209,7 @@ public class VolleyClient implements HttpClient {
      * Create an HTTP PUT request with parameters and with basic authentication
      */
     public HttpRequest put(String _queryUrl,
-                           Map<String, String> _headers, Map<String, Object> _parameters,
+                           Map<String, String> _headers, List<SimpleEntry<String, Object>> _parameters,
                            String _username, String _password) {
         return new HttpRequest(HttpMethod.PUT, _queryUrl, _headers, _parameters, _username, _password);
     }
@@ -233,7 +235,7 @@ public class VolleyClient implements HttpClient {
      * Create an HTTP PATCH request with parameters
      */
     public HttpRequest patch(String _queryUrl,
-                             Map<String, String> _headers, Map<String, Object> _parameters) {
+                             Map<String, String> _headers, List<SimpleEntry<String, Object>> _parameters) {
         return new HttpRequest(HttpMethod.PATCH, _queryUrl, _headers, _parameters);
     }
 
@@ -241,7 +243,7 @@ public class VolleyClient implements HttpClient {
      * Create an HTTP PATCH request with parameters and with basic authentication
      */
     public HttpRequest patch(String _queryUrl,
-                             Map<String, String> _headers, Map<String, Object> _parameters,
+                             Map<String, String> _headers, List<SimpleEntry<String, Object>> _parameters,
                              String _username, String _password) {
         return new HttpRequest(HttpMethod.PATCH, _queryUrl, _headers, _parameters, _username, _password);
     }
@@ -267,7 +269,7 @@ public class VolleyClient implements HttpClient {
      * Create an HTTP DELETE request with parameters
      */
     public HttpRequest delete(String _queryUrl,
-                              Map<String, String> _headers, Map<String, Object> _parameters) {
+                              Map<String, String> _headers, List<SimpleEntry<String, Object>> _parameters) {
         return new HttpRequest(HttpMethod.DELETE, _queryUrl, _headers, _parameters);
     }
 
@@ -275,7 +277,7 @@ public class VolleyClient implements HttpClient {
      * Create an HTTP DELETE request with parameters and with basic authentication
      */
     public HttpRequest delete(String _queryUrl,
-                              Map<String, String> _headers, Map<String, Object> _parameters,
+                              Map<String, String> _headers, List<SimpleEntry<String, Object>> _parameters,
                               String _username, String _password) {
         return new HttpRequest(HttpMethod.DELETE, _queryUrl, _headers, _parameters, _username, _password);
     }
@@ -364,7 +366,7 @@ public class VolleyClient implements HttpClient {
                 }
                 return body.getBytes();
             } else {
-                Map<String, Object> params = _request.getParameters();
+                List<SimpleEntry<String, Object>> params = _request.getParameters();
                 if (params != null && params.size() > 0) {
                     if (_isMultipart) {
                         return encodeMultipartData(params);
@@ -396,10 +398,10 @@ public class VolleyClient implements HttpClient {
          * @param params
          * @return
          */
-        private byte[] encodeMultipartData(Map<String, Object> params) {
+        private byte[] encodeMultipartData(List<SimpleEntry<String, Object>> params) {
             MultipartEntityBuilder entityBuilder = MultipartEntityBuilder.create();
             //iterate and prepare multipart body
-            for (Map.Entry<String, Object> pair : params.entrySet()) {
+            for (SimpleEntry<String, Object> pair : params) {
                 String key = pair.getKey();
                 Object value = pair.getValue();
                 if(pair.getValue() instanceof File) {
@@ -430,9 +432,9 @@ public class VolleyClient implements HttpClient {
          * @return
          */
         private boolean isMultipart() {
-            Map<String, Object> params = _request.getParameters();
+            List<SimpleEntry<String, Object>> params = _request.getParameters();
             if(params != null) {
-                for (Map.Entry<String, Object> pair : params.entrySet()) {
+                for (SimpleEntry<String, Object> pair : params) {
                     if (pair.getValue() instanceof File) {
                         return true;
                     }
@@ -444,10 +446,10 @@ public class VolleyClient implements HttpClient {
         /**
          * Converts <code>params</code> into an application/x-www-form-urlencoded encoded string.
          */
-        private byte[] encodeParameters(Map<String, Object> params, String paramsEncoding) {
+        private byte[] encodeParameters(List<SimpleEntry<String, Object>> params, String paramsEncoding) {
             StringBuilder encodedParams = new StringBuilder();
             try {
-                for (Map.Entry<String, Object> entry : params.entrySet()) {
+                for (SimpleEntry<String, Object> entry : params) {
                     encodedParams.append(URLEncoder.encode(entry.getKey(), paramsEncoding));
                     encodedParams.append('=');
                     encodedParams.append(URLEncoder.encode(entry.getValue().toString(), paramsEncoding));

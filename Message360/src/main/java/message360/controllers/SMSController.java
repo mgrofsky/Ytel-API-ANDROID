@@ -38,12 +38,233 @@ public class SMSController extends BaseController {
     }
 
     /**
-     * List All SMS
-     * @param    CreateListSMSInput    Object containing request parameters
+     * Send an SMS from a message360 number
+     * @param    SendSMSInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createListSMSAsync(
-                final CreateListSMSInput input,
+    public void sendSMSAsync(
+                final SendSMSInput input,
+                final APICallBack<String> callBack
+    ) {
+        //validating required parameters
+        if (null == input.getFrom())
+            throw new NullPointerException("The property \"From\" in the input object cannot be null.");
+
+        if (null == input.getTo())
+            throw new NullPointerException("The property \"To\" in the input object cannot be null.");
+
+        if (null == input.getBody())
+            throw new NullPointerException("The property \"Body\" in the input object cannot be null.");
+
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
+        //the base uri for api requests
+        String _baseUri = Configuration.getBaseUri();
+        
+        //prepare query string for API call
+        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
+        _queryBuilder.append("/sms/sendsms.{ResponseType}");
+
+        //process template parameters
+        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
+            private static final long serialVersionUID = 4875920359701690000L;
+            {
+                    put( "ResponseType", input.getResponseType() );
+            }});
+        //validate and preprocess url
+        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
+
+        //load all headers for the outgoing API request
+        Map<String, String> _headers = new HashMap<String, String>() {
+            private static final long serialVersionUID = 5224712039159339257L;
+            {
+                    put( "user-agent", "message360-api" );
+            }
+        };
+
+        //load all fields for the outgoing API request
+        Map<String, Object> _parameters = new HashMap<String, Object>() {
+            private static final long serialVersionUID = 4689754650467206955L;
+            {
+                    put( "from", input.getFrom() );
+                    put( "to", input.getTo() );
+                    put( "body", input.getBody() );
+                    put( "method", (input.getMethod() != null) ? input.getMethod().value() : null );
+                    put( "messagestatuscallback", input.getMessagestatuscallback() );
+                    put( "smartsms", input.getSmartsms() );
+            }
+        };
+
+        //prepare and invoke the API call request to fetch the response
+        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
+                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
+
+        //invoke the callback before request if its not null
+        if (getHttpCallBack() != null)
+        {
+            getHttpCallBack().OnBeforeRequest(_request);
+        }
+
+        //invoke request and get response
+        Runnable _responseTask = new Runnable() {
+            public void run() {
+                //make the API call
+                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
+                    public void onSuccess(HttpContext _context, HttpResponse _response) {
+                        try {
+
+                            //invoke the callback after response if its not null
+                            if (getHttpCallBack() != null)	
+                            {
+                                getHttpCallBack().OnAfterResponse(_context);
+                            }
+
+                            //handle errors defined at the API level
+                            validateResponse(_response, _context);
+
+                            //extract result from the http response
+                            String _result = ((HttpStringResponse)_response).getBody();
+                            //let the caller know of the success
+                            callBack.onSuccess(_context, _result);
+                        } catch (APIException error) {
+                            //let the caller know of the error
+                            callBack.onFailure(_context, error);
+                        } catch (Exception exception) {
+                            //let the caller know of the caught Exception
+                            callBack.onFailure(_context, exception);
+                        }
+                    }
+                    public void onFailure(HttpContext _context, Throwable _error) {
+                        //invoke the callback after response if its not null
+                        if (getHttpCallBack() != null)
+                        {
+                            getHttpCallBack().OnAfterResponse(_context);
+                        }
+
+                        //let the caller know of the failure
+                        callBack.onFailure(_context, _error);
+                    }
+                });
+            }
+        };
+
+        //execute async using thread pool
+        APIHelper.getScheduler().execute(_responseTask);
+    }
+
+    /**
+     * View a Particular SMS
+     * @param    ViewSMSInput    Object containing request parameters
+     * @return    Returns the void response from the API call 
+     */
+    public void viewSMSAsync(
+                final ViewSMSInput input,
+                final APICallBack<String> callBack
+    ) {
+        //validating required parameters
+        if (null == input.getMessagesid())
+            throw new NullPointerException("The property \"Messagesid\" in the input object cannot be null.");
+
+        if (null == input.getResponseType())
+            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
+
+        //the base uri for api requests
+        String _baseUri = Configuration.getBaseUri();
+        
+        //prepare query string for API call
+        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
+        _queryBuilder.append("/sms/viewsms.{ResponseType}");
+
+        //process template parameters
+        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
+            private static final long serialVersionUID = 5384969693064723467L;
+            {
+                    put( "ResponseType", input.getResponseType() );
+            }});
+        //validate and preprocess url
+        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
+
+        //load all headers for the outgoing API request
+        Map<String, String> _headers = new HashMap<String, String>() {
+            private static final long serialVersionUID = 4679628255598627646L;
+            {
+                    put( "user-agent", "message360-api" );
+            }
+        };
+
+        //load all fields for the outgoing API request
+        Map<String, Object> _parameters = new HashMap<String, Object>() {
+            private static final long serialVersionUID = 4720773512089435304L;
+            {
+                    put( "messagesid", input.getMessagesid() );
+            }
+        };
+
+        //prepare and invoke the API call request to fetch the response
+        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
+                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
+
+        //invoke the callback before request if its not null
+        if (getHttpCallBack() != null)
+        {
+            getHttpCallBack().OnBeforeRequest(_request);
+        }
+
+        //invoke request and get response
+        Runnable _responseTask = new Runnable() {
+            public void run() {
+                //make the API call
+                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
+                    public void onSuccess(HttpContext _context, HttpResponse _response) {
+                        try {
+
+                            //invoke the callback after response if its not null
+                            if (getHttpCallBack() != null)	
+                            {
+                                getHttpCallBack().OnAfterResponse(_context);
+                            }
+
+                            //handle errors defined at the API level
+                            validateResponse(_response, _context);
+
+                            //extract result from the http response
+                            String _result = ((HttpStringResponse)_response).getBody();
+                            //let the caller know of the success
+                            callBack.onSuccess(_context, _result);
+                        } catch (APIException error) {
+                            //let the caller know of the error
+                            callBack.onFailure(_context, error);
+                        } catch (Exception exception) {
+                            //let the caller know of the caught Exception
+                            callBack.onFailure(_context, exception);
+                        }
+                    }
+                    public void onFailure(HttpContext _context, Throwable _error) {
+                        //invoke the callback after response if its not null
+                        if (getHttpCallBack() != null)
+                        {
+                            getHttpCallBack().OnAfterResponse(_context);
+                        }
+
+                        //let the caller know of the failure
+                        callBack.onFailure(_context, _error);
+                    }
+                });
+            }
+        };
+
+        //execute async using thread pool
+        APIHelper.getScheduler().execute(_responseTask);
+    }
+
+    /**
+     * List All SMS
+     * @param    ListSMSInput    Object containing request parameters
+     * @return    Returns the void response from the API call 
+     */
+    public void listSMSAsync(
+                final ListSMSInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
@@ -59,7 +280,7 @@ public class SMSController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4751034674330708286L;
+            private static final long serialVersionUID = 5758474509533572336L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -68,7 +289,7 @@ public class SMSController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4772691698449287377L;
+            private static final long serialVersionUID = 5151603896398897722L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -76,7 +297,7 @@ public class SMSController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4654107580255130576L;
+            private static final long serialVersionUID = 4677548727057262225L;
             {
                     put( "page", input.getPage() );
                     put( "pagesize", input.getPagesize() );
@@ -127,8 +348,8 @@ public class SMSController extends BaseController {
                     }
                     public void onFailure(HttpContext _context, Throwable _error) {
                         //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
+                        if (getHttpCallBack() != null)
+                        {
                             getHttpCallBack().OnAfterResponse(_context);
                         }
 
@@ -145,11 +366,11 @@ public class SMSController extends BaseController {
 
     /**
      * List All Inbound SMS
-     * @param    CreateListInboundSMSInput    Object containing request parameters
+     * @param    ListInboundSMSInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createListInboundSMSAsync(
-                final CreateListInboundSMSInput input,
+    public void listInboundSMSAsync(
+                final ListInboundSMSInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
@@ -165,7 +386,7 @@ public class SMSController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4782167614413607769L;
+            private static final long serialVersionUID = 4677358384576839033L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -174,7 +395,7 @@ public class SMSController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5130959103956429927L;
+            private static final long serialVersionUID = 5211049328145467498L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -182,12 +403,13 @@ public class SMSController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5123124373169060623L;
+            private static final long serialVersionUID = 5420923903656593921L;
             {
                     put( "page", input.getPage() );
                     put( "pagesize", input.getPagesize() );
                     put( "from", input.getFrom() );
                     put( "to", input.getTo() );
+                    put( "DateSent", input.getDateSent() );
             }
         };
 
@@ -232,230 +454,8 @@ public class SMSController extends BaseController {
                     }
                     public void onFailure(HttpContext _context, Throwable _error) {
                         //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
-                            getHttpCallBack().OnAfterResponse(_context);
-                        }
-
-                        //let the caller know of the failure
-                        callBack.onFailure(_context, _error);
-                    }
-                });
-            }
-        };
-
-        //execute async using thread pool
-        APIHelper.getScheduler().execute(_responseTask);
-    }
-
-    /**
-     * Send an SMS from a message360 number
-     * @param    CreateSendSMSInput    Object containing request parameters
-     * @return    Returns the void response from the API call 
-     */
-    public void createSendSMSAsync(
-                final CreateSendSMSInput input,
-                final APICallBack<String> callBack
-    ) {
-        //validating required parameters
-        if (null == input.getFrom())
-            throw new NullPointerException("The property \"From\" in the input object cannot be null.");
-
-        if (null == input.getTo())
-            throw new NullPointerException("The property \"To\" in the input object cannot be null.");
-
-        if (null == input.getBody())
-            throw new NullPointerException("The property \"Body\" in the input object cannot be null.");
-
-        if (null == input.getResponseType())
-            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
-
-        //the base uri for api requests
-        String _baseUri = Configuration.getBaseUri();
-        
-        //prepare query string for API call
-        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/sms/sendsms.{ResponseType}");
-
-        //process template parameters
-        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5336881720826629508L;
-            {
-                    put( "ResponseType", input.getResponseType() );
-            }});
-        //validate and preprocess url
-        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
-
-        //load all headers for the outgoing API request
-        Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4679479866390886750L;
-            {
-                    put( "user-agent", "message360-api" );
-            }
-        };
-
-        //load all fields for the outgoing API request
-        Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5173198405090015541L;
-            {
-                    put( "fromcountrycode", input.getFromcountrycode() );
-                    put( "from", input.getFrom() );
-                    put( "tocountrycode", input.getTocountrycode() );
-                    put( "to", input.getTo() );
-                    put( "body", input.getBody() );
-                    put( "method", (input.getMethod() != null) ? input.getMethod().value() : null );
-                    put( "messagestatuscallback", input.getMessagestatuscallback() );
-            }
-        };
-
-        //prepare and invoke the API call request to fetch the response
-        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
-                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
-
-        //invoke the callback before request if its not null
-        if (getHttpCallBack() != null)
-        {
-            getHttpCallBack().OnBeforeRequest(_request);
-        }
-
-        //invoke request and get response
-        Runnable _responseTask = new Runnable() {
-            public void run() {
-                //make the API call
-                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
-                    public void onSuccess(HttpContext _context, HttpResponse _response) {
-                        try {
-
-                            //invoke the callback after response if its not null
-                            if (getHttpCallBack() != null)	
-                            {
-                                getHttpCallBack().OnAfterResponse(_context);
-                            }
-
-                            //handle errors defined at the API level
-                            validateResponse(_response, _context);
-
-                            //extract result from the http response
-                            String _result = ((HttpStringResponse)_response).getBody();
-                            //let the caller know of the success
-                            callBack.onSuccess(_context, _result);
-                        } catch (APIException error) {
-                            //let the caller know of the error
-                            callBack.onFailure(_context, error);
-                        } catch (Exception exception) {
-                            //let the caller know of the caught Exception
-                            callBack.onFailure(_context, exception);
-                        }
-                    }
-                    public void onFailure(HttpContext _context, Throwable _error) {
-                        //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
-                            getHttpCallBack().OnAfterResponse(_context);
-                        }
-
-                        //let the caller know of the failure
-                        callBack.onFailure(_context, _error);
-                    }
-                });
-            }
-        };
-
-        //execute async using thread pool
-        APIHelper.getScheduler().execute(_responseTask);
-    }
-
-    /**
-     * View a Particular SMS
-     * @param    CreateViewSMSInput    Object containing request parameters
-     * @return    Returns the void response from the API call 
-     */
-    public void createViewSMSAsync(
-                final CreateViewSMSInput input,
-                final APICallBack<String> callBack
-    ) {
-        //validating required parameters
-        if (null == input.getMessagesid())
-            throw new NullPointerException("The property \"Messagesid\" in the input object cannot be null.");
-
-        if (null == input.getResponseType())
-            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
-
-        //the base uri for api requests
-        String _baseUri = Configuration.getBaseUri();
-        
-        //prepare query string for API call
-        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/sms/viewsms.{ResponseType}");
-
-        //process template parameters
-        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4688405296467439048L;
-            {
-                    put( "ResponseType", input.getResponseType() );
-            }});
-        //validate and preprocess url
-        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
-
-        //load all headers for the outgoing API request
-        Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5619651167935599336L;
-            {
-                    put( "user-agent", "message360-api" );
-            }
-        };
-
-        //load all fields for the outgoing API request
-        Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5008578260418250638L;
-            {
-                    put( "messagesid", input.getMessagesid() );
-            }
-        };
-
-        //prepare and invoke the API call request to fetch the response
-        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
-                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
-
-        //invoke the callback before request if its not null
-        if (getHttpCallBack() != null)
-        {
-            getHttpCallBack().OnBeforeRequest(_request);
-        }
-
-        //invoke request and get response
-        Runnable _responseTask = new Runnable() {
-            public void run() {
-                //make the API call
-                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
-                    public void onSuccess(HttpContext _context, HttpResponse _response) {
-                        try {
-
-                            //invoke the callback after response if its not null
-                            if (getHttpCallBack() != null)	
-                            {
-                                getHttpCallBack().OnAfterResponse(_context);
-                            }
-
-                            //handle errors defined at the API level
-                            validateResponse(_response, _context);
-
-                            //extract result from the http response
-                            String _result = ((HttpStringResponse)_response).getBody();
-                            //let the caller know of the success
-                            callBack.onSuccess(_context, _result);
-                        } catch (APIException error) {
-                            //let the caller know of the error
-                            callBack.onFailure(_context, error);
-                        } catch (Exception exception) {
-                            //let the caller know of the caught Exception
-                            callBack.onFailure(_context, exception);
-                        }
-                    }
-                    public void onFailure(HttpContext _context, Throwable _error) {
-                        //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
+                        if (getHttpCallBack() != null)
+                        {
                             getHttpCallBack().OnAfterResponse(_context);
                         }
 

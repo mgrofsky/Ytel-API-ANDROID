@@ -8,6 +8,7 @@ package message360.controllers;
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.*;
+import org.joda.time.LocalDate;
 
 import message360.*;
 import message360.models.*;
@@ -38,17 +39,17 @@ public class ShortCodeController extends BaseController {
     }
 
     /**
-     * View a Shared ShortCode Template
-     * @param    CreateViewTemplateInput    Object containing request parameters
+     * TODO: type endpoint description here
+     * @param    SendDedicatedShortcodeInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createViewTemplateAsync(
-                final CreateViewTemplateInput input,
+    public void sendDedicatedShortcodeAsync(
+                final SendDedicatedShortcodeInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
-        if (null == input.getTemplateid())
-            throw new NullPointerException("The property \"Templateid\" in the input object cannot be null.");
+        if (null == input.getBody())
+            throw new NullPointerException("The property \"Body\" in the input object cannot be null.");
 
         if (null == input.getResponseType())
             throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
@@ -58,11 +59,11 @@ public class ShortCodeController extends BaseController {
         
         //prepare query string for API call
         StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/template/view.{ResponseType}");
+        _queryBuilder.append("/shortcode/senddedicatedsms.{ResponseType}");
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4994833065759821608L;
+            private static final long serialVersionUID = 5442592679710605673L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -71,7 +72,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4787435337267697856L;
+            private static final long serialVersionUID = 5542491409710329337L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -79,132 +80,13 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5587554045807786164L;
-            {
-                    put( "templateid", input.getTemplateid() );
-            }
-        };
-
-        //prepare and invoke the API call request to fetch the response
-        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
-                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
-
-        //invoke the callback before request if its not null
-        if (getHttpCallBack() != null)
-        {
-            getHttpCallBack().OnBeforeRequest(_request);
-        }
-
-        //invoke request and get response
-        Runnable _responseTask = new Runnable() {
-            public void run() {
-                //make the API call
-                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
-                    public void onSuccess(HttpContext _context, HttpResponse _response) {
-                        try {
-
-                            //invoke the callback after response if its not null
-                            if (getHttpCallBack() != null)	
-                            {
-                                getHttpCallBack().OnAfterResponse(_context);
-                            }
-
-                            //handle errors defined at the API level
-                            validateResponse(_response, _context);
-
-                            //extract result from the http response
-                            String _result = ((HttpStringResponse)_response).getBody();
-                            //let the caller know of the success
-                            callBack.onSuccess(_context, _result);
-                        } catch (APIException error) {
-                            //let the caller know of the error
-                            callBack.onFailure(_context, error);
-                        } catch (Exception exception) {
-                            //let the caller know of the caught Exception
-                            callBack.onFailure(_context, exception);
-                        }
-                    }
-                    public void onFailure(HttpContext _context, Throwable _error) {
-                        //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
-                            getHttpCallBack().OnAfterResponse(_context);
-                        }
-
-                        //let the caller know of the failure
-                        callBack.onFailure(_context, _error);
-                    }
-                });
-            }
-        };
-
-        //execute async using thread pool
-        APIHelper.getScheduler().execute(_responseTask);
-    }
-
-    /**
-     * Send an SMS from a message360 ShortCode
-     * @param    CreateSendShortCodeInput    Object containing request parameters
-     * @return    Returns the void response from the API call 
-     */
-    public void createSendShortCodeAsync(
-                final CreateSendShortCodeInput input,
-                final APICallBack<String> callBack
-    ) {
-        //validating required parameters
-        if (null == input.getShortcode())
-            throw new NullPointerException("The property \"Shortcode\" in the input object cannot be null.");
-
-        if (null == input.getTocountrycode())
-            throw new NullPointerException("The property \"Tocountrycode\" in the input object cannot be null.");
-
-        if (null == input.getTo())
-            throw new NullPointerException("The property \"To\" in the input object cannot be null.");
-
-        if (null == input.getTemplateid())
-            throw new NullPointerException("The property \"Templateid\" in the input object cannot be null.");
-
-        if (null == input.getResponseType())
-            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
-
-        if (null == input.getData())
-            throw new NullPointerException("The property \"Data\" in the input object cannot be null.");
-
-        //the base uri for api requests
-        String _baseUri = Configuration.getBaseUri();
-        
-        //prepare query string for API call
-        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/shortcode/sendsms.{ResponseType}");
-
-        //process template parameters
-        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5092430393736157358L;
-            {
-                    put( "ResponseType", input.getResponseType() );
-            }});
-        //validate and preprocess url
-        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
-
-        //load all headers for the outgoing API request
-        Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5749770499485042800L;
-            {
-                    put( "user-agent", "message360-api" );
-            }
-        };
-
-        //load all fields for the outgoing API request
-        Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5420408061290311451L;
+            private static final long serialVersionUID = 4895285163355760977L;
             {
                     put( "shortcode", input.getShortcode() );
-                    put( "tocountrycode", input.getTocountrycode() );
                     put( "to", input.getTo() );
-                    put( "templateid", input.getTemplateid() );
-                    put( "data", input.getData() );
-                    put( "Method", input.getMethod() );
-                    put( "MessageStatusCallback", input.getMessageStatusCallback() );
+                    put( "body", input.getBody() );
+                    put( "method", (input.getMethod() != null) ? input.getMethod().value() : null );
+                    put( "messagestatuscallback", input.getMessagestatuscallback() );
             }
         };
 
@@ -249,8 +131,8 @@ public class ShortCodeController extends BaseController {
                     }
                     public void onFailure(HttpContext _context, Throwable _error) {
                         //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
+                        if (getHttpCallBack() != null)
+                        {
                             getHttpCallBack().OnAfterResponse(_context);
                         }
 
@@ -266,15 +148,18 @@ public class ShortCodeController extends BaseController {
     }
 
     /**
-     * List All Inbound ShortCode
-     * @param    CreateListInboundShortCodeInput    Object containing request parameters
+     * View a single Sms Short Code message.
+     * @param    ViewShortcodeInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createListInboundShortCodeAsync(
-                final CreateListInboundShortCodeInput input,
+    public void viewShortcodeAsync(
+                final ViewShortcodeInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
+        if (null == input.getMessageSid())
+            throw new NullPointerException("The property \"MessageSid\" in the input object cannot be null.");
+
         if (null == input.getResponseType())
             throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
 
@@ -283,27 +168,20 @@ public class ShortCodeController extends BaseController {
         
         //prepare query string for API call
         StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/shortcode/getinboundsms.{ResponseType}");
+        _queryBuilder.append("/shortcode/viewsms..{ResponseType}");
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4926411370366603076L;
+            private static final long serialVersionUID = 4937223206722561751L;
             {
                     put( "ResponseType", input.getResponseType() );
-            }});
-
-        //process query parameters
-        APIHelper.appendUrlWithQueryParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5312871574975723740L;
-            {
-                    put( "DateReceived", input.getDateReceived() );
             }});
         //validate and preprocess url
         String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4645000027571836764L;
+            private static final long serialVersionUID = 5465065359664433211L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -311,12 +189,9 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4659279705817230095L;
+            private static final long serialVersionUID = 5615424714817686585L;
             {
-                    put( "page", input.getPage() );
-                    put( "pagesize", input.getPagesize() );
-                    put( "from", input.getFrom() );
-                    put( "Shortcode", input.getShortcode() );
+                    put( "MessageSid", input.getMessageSid() );
             }
         };
 
@@ -361,8 +236,8 @@ public class ShortCodeController extends BaseController {
                     }
                     public void onFailure(HttpContext _context, Throwable _error) {
                         //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
+                        if (getHttpCallBack() != null)
+                        {
                             getHttpCallBack().OnAfterResponse(_context);
                         }
 
@@ -378,12 +253,12 @@ public class ShortCodeController extends BaseController {
     }
 
     /**
-     * List ShortCode Messages
-     * @param    CreateListShortCodeInput    Object containing request parameters
+     * Retrieve a list of Short Code message objects.
+     * @param    ListShortcodeInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createListShortCodeAsync(
-                final CreateListShortCodeInput input,
+    public void listShortcodeAsync(
+                final ListShortcodeInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
@@ -399,7 +274,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5231117787385104499L;
+            private static final long serialVersionUID = 5233947798057972915L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -408,7 +283,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5447803038977037287L;
+            private static final long serialVersionUID = 5353222695522612907L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -416,13 +291,13 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5132967230174303833L;
+            private static final long serialVersionUID = 5007831905365546483L;
             {
-                    put( "page", input.getPage() );
-                    put( "pagesize", input.getPagesize() );
-                    put( "from", input.getFrom() );
-                    put( "to", input.getTo() );
-                    put( "datesent", input.getDatesent() );
+                    put( "Shortcode", input.getShortcode() );
+                    put( "To", input.getTo() );
+                    put( "DateSent", DateTimeHelper.toSimpleDate(input.getDateSent()) );
+                    put( "Page", input.getPage() );
+                    put( "PageSize", input.getPageSize() );
             }
         };
 
@@ -467,8 +342,8 @@ public class ShortCodeController extends BaseController {
                     }
                     public void onFailure(HttpContext _context, Throwable _error) {
                         //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
+                        if (getHttpCallBack() != null)
+                        {
                             getHttpCallBack().OnAfterResponse(_context);
                         }
 
@@ -484,12 +359,12 @@ public class ShortCodeController extends BaseController {
     }
 
     /**
-     * List Shortcode Templates by Type
-     * @param    CreateListTemplatesInput    Object containing request parameters
+     * Retrive a list of inbound Sms Short Code messages associated with your message360 account.
+     * @param    ListInboundShortcodeInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createListTemplatesAsync(
-                final CreateListTemplatesInput input,
+    public void listInboundShortcodeAsync(
+                final ListInboundShortcodeInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
@@ -501,11 +376,11 @@ public class ShortCodeController extends BaseController {
         
         //prepare query string for API call
         StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/template/lists.{ResponseType}");
+        _queryBuilder.append("/shortcode/getinboundsms.{ResponseType}");
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4759723692676543292L;
+            private static final long serialVersionUID = 5046800485151199067L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -514,7 +389,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5132522940293044748L;
+            private static final long serialVersionUID = 5050759325408243094L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -522,11 +397,13 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5599783969981446979L;
+            private static final long serialVersionUID = 5737743393346592590L;
             {
-                    put( "type", input.getType() );
-                    put( "page", input.getPage() );
-                    put( "pagesize", input.getPagesize() );
+                    put( "Page", input.getPage() );
+                    put( "PageSize", input.getPageSize() );
+                    put( "From", input.getFrom() );
+                    put( "Shortcode", input.getShortcode() );
+                    put( "DateReceived", input.getDateReceived() );
             }
         };
 
@@ -571,113 +448,8 @@ public class ShortCodeController extends BaseController {
                     }
                     public void onFailure(HttpContext _context, Throwable _error) {
                         //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
-                            getHttpCallBack().OnAfterResponse(_context);
-                        }
-
-                        //let the caller know of the failure
-                        callBack.onFailure(_context, _error);
-                    }
-                });
-            }
-        };
-
-        //execute async using thread pool
-        APIHelper.getScheduler().execute(_responseTask);
-    }
-
-    /**
-     * View a ShortCode Message
-     * @param    CreateViewShortCodeInput    Object containing request parameters
-     * @return    Returns the void response from the API call 
-     */
-    public void createViewShortCodeAsync(
-                final CreateViewShortCodeInput input,
-                final APICallBack<String> callBack
-    ) {
-        //validating required parameters
-        if (null == input.getMessagesid())
-            throw new NullPointerException("The property \"Messagesid\" in the input object cannot be null.");
-
-        if (null == input.getResponseType())
-            throw new NullPointerException("The property \"ResponseType\" in the input object cannot be null.");
-
-        //the base uri for api requests
-        String _baseUri = Configuration.getBaseUri();
-        
-        //prepare query string for API call
-        StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-        _queryBuilder.append("/shortcode/viewsms.{ResponseType}");
-
-        //process template parameters
-        APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4981725873760992769L;
-            {
-                    put( "ResponseType", input.getResponseType() );
-            }});
-        //validate and preprocess url
-        String _queryUrl = APIHelper.cleanUrl(_queryBuilder);
-
-        //load all headers for the outgoing API request
-        Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5539013173982794528L;
-            {
-                    put( "user-agent", "message360-api" );
-            }
-        };
-
-        //load all fields for the outgoing API request
-        Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4884954197631061815L;
-            {
-                    put( "messagesid", input.getMessagesid() );
-            }
-        };
-
-        //prepare and invoke the API call request to fetch the response
-        final HttpRequest _request = getClientInstance().post(_queryUrl, _headers, APIHelper.prepareFormFields(_parameters),
-                                        Configuration.basicAuthUserName, Configuration.basicAuthPassword);
-
-        //invoke the callback before request if its not null
-        if (getHttpCallBack() != null)
-        {
-            getHttpCallBack().OnBeforeRequest(_request);
-        }
-
-        //invoke request and get response
-        Runnable _responseTask = new Runnable() {
-            public void run() {
-                //make the API call
-                getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
-                    public void onSuccess(HttpContext _context, HttpResponse _response) {
-                        try {
-
-                            //invoke the callback after response if its not null
-                            if (getHttpCallBack() != null)	
-                            {
-                                getHttpCallBack().OnAfterResponse(_context);
-                            }
-
-                            //handle errors defined at the API level
-                            validateResponse(_response, _context);
-
-                            //extract result from the http response
-                            String _result = ((HttpStringResponse)_response).getBody();
-                            //let the caller know of the success
-                            callBack.onSuccess(_context, _result);
-                        } catch (APIException error) {
-                            //let the caller know of the error
-                            callBack.onFailure(_context, error);
-                        } catch (Exception exception) {
-                            //let the caller know of the caught Exception
-                            callBack.onFailure(_context, exception);
-                        }
-                    }
-                    public void onFailure(HttpContext _context, Throwable _error) {
-                        //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
+                        if (getHttpCallBack() != null)
+                        {
                             getHttpCallBack().OnAfterResponse(_context);
                         }
 
