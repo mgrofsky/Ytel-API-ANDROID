@@ -39,11 +39,11 @@ public class CarrierController extends BaseController {
 
     /**
      * Get the All Purchase Number's Carrier lookup
-     * @param    CreateCarrierLookupListInput    Object containing request parameters
+     * @param    CarrierLookupListInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createCarrierLookupListAsync(
-                final CreateCarrierLookupListInput input,
+    public void carrierLookupListAsync(
+                final CarrierLookupListInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
@@ -59,7 +59,7 @@ public class CarrierController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5391067777034382288L;
+            private static final long serialVersionUID = 4678215877571268815L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -68,7 +68,7 @@ public class CarrierController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4887971761625706481L;
+            private static final long serialVersionUID = 5603883270412011066L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -76,7 +76,7 @@ public class CarrierController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5457623349834348305L;
+            private static final long serialVersionUID = 5156731697395736366L;
             {
                     put( "page", input.getPage() );
                     put( "pagesize", input.getPagesize() );
@@ -124,8 +124,8 @@ public class CarrierController extends BaseController {
                     }
                     public void onFailure(HttpContext _context, Throwable _error) {
                         //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
+                        if (getHttpCallBack() != null)
+                        {
                             getHttpCallBack().OnAfterResponse(_context);
                         }
 
@@ -142,11 +142,11 @@ public class CarrierController extends BaseController {
 
     /**
      * Get the Carrier Lookup
-     * @param    CreateCarrierLookupInput    Object containing request parameters
+     * @param    CarrierLookupInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createCarrierLookupAsync(
-                final CreateCarrierLookupInput input,
+    public void carrierLookupAsync(
+                final CarrierLookupInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
@@ -165,7 +165,7 @@ public class CarrierController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5240421055392751270L;
+            private static final long serialVersionUID = 5277288323924097633L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -174,7 +174,7 @@ public class CarrierController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4784279667246520334L;
+            private static final long serialVersionUID = 5020596716059309909L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -182,7 +182,7 @@ public class CarrierController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4808041468072290310L;
+            private static final long serialVersionUID = 4801406844460479276L;
             {
                     put( "phonenumber", input.getPhonenumber() );
             }
@@ -229,8 +229,8 @@ public class CarrierController extends BaseController {
                     }
                     public void onFailure(HttpContext _context, Throwable _error) {
                         //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
+                        if (getHttpCallBack() != null)
+                        {
                             getHttpCallBack().OnAfterResponse(_context);
                         }
 

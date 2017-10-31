@@ -12,10 +12,9 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class AddParticipantInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4778484784909548728L;
+    private static final long serialVersionUID = 5739417045051278386L;
     private String conferencesid;
     private String participantnumber;
-    private int tocountrycode;
     private String responseType = "json";
     private Boolean muted;
     private Boolean deaf;
@@ -54,23 +53,6 @@ public class AddParticipantInput
     }
  
     /** GETTER
-     * TODO: Write general description for this method
-     */
-    @JsonGetter("tocountrycode")
-    public int getTocountrycode ( ) { 
-        return this.tocountrycode;
-    }
-    
-    /** SETTER
-     * TODO: Write general description for this method
-     */
-    @JsonSetter("tocountrycode")
-    public void setTocountrycode (int value) { 
-        this.tocountrycode = value;
-        notifyObservers(this.tocountrycode);
-    }
- 
-    /** GETTER
      * Response type format xml or json
      */
     @JsonGetter("ResponseType")
@@ -88,7 +70,7 @@ public class AddParticipantInput
     }
  
     /** GETTER
-     * TODO: Write general description for this method
+     * add muted
      */
     @JsonGetter("muted")
     public Boolean getMuted ( ) { 
@@ -96,7 +78,7 @@ public class AddParticipantInput
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * add muted
      */
     @JsonSetter("muted")
     public void setMuted (Boolean value) { 
@@ -105,7 +87,7 @@ public class AddParticipantInput
     }
  
     /** GETTER
-     * TODO: Write general description for this method
+     * add without volume
      */
     @JsonGetter("deaf")
     public Boolean getDeaf ( ) { 
@@ -113,7 +95,7 @@ public class AddParticipantInput
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * add without volume
      */
     @JsonSetter("deaf")
     public void setDeaf (Boolean value) { 

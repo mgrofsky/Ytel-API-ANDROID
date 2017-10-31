@@ -10,11 +10,11 @@ import message360.http.client.HttpClient;
 
 public class Message360Client {
     /**
-     * Singleton access to ShortCode controller
-     * @return	Returns the ShortCodeController instance 
+     * Singleton access to SharedShortCode controller
+     * @return	Returns the SharedShortCodeController instance 
      */
-    public ShortCodeController getShortCode() {
-        return ShortCodeController.getInstance();
+    public SharedShortCodeController getSharedShortCode() {
+        return SharedShortCodeController.getInstance();
     }
 
     /**
@@ -26,11 +26,27 @@ public class Message360Client {
     }
 
     /**
-     * Singleton access to NumberVerification controller
-     * @return	Returns the NumberVerificationController instance 
+     * Singleton access to Transcription controller
+     * @return	Returns the TranscriptionController instance 
      */
-    public NumberVerificationController getNumberVerification() {
-        return NumberVerificationController.getInstance();
+    public TranscriptionController getTranscription() {
+        return TranscriptionController.getInstance();
+    }
+
+    /**
+     * Singleton access to PhoneNumber controller
+     * @return	Returns the PhoneNumberController instance 
+     */
+    public PhoneNumberController getPhoneNumber() {
+        return PhoneNumberController.getInstance();
+    }
+
+    /**
+     * Singleton access to Usage controller
+     * @return	Returns the UsageController instance 
+     */
+    public UsageController getUsage() {
+        return UsageController.getInstance();
     }
 
     /**
@@ -42,27 +58,11 @@ public class Message360Client {
     }
 
     /**
-     * Singleton access to Call controller
-     * @return	Returns the CallController instance 
+     * Singleton access to Recording controller
+     * @return	Returns the RecordingController instance 
      */
-    public CallController getCall() {
-        return CallController.getInstance();
-    }
-
-    /**
-     * Singleton access to SubAccount controller
-     * @return	Returns the SubAccountController instance 
-     */
-    public SubAccountController getSubAccount() {
-        return SubAccountController.getInstance();
-    }
-
-    /**
-     * Singleton access to Address controller
-     * @return	Returns the AddressController instance 
-     */
-    public AddressController getAddress() {
-        return AddressController.getInstance();
+    public RecordingController getRecording() {
+        return RecordingController.getInstance();
     }
 
     /**
@@ -82,11 +82,11 @@ public class Message360Client {
     }
 
     /**
-     * Singleton access to Recording controller
-     * @return	Returns the RecordingController instance 
+     * Singleton access to Call controller
+     * @return	Returns the CallController instance 
      */
-    public RecordingController getRecording() {
-        return RecordingController.getInstance();
+    public CallController getCall() {
+        return CallController.getInstance();
     }
 
     /**
@@ -98,27 +98,19 @@ public class Message360Client {
     }
 
     /**
-     * Singleton access to PhoneNumber controller
-     * @return	Returns the PhoneNumberController instance 
+     * Singleton access to Address controller
+     * @return	Returns the AddressController instance 
      */
-    public PhoneNumberController getPhoneNumber() {
-        return PhoneNumberController.getInstance();
+    public AddressController getAddress() {
+        return AddressController.getInstance();
     }
 
     /**
-     * Singleton access to Transcription controller
-     * @return	Returns the TranscriptionController instance 
+     * Singleton access to SubAccount controller
+     * @return	Returns the SubAccountController instance 
      */
-    public TranscriptionController getTranscription() {
-        return TranscriptionController.getInstance();
-    }
-
-    /**
-     * Singleton access to Usage controller
-     * @return	Returns the UsageController instance 
-     */
-    public UsageController getUsage() {
-        return UsageController.getInstance();
+    public SubAccountController getSubAccount() {
+        return SubAccountController.getInstance();
     }
 
     /**
@@ -127,6 +119,14 @@ public class Message360Client {
      */
     public AccountController getAccount() {
         return AccountController.getInstance();
+    }
+
+    /**
+     * Singleton access to ShortCode controller
+     * @return	Returns the ShortCodeController instance 
+     */
+    public ShortCodeController getShortCode() {
+        return ShortCodeController.getInstance();
     }
 
     /**
@@ -148,8 +148,8 @@ public class Message360Client {
     /**
      * Default constructor 
      */     
-    public Message360Client() {	
-	}
+    public Message360Client() {
+    }
 
     /**
      * Client initialization constructor 

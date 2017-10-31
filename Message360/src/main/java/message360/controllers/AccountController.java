@@ -39,11 +39,11 @@ public class AccountController extends BaseController {
 
     /**
      * Display Account Description
-     * @param    CreateViewAccountInput    Object containing request parameters
+     * @param    ViewAccountInput    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void createViewAccountAsync(
-                final CreateViewAccountInput input,
+    public void viewAccountAsync(
+                final ViewAccountInput input,
                 final APICallBack<String> callBack
     ) {
         //validating required parameters
@@ -62,7 +62,7 @@ public class AccountController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5291801431797078510L;
+            private static final long serialVersionUID = 5164778190655443683L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -71,7 +71,7 @@ public class AccountController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5547149686682916313L;
+            private static final long serialVersionUID = 5706296781079951635L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -79,7 +79,7 @@ public class AccountController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5185279047331197353L;
+            private static final long serialVersionUID = 5283209690500151463L;
             {
                     put( "Date", input.getDate() );
             }
@@ -126,8 +126,8 @@ public class AccountController extends BaseController {
                     }
                     public void onFailure(HttpContext _context, Throwable _error) {
                         //invoke the callback after response if its not null
-                        if (getHttpCallBack() != null)	
-                            {
+                        if (getHttpCallBack() != null)
+                        {
                             getHttpCallBack().OnAfterResponse(_context);
                         }
 

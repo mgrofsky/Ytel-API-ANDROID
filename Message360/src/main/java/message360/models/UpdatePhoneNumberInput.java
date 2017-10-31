@@ -12,11 +12,11 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class UpdatePhoneNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5351355549383764704L;
+    private static final long serialVersionUID = 4804700059811088437L;
     private String phoneNumber;
+    private String voiceUrl;
     private String responseType = "json";
     private String friendlyName;
-    private String voiceUrl;
     private HttpActionEnum voiceMethod;
     private String voiceFallbackUrl;
     private HttpActionEnum voiceFallbackMethod;
@@ -29,7 +29,7 @@ public class UpdatePhoneNumberInput
     private String smsFallbackUrl;
     private HttpActionEnum smsFallbackMethod;
     /** GETTER
-     * TODO: Write general description for this method
+     * The phone number to update
      */
     @JsonGetter("PhoneNumber")
     public String getPhoneNumber ( ) { 
@@ -37,46 +37,12 @@ public class UpdatePhoneNumberInput
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * The phone number to update
      */
     @JsonSetter("PhoneNumber")
     public void setPhoneNumber (String value) { 
         this.phoneNumber = value;
         notifyObservers(this.phoneNumber);
-    }
- 
-    /** GETTER
-     * Response type format xml or json
-     */
-    @JsonGetter("ResponseType")
-    public String getResponseType ( ) { 
-        return this.responseType;
-    }
-    
-    /** SETTER
-     * Response type format xml or json
-     */
-    @JsonSetter("ResponseType")
-    public void setResponseType (String value) { 
-        this.responseType = value;
-        notifyObservers(this.responseType);
-    }
- 
-    /** GETTER
-     * TODO: Write general description for this method
-     */
-    @JsonGetter("FriendlyName")
-    public String getFriendlyName ( ) { 
-        return this.friendlyName;
-    }
-    
-    /** SETTER
-     * TODO: Write general description for this method
-     */
-    @JsonSetter("FriendlyName")
-    public void setFriendlyName (String value) { 
-        this.friendlyName = value;
-        notifyObservers(this.friendlyName);
     }
  
     /** GETTER
@@ -97,7 +63,41 @@ public class UpdatePhoneNumberInput
     }
  
     /** GETTER
-     * TODO: Write general description for this method
+     * Response type format xml or json
+     */
+    @JsonGetter("ResponseType")
+    public String getResponseType ( ) { 
+        return this.responseType;
+    }
+    
+    /** SETTER
+     * Response type format xml or json
+     */
+    @JsonSetter("ResponseType")
+    public void setResponseType (String value) { 
+        this.responseType = value;
+        notifyObservers(this.responseType);
+    }
+ 
+    /** GETTER
+     * Phone number friendly name description
+     */
+    @JsonGetter("FriendlyName")
+    public String getFriendlyName ( ) { 
+        return this.friendlyName;
+    }
+    
+    /** SETTER
+     * Phone number friendly name description
+     */
+    @JsonSetter("FriendlyName")
+    public void setFriendlyName (String value) { 
+        this.friendlyName = value;
+        notifyObservers(this.friendlyName);
+    }
+ 
+    /** GETTER
+     * Post or Get
      */
     @JsonGetter("VoiceMethod")
     public HttpActionEnum getVoiceMethod ( ) { 
@@ -105,7 +105,7 @@ public class UpdatePhoneNumberInput
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * Post or Get
      */
     @JsonSetter("VoiceMethod")
     public void setVoiceMethod (HttpActionEnum value) { 
@@ -131,7 +131,7 @@ public class UpdatePhoneNumberInput
     }
  
     /** GETTER
-     * TODO: Write general description for this method
+     * Post or Get
      */
     @JsonGetter("VoiceFallbackMethod")
     public HttpActionEnum getVoiceFallbackMethod ( ) { 
@@ -139,7 +139,7 @@ public class UpdatePhoneNumberInput
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * Post or Get
      */
     @JsonSetter("VoiceFallbackMethod")
     public void setVoiceFallbackMethod (HttpActionEnum value) { 
@@ -148,7 +148,7 @@ public class UpdatePhoneNumberInput
     }
  
     /** GETTER
-     * TODO: Write general description for this method
+     * callback url after a hangup occurs
      */
     @JsonGetter("HangupCallback")
     public String getHangupCallback ( ) { 
@@ -156,7 +156,7 @@ public class UpdatePhoneNumberInput
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * callback url after a hangup occurs
      */
     @JsonSetter("HangupCallback")
     public void setHangupCallback (String value) { 
@@ -165,7 +165,7 @@ public class UpdatePhoneNumberInput
     }
  
     /** GETTER
-     * TODO: Write general description for this method
+     * Post or Get
      */
     @JsonGetter("HangupCallbackMethod")
     public HttpActionEnum getHangupCallbackMethod ( ) { 
@@ -173,7 +173,7 @@ public class UpdatePhoneNumberInput
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * Post or Get
      */
     @JsonSetter("HangupCallbackMethod")
     public void setHangupCallbackMethod (HttpActionEnum value) { 
@@ -233,7 +233,7 @@ public class UpdatePhoneNumberInput
     }
  
     /** GETTER
-     * TODO: Write general description for this method
+     * Post or Get
      */
     @JsonGetter("SmsMethod")
     public HttpActionEnum getSmsMethod ( ) { 
@@ -241,7 +241,7 @@ public class UpdatePhoneNumberInput
     }
     
     /** SETTER
-     * TODO: Write general description for this method
+     * Post or Get
      */
     @JsonSetter("SmsMethod")
     public void setSmsMethod (HttpActionEnum value) { 
