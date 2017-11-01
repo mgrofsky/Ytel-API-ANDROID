@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class PlayConferenceAudioInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5658328107531496357L;
+    private static final long serialVersionUID = 4800959037026468676L;
     private String conferenceSid;
     private String participantSid;
     private AudioFormatEnum audioUrl;

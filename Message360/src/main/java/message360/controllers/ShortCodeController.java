@@ -8,7 +8,6 @@ package message360.controllers;
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.*;
-import org.joda.time.LocalDate;
 
 import message360.*;
 import message360.models.*;
@@ -63,7 +62,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5442592679710605673L;
+            private static final long serialVersionUID = 5477791215514959386L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -72,7 +71,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5542491409710329337L;
+            private static final long serialVersionUID = 5036434144911209102L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -80,7 +79,7 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4895285163355760977L;
+            private static final long serialVersionUID = 5351659190733184559L;
             {
                     put( "shortcode", input.getShortcode() );
                     put( "to", input.getTo() );
@@ -172,7 +171,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4937223206722561751L;
+            private static final long serialVersionUID = 5114342391873539347L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -181,7 +180,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5465065359664433211L;
+            private static final long serialVersionUID = 5074219793400690357L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -189,7 +188,7 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5615424714817686585L;
+            private static final long serialVersionUID = 4909069304646373097L;
             {
                     put( "MessageSid", input.getMessageSid() );
             }
@@ -274,7 +273,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5233947798057972915L;
+            private static final long serialVersionUID = 5093117818752497684L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -283,7 +282,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5353222695522612907L;
+            private static final long serialVersionUID = 5702395976579136252L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -291,11 +290,11 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5007831905365546483L;
+            private static final long serialVersionUID = 4710001936342974521L;
             {
                     put( "Shortcode", input.getShortcode() );
                     put( "To", input.getTo() );
-                    put( "DateSent", DateTimeHelper.toSimpleDate(input.getDateSent()) );
+                    put( "DateSent", input.getDateSent() );
                     put( "Page", input.getPage() );
                     put( "PageSize", input.getPageSize() );
             }
@@ -380,7 +379,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5046800485151199067L;
+            private static final long serialVersionUID = 5138823999474297701L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -389,7 +388,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5050759325408243094L;
+            private static final long serialVersionUID = 5520940452659177343L;
             {
                     put( "user-agent", "message360-api" );
             }
@@ -397,7 +396,7 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5737743393346592590L;
+            private static final long serialVersionUID = 5331822654106120495L;
             {
                     put( "Page", input.getPage() );
                     put( "PageSize", input.getPageSize() );

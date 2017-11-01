@@ -8,19 +8,15 @@ package message360.models;
 import java.util.*;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import org.hopto.apimatic.DateTimeHelper;
-import org.joda.time.LocalDate;
 
 public class ListShortcodeInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4688201236133661501L;
+    private static final long serialVersionUID = 4860867560021867908L;
     private String responseType = "json";
     private String shortcode;
     private String to;
-    private LocalDate dateSent;
+    private String dateSent;
     private Integer page = 1;
     private Integer pageSize = 10;
     /** GETTER
@@ -78,8 +74,7 @@ public class ListShortcodeInput
      * Only list messages sent with the specified date
      */
     @JsonGetter("DateSent")
-    @JsonSerialize(using=DateTimeHelper.SimpleDateSerializer.class)
-    public LocalDate getDateSent ( ) { 
+    public String getDateSent ( ) { 
         return this.dateSent;
     }
     
@@ -87,8 +82,7 @@ public class ListShortcodeInput
      * Only list messages sent with the specified date
      */
     @JsonSetter("DateSent")
-    @JsonDeserialize(using=DateTimeHelper.SimpleDateDeserializer.class)
-    public void setDateSent (LocalDate value) { 
+    public void setDateSent (String value) { 
         this.dateSent = value;
         notifyObservers(this.dateSent);
     }

@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class AvailablePhoneNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5119346112813799987L;
+    private static final long serialVersionUID = 5218984620066443057L;
     private NumberTypeEnum numberType;
     private String areaCode;
     private String responseType = "json";

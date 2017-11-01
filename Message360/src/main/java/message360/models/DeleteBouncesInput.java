@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class DeleteBouncesInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4833493308805150392L;
+    private static final long serialVersionUID = 5524495418571631108L;
     private String responseType = "json";
     private String email;
     /** GETTER

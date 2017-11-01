@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class ListUnsubscribesInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4667824804682099761L;
+    private static final long serialVersionUID = 4903677790524408886L;
     private String responseType = "json";
     private String offset;
     private String limit;

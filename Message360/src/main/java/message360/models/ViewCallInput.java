@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class ViewCallInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4652445737748449410L;
+    private static final long serialVersionUID = 5653241643327799697L;
     private String callsid;
     private String responseType = "json";
     /** GETTER

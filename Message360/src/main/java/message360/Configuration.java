@@ -55,7 +55,7 @@ public class Configuration {
     public static String getBaseUri(Servers server) {
         StringBuilder baseUrl = new StringBuilder(environmentsMap.get(Configuration.environment).get(server));
         Map<String, Object> parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5068136720259917924L;
+            private static final long serialVersionUID = 5196367628423496085L;
             {
             }
         };
@@ -75,16 +75,16 @@ public class Configuration {
      * Map of all base URLs by environments and server aliases 
      */
     private static EnumMap<Environments, EnumMap<Servers, String>> environmentsMap = new EnumMap<Environments, EnumMap<Servers,String>>(Environments.class) {
-        private static final long serialVersionUID = 5358699516599217787L;
+        private static final long serialVersionUID = 4909884917074468331L;
         {
             put(Environments.PRODUCTION , new EnumMap<Servers, String>(Servers.class) {
-                private static final long serialVersionUID = 5038125732024901105L;
+                private static final long serialVersionUID = 5384626177125544729L;
                 {
                     put(Servers.DEFAULT, "https://api.message360.com/api/v3");
                 }
             });
             put(Environments.PREPRODUCTION , new EnumMap<Servers, String>(Servers.class) {
-                private static final long serialVersionUID = 4851337804767546157L;
+                private static final long serialVersionUID = 5584134374926085269L;
                 {
                     put(Servers.DEFAULT, "https://api-preprod.message360.com/api/v2");
                 }

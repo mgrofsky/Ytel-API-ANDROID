@@ -27,11 +27,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonSerializer;
-import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.module.SimpleModule;
-
 import message360.exceptions.APIException;
 
 public class APIHelper {
@@ -70,30 +65,6 @@ public class APIHelper {
         }
     };
 
-	/**
-     * Get a JsonSerializer instance from the provided annotation.
-     * @param  serializerAnnotation The Annotation containing information about the serializer
-     * @return The JsonSerializer instance of the required type
-     */
-    private static JsonSerializer getSerializer(Annotation serializerAnnotation)
-    {
-    	String sa = serializerAnnotation.toString();
-        sa = sa.substring(sa.indexOf("using=class ") + 12);
-		sa = sa.substring(0, sa.indexOf(')'));
-        try {
-        	return (JsonSerializer) Class.forName(sa).newInstance();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-			return null;
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-			return null;
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			return null;
-		}
-    }
-
     /**
      * JSON Serialization of a given object.
      * @param  obj The object to serialize into JSON
@@ -105,44 +76,6 @@ public class APIHelper {
             return null;
 
         return mapper.writeValueAsString(obj);
-    }
-
-	/**
-     * JSON Serialization of a given object using a specified JsonSerializer.
-     * @param  obj The object to serialize into JSON
-     * @param  serializer The instance of JsonSerializer to use
-     * @return The serialized Json string representation of the given object
-     */
-    public static String serialize(Object obj, final JsonSerializer serializer)
-            throws JsonProcessingException {
-        if(null == obj || null == serializer)
-            return null;
-        
-        if (obj.getClass().getName().equals("java.util.ArrayList"))		// need to find the generic type if it's an ArrayList
-        {
-        	final Class<? extends Object> cls = ((ArrayList) obj).get(0).getClass();
-        	
-    		return new ObjectMapper() {
-    			private static final long serialVersionUID = -1639089569991988232L;
-    			{
-    				SimpleModule module = new SimpleModule();
-    				module.addSerializer(cls, serializer);
-    				this.registerModule(module);
-    			}
-    		}.writeValueAsString(obj);
-        }
-        else {
-            final Class<? extends Object> cls = obj.getClass();
-
-			return new ObjectMapper() {
-				private static final long serialVersionUID = -1639089569991988232L;
-				{
-					SimpleModule module = new SimpleModule();
-					module.addSerializer(cls, serializer);
-					this.registerModule(module);
-				}
-			}.writeValueAsString(obj);
-        }
     }
 
     /**
@@ -158,30 +91,6 @@ public class APIHelper {
 
         return mapper.readValue(json, typeReference);
     }
-
-    /**
-     * JSON Deserialization of the given json string using a specified JsonDerializer.
-     * @param   json The json string to deserialize
-     * @param   <T>  The type of the object to deserialize into
-     * @param   cls  The class to attach the deserializer to
-     * @param   deserializer  The deserializer to use
-     * @return  The deserialized object
-     */
-	public static <T extends Object> List<T> deserialize(String json, final TypeReference<List<T>> typeReference,
-			final Class<T> cls, final JsonDeserializer<T> deserializer) throws IOException {
-		if (isNullOrWhiteSpace(json))
-			return null;
-		
-		return new ObjectMapper() {
-			private static final long serialVersionUID = -1639089569991988232L;
-
-			{
-				SimpleModule module = new SimpleModule();
-				module.addDeserializer(cls, deserializer);
-				this.registerModule(module);
-			}
-		}.readValue(json, typeReference);
-	}
 
     /**
      * JSON Deserialization of the given json string.
@@ -535,11 +444,7 @@ public class APIHelper {
                 try {
                     //load key value pair
                     Object value = method.invoke(obj);
-                    Annotation serializerAnnotation = method.getAnnotation(JsonSerialize.class);
-                    if (serializerAnnotation != null)
-                        loadKeyValuePairForEncoding(key, value, objectList, processed, serializerAnnotation);
-                    else
-                        loadKeyValuePairForEncoding(key, value, objectList, processed);
+                    loadKeyValuePairForEncoding(key, value, objectList, processed);
                 } catch (Exception ex) {
                 }
             }
@@ -579,31 +484,6 @@ public class APIHelper {
             objectList.add( new SimpleEntry<String, Object>(key, value));
         else
             objectToList(key, value, objectList, processed);
-    }
-
-	/**
-     * While processing objects to map, loads value after serializing
-     * @param key The key to used for creating key value pair
-     * @param value The value to process against the given key
-     * @param objectList The object list to process with key value pair
-     * @param processed List of processed objects hashCodes
-     * @param serializerAnnotation 
-     * @throws InvalidObjectException
-     */
-    private static void loadKeyValuePairForEncoding(
-            String key, Object value, List<SimpleEntry<String, Object>> objectList, HashSet<Integer> processed,
-            Annotation serializerAnnotation)
-    throws InvalidObjectException {
-        if(value == null)
-            return;
-        try {
-    		value = serialize(value, getSerializer(serializerAnnotation));
-    		if (value.toString().startsWith("\""))
-        		value = value.toString().substring(1, value.toString().length()-1);
-    		objectList.add( new SimpleEntry<String, Object>(key, value));
-		} catch (JsonProcessingException e) {
-			e.printStackTrace();
-		}
     }
 
     /**

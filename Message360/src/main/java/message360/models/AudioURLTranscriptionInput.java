@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class AudioURLTranscriptionInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5723169209694283006L;
+    private static final long serialVersionUID = 5395315596711628020L;
     private String audioUrl;
     private String responseType = "json";
     /** GETTER

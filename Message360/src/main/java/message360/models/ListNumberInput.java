@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class ListNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5437798810673961310L;
+    private static final long serialVersionUID = 5369975486380969521L;
     private String responseType = "json";
     private Integer page = 1;
     private Integer pageSize = 10;

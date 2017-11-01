@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class ListSpamInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5454341413814998516L;
+    private static final long serialVersionUID = 5408042808072431314L;
     private String responseType = "json";
     private String offset;
     private String limit;

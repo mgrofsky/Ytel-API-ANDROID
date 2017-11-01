@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class SendRinglessVMInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5349653274607964459L;
+    private static final long serialVersionUID = 5169347516072982174L;
     private String from;
     private String rVMCallerId;
     private String to;

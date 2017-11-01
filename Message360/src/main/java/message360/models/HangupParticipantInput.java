@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class HangupParticipantInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5740490012850292146L;
+    private static final long serialVersionUID = 5054564057623497476L;
     private String conferenceSid;
     private String participantSid;
     private String responseType = "json";
