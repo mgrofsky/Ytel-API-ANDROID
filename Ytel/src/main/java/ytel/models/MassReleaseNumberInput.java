@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class MassReleaseNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4952654408167533901L;
+    private static final long serialVersionUID = 5471310164659326394L;
     private String phoneNumber;
     private String responseType = "json";
     /** GETTER

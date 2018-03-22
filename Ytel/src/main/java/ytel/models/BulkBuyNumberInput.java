@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class BulkBuyNumberInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5281726750047822690L;
+    private static final long serialVersionUID = 5347185043778556425L;
     private NumberTypeEnum numberType;
     private String areaCode;
     private String quantity;

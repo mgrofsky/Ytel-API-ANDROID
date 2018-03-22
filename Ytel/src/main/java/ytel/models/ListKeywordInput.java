@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class ListKeywordInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5046947826624335024L;
+    private static final long serialVersionUID = 5656703002857520965L;
     private String responseType = "json";
     private Integer page = 1;
     private Integer pagesize = 10;

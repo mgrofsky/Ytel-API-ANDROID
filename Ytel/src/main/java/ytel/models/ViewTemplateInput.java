@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class ViewTemplateInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5692565879003474972L;
+    private static final long serialVersionUID = 5055833270395871006L;
     private UUID templateId;
     private String responseType = "json";
     /** GETTER

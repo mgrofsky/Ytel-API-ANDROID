@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class ViewAreaMailInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5679925300204060306L;
+    private static final long serialVersionUID = 5067778860150060691L;
     private String areamailid;
     private String responseType = "json";
     /** GETTER

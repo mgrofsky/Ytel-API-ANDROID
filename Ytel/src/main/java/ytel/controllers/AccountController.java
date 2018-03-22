@@ -62,7 +62,7 @@ public class AccountController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5465431652202459961L;
+            private static final long serialVersionUID = 5061357610488651374L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -71,7 +71,7 @@ public class AccountController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4802901271927105532L;
+            private static final long serialVersionUID = 4747895464715470171L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -79,7 +79,7 @@ public class AccountController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5426281757316832432L;
+            private static final long serialVersionUID = 5544058237058085967L;
             {
                     put( "Date", input.getDate() );
             }

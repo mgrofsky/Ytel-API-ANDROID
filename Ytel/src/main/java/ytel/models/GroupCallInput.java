@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class GroupCallInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4894339076134635027L;
+    private static final long serialVersionUID = 5340743825092485031L;
     private String from;
     private String to;
     private String url;

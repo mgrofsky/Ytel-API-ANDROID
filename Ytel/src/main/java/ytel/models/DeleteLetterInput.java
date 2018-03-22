@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class DeleteLetterInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4774543803698603845L;
+    private static final long serialVersionUID = 4944760338412407642L;
     private String lettersid;
     private String responseType = "json";
     /** GETTER

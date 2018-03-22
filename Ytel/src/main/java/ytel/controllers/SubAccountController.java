@@ -65,7 +65,7 @@ public class SubAccountController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5748250826808763625L;
+            private static final long serialVersionUID = 4676262404252999773L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -74,7 +74,7 @@ public class SubAccountController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5698429839308307159L;
+            private static final long serialVersionUID = 5006583760245123968L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -82,7 +82,7 @@ public class SubAccountController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4859429263517582181L;
+            private static final long serialVersionUID = 5501570953896409310L;
             {
                     put( "SubAccountSID", input.getSubAccountSID() );
                     put( "MergeNumber", (input.getMergeNumber() != null) ? input.getMergeNumber().value() : 0 );
@@ -174,7 +174,7 @@ public class SubAccountController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5345812387703059325L;
+            private static final long serialVersionUID = 5432456576088063435L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -183,7 +183,7 @@ public class SubAccountController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5319325964532244172L;
+            private static final long serialVersionUID = 4970384879932588510L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -191,7 +191,7 @@ public class SubAccountController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5328140666610145332L;
+            private static final long serialVersionUID = 5338280888161149615L;
             {
                     put( "SubAccountSID", input.getSubAccountSID() );
                     put( "Activate", (input.getActivate() != null) ? input.getActivate().value() : 0 );
@@ -292,7 +292,7 @@ public class SubAccountController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5376840988858531881L;
+            private static final long serialVersionUID = 4764151567712913727L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -301,7 +301,7 @@ public class SubAccountController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4889571836497138332L;
+            private static final long serialVersionUID = 5431080704184797539L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -309,7 +309,7 @@ public class SubAccountController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4768094559829081862L;
+            private static final long serialVersionUID = 5102167549207982135L;
             {
                     put( "FirstName", input.getFirstName() );
                     put( "LastName", input.getLastName() );

@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class ListBouncesInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4648145296246544412L;
+    private static final long serialVersionUID = 5440744319550237974L;
     private String responseType = "json";
     private String offset;
     private String limit;

@@ -62,7 +62,7 @@ public class TranscriptionController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4940053491484781820L;
+            private static final long serialVersionUID = 5043380056057959887L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -71,7 +71,7 @@ public class TranscriptionController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4827173654645755400L;
+            private static final long serialVersionUID = 5171532709896828813L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -79,7 +79,7 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5194255515388654163L;
+            private static final long serialVersionUID = 5451157768670906846L;
             {
                     put( "transcriptionsid", input.getTranscriptionsid() );
             }
@@ -167,7 +167,7 @@ public class TranscriptionController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5235464474190169697L;
+            private static final long serialVersionUID = 5308407636883083809L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -176,7 +176,7 @@ public class TranscriptionController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5203651070730851938L;
+            private static final long serialVersionUID = 4647399892670776942L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -184,7 +184,7 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4851348330071597812L;
+            private static final long serialVersionUID = 5689054611006967076L;
             {
                     put( "recordingSid", input.getRecordingSid() );
             }
@@ -272,7 +272,7 @@ public class TranscriptionController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5225097756558017224L;
+            private static final long serialVersionUID = 5689500833959492953L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -281,7 +281,7 @@ public class TranscriptionController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5153511895428538992L;
+            private static final long serialVersionUID = 4866588344576313551L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -289,7 +289,7 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5548453483525599349L;
+            private static final long serialVersionUID = 5263711710727763454L;
             {
                     put( "audiourl", input.getAudiourl() );
             }
@@ -374,7 +374,7 @@ public class TranscriptionController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5414155721117697939L;
+            private static final long serialVersionUID = 5709842318362994257L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -383,7 +383,7 @@ public class TranscriptionController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5342829104676523753L;
+            private static final long serialVersionUID = 5509987194538974787L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -391,7 +391,7 @@ public class TranscriptionController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4737604218951729911L;
+            private static final long serialVersionUID = 5152820162461734589L;
             {
                     put( "page", input.getPage() );
                     put( "pagesize", input.getPagesize() );

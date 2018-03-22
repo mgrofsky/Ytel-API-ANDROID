@@ -62,7 +62,7 @@ public class RecordingController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4870351614612218126L;
+            private static final long serialVersionUID = 5151099064379169783L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -71,7 +71,7 @@ public class RecordingController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5006364175853520040L;
+            private static final long serialVersionUID = 4839843834553882149L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -79,7 +79,7 @@ public class RecordingController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5232598325359492708L;
+            private static final long serialVersionUID = 5341670958368549459L;
             {
                     put( "recordingsid", input.getRecordingsid() );
             }
@@ -167,7 +167,7 @@ public class RecordingController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5042035583105227995L;
+            private static final long serialVersionUID = 5713597983267862170L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -176,7 +176,7 @@ public class RecordingController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5681920367274206924L;
+            private static final long serialVersionUID = 5471535238188168443L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -184,7 +184,7 @@ public class RecordingController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4638593198958349185L;
+            private static final long serialVersionUID = 4788181717780954433L;
             {
                     put( "recordingsid", input.getRecordingsid() );
             }
@@ -269,7 +269,7 @@ public class RecordingController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4667871557700771430L;
+            private static final long serialVersionUID = 5622726829490152476L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -278,7 +278,7 @@ public class RecordingController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4875696754675933794L;
+            private static final long serialVersionUID = 5148209732168567056L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -286,7 +286,7 @@ public class RecordingController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4872020904002996895L;
+            private static final long serialVersionUID = 5331446166061389841L;
             {
                     put( "page", input.getPage() );
                     put( "pagesize", input.getPagesize() );

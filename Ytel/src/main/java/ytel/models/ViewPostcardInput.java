@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class ViewPostcardInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4866098520733832792L;
+    private static final long serialVersionUID = 4927815820387926775L;
     private String postcardid;
     private String responseType = "json";
     /** GETTER

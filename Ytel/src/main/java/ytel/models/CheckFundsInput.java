@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class CheckFundsInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4826685621862505028L;
+    private static final long serialVersionUID = 5646278981086036743L;
     private String accountSid;
     private String authToken;
     /** GETTER

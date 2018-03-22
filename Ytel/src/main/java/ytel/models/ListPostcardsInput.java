@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class ListPostcardsInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4989574017949196146L;
+    private static final long serialVersionUID = 5049500952052115034L;
     private String responseType = "json";
     private Integer page = 1;
     private Integer pagesize = 10;

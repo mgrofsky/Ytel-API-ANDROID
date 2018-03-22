@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class DeleteAreaMailInput 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4870196418748286364L;
+    private static final long serialVersionUID = 5425861826921958620L;
     private String areamailid;
     private String responseType = "json";
     /** GETTER

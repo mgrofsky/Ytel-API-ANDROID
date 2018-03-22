@@ -62,7 +62,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5062207169832048360L;
+            private static final long serialVersionUID = 5670353794005758896L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -71,7 +71,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4929565988699991790L;
+            private static final long serialVersionUID = 5611037529044448563L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -79,7 +79,7 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4870990773822902722L;
+            private static final long serialVersionUID = 5673807086229232098L;
             {
                     put( "shortcode", input.getShortcode() );
                     put( "to", input.getTo() );
@@ -171,7 +171,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4758908291239748071L;
+            private static final long serialVersionUID = 4951945878526923415L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -180,7 +180,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5293607953385052965L;
+            private static final long serialVersionUID = 4844834021816107993L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -188,7 +188,7 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5421973221258083569L;
+            private static final long serialVersionUID = 4927317694290043887L;
             {
                     put( "MessageSid", input.getMessageSid() );
             }
@@ -273,7 +273,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5652136271359142077L;
+            private static final long serialVersionUID = 4912668955969805129L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -282,7 +282,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4747698025313060305L;
+            private static final long serialVersionUID = 4622541213598118799L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -290,7 +290,7 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5322296800867451440L;
+            private static final long serialVersionUID = 5406227603175169330L;
             {
                     put( "Shortcode", input.getShortcode() );
                     put( "To", input.getTo() );
@@ -379,7 +379,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4637257148446052178L;
+            private static final long serialVersionUID = 5044897774715111508L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -388,7 +388,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4804654991895600938L;
+            private static final long serialVersionUID = 4807786907212101889L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -396,7 +396,7 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5291623556335562569L;
+            private static final long serialVersionUID = 4640719064167337377L;
             {
                     put( "page", input.getPage() );
                     put( "pagesize", input.getPagesize() );
@@ -488,7 +488,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5230048172973701641L;
+            private static final long serialVersionUID = 5011832376696709691L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -497,7 +497,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5727917940446048737L;
+            private static final long serialVersionUID = 5668294912980240382L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -505,7 +505,7 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5506959438620816830L;
+            private static final long serialVersionUID = 5144729182005214003L;
             {
                     put( "Shortcode", input.getShortcode() );
             }
@@ -593,7 +593,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4617787104480454668L;
+            private static final long serialVersionUID = 5257365983527200616L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -602,7 +602,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5325879296972599877L;
+            private static final long serialVersionUID = 5141319617884868971L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -610,7 +610,7 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4903121756802994858L;
+            private static final long serialVersionUID = 5362620329069264469L;
             {
                     put( "Shortcode", input.getShortcode() );
                     put( "FriendlyName", input.getFriendlyName() );
@@ -700,7 +700,7 @@ public class ShortCodeController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5492369062749746183L;
+            private static final long serialVersionUID = 5526271197400429300L;
             {
                     put( "ResponseType", input.getResponseType() );
             }});
@@ -709,7 +709,7 @@ public class ShortCodeController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5253806867222587924L;
+            private static final long serialVersionUID = 4851603231094379310L;
             {
                     put( "user-agent", "ytel-api" );
             }
@@ -717,7 +717,7 @@ public class ShortCodeController extends BaseController {
 
         //load all fields for the outgoing API request
         Map<String, Object> _parameters = new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5214008251331225979L;
+            private static final long serialVersionUID = 5231826083950441438L;
             {
                     put( "Shortcode", input.getShortcode() );
                     put( "page", input.getPage() );
