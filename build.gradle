@@ -4,15 +4,17 @@ buildscript {
     System.properties['com.android.build.gradle.overrideVersionCheck'] = 'true'
     repositories {
         jcenter()
+        google()
     }
     dependencies {
         //update the following line to match your gradle version
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:3.0.1'
     }
 }
 
 allprojects {
     repositories {
         jcenter()
+        google()
     }
 }
