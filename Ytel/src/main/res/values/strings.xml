@@ -1,9 +1,0 @@
-<!--
- - Ytel
- -
- - This file was automatically generated for ytel by APIMATIC v2.0 ( https://apimatic.io ).
--->
-<resources>
-    <string name="app_name">Ytel</string>
-    <string name="preference_file_key">ytel_prefs</string>
-</resources>
