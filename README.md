@@ -11,61 +11,61 @@ you will need internet access for a successful build.
 
 * In order to open the client library in Android Studio click on ``` Open an Existing Android Project ```.
 
-![Importing SDK into Android Studio - Step 1](https://apidocs.io/illustration/android?step=import1&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Importing SDK into Android Studio - Step 1](https://apidocs.io/illustration/android?step=import1&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
-* Browse to locate the folder containing the source code. Select the location of the YtelAPI gradle project and click ``` Ok ```.
+* Browse to locate the folder containing the source code. Select the location of the YtelAPIV3 gradle project and click ``` Ok ```.
 
-![Importing SDK into Android Studio - Step 2](https://apidocs.io/illustration/android?step=import2&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Importing SDK into Android Studio - Step 2](https://apidocs.io/illustration/android?step=import2&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 * Upon successful import, the project can be built by clicking on ``` Build > Make Project ``` or  pressing ``` Ctrl + F9 ```.
 
-![Importing SDK into Android Studio - Step 3](https://apidocs.io/illustration/android?step=import3&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Importing SDK into Android Studio - Step 3](https://apidocs.io/illustration/android?step=import3&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 ## How to Use
 
-The following section explains how to use the YtelAPI library in a new project.
+The following section explains how to use the YtelAPIV3 library in a new project.
 
 ### 1. Starting a new project 
 
 For starting a new project, click on ``` Create New Android Studio Project ```.
 
-![Add a new project in Android Studio - Step 1](https://apidocs.io/illustration/android?step=createNewProject0&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Add a new project in Android Studio - Step 1](https://apidocs.io/illustration/android?step=createNewProject0&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 Here, configure the new project by adding the name, domain and location of the sample application followed by clicking ``` Next ```.
 
-![Create a new Android Studio Project - Step 2](https://apidocs.io/illustration/android?step=createNewProject1&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Create a new Android Studio Project - Step 2](https://apidocs.io/illustration/android?step=createNewProject1&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 Following this, select the `Phone and Tablet` option as shown in the illustration below and click `Next`.
 
-![Create a new Android Studio Project - Step 3](https://apidocs.io/illustration/android?step=createNewProject2&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Create a new Android Studio Project - Step 3](https://apidocs.io/illustration/android?step=createNewProject2&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 In the following step, choose ``` Empty Activity ``` as the activity type and click ``` Next ```.
 
-![Create a new Android Studio Project - Step 4](https://apidocs.io/illustration/android?step=createNewProject3&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Create a new Android Studio Project - Step 4](https://apidocs.io/illustration/android?step=createNewProject3&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 In this step, provide an ``` Activity Name ``` and ``` Layout Name ``` and click ``` Finish ```.  This would take you to the newly created project.
 
-![Create a new Android Studio Project - Step 4](https://apidocs.io/illustration/android?step=createNewProject4&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Create a new Android Studio Project - Step 4](https://apidocs.io/illustration/android?step=createNewProject4&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 ### 2. Add reference of the library project
 
 In order to add a dependency to this sample application, click on the android button shown in the project explorer on the left side as shown in the picture. Click on ``` Project ``` in the drop down that emerges.  
 
-![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/android?step=testProject0&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/android?step=testProject0&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 Right click the sample application in the project explorer and click on ``` New > Module ```  as shown in the picture.
 
-![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/android?step=testProject1&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/android?step=testProject1&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 Choose ``` Import Gradle Project ``` and click ``` Next ```.
 
-![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/android?step=testProject2&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/android?step=testProject2&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 Click on ``` Finish ``` which would take you back to the sample application with the refernced SDK. 
 
-![Adding dependency to the client library - Step 4](https://apidocs.io/illustration/android?step=testProject3&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Adding dependency to the client library - Step 4](https://apidocs.io/illustration/android?step=testProject3&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
-In the following step navigate to the ``` SampleApplication >  app > build.gradle ``` file and add the following line ```compile project(path: ':YtelAPILib')``` to the dependencies section as shown in the illustration below. Also add the following packagingOptions.
+In the following step navigate to the ``` SampleApplication >  app > build.gradle ``` file and add the following line ```compile project(path: ':YtelAPIV3Lib')``` to the dependencies section as shown in the illustration below. Also add the following packagingOptions.
 
 packagingOptions
     exclude 'META-INF/LICENSE'
@@ -73,11 +73,11 @@ packagingOptions
     exclude 'META-INF/DEPENDENCIES'
 }
 
-![Adding dependency to the client library - Step 5](https://apidocs.io/illustration/android?step=testProject4&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Adding dependency to the client library - Step 5](https://apidocs.io/illustration/android?step=testProject4&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 Finally, press ``` Sync Now ``` in the warning visible as shown in the picture below.
 
-![Adding dependency to the client library - Step 6](https://apidocs.io/illustration/android?step=testProject5&workspaceFolder=Ytel%20API&workspaceName=YtelAPI&projectName=YtelAPILib&rootNamespace=com.message360.api)
+![Adding dependency to the client library - Step 6](https://apidocs.io/illustration/android?step=testProject5&workspaceFolder=Ytel%20API%20V3&workspaceName=YtelAPIV3&projectName=YtelAPIV3Lib&rootNamespace=com.ytel.api)
 
 ### 3. Write sample code
 
@@ -91,7 +91,7 @@ JUnit is used as the testing framework and test runner.
 
 In Android Studio, for running the tests do the following:
 
-1. Right click on *SampleApplication > YtelAPILib > androidTest > java)* from the project explorer.
+1. Right click on *SampleApplication > YtelAPIV3Lib > androidTest > java)* from the project explorer.
 2. Select "Run All Tests" or use "Ctrl + Shift + F10" to run the Tests.
 
 ## Initialization
@@ -113,8 +113,8 @@ API client can be initialized as following. The `appContext` being passed is the
 String basicAuthUserName = "basicAuthUserName"; // The username to use with basic authentication
 String basicAuthPassword = "basicAuthPassword"; // The password to use with basic authentication
 
-com.message360.api.Configuration.initialize(appContext);
-YtelAPIClient client = new YtelAPIClient(basicAuthUserName, basicAuthPassword);
+com.ytel.api.Configuration.initialize(appContext);
+YtelAPIV3Client client = new YtelAPIV3Client(basicAuthUserName, basicAuthPassword);
 ```
 
 
@@ -140,7 +140,7 @@ YtelAPIClient client = new YtelAPIClient(basicAuthUserName, basicAuthPassword);
 * [TranscriptionController](#transcription_controller)
 * [UsageController](#usage_controller)
 
-## <a name="short_code_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.ShortCodeController") ShortCodeController
+## <a name="short_code_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.ShortCodeController") ShortCodeController
 
 ### Get singleton instance
 
@@ -150,14 +150,16 @@ The singleton instance of the ``` ShortCodeController ``` class can be accessed 
 ShortCodeController shortCode = client.getShortCode();
 ```
 
-### <a name="create_dedicatedshortcode_listshortcode_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ShortCodeController.createDedicatedshortcodeListshortcodeAsync") createDedicatedshortcodeListshortcodeAsync
+### <a name="create_list_shortcodes_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ShortCodeController.createListShortcodesAsync") createListShortcodesAsync
 
 > Retrieve a list of Short Code assignment associated with your Ytel account.
 
 
 ```java
-void createDedicatedshortcodeListshortcodeAsync(
-        final CreateDedicatedshortcodeListshortcodeInput input,
+void createListShortcodesAsync(
+        final String shortcode,
+        final String page,
+        final String pagesize,
         final APICallBack<String> callBack)
 ```
 
@@ -173,39 +175,246 @@ void createDedicatedshortcodeListshortcodeAsync(
 #### Example Usage
 
 ```java
-CreateDedicatedshortcodeListshortcodeInput collect = new CreateDedicatedshortcodeListshortcodeInput();
-
 String shortcode = "Shortcode";
-collect.setShortcode(shortcode);
-
 String page = "page";
-collect.setPage(page);
-
 String pagesize = "pagesize";
-collect.setPagesize(pagesize);
-
 // Invoking the API call with sample inputs
-shortCode.createDedicatedshortcodeListshortcodeAsync(collect, new APICallBack<String>() {
+shortCode.createListShortcodesAsync(shortcode, page, pagesize, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_dedicatedshortcode_updateshortcode_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ShortCodeController.createDedicatedshortcodeUpdateshortcodeAsync") createDedicatedshortcodeUpdateshortcodeAsync
+### <a name="create_view_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ShortCodeController.createViewSMSAsync") createViewSMSAsync
+
+> Retrieve a single Short Code object by its shortcode assignment.
+
+
+```java
+void createViewSMSAsync(
+        final String shortcode,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Required ```  | List of valid Dedicated Short Code to your Ytel account |
+
+
+#### Example Usage
+
+```java
+String shortcode = "Shortcode";
+// Invoking the API call with sample inputs
+shortCode.createViewSMSAsync(shortcode, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_view_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ShortCodeController.createViewSMSAsync") createViewSMSAsync
+
+> View a single Sms Short Code message.
+
+
+```java
+void createViewSMSAsync(
+        final String messageSid,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| messageSid |  ``` Required ```  | The unique identifier for the sms resource |
+
+
+#### Example Usage
+
+```java
+String messageSid = "MessageSid";
+// Invoking the API call with sample inputs
+shortCode.createViewSMSAsync(messageSid, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_list_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ShortCodeController.createListSMSAsync") createListSMSAsync
+
+> Retrieve a list of Short Code messages.
+
+
+```java
+void createListSMSAsync(
+        final String shortcode,
+        final String to,
+        final String dateSent,
+        final Integer page,
+        final Integer pageSize,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Optional ```  | Only list messages sent from this Short Code |
+| to |  ``` Optional ```  | Only list messages sent to this number |
+| dateSent |  ``` Optional ```  | Only list messages sent with the specified date |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pageSize |  ``` Optional ```  | The count of objects to return per page. |
+
+
+#### Example Usage
+
+```java
+String shortcode = "Shortcode";
+String to = "To";
+String dateSent = "DateSent";
+Integer page = 233;
+Integer pageSize = 233;
+// Invoking the API call with sample inputs
+shortCode.createListSMSAsync(shortcode, to, dateSent, page, pageSize, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_send_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ShortCodeController.createSendSMSAsync") createSendSMSAsync
+
+> Send Dedicated Shortcode
+
+
+```java
+void createSendSMSAsync(
+        final int shortcode,
+        final double to,
+        final String body,
+        final String method,
+        final String messagestatuscallback,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Required ```  | Your dedicated shortcode |
+| to |  ``` Required ```  | The number to send your SMS to |
+| body |  ``` Required ```  | The body of your message |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent.GET or POST |
+| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
+
+
+#### Example Usage
+
+```java
+int shortcode = 233;
+double to = 233.219640796641;
+String body = "body";
+String method = "method";
+String messagestatuscallback = "messagestatuscallback";
+// Invoking the API call with sample inputs
+shortCode.createSendSMSAsync(shortcode, to, body, method, messagestatuscallback, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_list_inbound_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ShortCodeController.createListInboundSMSAsync") createListInboundSMSAsync
+
+> Retrive a list of inbound Sms Short Code messages associated with your Ytel account.
+
+
+```java
+void createListInboundSMSAsync(
+        final Integer page,
+        final Integer pagesize,
+        final String from,
+        final String shortcode,
+        final String datecreated,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | Only list SMS messages sent from this number |
+| shortcode |  ``` Optional ```  | Only list SMS messages sent to Shortcode |
+| datecreated |  ``` Optional ```  | Only list SMS messages sent in the specified date MAKE REQUEST |
+
+
+#### Example Usage
+
+```java
+Integer page = 233;
+Integer pagesize = 233;
+String from = "From";
+String shortcode = "Shortcode";
+String datecreated = "Datecreated";
+// Invoking the API call with sample inputs
+shortCode.createListInboundSMSAsync(page, pagesize, from, shortcode, datecreated, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="update_shortcode_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ShortCodeController.updateShortcodeAsync") updateShortcodeAsync
 
 > Update a dedicated shortcode.
 
 
 ```java
-void createDedicatedshortcodeUpdateshortcodeAsync(
-        final CreateDedicatedshortcodeUpdateshortcodeInput input,
+void updateShortcodeAsync(
+        final String shortcode,
+        final String friendlyName,
+        final String callbackMethod,
+        final String callbackUrl,
+        final String fallbackMethod,
+        final String fallbackUrl,
         final APICallBack<String> callBack)
 ```
 
@@ -224,64 +433,14 @@ void createDedicatedshortcodeUpdateshortcodeAsync(
 #### Example Usage
 
 ```java
-CreateDedicatedshortcodeUpdateshortcodeInput collect = new CreateDedicatedshortcodeUpdateshortcodeInput();
-
 String shortcode = "Shortcode";
-collect.setShortcode(shortcode);
-
 String friendlyName = "FriendlyName";
-collect.setFriendlyName(friendlyName);
-
 String callbackMethod = "CallbackMethod";
-collect.setCallbackMethod(callbackMethod);
-
 String callbackUrl = "CallbackUrl";
-collect.setCallbackUrl(callbackUrl);
-
 String fallbackMethod = "FallbackMethod";
-collect.setFallbackMethod(fallbackMethod);
-
 String fallbackUrl = "FallbackUrl";
-collect.setFallbackUrl(fallbackUrl);
-
 // Invoking the API call with sample inputs
-shortCode.createDedicatedshortcodeUpdateshortcodeAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_dedicatedshortcode_viewshortcode_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ShortCodeController.createDedicatedshortcodeViewshortcodeAsync") createDedicatedshortcodeViewshortcodeAsync
-
-> Retrieve a single Short Code object by its shortcode assignment.
-
-
-```java
-void createDedicatedshortcodeViewshortcodeAsync(
-        final String shortcode,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| shortcode |  ``` Required ```  | List of valid Dedicated Short Code to your Ytel account |
-
-
-#### Example Usage
-
-```java
-String shortcode = "Shortcode";
-// Invoking the API call with sample inputs
-shortCode.createDedicatedshortcodeViewshortcodeAsync(shortcode, new APICallBack<String>() {
+shortCode.updateShortcodeAsync(shortcode, friendlyName, callbackMethod, callbackUrl, fallbackMethod, fallbackUrl, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -289,216 +448,13 @@ shortCode.createDedicatedshortcodeViewshortcodeAsync(shortcode, new APICallBack<
         // TODO failure callback handler
     }
 });
-
-```
-
-
-### <a name="create_shortcode_viewsms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ShortCodeController.createShortcodeViewsmsAsync") createShortcodeViewsmsAsync
-
-> View a single Sms Short Code message.
-
-
-```java
-void createShortcodeViewsmsAsync(
-        final String messageSid,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| messageSid |  ``` Required ```  | The unique identifier for the sms resource |
-
-
-#### Example Usage
-
-```java
-String messageSid = "MessageSid";
-// Invoking the API call with sample inputs
-shortCode.createShortcodeViewsmsAsync(messageSid, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-});
-
-```
-
-
-### <a name="create_dedicatedshortcode_getinboundsms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ShortCodeController.createDedicatedshortcodeGetinboundsmsAsync") createDedicatedshortcodeGetinboundsmsAsync
-
-> Retrive a list of inbound Sms Short Code messages associated with your Ytel account.
-
-
-```java
-void createDedicatedshortcodeGetinboundsmsAsync(
-        final CreateDedicatedshortcodeGetinboundsmsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | Only list SMS messages sent from this number |
-| shortcode |  ``` Optional ```  | Only list SMS messages sent to Shortcode |
-| datecreated |  ``` Optional ```  | Only list SMS messages sent in the specified date MAKE REQUEST |
-
-
-#### Example Usage
-
-```java
-CreateDedicatedshortcodeGetinboundsmsInput collect = new CreateDedicatedshortcodeGetinboundsmsInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-String from = "From";
-collect.setFrom(from);
-
-String shortcode = "Shortcode";
-collect.setShortcode(shortcode);
-
-String datecreated = "Datecreated";
-collect.setDatecreated(datecreated);
-
-// Invoking the API call with sample inputs
-shortCode.createDedicatedshortcodeGetinboundsmsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_dedicatedshortcode_sendsms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ShortCodeController.createDedicatedshortcodeSendsmsAsync") createDedicatedshortcodeSendsmsAsync
-
-> Send Dedicated Shortcode
-
-
-```java
-void createDedicatedshortcodeSendsmsAsync(
-        final CreateDedicatedshortcodeSendsmsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| shortcode |  ``` Required ```  | Your dedicated shortcode |
-| to |  ``` Required ```  | The number to send your SMS to |
-| body |  ``` Required ```  | The body of your message |
-| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent.GET or POST |
-| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
-
-
-#### Example Usage
-
-```java
-CreateDedicatedshortcodeSendsmsInput collect = new CreateDedicatedshortcodeSendsmsInput();
-
-int shortcode = 12;
-collect.setShortcode(shortcode);
-
-double to = 12.3602690023185;
-collect.setTo(to);
-
-String body = "body";
-collect.setBody(body);
-
-String method = "method";
-collect.setMethod(method);
-
-String messagestatuscallback = "messagestatuscallback";
-collect.setMessagestatuscallback(messagestatuscallback);
-
-// Invoking the API call with sample inputs
-shortCode.createDedicatedshortcodeSendsmsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_shortcode_listsms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ShortCodeController.createShortcodeListsmsAsync") createShortcodeListsmsAsync
-
-> Retrieve a list of Short Code messages.
-
-
-```java
-void createShortcodeListsmsAsync(
-        final CreateShortcodeListsmsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| shortcode |  ``` Optional ```  | Only list messages sent from this Short Code |
-| to |  ``` Optional ```  | Only list messages sent to this number |
-| dateSent |  ``` Optional ```  | Only list messages sent with the specified date |
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pageSize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-
-
-#### Example Usage
-
-```java
-CreateShortcodeListsmsInput collect = new CreateShortcodeListsmsInput();
-
-String shortcode = "Shortcode";
-collect.setShortcode(shortcode);
-
-String to = "To";
-collect.setTo(to);
-
-String dateSent = "DateSent";
-collect.setDateSent(dateSent);
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pageSize = 10;
-collect.setPageSize(pageSize);
-
-// Invoking the API call with sample inputs
-shortCode.createShortcodeListsmsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="area_mail_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.AreaMailController") AreaMailController
+## <a name="area_mail_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.AreaMailController") AreaMailController
 
 ### Get singleton instance
 
@@ -508,13 +464,13 @@ The singleton instance of the ``` AreaMailController ``` class can be accessed f
 AreaMailController areaMail = client.getAreaMail();
 ```
 
-### <a name="create_areamail_delete_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.AreaMailController.createAreamailDeleteAsync") createAreamailDeleteAsync
+### <a name="create_delete_area_mail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.AreaMailController.createDeleteAreaMailAsync") createDeleteAreaMailAsync
 
 > Remove an AreaMail object by its AreaMailId.
 
 
 ```java
-void createAreamailDeleteAsync(
+void createDeleteAreaMailAsync(
         final String areamailid,
         final APICallBack<String> callBack)
 ```
@@ -531,7 +487,7 @@ void createAreamailDeleteAsync(
 ```java
 String areamailid = "areamailid";
 // Invoking the API call with sample inputs
-areaMail.createAreamailDeleteAsync(areamailid, new APICallBack<String>() {
+areaMail.createDeleteAreaMailAsync(areamailid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -543,14 +499,99 @@ areaMail.createAreamailDeleteAsync(areamailid, new APICallBack<String>() {
 ```
 
 
-### <a name="create_areamail_create_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.AreaMailController.createAreamailCreateAsync") createAreamailCreateAsync
+### <a name="create_view_area_mail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.AreaMailController.createViewAreaMailAsync") createViewAreaMailAsync
+
+> Retrieve an AreaMail object by its AreaMailId.
+
+
+```java
+void createViewAreaMailAsync(
+        final String areamailid,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| areamailid |  ``` Required ```  | The unique identifier for an AreaMail object. |
+
+
+#### Example Usage
+
+```java
+String areamailid = "areamailid";
+// Invoking the API call with sample inputs
+areaMail.createViewAreaMailAsync(areamailid, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_list_area_mails_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.AreaMailController.createListAreaMailsAsync") createListAreaMailsAsync
+
+> Retrieve a list of AreaMail objects.
+
+
+```java
+void createListAreaMailsAsync(
+        final Integer page,
+        final Integer pagesize,
+        final String areamailsid,
+        final String dateCreated,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
+| areamailsid |  ``` Optional ```  | The unique identifier for an AreaMail object. |
+| dateCreated |  ``` Optional ```  | The date the AreaMail was created. |
+
+
+#### Example Usage
+
+```java
+Integer page = 233;
+Integer pagesize = 233;
+String areamailsid = "areamailsid";
+String dateCreated = "dateCreated";
+// Invoking the API call with sample inputs
+areaMail.createListAreaMailsAsync(page, pagesize, areamailsid, dateCreated, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_area_mail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.AreaMailController.createAreaMailAsync") createAreaMailAsync
 
 > Create a new AreaMail object.
 
 
 ```java
-void createAreamailCreateAsync(
-        final CreateAreamailCreateInput input,
+void createAreaMailAsync(
+        final String routes,
+        final String attachbyid,
+        final String front,
+        final String back,
+        final String description,
+        final String targettype,
+        final String htmldata,
         final APICallBack<String> callBack)
 ```
 
@@ -570,67 +611,15 @@ void createAreamailCreateAsync(
 #### Example Usage
 
 ```java
-CreateAreamailCreateInput collect = new CreateAreamailCreateInput();
-
 String routes = "routes";
-collect.setRoutes(routes);
-
 String attachbyid = "attachbyid";
-collect.setAttachbyid(attachbyid);
-
 String front = "front";
-collect.setFront(front);
-
 String back = "back";
-collect.setBack(back);
-
 String description = "description";
-collect.setDescription(description);
-
 String targettype = "targettype";
-collect.setTargettype(targettype);
-
 String htmldata = "htmldata";
-collect.setHtmldata(htmldata);
-
 // Invoking the API call with sample inputs
-areaMail.createAreamailCreateAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_areamail_view_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.AreaMailController.createAreamailViewAsync") createAreamailViewAsync
-
-> Retrieve an AreaMail object by its AreaMailId.
-
-
-```java
-void createAreamailViewAsync(
-        final String areamailid,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| areamailid |  ``` Required ```  | The unique identifier for an AreaMail object. |
-
-
-#### Example Usage
-
-```java
-String areamailid = "areamailid";
-// Invoking the API call with sample inputs
-areaMail.createAreamailViewAsync(areamailid, new APICallBack<String>() {
+areaMail.createAreaMailAsync(routes, attachbyid, front, back, description, targettype, htmldata, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -642,61 +631,9 @@ areaMail.createAreamailViewAsync(areamailid, new APICallBack<String>() {
 ```
 
 
-### <a name="create_areamail_lists_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.AreaMailController.createAreamailListsAsync") createAreamailListsAsync
-
-> Retrieve a list of AreaMail objects.
-
-
-```java
-void createAreamailListsAsync(
-        final CreateAreamailListsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| areamailsid |  ``` Optional ```  | The unique identifier for an AreaMail object. |
-| dateCreated |  ``` Optional ```  | The date the AreaMail was created. |
-
-
-#### Example Usage
-
-```java
-CreateAreamailListsInput collect = new CreateAreamailListsInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-String areamailsid = "areamailsid";
-collect.setAreamailsid(areamailsid);
-
-String dateCreated = "dateCreated";
-collect.setDateCreated(dateCreated);
-
-// Invoking the API call with sample inputs
-areaMail.createAreamailListsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="post_card_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.PostCardController") PostCardController
+## <a name="post_card_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.PostCardController") PostCardController
 
 ### Get singleton instance
 
@@ -706,13 +643,13 @@ The singleton instance of the ``` PostCardController ``` class can be accessed f
 PostCardController postCard = client.getPostCard();
 ```
 
-### <a name="postcard_deletepostcard_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PostCardController.postcardDeletepostcardAsync") postcardDeletepostcardAsync
+### <a name="create_delete_postcard_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PostCardController.createDeletePostcardAsync") createDeletePostcardAsync
 
 > Remove a postcard object.
 
 
 ```java
-void postcardDeletepostcardAsync(
+void createDeletePostcardAsync(
         final String postcardid,
         final APICallBack<String> callBack)
 ```
@@ -729,7 +666,7 @@ void postcardDeletepostcardAsync(
 ```java
 String postcardid = "postcardid";
 // Invoking the API call with sample inputs
-postCard.postcardDeletepostcardAsync(postcardid, new APICallBack<String>() {
+postCard.createDeletePostcardAsync(postcardid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -741,13 +678,13 @@ postCard.postcardDeletepostcardAsync(postcardid, new APICallBack<String>() {
 ```
 
 
-### <a name="postcard_viewpostcard_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PostCardController.postcardViewpostcardAsync") postcardViewpostcardAsync
+### <a name="create_view_postcard_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PostCardController.createViewPostcardAsync") createViewPostcardAsync
 
 > Retrieve a postcard object by its PostcardId.
 
 
 ```java
-void postcardViewpostcardAsync(
+void createViewPostcardAsync(
         final String postcardid,
         final APICallBack<String> callBack)
 ```
@@ -764,7 +701,7 @@ void postcardViewpostcardAsync(
 ```java
 String postcardid = "postcardid";
 // Invoking the API call with sample inputs
-postCard.postcardViewpostcardAsync(postcardid, new APICallBack<String>() {
+postCard.createViewPostcardAsync(postcardid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -776,66 +713,22 @@ postCard.postcardViewpostcardAsync(postcardid, new APICallBack<String>() {
 ```
 
 
-### <a name="postcard_listpostcard_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PostCardController.postcardListpostcardAsync") postcardListpostcardAsync
-
-> Retrieve a list of postcard objects. The postcards objects are sorted by creation date, with the most recently created postcards appearing first.
-
-
-```java
-void postcardListpostcardAsync(
-        final PostcardListpostcardInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| postcardid |  ``` Optional ```  | The unique identifier for a postcard object. |
-| dateCreated |  ``` Optional ```  | The date the postcard was created. |
-
-
-#### Example Usage
-
-```java
-PostcardListpostcardInput collect = new PostcardListpostcardInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-String postcardid = "postcardid";
-collect.setPostcardid(postcardid);
-
-String dateCreated = "dateCreated";
-collect.setDateCreated(dateCreated);
-
-// Invoking the API call with sample inputs
-postCard.postcardListpostcardAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="postcard_createpostcard_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PostCardController.postcardCreatepostcardAsync") postcardCreatepostcardAsync
+### <a name="create_postcard_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PostCardController.createPostcardAsync") createPostcardAsync
 
 > Create, print, and mail a postcard to an address. The postcard front must be supplied as a PDF, image, or an HTML string. The back can be a PDF, image, HTML string, or it can be automatically generated by supplying a custom message.
 
 
 ```java
-void postcardCreatepostcardAsync(
-        final PostcardCreatepostcardInput input,
+void createPostcardAsync(
+        final String to,
+        final String from,
+        final String attachbyid,
+        final String front,
+        final String back,
+        final String message,
+        final String setting,
+        final String description,
+        final String htmldata,
         final APICallBack<String> callBack)
 ```
 
@@ -857,52 +750,75 @@ void postcardCreatepostcardAsync(
 #### Example Usage
 
 ```java
-PostcardCreatepostcardInput collect = new PostcardCreatepostcardInput();
-
 String to = "to";
-collect.setTo(to);
-
 String from = "from";
-collect.setFrom(from);
-
 String attachbyid = "attachbyid";
-collect.setAttachbyid(attachbyid);
-
 String front = "front";
-collect.setFront(front);
-
 String back = "back";
-collect.setBack(back);
-
 String message = "message";
-collect.setMessage(message);
-
 String setting = "setting";
-collect.setSetting(setting);
-
 String description = "description";
-collect.setDescription(description);
-
 String htmldata = "htmldata";
-collect.setHtmldata(htmldata);
-
 // Invoking the API call with sample inputs
-postCard.postcardCreatepostcardAsync(collect, new APICallBack<String>() {
+postCard.createPostcardAsync(to, from, attachbyid, front, back, message, setting, description, htmldata, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
+
+```
+
+
+### <a name="create_list_postcards_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PostCardController.createListPostcardsAsync") createListPostcardsAsync
+
+> Retrieve a list of postcard objects. The postcards objects are sorted by creation date, with the most recently created postcards appearing first.
+
+
+```java
+void createListPostcardsAsync(
+        final Integer page,
+        final Integer pagesize,
+        final String postcardid,
+        final String dateCreated,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
+| postcardid |  ``` Optional ```  | The unique identifier for a postcard object. |
+| dateCreated |  ``` Optional ```  | The date the postcard was created. |
+
+
+#### Example Usage
+
+```java
+Integer page = 233;
+Integer pagesize = 233;
+String postcardid = "postcardid";
+String dateCreated = "dateCreated";
+// Invoking the API call with sample inputs
+postCard.createListPostcardsAsync(page, pagesize, postcardid, dateCreated, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="letter_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.LetterController") LetterController
+## <a name="letter_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.LetterController") LetterController
 
 ### Get singleton instance
 
@@ -912,13 +828,13 @@ The singleton instance of the ``` LetterController ``` class can be accessed fro
 LetterController letter = client.getLetter();
 ```
 
-### <a name="create_letter_delete_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.LetterController.createLetterDeleteAsync") createLetterDeleteAsync
+### <a name="create_delete_letter_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.LetterController.createDeleteLetterAsync") createDeleteLetterAsync
 
 > Remove a letter object by its LetterId.
 
 
 ```java
-void createLetterDeleteAsync(
+void createDeleteLetterAsync(
         final String lettersid,
         final APICallBack<String> callBack)
 ```
@@ -935,7 +851,7 @@ void createLetterDeleteAsync(
 ```java
 String lettersid = "lettersid";
 // Invoking the API call with sample inputs
-letter.createLetterDeleteAsync(lettersid, new APICallBack<String>() {
+letter.createDeleteLetterAsync(lettersid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -947,13 +863,13 @@ letter.createLetterDeleteAsync(lettersid, new APICallBack<String>() {
 ```
 
 
-### <a name="create_letter_viewletter_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.LetterController.createLetterViewletterAsync") createLetterViewletterAsync
+### <a name="create_view_letter_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.LetterController.createViewLetterAsync") createViewLetterAsync
 
 > Retrieve a letter object by its LetterSid.
 
 
 ```java
-void createLetterViewletterAsync(
+void createViewLetterAsync(
         final String lettersid,
         final APICallBack<String> callBack)
 ```
@@ -970,7 +886,7 @@ void createLetterViewletterAsync(
 ```java
 String lettersid = "lettersid";
 // Invoking the API call with sample inputs
-letter.createLetterViewletterAsync(lettersid, new APICallBack<String>() {
+letter.createViewLetterAsync(lettersid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -982,66 +898,23 @@ letter.createLetterViewletterAsync(lettersid, new APICallBack<String>() {
 ```
 
 
-### <a name="create_letter_listsletter_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.LetterController.createLetterListsletterAsync") createLetterListsletterAsync
-
-> Retrieve a list of letter objects. The letter objects are sorted by creation date, with the most recently created letters appearing first.
-
-
-```java
-void createLetterListsletterAsync(
-        final CreateLetterListsletterInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| lettersid |  ``` Optional ```  | The unique identifier for a letter object. |
-| dateCreated |  ``` Optional ```  | The date the letter was created. |
-
-
-#### Example Usage
-
-```java
-CreateLetterListsletterInput collect = new CreateLetterListsletterInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-String lettersid = "lettersid";
-collect.setLettersid(lettersid);
-
-String dateCreated = "dateCreated";
-collect.setDateCreated(dateCreated);
-
-// Invoking the API call with sample inputs
-letter.createLetterListsletterAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_letter_create_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.LetterController.createLetterCreateAsync") createLetterCreateAsync
+### <a name="create_letter_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.LetterController.createLetterAsync") createLetterAsync
 
 > Create, print, and mail a letter to an address. The letter file must be supplied as a PDF or an HTML string.
 
 
 ```java
-void createLetterCreateAsync(
-        final CreateLetterCreateInput input,
+void createLetterAsync(
+        final String to,
+        final String from,
+        final String attachbyid,
+        final String file,
+        final String color,
+        final String description,
+        final String extraservice,
+        final String doublesided,
+        final String template,
+        final String htmldata,
         final APICallBack<String> callBack)
 ```
 
@@ -1064,55 +937,76 @@ void createLetterCreateAsync(
 #### Example Usage
 
 ```java
-CreateLetterCreateInput collect = new CreateLetterCreateInput();
-
 String to = "to";
-collect.setTo(to);
-
 String from = "from";
-collect.setFrom(from);
-
 String attachbyid = "attachbyid";
-collect.setAttachbyid(attachbyid);
-
 String file = "file";
-collect.setFile(file);
-
 String color = "color";
-collect.setColor(color);
-
 String description = "description";
-collect.setDescription(description);
-
 String extraservice = "extraservice";
-collect.setExtraservice(extraservice);
-
 String doublesided = "doublesided";
-collect.setDoublesided(doublesided);
-
 String template = "template";
-collect.setTemplate(template);
-
 String htmldata = "htmldata";
-collect.setHtmldata(htmldata);
-
 // Invoking the API call with sample inputs
-letter.createLetterCreateAsync(collect, new APICallBack<String>() {
+letter.createLetterAsync(to, from, attachbyid, file, color, description, extraservice, doublesided, template, htmldata, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
+
+```
+
+
+### <a name="create_list_letters_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.LetterController.createListLettersAsync") createListLettersAsync
+
+> Retrieve a list of letter objects. The letter objects are sorted by creation date, with the most recently created letters appearing first.
+
+
+```java
+void createListLettersAsync(
+        final Integer page,
+        final Integer pagesize,
+        final String lettersid,
+        final String dateCreated,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
+| lettersid |  ``` Optional ```  | The unique identifier for a letter object. |
+| dateCreated |  ``` Optional ```  | The date the letter was created. |
+
+
+#### Example Usage
+
+```java
+Integer page = 233;
+Integer pagesize = 233;
+String lettersid = "lettersid";
+String dateCreated = "dateCreated";
+// Invoking the API call with sample inputs
+letter.createListLettersAsync(page, pagesize, lettersid, dateCreated, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="call_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.CallController") CallController
+## <a name="call_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.CallController") CallController
 
 ### Get singleton instance
 
@@ -1122,13 +1016,13 @@ The singleton instance of the ``` CallController ``` class can be accessed from 
 CallController call = client.getCall();
 ```
 
-### <a name="create_calls_viewcalldetail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CallController.createCallsViewcalldetailAsync") createCallsViewcalldetailAsync
+### <a name="create_view_call1_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CallController.createViewCall1Async") createViewCall1Async
 
 > Retrieve a single voice call’s information by its CallSid.
 
 
 ```java
-void createCallsViewcalldetailAsync(
+void createViewCall1Async(
         final String callSid,
         final APICallBack<String> callBack)
 ```
@@ -1145,7 +1039,7 @@ void createCallsViewcalldetailAsync(
 ```java
 String callSid = "callSid";
 // Invoking the API call with sample inputs
-call.createCallsViewcalldetailAsync(callSid, new APICallBack<String>() {
+call.createViewCall1Async(callSid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -1157,13 +1051,13 @@ call.createCallsViewcalldetailAsync(callSid, new APICallBack<String>() {
 ```
 
 
-### <a name="create_calls_viewcalls_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CallController.createCallsViewcallsAsync") createCallsViewcallsAsync
+### <a name="create_view_call_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CallController.createViewCallAsync") createViewCallAsync
 
 > Retrieve a single voice call’s information by its CallSid.
 
 
 ```java
-void createCallsViewcallsAsync(
+void createViewCallAsync(
         final String callsid,
         final APICallBack<String> callBack)
 ```
@@ -1180,7 +1074,7 @@ void createCallsViewcallsAsync(
 ```java
 String callsid = "callsid";
 // Invoking the API call with sample inputs
-call.createCallsViewcallsAsync(callsid, new APICallBack<String>() {
+call.createViewCallAsync(callsid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -1192,14 +1086,16 @@ call.createCallsViewcallsAsync(callsid, new APICallBack<String>() {
 ```
 
 
-### <a name="create_calls_senddigits_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CallController.createCallsSenddigitsAsync") createCallsSenddigitsAsync
+### <a name="create_play_dtmf_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CallController.createPlayDTMFAsync") createPlayDTMFAsync
 
 > Play Dtmf and send the Digit
 
 
 ```java
-void createCallsSenddigitsAsync(
-        final CreateCallsSenddigitsInput input,
+void createPlayDTMFAsync(
+        final String callSid,
+        final String playDtmf,
+        final PlayDtmfDirectionEnum playDtmfDirection,
         final APICallBack<String> callBack)
 ```
 
@@ -1215,511 +1111,52 @@ void createCallsSenddigitsAsync(
 #### Example Usage
 
 ```java
-CreateCallsSenddigitsInput collect = new CreateCallsSenddigitsInput();
-
 String callSid = "CallSid";
-collect.setCallSid(callSid);
-
 String playDtmf = "PlayDtmf";
-collect.setPlayDtmf(playDtmf);
-
-PlayDtmfDirectionEnum playDtmfDirection = PlayDtmfDirectionEnum.fromString("IN");
-collect.setPlayDtmfDirection(playDtmfDirection);
-
+PlayDtmfDirectionEnum playDtmfDirection = PlayDtmfDirectionEnum.fromString("in");
 // Invoking the API call with sample inputs
-call.createCallsSenddigitsAsync(collect, new APICallBack<String>() {
+call.createPlayDTMFAsync(callSid, playDtmf, playDtmfDirection, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_calls_makervm_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CallController.createCallsMakervmAsync") createCallsMakervmAsync
-
-> Initiate an outbound Ringless Voicemail through Ytel.
-
-
-```java
-void createCallsMakervmAsync(
-        final CreateCallsMakervmInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| from |  ``` Required ```  | A valid Ytel Voice enabled number (E.164 format) that will be initiating the phone call. |
-| rVMCallerId |  ``` Required ```  | A required secondary Caller ID for RVM to work. |
-| to |  ``` Required ```  | A valid number (E.164 format) that will receive the phone call. |
-| voiceMailURL |  ``` Required ```  | The URL requested once the RVM connects. A set of default parameters will be sent here. |
-| method |  ``` Optional ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once call connects. |
-| statusCallBackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
-| statsCallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required StatusCallBackUrl once call connects. |
-
-
-#### Example Usage
-
-```java
-CreateCallsMakervmInput collect = new CreateCallsMakervmInput();
-
-String from = "From";
-collect.setFrom(from);
-
-String rVMCallerId = "RVMCallerId";
-collect.setRVMCallerId(rVMCallerId);
-
-String to = "To";
-collect.setTo(to);
-
-String voiceMailURL = "VoiceMailURL";
-collect.setVoiceMailURL(voiceMailURL);
-
-String method = "GET";
-collect.setMethod(method);
-
-String statusCallBackUrl = "StatusCallBackUrl";
-collect.setStatusCallBackUrl(statusCallBackUrl);
-
-String statsCallBackMethod = "StatsCallBackMethod";
-collect.setStatsCallBackMethod(statsCallBackMethod);
-
-// Invoking the API call with sample inputs
-call.createCallsMakervmAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_calls_listcalls_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CallController.createCallsListcallsAsync") createCallsListcallsAsync
-
-> A list of calls associated with your Ytel account
-
-
-```java
-void createCallsListcallsAsync(
-        final CreateCallsListcallsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pageSize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| to |  ``` Optional ```  | Filter calls that were sent to this 10-digit number (E.164 format). |
-| from |  ``` Optional ```  | Filter calls that were sent from this 10-digit number (E.164 format). |
-| dateCreated |  ``` Optional ```  | Return calls that are from a specified date. |
-
-
-#### Example Usage
-
-```java
-CreateCallsListcallsInput collect = new CreateCallsListcallsInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pageSize = 10;
-collect.setPageSize(pageSize);
-
-String to = "To";
-collect.setTo(to);
-
-String from = "From";
-collect.setFrom(from);
-
-String dateCreated = "DateCreated";
-collect.setDateCreated(dateCreated);
-
-// Invoking the API call with sample inputs
-call.createCallsListcallsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_calls_interruptcalls_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CallController.createCallsInterruptcallsAsync") createCallsInterruptcallsAsync
-
-> Interrupt the Call by Call Sid
-
-
-```java
-void createCallsInterruptcallsAsync(
-        final CreateCallsInterruptcallsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | The unique identifier for voice call that is in progress. |
-| url |  ``` Optional ```  | URL the in-progress call will be redirected to |
-| method |  ``` Optional ```  | The method used to request the above Url parameter |
-| status |  ``` Optional ```  | Status to set the in-progress call to |
-
-
-#### Example Usage
-
-```java
-CreateCallsInterruptcallsInput collect = new CreateCallsInterruptcallsInput();
-
-String callSid = "CallSid";
-collect.setCallSid(callSid);
-
-String url = "Url";
-collect.setUrl(url);
-
-String method = "Method";
-collect.setMethod(method);
-
-Status24Enum status = Status24Enum.fromString("CANCELED");
-collect.setStatus(status);
-
-// Invoking the API call with sample inputs
-call.createCallsInterruptcallsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_calls_recordcalls_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CallController.createCallsRecordcallsAsync") createCallsRecordcallsAsync
-
-> Start or stop recording of an in-progress voice call.
-
-
-```java
-void createCallsRecordcallsAsync(
-        final CreateCallsRecordcallsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | The unique identifier of each call resource |
-| record |  ``` Required ```  | Set true to initiate recording or false to terminate recording |
-| direction |  ``` Optional ```  | The leg of the call to record |
-| timeLimit |  ``` Optional ```  | Time in seconds the recording duration should not exceed |
-| callBackUrl |  ``` Optional ```  | URL consulted after the recording completes |
-| fileformat |  ``` Optional ```  | Format of the recording file. Can be .mp3 or .wav |
-
-
-#### Example Usage
-
-```java
-CreateCallsRecordcallsInput collect = new CreateCallsRecordcallsInput();
-
-String callSid = "CallSid";
-collect.setCallSid(callSid);
-
-boolean record = false;
-collect.setRecord(record);
-
-DirectionEnum direction = DirectionEnum.fromString("IN");
-collect.setDirection(direction);
-
-Integer timeLimit = 12;
-collect.setTimeLimit(timeLimit);
-
-String callBackUrl = "CallBackUrl";
-collect.setCallBackUrl(callBackUrl);
-
-FileformatEnum fileformat = FileformatEnum.fromString("mp3");
-collect.setFileformat(fileformat);
-
-// Invoking the API call with sample inputs
-call.createCallsRecordcallsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_calls_playaudios_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CallController.createCallsPlayaudiosAsync") createCallsPlayaudiosAsync
-
-> Play Audio from a url
-
-
-```java
-void createCallsPlayaudiosAsync(
-        final CreateCallsPlayaudiosInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | The unique identifier of each call resource |
-| audioUrl |  ``` Required ```  | URL to sound that should be played. You also can add more than one audio file using semicolons e.g. http://example.com/audio1.mp3;http://example.com/audio2.wav |
-| sayText |  ``` Required ```  | Valid alphanumeric string that should be played to the In-progress call. |
-| length |  ``` Optional ```  | Time limit in seconds for audio play back |
-| direction |  ``` Optional ```  | The leg of the call audio will be played to |
-| mix |  ``` Optional ```  | If false, all other audio will be muted |
-
-
-#### Example Usage
-
-```java
-CreateCallsPlayaudiosInput collect = new CreateCallsPlayaudiosInput();
-
-String callSid = "CallSid";
-collect.setCallSid(callSid);
-
-String audioUrl = "AudioUrl";
-collect.setAudioUrl(audioUrl);
-
-String sayText = "SayText";
-collect.setSayText(sayText);
-
-Integer length = 12;
-collect.setLength(length);
-
-DirectionEnum direction = DirectionEnum.fromString("IN");
-collect.setDirection(direction);
-
-Boolean mix = false;
-collect.setMix(mix);
-
-// Invoking the API call with sample inputs
-call.createCallsPlayaudiosAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_calls_voiceeffect_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CallController.createCallsVoiceeffectAsync") createCallsVoiceeffectAsync
-
-> Add audio voice effects to the an in-progress voice call.
-
-
-```java
-void createCallsVoiceeffectAsync(
-        final CreateCallsVoiceeffectInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | The unique identifier for the in-progress voice call. |
-| audioDirection |  ``` Optional ```  | The direction the audio effect should be placed on. If IN, the effects will occur on the incoming audio stream. If OUT, the effects will occur on the outgoing audio stream. |
-| pitchSemiTones |  ``` Optional ```  | Set the pitch in semitone (half-step) intervals. Value between -14 and 14 |
-| pitchOctaves |  ``` Optional ```  | Set the pitch in octave intervals.. Value between -1 and 1 |
-| pitch |  ``` Optional ```  | Set the pitch (lowness/highness) of the audio. The higher the value, the higher the pitch. Value greater than 0 |
-| rate |  ``` Optional ```  | Set the rate for audio. The lower the value, the lower the rate. value greater than 0 |
-| tempo |  ``` Optional ```  | Set the tempo (speed) of the audio. A higher value denotes a faster tempo. Value greater than 0 |
-
-
-#### Example Usage
-
-```java
-CreateCallsVoiceeffectInput collect = new CreateCallsVoiceeffectInput();
-
-String callSid = "CallSid";
-collect.setCallSid(callSid);
-
-AudioDirectionEnum audioDirection = AudioDirectionEnum.fromString("IN");
-collect.setAudioDirection(audioDirection);
-
-Double pitchSemiTones = 12.3602690023185;
-collect.setPitchSemiTones(pitchSemiTones);
-
-Double pitchOctaves = 12.3602690023185;
-collect.setPitchOctaves(pitchOctaves);
-
-Double pitch = 12.3602690023185;
-collect.setPitch(pitch);
-
-Double rate = 12.3602690023185;
-collect.setRate(rate);
-
-Double tempo = 12.3602690023185;
-collect.setTempo(tempo);
-
-// Invoking the API call with sample inputs
-call.createCallsVoiceeffectAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_calls_groupcall_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CallController.createCallsGroupcallAsync") createCallsGroupcallAsync
-
-> Group Call
-
-
-```java
-void createCallsGroupcallAsync(
-        final CreateCallsGroupcallInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| from |  ``` Required ```  | This number to display on Caller ID as calling |
-| to |  ``` Required ```  | Please enter multiple E164 number. You can add max 10 numbers. Add numbers separated with comma. e.g : 1111111111,2222222222 |
-| url |  ``` Required ```  | URL requested once the call connects |
-| groupConfirmKey |  ``` Required ```  | Define the DTMF that the called party should send to bridge the call. Allowed Values : 0-9, #, * |
-| groupConfirmFile |  ``` Required ```  | Specify the audio file you want to play when the called party picks up the call |
-| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
-| statusCallBackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
-| statusCallBackMethod |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
-| fallBackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
-| fallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
-| heartBeatUrl |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed time and pass other general information. |
-| heartBeatMethod |  ``` Optional ```  | Specifies the HTTP method used to request HeartbeatUrl. |
-| timeout |  ``` Optional ```  | Time (in seconds) we should wait while the call is ringing before canceling the call |
-| playDtmf |  ``` Optional ```  | DTMF Digits to play to the call once it connects. 0-9, #, or * |
-| hideCallerId |  ``` Optional ```  | Specifies if the caller id will be hidden |
-| record |  ``` Optional ```  | Specifies if the call should be recorded |
-| recordCallBackUrl |  ``` Optional ```  | Recording parameters will be sent here upon completion |
-| recordCallBackMethod |  ``` Optional ```  | Method used to request the RecordCallback URL. |
-| transcribe |  ``` Optional ```  | Specifies if the call recording should be transcribed |
-| transcribeCallBackUrl |  ``` Optional ```  | Transcription parameters will be sent here upon completion |
-
-
-#### Example Usage
-
-```java
-CreateCallsGroupcallInput collect = new CreateCallsGroupcallInput();
-
-String from = "From";
-collect.setFrom(from);
-
-String to = "To";
-collect.setTo(to);
-
-String url = "Url";
-collect.setUrl(url);
-
-String groupConfirmKey = "GroupConfirmKey";
-collect.setGroupConfirmKey(groupConfirmKey);
-
-GroupConfirmFileEnum groupConfirmFile = GroupConfirmFileEnum.fromString("mp3");
-collect.setGroupConfirmFile(groupConfirmFile);
-
-String method = "Method";
-collect.setMethod(method);
-
-String statusCallBackUrl = "StatusCallBackUrl";
-collect.setStatusCallBackUrl(statusCallBackUrl);
-
-String statusCallBackMethod = "StatusCallBackMethod";
-collect.setStatusCallBackMethod(statusCallBackMethod);
-
-String fallBackUrl = "FallBackUrl";
-collect.setFallBackUrl(fallBackUrl);
-
-String fallBackMethod = "FallBackMethod";
-collect.setFallBackMethod(fallBackMethod);
-
-String heartBeatUrl = "HeartBeatUrl";
-collect.setHeartBeatUrl(heartBeatUrl);
-
-String heartBeatMethod = "HeartBeatMethod";
-collect.setHeartBeatMethod(heartBeatMethod);
-
-Integer timeout = 12;
-collect.setTimeout(timeout);
-
-String playDtmf = "PlayDtmf";
-collect.setPlayDtmf(playDtmf);
-
-String hideCallerId = "HideCallerId";
-collect.setHideCallerId(hideCallerId);
-
-Boolean record = false;
-collect.setRecord(record);
-
-String recordCallBackUrl = "RecordCallBackUrl";
-collect.setRecordCallBackUrl(recordCallBackUrl);
-
-String recordCallBackMethod = "RecordCallBackMethod";
-collect.setRecordCallBackMethod(recordCallBackMethod);
-
-Boolean transcribe = false;
-collect.setTranscribe(transcribe);
-
-String transcribeCallBackUrl = "TranscribeCallBackUrl";
-collect.setTranscribeCallBackUrl(transcribeCallBackUrl);
-
-// Invoking the API call with sample inputs
-call.createCallsGroupcallAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_calls_makecall_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CallController.createCallsMakecallAsync") createCallsMakecallAsync
+### <a name="create_make_call_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CallController.createMakeCallAsync") createMakeCallAsync
 
 > You can experiment with initiating a call through Ytel and view the request response generated when doing so and get the response in json
 
 
 ```java
-void createCallsMakecallAsync(
-        final CreateCallsMakecallInput input,
+void createMakeCallAsync(
+        final String from,
+        final String to,
+        final String url,
+        final String method,
+        final String statusCallBackUrl,
+        final String statusCallBackMethod,
+        final String fallBackUrl,
+        final String fallBackMethod,
+        final String heartBeatUrl,
+        final String heartBeatMethod,
+        final Integer timeout,
+        final String playDtmf,
+        final Boolean hideCallerId,
+        final Boolean record,
+        final String recordCallBackUrl,
+        final String recordCallBackMethod,
+        final Boolean transcribe,
+        final String transcribeCallBackUrl,
+        final IfMachineEnum ifMachine,
+        final String ifMachineUrl,
+        final String ifMachineMethod,
+        final Boolean feedback,
+        final String surveyId,
         final APICallBack<String> callBack)
 ```
 
@@ -1755,94 +1192,434 @@ void createCallsMakecallAsync(
 #### Example Usage
 
 ```java
-CreateCallsMakecallInput collect = new CreateCallsMakecallInput();
-
 String from = "From";
-collect.setFrom(from);
-
 String to = "To";
-collect.setTo(to);
-
 String url = "Url";
-collect.setUrl(url);
-
 String method = "Method";
-collect.setMethod(method);
-
 String statusCallBackUrl = "StatusCallBackUrl";
-collect.setStatusCallBackUrl(statusCallBackUrl);
-
 String statusCallBackMethod = "StatusCallBackMethod";
-collect.setStatusCallBackMethod(statusCallBackMethod);
-
 String fallBackUrl = "FallBackUrl";
-collect.setFallBackUrl(fallBackUrl);
-
 String fallBackMethod = "FallBackMethod";
-collect.setFallBackMethod(fallBackMethod);
-
 String heartBeatUrl = "HeartBeatUrl";
-collect.setHeartBeatUrl(heartBeatUrl);
-
 String heartBeatMethod = "HeartBeatMethod";
-collect.setHeartBeatMethod(heartBeatMethod);
-
-Integer timeout = 12;
-collect.setTimeout(timeout);
-
+Integer timeout = 233;
 String playDtmf = "PlayDtmf";
-collect.setPlayDtmf(playDtmf);
-
-Boolean hideCallerId = false;
-collect.setHideCallerId(hideCallerId);
-
-Boolean record = false;
-collect.setRecord(record);
-
+Boolean hideCallerId = true;
+Boolean record = true;
 String recordCallBackUrl = "RecordCallBackUrl";
-collect.setRecordCallBackUrl(recordCallBackUrl);
-
 String recordCallBackMethod = "RecordCallBackMethod";
-collect.setRecordCallBackMethod(recordCallBackMethod);
-
-Boolean transcribe = false;
-collect.setTranscribe(transcribe);
-
+Boolean transcribe = true;
 String transcribeCallBackUrl = "TranscribeCallBackUrl";
-collect.setTranscribeCallBackUrl(transcribeCallBackUrl);
-
-IfMachineEnum ifMachine = IfMachineEnum.fromString("CONTINUE");
-collect.setIfMachine(ifMachine);
-
+IfMachineEnum ifMachine = IfMachineEnum.fromString("continue");
 String ifMachineUrl = "IfMachineUrl";
-collect.setIfMachineUrl(ifMachineUrl);
-
 String ifMachineMethod = "IfMachineMethod";
-collect.setIfMachineMethod(ifMachineMethod);
-
-Boolean feedback = false;
-collect.setFeedback(feedback);
-
+Boolean feedback = true;
 String surveyId = "SurveyId";
-collect.setSurveyId(surveyId);
-
 // Invoking the API call with sample inputs
-call.createCallsMakecallAsync(collect, new APICallBack<String>() {
+call.createMakeCallAsync(from, to, url, method, statusCallBackUrl, statusCallBackMethod, fallBackUrl, fallBackMethod, heartBeatUrl, heartBeatMethod, timeout, playDtmf, hideCallerId, record, recordCallBackUrl, recordCallBackMethod, transcribe, transcribeCallBackUrl, ifMachine, ifMachineUrl, ifMachineMethod, feedback, surveyId, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
+
+```
+
+
+### <a name="create_play_audio_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CallController.createPlayAudioAsync") createPlayAudioAsync
+
+> Play Audio from a url
+
+
+```java
+void createPlayAudioAsync(
+        final String callSid,
+        final String audioUrl,
+        final String sayText,
+        final Integer length,
+        final DirectionEnum direction,
+        final Boolean mix,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | The unique identifier of each call resource |
+| audioUrl |  ``` Required ```  | URL to sound that should be played. You also can add more than one audio file using semicolons e.g. http://example.com/audio1.mp3;http://example.com/audio2.wav |
+| sayText |  ``` Required ```  | Valid alphanumeric string that should be played to the In-progress call. |
+| length |  ``` Optional ```  | Time limit in seconds for audio play back |
+| direction |  ``` Optional ```  | The leg of the call audio will be played to |
+| mix |  ``` Optional ```  | If false, all other audio will be muted |
+
+
+#### Example Usage
+
+```java
+String callSid = "CallSid";
+String audioUrl = "AudioUrl";
+String sayText = "SayText";
+Integer length = 233;
+DirectionEnum direction = DirectionEnum.fromString("in");
+Boolean mix = true;
+// Invoking the API call with sample inputs
+call.createPlayAudioAsync(callSid, audioUrl, sayText, length, direction, mix, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_record_call_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CallController.createRecordCallAsync") createRecordCallAsync
+
+> Start or stop recording of an in-progress voice call.
+
+
+```java
+void createRecordCallAsync(
+        final String callSid,
+        final boolean record,
+        final Direction4Enum direction,
+        final Integer timeLimit,
+        final String callBackUrl,
+        final FileformatEnum fileformat,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | The unique identifier of each call resource |
+| record |  ``` Required ```  | Set true to initiate recording or false to terminate recording |
+| direction |  ``` Optional ```  | The leg of the call to record |
+| timeLimit |  ``` Optional ```  | Time in seconds the recording duration should not exceed |
+| callBackUrl |  ``` Optional ```  | URL consulted after the recording completes |
+| fileformat |  ``` Optional ```  | Format of the recording file. Can be .mp3 or .wav |
+
+
+#### Example Usage
+
+```java
+String callSid = "CallSid";
+boolean record = true;
+Direction4Enum direction = Direction4Enum.fromString("in");
+Integer timeLimit = 233;
+String callBackUrl = "CallBackUrl";
+FileformatEnum fileformat = FileformatEnum.fromString("mp3");
+// Invoking the API call with sample inputs
+call.createRecordCallAsync(callSid, record, direction, timeLimit, callBackUrl, fileformat, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_voice_effect_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CallController.createVoiceEffectAsync") createVoiceEffectAsync
+
+> Add audio voice effects to the an in-progress voice call.
+
+
+```java
+void createVoiceEffectAsync(
+        final String callSid,
+        final AudioDirectionEnum audioDirection,
+        final Double pitchSemiTones,
+        final Double pitchOctaves,
+        final Double pitch,
+        final Double rate,
+        final Double tempo,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | The unique identifier for the in-progress voice call. |
+| audioDirection |  ``` Optional ```  | The direction the audio effect should be placed on. If IN, the effects will occur on the incoming audio stream. If OUT, the effects will occur on the outgoing audio stream. |
+| pitchSemiTones |  ``` Optional ```  | Set the pitch in semitone (half-step) intervals. Value between -14 and 14 |
+| pitchOctaves |  ``` Optional ```  | Set the pitch in octave intervals.. Value between -1 and 1 |
+| pitch |  ``` Optional ```  | Set the pitch (lowness/highness) of the audio. The higher the value, the higher the pitch. Value greater than 0 |
+| rate |  ``` Optional ```  | Set the rate for audio. The lower the value, the lower the rate. value greater than 0 |
+| tempo |  ``` Optional ```  | Set the tempo (speed) of the audio. A higher value denotes a faster tempo. Value greater than 0 |
+
+
+#### Example Usage
+
+```java
+String callSid = "CallSid";
+AudioDirectionEnum audioDirection = AudioDirectionEnum.fromString("in");
+Double pitchSemiTones = 233.219640796641;
+Double pitchOctaves = 233.219640796641;
+Double pitch = 233.219640796641;
+Double rate = 233.219640796641;
+Double tempo = 233.219640796641;
+// Invoking the API call with sample inputs
+call.createVoiceEffectAsync(callSid, audioDirection, pitchSemiTones, pitchOctaves, pitch, rate, tempo, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_interrupt_call_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CallController.createInterruptCallAsync") createInterruptCallAsync
+
+> Interrupt the Call by Call Sid
+
+
+```java
+void createInterruptCallAsync(
+        final String callSid,
+        final String url,
+        final String method,
+        final StatusEnum status,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | The unique identifier for voice call that is in progress. |
+| url |  ``` Optional ```  | URL the in-progress call will be redirected to |
+| method |  ``` Optional ```  | The method used to request the above Url parameter |
+| status |  ``` Optional ```  | Status to set the in-progress call to |
+
+
+#### Example Usage
+
+```java
+String callSid = "CallSid";
+String url = "Url";
+String method = "Method";
+StatusEnum status = StatusEnum.fromString("canceled");
+// Invoking the API call with sample inputs
+call.createInterruptCallAsync(callSid, url, method, status, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_list_calls_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CallController.createListCallsAsync") createListCallsAsync
+
+> A list of calls associated with your Ytel account
+
+
+```java
+void createListCallsAsync(
+        final Integer page,
+        final Integer pageSize,
+        final String to,
+        final String from,
+        final String dateCreated,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pageSize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| to |  ``` Optional ```  | Filter calls that were sent to this 10-digit number (E.164 format). |
+| from |  ``` Optional ```  | Filter calls that were sent from this 10-digit number (E.164 format). |
+| dateCreated |  ``` Optional ```  | Return calls that are from a specified date. |
+
+
+#### Example Usage
+
+```java
+Integer page = 233;
+Integer pageSize = 233;
+String to = "To";
+String from = "From";
+String dateCreated = "DateCreated";
+// Invoking the API call with sample inputs
+call.createListCallsAsync(page, pageSize, to, from, dateCreated, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_send_rvm_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CallController.createSendRVMAsync") createSendRVMAsync
+
+> Initiate an outbound Ringless Voicemail through Ytel.
+
+
+```java
+void createSendRVMAsync(
+        final String from,
+        final String rVMCallerId,
+        final String to,
+        final String voiceMailURL,
+        final String method,
+        final String statusCallBackUrl,
+        final String statsCallBackMethod,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| from |  ``` Required ```  | A valid Ytel Voice enabled number (E.164 format) that will be initiating the phone call. |
+| rVMCallerId |  ``` Required ```  | A required secondary Caller ID for RVM to work. |
+| to |  ``` Required ```  | A valid number (E.164 format) that will receive the phone call. |
+| voiceMailURL |  ``` Required ```  | The URL requested once the RVM connects. A set of default parameters will be sent here. |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
+| statusCallBackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
+| statsCallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required StatusCallBackUrl once call connects. |
+
+
+#### Example Usage
+
+```java
+String from = "From";
+String rVMCallerId = "RVMCallerId";
+String to = "To";
+String voiceMailURL = "VoiceMailURL";
+String method = "Method";
+String statusCallBackUrl = "StatusCallBackUrl";
+String statsCallBackMethod = "StatsCallBackMethod";
+// Invoking the API call with sample inputs
+call.createSendRVMAsync(from, rVMCallerId, to, voiceMailURL, method, statusCallBackUrl, statsCallBackMethod, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_group_call_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CallController.createGroupCallAsync") createGroupCallAsync
+
+> Group Call
+
+
+```java
+void createGroupCallAsync(
+        final String from,
+        final String to,
+        final String url,
+        final String groupConfirmKey,
+        final GroupConfirmFileEnum groupConfirmFile,
+        final String method,
+        final String statusCallBackUrl,
+        final String statusCallBackMethod,
+        final String fallBackUrl,
+        final String fallBackMethod,
+        final String heartBeatUrl,
+        final String heartBeatMethod,
+        final Integer timeout,
+        final String playDtmf,
+        final String hideCallerId,
+        final Boolean record,
+        final String recordCallBackUrl,
+        final String recordCallBackMethod,
+        final Boolean transcribe,
+        final String transcribeCallBackUrl,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| from |  ``` Required ```  | This number to display on Caller ID as calling |
+| to |  ``` Required ```  | Please enter multiple E164 number. You can add max 10 numbers. Add numbers separated with comma. e.g : 1111111111,2222222222 |
+| url |  ``` Required ```  | URL requested once the call connects |
+| groupConfirmKey |  ``` Required ```  | Define the DTMF that the called party should send to bridge the call. Allowed Values : 0-9, #, * |
+| groupConfirmFile |  ``` Required ```  | Specify the audio file you want to play when the called party picks up the call |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
+| statusCallBackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
+| statusCallBackMethod |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
+| fallBackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
+| fallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
+| heartBeatUrl |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed time and pass other general information. |
+| heartBeatMethod |  ``` Optional ```  | Specifies the HTTP method used to request HeartbeatUrl. |
+| timeout |  ``` Optional ```  | Time (in seconds) we should wait while the call is ringing before canceling the call |
+| playDtmf |  ``` Optional ```  | DTMF Digits to play to the call once it connects. 0-9, #, or * |
+| hideCallerId |  ``` Optional ```  | Specifies if the caller id will be hidden |
+| record |  ``` Optional ```  | Specifies if the call should be recorded |
+| recordCallBackUrl |  ``` Optional ```  | Recording parameters will be sent here upon completion |
+| recordCallBackMethod |  ``` Optional ```  | Method used to request the RecordCallback URL. |
+| transcribe |  ``` Optional ```  | Specifies if the call recording should be transcribed |
+| transcribeCallBackUrl |  ``` Optional ```  | Transcription parameters will be sent here upon completion |
+
+
+#### Example Usage
+
+```java
+String from = "From";
+String to = "To";
+String url = "Url";
+String groupConfirmKey = "GroupConfirmKey";
+GroupConfirmFileEnum groupConfirmFile = GroupConfirmFileEnum.fromString("mp3");
+String method = "Method";
+String statusCallBackUrl = "StatusCallBackUrl";
+String statusCallBackMethod = "StatusCallBackMethod";
+String fallBackUrl = "FallBackUrl";
+String fallBackMethod = "FallBackMethod";
+String heartBeatUrl = "HeartBeatUrl";
+String heartBeatMethod = "HeartBeatMethod";
+Integer timeout = 141;
+String playDtmf = "PlayDtmf";
+String hideCallerId = "HideCallerId";
+Boolean record = true;
+String recordCallBackUrl = "RecordCallBackUrl";
+String recordCallBackMethod = "RecordCallBackMethod";
+Boolean transcribe = true;
+String transcribeCallBackUrl = "TranscribeCallBackUrl";
+// Invoking the API call with sample inputs
+call.createGroupCallAsync(from, to, url, groupConfirmKey, groupConfirmFile, method, statusCallBackUrl, statusCallBackMethod, fallBackUrl, fallBackMethod, heartBeatUrl, heartBeatMethod, timeout, playDtmf, hideCallerId, record, recordCallBackUrl, recordCallBackMethod, transcribe, transcribeCallBackUrl, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="phone_number_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.PhoneNumberController") PhoneNumberController
+## <a name="phone_number_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.PhoneNumberController") PhoneNumberController
 
 ### Get singleton instance
 
@@ -1852,13 +1629,13 @@ The singleton instance of the ``` PhoneNumberController ``` class can be accesse
 PhoneNumberController phoneNumber = client.getPhoneNumber();
 ```
 
-### <a name="create_incomingphone_getdidscore_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PhoneNumberController.createIncomingphoneGetdidscoreAsync") createIncomingphoneGetdidscoreAsync
+### <a name="create_get_did_score_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PhoneNumberController.createGetDIDScoreAsync") createGetDIDScoreAsync
 
 > Get DID Score Number
 
 
 ```java
-void createIncomingphoneGetdidscoreAsync(
+void createGetDIDScoreAsync(
         final String phonenumber,
         final APICallBack<String> callBack)
 ```
@@ -1875,7 +1652,7 @@ void createIncomingphoneGetdidscoreAsync(
 ```java
 String phonenumber = "Phonenumber";
 // Invoking the API call with sample inputs
-phoneNumber.createIncomingphoneGetdidscoreAsync(phonenumber, new APICallBack<String>() {
+phoneNumber.createGetDIDScoreAsync(phonenumber, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -1887,14 +1664,16 @@ phoneNumber.createIncomingphoneGetdidscoreAsync(phonenumber, new APICallBack<Str
 ```
 
 
-### <a name="create_incomingphone_bulkbuy_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PhoneNumberController.createIncomingphoneBulkbuyAsync") createIncomingphoneBulkbuyAsync
+### <a name="create_move_number_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PhoneNumberController.createMoveNumberAsync") createMoveNumberAsync
 
-> Purchase a selected number of DID's from specific area codes to be used with your Ytel account.
+> Transfer phone number that has been purchased for from one account to another account.
 
 
 ```java
-void createIncomingphoneBulkbuyAsync(
-        final CreateIncomingphoneBulkbuyInput input,
+void createMoveNumberAsync(
+        final String phonenumber,
+        final String fromaccountsid,
+        final String toaccountsid,
         final APICallBack<String> callBack)
 ```
 
@@ -1902,102 +1681,37 @@ void createIncomingphoneBulkbuyAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| numberType |  ``` Required ```  | The capability the number supports. |
-| areaCode |  ``` Required ```  | Specifies the area code for the returned list of available numbers. Only available for North American numbers. |
-| quantity |  ``` Required ```  | A positive integer that tells how many number you want to buy at a time. |
-| leftover |  ``` Optional ```  | If desired quantity is unavailable purchase what is available . |
+| phonenumber |  ``` Required ```  | A valid 10-digit Ytel number (E.164 format). |
+| fromaccountsid |  ``` Required ```  | A specific Accountsid from where Number is getting transfer. |
+| toaccountsid |  ``` Required ```  | A specific Accountsid to which Number is getting transfer. |
 
 
 #### Example Usage
 
 ```java
-CreateIncomingphoneBulkbuyInput collect = new CreateIncomingphoneBulkbuyInput();
-
-Numbertype16Enum numberType = Numbertype16Enum.fromString("ALL");
-collect.setNumberType(numberType);
-
-String areaCode = "AreaCode";
-collect.setAreaCode(areaCode);
-
-String quantity = "Quantity";
-collect.setQuantity(quantity);
-
-String leftover = "Leftover";
-collect.setLeftover(leftover);
-
+String phonenumber = "phonenumber";
+String fromaccountsid = "fromaccountsid";
+String toaccountsid = "toaccountsid";
 // Invoking the API call with sample inputs
-phoneNumber.createIncomingphoneBulkbuyAsync(collect, new APICallBack<String>() {
+phoneNumber.createMoveNumberAsync(phonenumber, fromaccountsid, toaccountsid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_incomingphone_listnumber_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PhoneNumberController.createIncomingphoneListnumberAsync") createIncomingphoneListnumberAsync
-
-> Retrieve a list of purchased phones numbers associated with your Ytel account.
-
-
-```java
-void createIncomingphoneListnumberAsync(
-        final CreateIncomingphoneListnumberInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Page indexing starts at 1. |
-| pageSize |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| numberType |  ``` Optional ```  | The capability supported by the number.Number type either SMS,Voice or all |
-| friendlyName |  ``` Optional ```  | A human-readable label added to the number object. |
-
-
-#### Example Usage
-
-```java
-CreateIncomingphoneListnumberInput collect = new CreateIncomingphoneListnumberInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pageSize = 10;
-collect.setPageSize(pageSize);
-
-Numbertype16Enum numberType = Numbertype16Enum.fromString("ALL");
-collect.setNumberType(numberType);
-
-String friendlyName = "FriendlyName";
-collect.setFriendlyName(friendlyName);
-
-// Invoking the API call with sample inputs
-phoneNumber.createIncomingphoneListnumberAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_incomingphone_buynumber_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PhoneNumberController.createIncomingphoneBuynumberAsync") createIncomingphoneBuynumberAsync
+### <a name="create_purchase_number_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PhoneNumberController.createPurchaseNumberAsync") createPurchaseNumberAsync
 
 > Purchase a phone number to be used with your Ytel account
 
 
 ```java
-void createIncomingphoneBuynumberAsync(
+void createPurchaseNumberAsync(
         final String phoneNumber,
         final APICallBack<String> callBack)
 ```
@@ -2014,7 +1728,7 @@ void createIncomingphoneBuynumberAsync(
 ```java
 String phoneNumber = "PhoneNumber";
 // Invoking the API call with sample inputs
-phoneNumber.createIncomingphoneBuynumberAsync(phoneNumber, new APICallBack<String>() {
+phoneNumber.createPurchaseNumberAsync(phoneNumber, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2026,14 +1740,15 @@ phoneNumber.createIncomingphoneBuynumberAsync(phoneNumber, new APICallBack<Strin
 ```
 
 
-### <a name="create_incomingphone_releasenumber_by_response_type_post_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PhoneNumberController.createIncomingphoneReleasenumberByResponseTypePostAsync") createIncomingphoneReleasenumberByResponseTypePostAsync
+### <a name="create_release_number_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PhoneNumberController.createReleaseNumberAsync") createReleaseNumberAsync
 
 > Remove a purchased Ytel number from your account.
 
 
 ```java
-void createIncomingphoneReleasenumberByResponseTypePostAsync(
-        final CreateIncomingphoneReleasenumberByResponseTypePostInput input,
+void createReleaseNumberAsync(
+        final String responseType,
+        final String phoneNumber,
         final APICallBack<String> callBack)
 ```
 
@@ -2041,42 +1756,35 @@ void createIncomingphoneReleasenumberByResponseTypePostAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phoneNumber |  ``` Required ```  | A valid 10-digit Ytel number (E.164 format). |
 | responseType |  ``` Required ```  | Response type format xml or json |
+| phoneNumber |  ``` Required ```  | A valid 10-digit Ytel number (E.164 format). |
 
 
 #### Example Usage
 
 ```java
-CreateIncomingphoneReleasenumberByResponseTypePostInput collect = new CreateIncomingphoneReleasenumberByResponseTypePostInput();
-
-String phoneNumber = "PhoneNumber";
-collect.setPhoneNumber(phoneNumber);
-
 String responseType = "ResponseType";
-collect.setResponseType(responseType);
-
+String phoneNumber = "PhoneNumber";
 // Invoking the API call with sample inputs
-phoneNumber.createIncomingphoneReleasenumberByResponseTypePostAsync(collect, new APICallBack<String>() {
+phoneNumber.createReleaseNumberAsync(responseType, phoneNumber, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_incomingphone_viewnumber_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PhoneNumberController.createIncomingphoneViewnumberAsync") createIncomingphoneViewnumberAsync
+### <a name="create_view_details_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PhoneNumberController.createViewDetailsAsync") createViewDetailsAsync
 
 > Retrieve the details for a phone number by its number.
 
 
 ```java
-void createIncomingphoneViewnumberAsync(
+void createViewDetailsAsync(
         final String phoneNumber,
         final APICallBack<String> callBack)
 ```
@@ -2093,7 +1801,7 @@ void createIncomingphoneViewnumberAsync(
 ```java
 String phoneNumber = "PhoneNumber";
 // Invoking the API call with sample inputs
-phoneNumber.createIncomingphoneViewnumberAsync(phoneNumber, new APICallBack<String>() {
+phoneNumber.createViewDetailsAsync(phoneNumber, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2105,61 +1813,13 @@ phoneNumber.createIncomingphoneViewnumberAsync(phoneNumber, new APICallBack<Stri
 ```
 
 
-### <a name="create_incomingphone_transferphonenumbers_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PhoneNumberController.createIncomingphoneTransferphonenumbersAsync") createIncomingphoneTransferphonenumbersAsync
-
-> Transfer phone number that has been purchased for from one account to another account.
-
-
-```java
-void createIncomingphoneTransferphonenumbersAsync(
-        final CreateIncomingphoneTransferphonenumbersInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| phonenumber |  ``` Required ```  | A valid 10-digit Ytel number (E.164 format). |
-| fromaccountsid |  ``` Required ```  | A specific Accountsid from where Number is getting transfer. |
-| toaccountsid |  ``` Required ```  | A specific Accountsid to which Number is getting transfer. |
-
-
-#### Example Usage
-
-```java
-CreateIncomingphoneTransferphonenumbersInput collect = new CreateIncomingphoneTransferphonenumbersInput();
-
-String phonenumber = "phonenumber";
-collect.setPhonenumber(phonenumber);
-
-String fromaccountsid = "fromaccountsid";
-collect.setFromaccountsid(fromaccountsid);
-
-String toaccountsid = "toaccountsid";
-collect.setToaccountsid(toaccountsid);
-
-// Invoking the API call with sample inputs
-phoneNumber.createIncomingphoneTransferphonenumbersAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_incomingphone_massreleasenumber_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PhoneNumberController.createIncomingphoneMassreleasenumberAsync") createIncomingphoneMassreleasenumberAsync
+### <a name="create_bulk_release_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PhoneNumberController.createBulkReleaseAsync") createBulkReleaseAsync
 
 > Remove a purchased Ytel number from your account.
 
 
 ```java
-void createIncomingphoneMassreleasenumberAsync(
+void createBulkReleaseAsync(
         final String phoneNumber,
         final APICallBack<String> callBack)
 ```
@@ -2176,7 +1836,7 @@ void createIncomingphoneMassreleasenumberAsync(
 ```java
 String phoneNumber = "PhoneNumber";
 // Invoking the API call with sample inputs
-phoneNumber.createIncomingphoneMassreleasenumberAsync(phoneNumber, new APICallBack<String>() {
+phoneNumber.createBulkReleaseAsync(phoneNumber, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2188,14 +1848,16 @@ phoneNumber.createIncomingphoneMassreleasenumberAsync(phoneNumber, new APICallBa
 ```
 
 
-### <a name="create_incomingphone_massupdatenumber_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PhoneNumberController.createIncomingphoneMassupdatenumberAsync") createIncomingphoneMassupdatenumberAsync
+### <a name="create_available_numbers_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PhoneNumberController.createAvailableNumbersAsync") createAvailableNumbersAsync
 
-> Update properties for a Ytel numbers that has been purchased for your account. Refer to the parameters list for the list of properties that can be updated.
+> Retrieve a list of available phone numbers that can be purchased and used for your Ytel account.
 
 
 ```java
-void createIncomingphoneMassupdatenumberAsync(
-        final CreateIncomingphoneMassupdatenumberInput input,
+void createAvailableNumbersAsync(
+        final NumbertypeEnum numbertype,
+        final String areacode,
+        final Integer pagesize,
         final APICallBack<String> callBack)
 ```
 
@@ -2203,91 +1865,51 @@ void createIncomingphoneMassupdatenumberAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phoneNumber |  ``` Required ```  | A valid comma(,) separated Ytel numbers. (E.164 format). |
-| voiceUrl |  ``` Required ```  | The URL returning InboundXML incoming calls should execute when connected. |
-| friendlyName |  ``` Optional ```  | A human-readable value for labeling the number. |
-| voiceMethod |  ``` Optional ```  | Specifies the HTTP method used to request the VoiceUrl once incoming call connects. |
-| voiceFallbackUrl |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML on a call or at initial request of the voice url |
-| voiceFallbackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the VoiceFallbackUrl once incoming call connects. |
-| hangupCallback |  ``` Optional ```  | URL that can be requested to receive notification when and how incoming call has ended. |
-| hangupCallbackMethod |  ``` Optional ```  | The HTTP method Ytel will use when requesting the HangupCallback URL. |
-| heartbeatUrl |  ``` Optional ```  | URL that can be used to monitor the phone number. |
-| heartbeatMethod |  ``` Optional ```  | The HTTP method Ytel will use when requesting the HeartbeatUrl. |
-| smsUrl |  ``` Optional ```  | URL requested when an SMS is received. |
-| smsMethod |  ``` Optional ```  | The HTTP method Ytel will use when requesting the SmsUrl. |
-| smsFallbackUrl |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML from an SMS or at initial request of the SmsUrl. |
-| smsFallbackMethod |  ``` Optional ```  | The HTTP method Ytel will use when URL requested if the SmsUrl is not available. |
+| numbertype |  ``` Required ```  | Number type either SMS,Voice or all |
+| areacode |  ``` Required ```  | Specifies the area code for the returned list of available numbers. Only available for North American numbers. |
+| pagesize |  ``` Optional ```  | The count of objects to return. |
 
 
 #### Example Usage
 
 ```java
-CreateIncomingphoneMassupdatenumberInput collect = new CreateIncomingphoneMassupdatenumberInput();
-
-String phoneNumber = "PhoneNumber";
-collect.setPhoneNumber(phoneNumber);
-
-String voiceUrl = "VoiceUrl";
-collect.setVoiceUrl(voiceUrl);
-
-String friendlyName = "FriendlyName";
-collect.setFriendlyName(friendlyName);
-
-String voiceMethod = "VoiceMethod";
-collect.setVoiceMethod(voiceMethod);
-
-String voiceFallbackUrl = "VoiceFallbackUrl";
-collect.setVoiceFallbackUrl(voiceFallbackUrl);
-
-String voiceFallbackMethod = "VoiceFallbackMethod";
-collect.setVoiceFallbackMethod(voiceFallbackMethod);
-
-String hangupCallback = "HangupCallback";
-collect.setHangupCallback(hangupCallback);
-
-String hangupCallbackMethod = "HangupCallbackMethod";
-collect.setHangupCallbackMethod(hangupCallbackMethod);
-
-String heartbeatUrl = "HeartbeatUrl";
-collect.setHeartbeatUrl(heartbeatUrl);
-
-String heartbeatMethod = "HeartbeatMethod";
-collect.setHeartbeatMethod(heartbeatMethod);
-
-String smsUrl = "SmsUrl";
-collect.setSmsUrl(smsUrl);
-
-String smsMethod = "SmsMethod";
-collect.setSmsMethod(smsMethod);
-
-String smsFallbackUrl = "SmsFallbackUrl";
-collect.setSmsFallbackUrl(smsFallbackUrl);
-
-String smsFallbackMethod = "SmsFallbackMethod";
-collect.setSmsFallbackMethod(smsFallbackMethod);
-
+NumbertypeEnum numbertype = NumbertypeEnum.fromString("all");
+String areacode = "areacode";
+Integer pagesize = 141;
 // Invoking the API call with sample inputs
-phoneNumber.createIncomingphoneMassupdatenumberAsync(collect, new APICallBack<String>() {
+phoneNumber.createAvailableNumbersAsync(numbertype, areacode, pagesize, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_incomingphone_updatenumber_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PhoneNumberController.createIncomingphoneUpdatenumberAsync") createIncomingphoneUpdatenumberAsync
+### <a name="update_number_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PhoneNumberController.updateNumberAsync") updateNumberAsync
 
 > Update properties for a Ytel number that has been purchased for your account. Refer to the parameters list for the list of properties that can be updated.
 
 
 ```java
-void createIncomingphoneUpdatenumberAsync(
-        final CreateIncomingphoneUpdatenumberInput input,
+void updateNumberAsync(
+        final String phoneNumber,
+        final String voiceUrl,
+        final String friendlyName,
+        final String voiceMethod,
+        final String voiceFallbackUrl,
+        final String voiceFallbackMethod,
+        final String hangupCallback,
+        final String hangupCallbackMethod,
+        final String heartbeatUrl,
+        final String heartbeatMethod,
+        final String smsUrl,
+        final String smsMethod,
+        final String smsFallbackUrl,
+        final String smsFallbackMethod,
         final APICallBack<String> callBack)
 ```
 
@@ -2314,72 +1936,44 @@ void createIncomingphoneUpdatenumberAsync(
 #### Example Usage
 
 ```java
-CreateIncomingphoneUpdatenumberInput collect = new CreateIncomingphoneUpdatenumberInput();
-
 String phoneNumber = "PhoneNumber";
-collect.setPhoneNumber(phoneNumber);
-
 String voiceUrl = "VoiceUrl";
-collect.setVoiceUrl(voiceUrl);
-
 String friendlyName = "FriendlyName";
-collect.setFriendlyName(friendlyName);
-
 String voiceMethod = "VoiceMethod";
-collect.setVoiceMethod(voiceMethod);
-
 String voiceFallbackUrl = "VoiceFallbackUrl";
-collect.setVoiceFallbackUrl(voiceFallbackUrl);
-
 String voiceFallbackMethod = "VoiceFallbackMethod";
-collect.setVoiceFallbackMethod(voiceFallbackMethod);
-
 String hangupCallback = "HangupCallback";
-collect.setHangupCallback(hangupCallback);
-
 String hangupCallbackMethod = "HangupCallbackMethod";
-collect.setHangupCallbackMethod(hangupCallbackMethod);
-
 String heartbeatUrl = "HeartbeatUrl";
-collect.setHeartbeatUrl(heartbeatUrl);
-
 String heartbeatMethod = "HeartbeatMethod";
-collect.setHeartbeatMethod(heartbeatMethod);
-
 String smsUrl = "SmsUrl";
-collect.setSmsUrl(smsUrl);
-
 String smsMethod = "SmsMethod";
-collect.setSmsMethod(smsMethod);
-
 String smsFallbackUrl = "SmsFallbackUrl";
-collect.setSmsFallbackUrl(smsFallbackUrl);
-
 String smsFallbackMethod = "SmsFallbackMethod";
-collect.setSmsFallbackMethod(smsFallbackMethod);
-
 // Invoking the API call with sample inputs
-phoneNumber.createIncomingphoneUpdatenumberAsync(collect, new APICallBack<String>() {
+phoneNumber.updateNumberAsync(phoneNumber, voiceUrl, friendlyName, voiceMethod, voiceFallbackUrl, voiceFallbackMethod, hangupCallback, hangupCallbackMethod, heartbeatUrl, heartbeatMethod, smsUrl, smsMethod, smsFallbackUrl, smsFallbackMethod, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_incomingphone_availablenumber_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.PhoneNumberController.createIncomingphoneAvailablenumberAsync") createIncomingphoneAvailablenumberAsync
+### <a name="create_list_numbers_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PhoneNumberController.createListNumbersAsync") createListNumbersAsync
 
-> Retrieve a list of available phone numbers that can be purchased and used for your Ytel account.
+> Retrieve a list of purchased phones numbers associated with your Ytel account.
 
 
 ```java
-void createIncomingphoneAvailablenumberAsync(
-        final CreateIncomingphoneAvailablenumberInput input,
+void createListNumbersAsync(
+        final Integer page,
+        final Integer pageSize,
+        final NumberType14Enum numberType,
+        final String friendlyName,
         final APICallBack<String> callBack)
 ```
 
@@ -2387,42 +1981,153 @@ void createIncomingphoneAvailablenumberAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| numbertype |  ``` Required ```  | Number type either SMS,Voice or all |
-| areacode |  ``` Required ```  | Specifies the area code for the returned list of available numbers. Only available for North American numbers. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return. |
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Page indexing starts at 1. |
+| pageSize |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| numberType |  ``` Optional ```  | The capability supported by the number.Number type either SMS,Voice or all |
+| friendlyName |  ``` Optional ```  | A human-readable label added to the number object. |
 
 
 #### Example Usage
 
 ```java
-CreateIncomingphoneAvailablenumberInput collect = new CreateIncomingphoneAvailablenumberInput();
-
-Numbertype16Enum numbertype = Numbertype16Enum.fromString("ALL");
-collect.setNumbertype(numbertype);
-
-String areacode = "areacode";
-collect.setAreacode(areacode);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
+Integer page = 141;
+Integer pageSize = 141;
+NumberType14Enum numberType = NumberType14Enum.fromString("all");
+String friendlyName = "FriendlyName";
 // Invoking the API call with sample inputs
-phoneNumber.createIncomingphoneAvailablenumberAsync(collect, new APICallBack<String>() {
+phoneNumber.createListNumbersAsync(page, pageSize, numberType, friendlyName, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
+
+```
+
+
+### <a name="create_bulk_update_numbers_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PhoneNumberController.createBulkUpdateNumbersAsync") createBulkUpdateNumbersAsync
+
+> Update properties for a Ytel numbers that has been purchased for your account. Refer to the parameters list for the list of properties that can be updated.
+
+
+```java
+void createBulkUpdateNumbersAsync(
+        final String phoneNumber,
+        final String voiceUrl,
+        final String friendlyName,
+        final String voiceMethod,
+        final String voiceFallbackUrl,
+        final String voiceFallbackMethod,
+        final String hangupCallback,
+        final String hangupCallbackMethod,
+        final String heartbeatUrl,
+        final String heartbeatMethod,
+        final String smsUrl,
+        final String smsMethod,
+        final String smsFallbackUrl,
+        final String smsFallbackMethod,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phoneNumber |  ``` Required ```  | A valid comma(,) separated Ytel numbers. (E.164 format). |
+| voiceUrl |  ``` Required ```  | The URL returning InboundXML incoming calls should execute when connected. |
+| friendlyName |  ``` Optional ```  | A human-readable value for labeling the number. |
+| voiceMethod |  ``` Optional ```  | Specifies the HTTP method used to request the VoiceUrl once incoming call connects. |
+| voiceFallbackUrl |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML on a call or at initial request of the voice url |
+| voiceFallbackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the VoiceFallbackUrl once incoming call connects. |
+| hangupCallback |  ``` Optional ```  | URL that can be requested to receive notification when and how incoming call has ended. |
+| hangupCallbackMethod |  ``` Optional ```  | The HTTP method Ytel will use when requesting the HangupCallback URL. |
+| heartbeatUrl |  ``` Optional ```  | URL that can be used to monitor the phone number. |
+| heartbeatMethod |  ``` Optional ```  | The HTTP method Ytel will use when requesting the HeartbeatUrl. |
+| smsUrl |  ``` Optional ```  | URL requested when an SMS is received. |
+| smsMethod |  ``` Optional ```  | The HTTP method Ytel will use when requesting the SmsUrl. |
+| smsFallbackUrl |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML from an SMS or at initial request of the SmsUrl. |
+| smsFallbackMethod |  ``` Optional ```  | The HTTP method Ytel will use when URL requested if the SmsUrl is not available. |
+
+
+#### Example Usage
+
+```java
+String phoneNumber = "PhoneNumber";
+String voiceUrl = "VoiceUrl";
+String friendlyName = "FriendlyName";
+String voiceMethod = "VoiceMethod";
+String voiceFallbackUrl = "VoiceFallbackUrl";
+String voiceFallbackMethod = "VoiceFallbackMethod";
+String hangupCallback = "HangupCallback";
+String hangupCallbackMethod = "HangupCallbackMethod";
+String heartbeatUrl = "HeartbeatUrl";
+String heartbeatMethod = "HeartbeatMethod";
+String smsUrl = "SmsUrl";
+String smsMethod = "SmsMethod";
+String smsFallbackUrl = "SmsFallbackUrl";
+String smsFallbackMethod = "SmsFallbackMethod";
+// Invoking the API call with sample inputs
+phoneNumber.createBulkUpdateNumbersAsync(phoneNumber, voiceUrl, friendlyName, voiceMethod, voiceFallbackUrl, voiceFallbackMethod, hangupCallback, hangupCallbackMethod, heartbeatUrl, heartbeatMethod, smsUrl, smsMethod, smsFallbackUrl, smsFallbackMethod, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_bulk_buy_numbers_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.PhoneNumberController.createBulkBuyNumbersAsync") createBulkBuyNumbersAsync
+
+> Purchase a selected number of DID's from specific area codes to be used with your Ytel account.
+
+
+```java
+void createBulkBuyNumbersAsync(
+        final NumberType15Enum numberType,
+        final String areaCode,
+        final String quantity,
+        final String leftover,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| numberType |  ``` Required ```  | The capability the number supports. |
+| areaCode |  ``` Required ```  | Specifies the area code for the returned list of available numbers. Only available for North American numbers. |
+| quantity |  ``` Required ```  | A positive integer that tells how many number you want to buy at a time. |
+| leftover |  ``` Optional ```  | If desired quantity is unavailable purchase what is available . |
+
+
+#### Example Usage
+
+```java
+NumberType15Enum numberType = NumberType15Enum.fromString("all");
+String areaCode = "AreaCode";
+String quantity = "Quantity";
+String leftover = "Leftover";
+// Invoking the API call with sample inputs
+phoneNumber.createBulkBuyNumbersAsync(numberType, areaCode, quantity, leftover, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="sms_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.SMSController") SMSController
+## <a name="sms_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.SMSController") SMSController
 
 ### Get singleton instance
 
@@ -2432,13 +2137,13 @@ The singleton instance of the ``` SMSController ``` class can be accessed from t
 SMSController sMS = client.getSMS();
 ```
 
-### <a name="create_sms_viewdetailsms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SMSController.createSmsViewdetailsmsAsync") createSmsViewdetailsmsAsync
+### <a name="create_view_sms1_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SMSController.createViewSMS1Async") createViewSMS1Async
 
 > Retrieve a single SMS message object with details by its SmsSid.
 
 
 ```java
-void createSmsViewdetailsmsAsync(
+void createViewSMS1Async(
         final String messageSid,
         final APICallBack<String> callBack)
 ```
@@ -2455,7 +2160,7 @@ void createSmsViewdetailsmsAsync(
 ```java
 String messageSid = "MessageSid";
 // Invoking the API call with sample inputs
-sMS.createSmsViewdetailsmsAsync(messageSid, new APICallBack<String>() {
+sMS.createViewSMS1Async(messageSid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2467,13 +2172,13 @@ sMS.createSmsViewdetailsmsAsync(messageSid, new APICallBack<String>() {
 ```
 
 
-### <a name="create_sms_viewsms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SMSController.createSmsViewsmsAsync") createSmsViewsmsAsync
+### <a name="create_view_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SMSController.createViewSMSAsync") createViewSMSAsync
 
 > Retrieve a single SMS message object by its SmsSid.
 
 
 ```java
-void createSmsViewsmsAsync(
+void createViewSMSAsync(
         final String messageSid,
         final APICallBack<String> callBack)
 ```
@@ -2490,7 +2195,7 @@ void createSmsViewsmsAsync(
 ```java
 String messageSid = "MessageSid";
 // Invoking the API call with sample inputs
-sMS.createSmsViewsmsAsync(messageSid, new APICallBack<String>() {
+sMS.createViewSMSAsync(messageSid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2502,126 +2207,20 @@ sMS.createSmsViewsmsAsync(messageSid, new APICallBack<String>() {
 ```
 
 
-### <a name="create_sms_getinboundsms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SMSController.createSmsGetinboundsmsAsync") createSmsGetinboundsmsAsync
-
-> Retrieve a list of Inbound SMS message objects.
-
-
-```java
-void createSmsGetinboundsmsAsync(
-        final CreateSmsGetinboundsmsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pageSize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| from |  ``` Optional ```  | Filter SMS message objects from this valid 10-digit phone number (E.164 format). |
-| to |  ``` Optional ```  | Filter SMS message objects to this valid 10-digit phone number (E.164 format). |
-| dateSent |  ``` Optional ```  | Filter sms message objects by this date. |
-
-
-#### Example Usage
-
-```java
-CreateSmsGetinboundsmsInput collect = new CreateSmsGetinboundsmsInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pageSize = 10;
-collect.setPageSize(pageSize);
-
-String from = "From";
-collect.setFrom(from);
-
-String to = "To";
-collect.setTo(to);
-
-String dateSent = "DateSent";
-collect.setDateSent(dateSent);
-
-// Invoking the API call with sample inputs
-sMS.createSmsGetinboundsmsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_sms_listsms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SMSController.createSmsListsmsAsync") createSmsListsmsAsync
-
-> Retrieve a list of Outbound SMS message objects.
-
-
-```java
-void createSmsListsmsAsync(
-        final CreateSmsListsmsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pageSize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | Filter SMS message objects from this valid 10-digit phone number (E.164 format). |
-| to |  ``` Optional ```  | Filter SMS message objects to this valid 10-digit phone number (E.164 format). |
-| dateSent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
-
-
-#### Example Usage
-
-```java
-CreateSmsListsmsInput collect = new CreateSmsListsmsInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pageSize = 10;
-collect.setPageSize(pageSize);
-
-String from = "From";
-collect.setFrom(from);
-
-String to = "To";
-collect.setTo(to);
-
-String dateSent = "DateSent";
-collect.setDateSent(dateSent);
-
-// Invoking the API call with sample inputs
-sMS.createSmsListsmsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_sms_sendsms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SMSController.createSmsSendsmsAsync") createSmsSendsmsAsync
+### <a name="create_send_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SMSController.createSendSMSAsync") createSendSMSAsync
 
 > Send an SMS from a Ytel number
 
 
 ```java
-void createSmsSendsmsAsync(
-        final CreateSmsSendsmsInput input,
+void createSendSMSAsync(
+        final String from,
+        final String to,
+        final String body,
+        final String method,
+        final String messageStatusCallback,
+        final Boolean smartsms,
+        final Boolean deliveryStatus,
         final APICallBack<String> callBack)
 ```
 
@@ -2634,53 +2233,130 @@ void createSmsSendsmsAsync(
 | body |  ``` Required ```  | The body message that is to be sent in the text. |
 | method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once SMS sent. |
 | messageStatusCallback |  ``` Optional ```  | URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished. |
-| smartsms |  ``` Optional ```  ``` DefaultValue ```  | Check's 'to' number can receive sms or not using Carrier API, if wireless = true then text sms is sent, else wireless = false then call is recieved to end user with audible message. |
-| deliveryStatus |  ``` Optional ```  ``` DefaultValue ```  | Delivery reports are a method to tell your system if the message has arrived on the destination phone. |
+| smartsms |  ``` Optional ```  | Check's 'to' number can receive sms or not using Carrier API, if wireless = true then text sms is sent, else wireless = false then call is recieved to end user with audible message. |
+| deliveryStatus |  ``` Optional ```  | Delivery reports are a method to tell your system if the message has arrived on the destination phone. |
 
 
 #### Example Usage
 
 ```java
-CreateSmsSendsmsInput collect = new CreateSmsSendsmsInput();
-
 String from = "From";
-collect.setFrom(from);
-
 String to = "To";
-collect.setTo(to);
-
 String body = "Body";
-collect.setBody(body);
-
 String method = "Method";
-collect.setMethod(method);
-
 String messageStatusCallback = "MessageStatusCallback";
-collect.setMessageStatusCallback(messageStatusCallback);
-
-Boolean smartsms = false;
-collect.setSmartsms(smartsms);
-
-Boolean deliveryStatus = false;
-collect.setDeliveryStatus(deliveryStatus);
-
+Boolean smartsms = true;
+Boolean deliveryStatus = true;
 // Invoking the API call with sample inputs
-sMS.createSmsSendsmsAsync(collect, new APICallBack<String>() {
+sMS.createSendSMSAsync(from, to, body, method, messageStatusCallback, smartsms, deliveryStatus, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
+
+```
+
+
+### <a name="create_list_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SMSController.createListSMSAsync") createListSMSAsync
+
+> Retrieve a list of Outbound SMS message objects.
+
+
+```java
+void createListSMSAsync(
+        final Integer page,
+        final Integer pageSize,
+        final String from,
+        final String to,
+        final String dateSent,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pageSize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | Filter SMS message objects from this valid 10-digit phone number (E.164 format). |
+| to |  ``` Optional ```  | Filter SMS message objects to this valid 10-digit phone number (E.164 format). |
+| dateSent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
+
+
+#### Example Usage
+
+```java
+Integer page = 141;
+Integer pageSize = 141;
+String from = "From";
+String to = "To";
+String dateSent = "DateSent";
+// Invoking the API call with sample inputs
+sMS.createListSMSAsync(page, pageSize, from, to, dateSent, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_list_inbound_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SMSController.createListInboundSMSAsync") createListInboundSMSAsync
+
+> Retrieve a list of Inbound SMS message objects.
+
+
+```java
+void createListInboundSMSAsync(
+        final Integer page,
+        final Integer pageSize,
+        final String from,
+        final String to,
+        final String dateSent,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pageSize |  ``` Optional ```  | The count of objects to return per page. |
+| from |  ``` Optional ```  | Filter SMS message objects from this valid 10-digit phone number (E.164 format). |
+| to |  ``` Optional ```  | Filter SMS message objects to this valid 10-digit phone number (E.164 format). |
+| dateSent |  ``` Optional ```  | Filter sms message objects by this date. |
+
+
+#### Example Usage
+
+```java
+Integer page = 141;
+Integer pageSize = 141;
+String from = "From";
+String to = "To";
+String dateSent = "DateSent";
+// Invoking the API call with sample inputs
+sMS.createListInboundSMSAsync(page, pageSize, from, to, dateSent, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="shared_short_code_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.SharedShortCodeController") SharedShortCodeController
+## <a name="shared_short_code_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.SharedShortCodeController") SharedShortCodeController
 
 ### Get singleton instance
 
@@ -2690,13 +2366,13 @@ The singleton instance of the ``` SharedShortCodeController ``` class can be acc
 SharedShortCodeController sharedShortCode = client.getSharedShortCode();
 ```
 
-### <a name="create_shortcode_viewshortcode_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SharedShortCodeController.createShortcodeViewshortcodeAsync") createShortcodeViewshortcodeAsync
+### <a name="create_view_shortcode_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SharedShortCodeController.createViewShortcodeAsync") createViewShortcodeAsync
 
 > The response returned here contains all resource properties associated with the given Shortcode.
 
 
 ```java
-void createShortcodeViewshortcodeAsync(
+void createViewShortcodeAsync(
         final String shortcode,
         final APICallBack<String> callBack)
 ```
@@ -2713,7 +2389,7 @@ void createShortcodeViewshortcodeAsync(
 ```java
 String shortcode = "Shortcode";
 // Invoking the API call with sample inputs
-sharedShortCode.createShortcodeViewshortcodeAsync(shortcode, new APICallBack<String>() {
+sharedShortCode.createViewShortcodeAsync(shortcode, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2725,13 +2401,13 @@ sharedShortCode.createShortcodeViewshortcodeAsync(shortcode, new APICallBack<Str
 ```
 
 
-### <a name="create_keyword_view_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SharedShortCodeController.createKeywordViewAsync") createKeywordViewAsync
+### <a name="create_view_keyword_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SharedShortCodeController.createViewKeywordAsync") createViewKeywordAsync
 
 > View a set of properties for a single keyword.
 
 
 ```java
-void createKeywordViewAsync(
+void createViewKeywordAsync(
         final String keywordid,
         final APICallBack<String> callBack)
 ```
@@ -2748,7 +2424,7 @@ void createKeywordViewAsync(
 ```java
 String keywordid = "Keywordid";
 // Invoking the API call with sample inputs
-sharedShortCode.createKeywordViewAsync(keywordid, new APICallBack<String>() {
+sharedShortCode.createViewKeywordAsync(keywordid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2760,14 +2436,280 @@ sharedShortCode.createKeywordViewAsync(keywordid, new APICallBack<String>() {
 ```
 
 
-### <a name="create_shortcode_updateshortcode_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SharedShortCodeController.createShortcodeUpdateshortcodeAsync") createShortcodeUpdateshortcodeAsync
+### <a name="create_view_template_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SharedShortCodeController.createViewTemplateAsync") createViewTemplateAsync
+
+> View a Shared ShortCode Template
+
+
+```java
+void createViewTemplateAsync(
+        final UUID templateId,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| templateId |  ``` Required ```  | The unique identifier for a template object |
+
+
+#### Example Usage
+
+```java
+UUID templateId = UUID.randomUUID();
+// Invoking the API call with sample inputs
+sharedShortCode.createViewTemplateAsync(templateId, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_list_inbound_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SharedShortCodeController.createListInboundSMSAsync") createListInboundSMSAsync
+
+> List All Inbound ShortCode
+
+
+```java
+void createListInboundSMSAsync(
+        final String datecreated,
+        final Integer page,
+        final Integer pagesize,
+        final String from,
+        final String shortcode,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| datecreated |  ``` Optional ```  | Only list messages sent with the specified date |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | From Number to Inbound ShortCode |
+| shortcode |  ``` Optional ```  | Only list messages sent to this Short Code |
+
+
+#### Example Usage
+
+```java
+String datecreated = "Datecreated";
+Integer page = 141;
+Integer pagesize = 141;
+String from = "from";
+String shortcode = "Shortcode";
+// Invoking the API call with sample inputs
+sharedShortCode.createListInboundSMSAsync(datecreated, page, pagesize, from, shortcode, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_send_sms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SharedShortCodeController.createSendSMSAsync") createSendSMSAsync
+
+> Send an SMS from a Ytel ShortCode
+
+
+```java
+void createSendSMSAsync(
+        final String shortcode,
+        final String to,
+        final UUID templateid,
+        final String data,
+        final String method,
+        final String messageStatusCallback,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Required ```  | The Short Code number that is the sender of this message |
+| to |  ``` Required ```  | A valid 10-digit number that should receive the message |
+| templateid |  ``` Required ```  | The unique identifier for the template used for the message |
+| data |  ``` Required ```  | format of your data, example: {companyname}:test,{otpcode}:1234 |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent. |
+| messageStatusCallback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
+
+
+#### Example Usage
+
+```java
+String shortcode = "shortcode";
+String to = "to";
+UUID templateid = UUID.randomUUID();
+String data = "data";
+String method = "Method";
+String messageStatusCallback = "MessageStatusCallback";
+// Invoking the API call with sample inputs
+sharedShortCode.createSendSMSAsync(shortcode, to, templateid, data, method, messageStatusCallback, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_list_templates_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SharedShortCodeController.createListTemplatesAsync") createListTemplatesAsync
+
+> List Shortcode Templates by Type
+
+
+```java
+void createListTemplatesAsync(
+        final String type,
+        final Integer page,
+        final Integer pagesize,
+        final String shortcode,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| type |  ``` Optional ```  | The type (category) of template Valid values: marketing, authorization |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
+| shortcode |  ``` Optional ```  | Only list templates of type |
+
+
+#### Example Usage
+
+```java
+String type = "type";
+Integer page = 141;
+Integer pagesize = 141;
+String shortcode = "Shortcode";
+// Invoking the API call with sample inputs
+sharedShortCode.createListTemplatesAsync(type, page, pagesize, shortcode, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_list_keywords_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SharedShortCodeController.createListKeywordsAsync") createListKeywordsAsync
+
+> Retrieve a list of keywords associated with your Ytel account.
+
+
+```java
+void createListKeywordsAsync(
+        final Integer page,
+        final Integer pagesize,
+        final String keyword,
+        final Integer shortcode,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| keyword |  ``` Optional ```  | Only list keywords of keyword |
+| shortcode |  ``` Optional ```  | Only list keywords of shortcode |
+
+
+#### Example Usage
+
+```java
+Integer page = 50;
+Integer pagesize = 50;
+String keyword = "Keyword";
+Integer shortcode = 50;
+// Invoking the API call with sample inputs
+sharedShortCode.createListKeywordsAsync(page, pagesize, keyword, shortcode, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_list_shortcodes_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SharedShortCodeController.createListShortcodesAsync") createListShortcodesAsync
+
+> Retrieve a list of shortcode assignment associated with your Ytel account.
+
+
+```java
+void createListShortcodesAsync(
+        final String shortcode,
+        final Integer page,
+        final Integer pagesize,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Optional ```  | Only list keywords of shortcode |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+
+
+#### Example Usage
+
+```java
+String shortcode = "Shortcode";
+Integer page = 50;
+Integer pagesize = 50;
+// Invoking the API call with sample inputs
+sharedShortCode.createListShortcodesAsync(shortcode, page, pagesize, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="update_shortcode_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SharedShortCodeController.updateShortcodeAsync") updateShortcodeAsync
 
 > Update Assignment
 
 
 ```java
-void createShortcodeUpdateshortcodeAsync(
-        final CreateShortcodeUpdateshortcodeInput input,
+void updateShortcodeAsync(
+        final String shortcode,
+        final String friendlyName,
+        final String callbackUrl,
+        final String callbackMethod,
+        final String fallbackUrl,
+        final String fallbackUrlMethod,
         final APICallBack<String> callBack)
 ```
 
@@ -2786,64 +2728,14 @@ void createShortcodeUpdateshortcodeAsync(
 #### Example Usage
 
 ```java
-CreateShortcodeUpdateshortcodeInput collect = new CreateShortcodeUpdateshortcodeInput();
-
 String shortcode = "Shortcode";
-collect.setShortcode(shortcode);
-
 String friendlyName = "FriendlyName";
-collect.setFriendlyName(friendlyName);
-
 String callbackUrl = "CallbackUrl";
-collect.setCallbackUrl(callbackUrl);
-
 String callbackMethod = "CallbackMethod";
-collect.setCallbackMethod(callbackMethod);
-
 String fallbackUrl = "FallbackUrl";
-collect.setFallbackUrl(fallbackUrl);
-
 String fallbackUrlMethod = "FallbackUrlMethod";
-collect.setFallbackUrlMethod(fallbackUrlMethod);
-
 // Invoking the API call with sample inputs
-sharedShortCode.createShortcodeUpdateshortcodeAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_template_view_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SharedShortCodeController.createTemplateViewAsync") createTemplateViewAsync
-
-> View a Shared ShortCode Template
-
-
-```java
-void createTemplateViewAsync(
-        final UUID templateId,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| templateId |  ``` Required ```  | The unique identifier for a template object |
-
-
-#### Example Usage
-
-```java
-UUID templateId = UUID.randomUUID();
-// Invoking the API call with sample inputs
-sharedShortCode.createTemplateViewAsync(templateId, new APICallBack<String>() {
+sharedShortCode.updateShortcodeAsync(shortcode, friendlyName, callbackUrl, callbackMethod, fallbackUrl, fallbackUrlMethod, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -2855,277 +2747,9 @@ sharedShortCode.createTemplateViewAsync(templateId, new APICallBack<String>() {
 ```
 
 
-### <a name="create_shortcode_listshortcode_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SharedShortCodeController.createShortcodeListshortcodeAsync") createShortcodeListshortcodeAsync
-
-> Retrieve a list of shortcode assignment associated with your Ytel account.
-
-
-```java
-void createShortcodeListshortcodeAsync(
-        final CreateShortcodeListshortcodeInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| shortcode |  ``` Optional ```  | Only list keywords of shortcode |
-
-
-#### Example Usage
-
-```java
-CreateShortcodeListshortcodeInput collect = new CreateShortcodeListshortcodeInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-String shortcode = "Shortcode";
-collect.setShortcode(shortcode);
-
-// Invoking the API call with sample inputs
-sharedShortCode.createShortcodeListshortcodeAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_keyword_lists_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SharedShortCodeController.createKeywordListsAsync") createKeywordListsAsync
-
-> Retrieve a list of keywords associated with your Ytel account.
-
-
-```java
-void createKeywordListsAsync(
-        final CreateKeywordListsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| keyword |  ``` Optional ```  | Only list keywords of keyword |
-| shortcode |  ``` Optional ```  | Only list keywords of shortcode |
-
-
-#### Example Usage
-
-```java
-CreateKeywordListsInput collect = new CreateKeywordListsInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-String keyword = "Keyword";
-collect.setKeyword(keyword);
-
-Integer shortcode = 12;
-collect.setShortcode(shortcode);
-
-// Invoking the API call with sample inputs
-sharedShortCode.createKeywordListsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_template_lists_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SharedShortCodeController.createTemplateListsAsync") createTemplateListsAsync
-
-> List Shortcode Templates by Type
-
-
-```java
-void createTemplateListsAsync(
-        final CreateTemplateListsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| type |  ``` Optional ```  ``` DefaultValue ```  | The type (category) of template Valid values: marketing, authorization |
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| shortcode |  ``` Optional ```  | Only list templates of type |
-
-
-#### Example Usage
-
-```java
-CreateTemplateListsInput collect = new CreateTemplateListsInput();
-
-String type = "authorization";
-collect.setType(type);
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-String shortcode = "Shortcode";
-collect.setShortcode(shortcode);
-
-// Invoking the API call with sample inputs
-sharedShortCode.createTemplateListsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_shortcode_sendsms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SharedShortCodeController.createShortcodeSendsmsAsync") createShortcodeSendsmsAsync
-
-> Send an SMS from a Ytel ShortCode
-
-
-```java
-void createShortcodeSendsmsAsync(
-        final CreateShortcodeSendsmsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| shortcode |  ``` Required ```  | The Short Code number that is the sender of this message |
-| to |  ``` Required ```  | A valid 10-digit number that should receive the message |
-| templateid |  ``` Required ```  | The unique identifier for the template used for the message |
-| data |  ``` Required ```  | format of your data, example: {companyname}:test,{otpcode}:1234 |
-| method |  ``` Optional ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent. |
-| messageStatusCallback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
-
-
-#### Example Usage
-
-```java
-CreateShortcodeSendsmsInput collect = new CreateShortcodeSendsmsInput();
-
-String shortcode = "shortcode";
-collect.setShortcode(shortcode);
-
-String to = "to";
-collect.setTo(to);
-
-UUID templateid = UUID.randomUUID();
-collect.setTemplateid(templateid);
-
-String data = "data";
-collect.setData(data);
-
-String method = "GET";
-collect.setMethod(method);
-
-String messageStatusCallback = "MessageStatusCallback";
-collect.setMessageStatusCallback(messageStatusCallback);
-
-// Invoking the API call with sample inputs
-sharedShortCode.createShortcodeSendsmsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_shortcode_getinboundsms_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SharedShortCodeController.createShortcodeGetinboundsmsAsync") createShortcodeGetinboundsmsAsync
-
-> List All Inbound ShortCode
-
-
-```java
-void createShortcodeGetinboundsmsAsync(
-        final CreateShortcodeGetinboundsmsInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | From Number to Inbound ShortCode |
-| shortcode |  ``` Optional ```  | Only list messages sent to this Short Code |
-| datecreated |  ``` Optional ```  | Only list messages sent with the specified date |
-
-
-#### Example Usage
-
-```java
-CreateShortcodeGetinboundsmsInput collect = new CreateShortcodeGetinboundsmsInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-String from = "from";
-collect.setFrom(from);
-
-String shortcode = "Shortcode";
-collect.setShortcode(shortcode);
-
-String datecreated = "Datecreated";
-collect.setDatecreated(datecreated);
-
-// Invoking the API call with sample inputs
-sharedShortCode.createShortcodeGetinboundsmsAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="conference_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.ConferenceController") ConferenceController
+## <a name="conference_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.ConferenceController") ConferenceController
 
 ### Get singleton instance
 
@@ -3135,14 +2759,16 @@ The singleton instance of the ``` ConferenceController ``` class can be accessed
 ConferenceController conference = client.getConference();
 ```
 
-### <a name="create_conferences_play_audio_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ConferenceController.createConferencesPlayAudioAsync") createConferencesPlayAudioAsync
+### <a name="create_play_audio_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ConferenceController.createPlayAudioAsync") createPlayAudioAsync
 
 > Play an audio file during a conference.
 
 
 ```java
-void createConferencesPlayAudioAsync(
-        final CreateConferencesPlayAudioInput input,
+void createPlayAudioAsync(
+        final String conferenceSid,
+        final String participantSid,
+        final AudioUrlEnum audioUrl,
         final APICallBack<String> callBack)
 ```
 
@@ -3158,39 +2784,31 @@ void createConferencesPlayAudioAsync(
 #### Example Usage
 
 ```java
-CreateConferencesPlayAudioInput collect = new CreateConferencesPlayAudioInput();
-
 String conferenceSid = "ConferenceSid";
-collect.setConferenceSid(conferenceSid);
-
 String participantSid = "ParticipantSid";
-collect.setParticipantSid(participantSid);
-
 AudioUrlEnum audioUrl = AudioUrlEnum.fromString("mp3");
-collect.setAudioUrl(audioUrl);
-
 // Invoking the API call with sample inputs
-conference.createConferencesPlayAudioAsync(collect, new APICallBack<String>() {
+conference.createPlayAudioAsync(conferenceSid, participantSid, audioUrl, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_conferences_hangup_participant_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ConferenceController.createConferencesHangupParticipantAsync") createConferencesHangupParticipantAsync
+### <a name="create_hangup_participant_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ConferenceController.createHangupParticipantAsync") createHangupParticipantAsync
 
 > Remove a participant from a conference.
 
 
 ```java
-void createConferencesHangupParticipantAsync(
-        final CreateConferencesHangupParticipantInput input,
+void createHangupParticipantAsync(
+        final String participantSid,
+        final String conferenceSid,
         final APICallBack<String> callBack)
 ```
 
@@ -3198,42 +2816,35 @@ void createConferencesHangupParticipantAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| conferenceSid |  ``` Required ```  | The unique identifier for a conference object. |
 | participantSid |  ``` Required ```  | The unique identifier for a participant object. |
+| conferenceSid |  ``` Required ```  | The unique identifier for a conference object. |
 
 
 #### Example Usage
 
 ```java
-CreateConferencesHangupParticipantInput collect = new CreateConferencesHangupParticipantInput();
-
-String conferenceSid = "ConferenceSid";
-collect.setConferenceSid(conferenceSid);
-
 String participantSid = "ParticipantSid";
-collect.setParticipantSid(participantSid);
-
+String conferenceSid = "ConferenceSid";
 // Invoking the API call with sample inputs
-conference.createConferencesHangupParticipantAsync(collect, new APICallBack<String>() {
+conference.createHangupParticipantAsync(participantSid, conferenceSid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_conferences_viewconference_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ConferenceController.createConferencesViewconferenceAsync") createConferencesViewconferenceAsync
+### <a name="create_view_conference_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ConferenceController.createViewConferenceAsync") createViewConferenceAsync
 
 > Retrieve information about a conference by its ConferenceSid.
 
 
 ```java
-void createConferencesViewconferenceAsync(
+void createViewConferenceAsync(
         final String conferenceSid,
         final APICallBack<String> callBack)
 ```
@@ -3250,7 +2861,7 @@ void createConferencesViewconferenceAsync(
 ```java
 String conferenceSid = "ConferenceSid";
 // Invoking the API call with sample inputs
-conference.createConferencesViewconferenceAsync(conferenceSid, new APICallBack<String>() {
+conference.createViewConferenceAsync(conferenceSid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3262,122 +2873,15 @@ conference.createConferencesViewconferenceAsync(conferenceSid, new APICallBack<S
 ```
 
 
-### <a name="create_conferences_listconference_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ConferenceController.createConferencesListconferenceAsync") createConferencesListconferenceAsync
-
-> Retrieve a list of conference objects.
-
-
-```java
-void createConferencesListconferenceAsync(
-        final CreateConferencesListconferenceInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| friendlyName |  ``` Optional ```  | Only return conferences with the specified FriendlyName |
-| dateCreated |  ``` Optional ```  | Conference created date |
-
-
-#### Example Usage
-
-```java
-CreateConferencesListconferenceInput collect = new CreateConferencesListconferenceInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-String friendlyName = "FriendlyName";
-collect.setFriendlyName(friendlyName);
-
-String dateCreated = "DateCreated";
-collect.setDateCreated(dateCreated);
-
-// Invoking the API call with sample inputs
-conference.createConferencesListconferenceAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_conferences_list_participant_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ConferenceController.createConferencesListParticipantAsync") createConferencesListParticipantAsync
-
-> Retrieve a list of participants for an in-progress conference.
-
-
-```java
-void createConferencesListParticipantAsync(
-        final CreateConferencesListParticipantInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| conferenceSid |  ``` Required ```  | The unique identifier for a conference. |
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| muted |  ``` Optional ```  | Specifies if participant should be muted. |
-| deaf |  ``` Optional ```  | Specifies if the participant should hear audio in the conference. |
-
-
-#### Example Usage
-
-```java
-CreateConferencesListParticipantInput collect = new CreateConferencesListParticipantInput();
-
-String conferenceSid = "ConferenceSid";
-collect.setConferenceSid(conferenceSid);
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-Boolean muted = true;
-collect.setMuted(muted);
-
-Boolean deaf = true;
-collect.setDeaf(deaf);
-
-// Invoking the API call with sample inputs
-conference.createConferencesListParticipantAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_conferences_view_participant_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ConferenceController.createConferencesViewParticipantAsync") createConferencesViewParticipantAsync
+### <a name="create_view_participant_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ConferenceController.createViewParticipantAsync") createViewParticipantAsync
 
 > Retrieve information about a participant by its ParticipantSid.
 
 
 ```java
-void createConferencesViewParticipantAsync(
-        final CreateConferencesViewParticipantInput input,
+void createViewParticipantAsync(
+        final String conferenceSid,
+        final String participantSid,
         final APICallBack<String> callBack)
 ```
 
@@ -3392,176 +2896,32 @@ void createConferencesViewParticipantAsync(
 #### Example Usage
 
 ```java
-CreateConferencesViewParticipantInput collect = new CreateConferencesViewParticipantInput();
-
 String conferenceSid = "ConferenceSid";
-collect.setConferenceSid(conferenceSid);
-
 String participantSid = "ParticipantSid";
-collect.setParticipantSid(participantSid);
-
 // Invoking the API call with sample inputs
-conference.createConferencesViewParticipantAsync(collect, new APICallBack<String>() {
+conference.createViewParticipantAsync(conferenceSid, participantSid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_conferences_add_participant_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ConferenceController.createConferencesAddParticipantAsync") createConferencesAddParticipantAsync
-
-> Add Participant in conference 
-
-
-```java
-void createConferencesAddParticipantAsync(
-        final CreateConferencesAddParticipantInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| conferenceSid |  ``` Required ```  | The unique identifier for a conference object. |
-| participantNumber |  ``` Required ```  | The phone number of the participant to be added. |
-| muted |  ``` Optional ```  | Specifies if participant should be muted. |
-| deaf |  ``` Optional ```  | Specifies if the participant should hear audio in the conference. |
-
-
-#### Example Usage
-
-```java
-CreateConferencesAddParticipantInput collect = new CreateConferencesAddParticipantInput();
-
-String conferenceSid = "ConferenceSid";
-collect.setConferenceSid(conferenceSid);
-
-String participantNumber = "ParticipantNumber";
-collect.setParticipantNumber(participantNumber);
-
-Boolean muted = true;
-collect.setMuted(muted);
-
-Boolean deaf = true;
-collect.setDeaf(deaf);
-
-// Invoking the API call with sample inputs
-conference.createConferencesAddParticipantAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_conferences_create_conference_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ConferenceController.createConferencesCreateConferenceAsync") createConferencesCreateConferenceAsync
-
-> Here you can experiment with initiating a conference call through Ytel and view the request response generated when doing so.
-
-
-```java
-void createConferencesCreateConferenceAsync(
-        final CreateConferencesCreateConferenceInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| from |  ``` Required ```  | A valid 10-digit number (E.164 format) that will be initiating the conference call. |
-| to |  ``` Required ```  | A valid 10-digit number (E.164 format) that is to receive the conference call. |
-| url |  ``` Required ```  | URL requested once the conference connects |
-| method |  ``` Optional ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once call connects. |
-| statusCallBackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the conference is finished. |
-| statusCallBackMethod |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
-| fallbackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
-| fallbackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
-| record |  ``` Optional ```  | Specifies if the conference should be recorded. |
-| recordCallBackUrl |  ``` Optional ```  | Recording parameters will be sent here upon completion. |
-| recordCallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once conference connects. |
-| scheduleTime |  ``` Optional ```  | Schedule conference in future. Schedule time must be greater than current time |
-| timeout |  ``` Optional ```  | The number of seconds the call stays on the line while waiting for an answer. The max time limit is 999 and the default limit is 60 seconds but lower times can be set. |
-
-
-#### Example Usage
-
-```java
-CreateConferencesCreateConferenceInput collect = new CreateConferencesCreateConferenceInput();
-
-String from = "From";
-collect.setFrom(from);
-
-String to = "To";
-collect.setTo(to);
-
-String url = "Url";
-collect.setUrl(url);
-
-String method = "POST";
-collect.setMethod(method);
-
-String statusCallBackUrl = "StatusCallBackUrl";
-collect.setStatusCallBackUrl(statusCallBackUrl);
-
-String statusCallBackMethod = "StatusCallBackMethod";
-collect.setStatusCallBackMethod(statusCallBackMethod);
-
-String fallbackUrl = "FallbackUrl";
-collect.setFallbackUrl(fallbackUrl);
-
-String fallbackMethod = "FallbackMethod";
-collect.setFallbackMethod(fallbackMethod);
-
-Boolean record = true;
-collect.setRecord(record);
-
-String recordCallBackUrl = "RecordCallBackUrl";
-collect.setRecordCallBackUrl(recordCallBackUrl);
-
-String recordCallBackMethod = "RecordCallBackMethod";
-collect.setRecordCallBackMethod(recordCallBackMethod);
-
-String scheduleTime = "ScheduleTime";
-collect.setScheduleTime(scheduleTime);
-
-Integer timeout = 225;
-collect.setTimeout(timeout);
-
-// Invoking the API call with sample inputs
-conference.createConferencesCreateConferenceAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
-
-```
-
-
-### <a name="create_conferences_deaf_mute_participant_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.ConferenceController.createConferencesDeafMuteParticipantAsync") createConferencesDeafMuteParticipantAsync
+### <a name="create_silence_participant_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ConferenceController.createSilenceParticipantAsync") createSilenceParticipantAsync
 
 > Deaf Mute Participant
 
 
 ```java
-void createConferencesDeafMuteParticipantAsync(
-        final CreateConferencesDeafMuteParticipantInput input,
+void createSilenceParticipantAsync(
+        final String conferenceSid,
+        final String participantSid,
+        final Boolean muted,
+        final Boolean deaf,
         final APICallBack<String> callBack)
 ```
 
@@ -3578,37 +2938,232 @@ void createConferencesDeafMuteParticipantAsync(
 #### Example Usage
 
 ```java
-CreateConferencesDeafMuteParticipantInput collect = new CreateConferencesDeafMuteParticipantInput();
-
 String conferenceSid = "conferenceSid";
-collect.setConferenceSid(conferenceSid);
-
 String participantSid = "ParticipantSid";
-collect.setParticipantSid(participantSid);
-
-Boolean muted = true;
-collect.setMuted(muted);
-
-Boolean deaf = true;
-collect.setDeaf(deaf);
-
+Boolean muted = false;
+Boolean deaf = false;
 // Invoking the API call with sample inputs
-conference.createConferencesDeafMuteParticipantAsync(collect, new APICallBack<String>() {
+conference.createSilenceParticipantAsync(conferenceSid, participantSid, muted, deaf, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
+
+```
+
+
+### <a name="add_participant_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ConferenceController.addParticipantAsync") addParticipantAsync
+
+> Add Participant in conference 
+
+
+```java
+void addParticipantAsync(
+        final String conferenceSid,
+        final String participantNumber,
+        final Boolean muted,
+        final Boolean deaf,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| conferenceSid |  ``` Required ```  | The unique identifier for a conference object. |
+| participantNumber |  ``` Required ```  | The phone number of the participant to be added. |
+| muted |  ``` Optional ```  | Specifies if participant should be muted. |
+| deaf |  ``` Optional ```  | Specifies if the participant should hear audio in the conference. |
+
+
+#### Example Usage
+
+```java
+String conferenceSid = "ConferenceSid";
+String participantNumber = "ParticipantNumber";
+Boolean muted = false;
+Boolean deaf = false;
+// Invoking the API call with sample inputs
+conference.addParticipantAsync(conferenceSid, participantNumber, muted, deaf, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_conference_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ConferenceController.createConferenceAsync") createConferenceAsync
+
+> Here you can experiment with initiating a conference call through Ytel and view the request response generated when doing so.
+
+
+```java
+void createConferenceAsync(
+        final String url,
+        final String from,
+        final String to,
+        final String method,
+        final String statusCallBackUrl,
+        final String statusCallBackMethod,
+        final String fallbackUrl,
+        final String fallbackMethod,
+        final Boolean record,
+        final String recordCallBackUrl,
+        final String recordCallBackMethod,
+        final String scheduleTime,
+        final Integer timeout,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| url |  ``` Required ```  | URL requested once the conference connects |
+| from |  ``` Required ```  | A valid 10-digit number (E.164 format) that will be initiating the conference call. |
+| to |  ``` Required ```  | A valid 10-digit number (E.164 format) that is to receive the conference call. |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
+| statusCallBackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the conference is finished. |
+| statusCallBackMethod |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
+| fallbackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
+| fallbackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
+| record |  ``` Optional ```  | Specifies if the conference should be recorded. |
+| recordCallBackUrl |  ``` Optional ```  | Recording parameters will be sent here upon completion. |
+| recordCallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once conference connects. |
+| scheduleTime |  ``` Optional ```  | Schedule conference in future. Schedule time must be greater than current time |
+| timeout |  ``` Optional ```  | The number of seconds the call stays on the line while waiting for an answer. The max time limit is 999 and the default limit is 60 seconds but lower times can be set. |
+
+
+#### Example Usage
+
+```java
+String url = "Url";
+String from = "From";
+String to = "To";
+String method = "Method";
+String statusCallBackUrl = "StatusCallBackUrl";
+String statusCallBackMethod = "StatusCallBackMethod";
+String fallbackUrl = "FallbackUrl";
+String fallbackMethod = "FallbackMethod";
+Boolean record = false;
+String recordCallBackUrl = "RecordCallBackUrl";
+String recordCallBackMethod = "RecordCallBackMethod";
+String scheduleTime = "ScheduleTime";
+Integer timeout = 50;
+// Invoking the API call with sample inputs
+conference.createConferenceAsync(url, from, to, method, statusCallBackUrl, statusCallBackMethod, fallbackUrl, fallbackMethod, record, recordCallBackUrl, recordCallBackMethod, scheduleTime, timeout, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_list_participants_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ConferenceController.createListParticipantsAsync") createListParticipantsAsync
+
+> Retrieve a list of participants for an in-progress conference.
+
+
+```java
+void createListParticipantsAsync(
+        final String conferenceSid,
+        final Integer page,
+        final Integer pagesize,
+        final Boolean muted,
+        final Boolean deaf,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| conferenceSid |  ``` Required ```  | The unique identifier for a conference. |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
+| muted |  ``` Optional ```  | Specifies if participant should be muted. |
+| deaf |  ``` Optional ```  | Specifies if the participant should hear audio in the conference. |
+
+
+#### Example Usage
+
+```java
+String conferenceSid = "ConferenceSid";
+Integer page = 50;
+Integer pagesize = 50;
+Boolean muted = false;
+Boolean deaf = false;
+// Invoking the API call with sample inputs
+conference.createListParticipantsAsync(conferenceSid, page, pagesize, muted, deaf, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_list_conferences_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.ConferenceController.createListConferencesAsync") createListConferencesAsync
+
+> Retrieve a list of conference objects.
+
+
+```java
+void createListConferencesAsync(
+        final Integer page,
+        final Integer pagesize,
+        final String friendlyName,
+        final String dateCreated,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| friendlyName |  ``` Optional ```  | Only return conferences with the specified FriendlyName |
+| dateCreated |  ``` Optional ```  | Conference created date |
+
+
+#### Example Usage
+
+```java
+Integer page = 50;
+Integer pagesize = 50;
+String friendlyName = "FriendlyName";
+String dateCreated = "DateCreated";
+// Invoking the API call with sample inputs
+conference.createListConferencesAsync(page, pagesize, friendlyName, dateCreated, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="carrier_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.CarrierController") CarrierController
+## <a name="carrier_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.CarrierController") CarrierController
 
 ### Get singleton instance
 
@@ -3618,13 +3173,13 @@ The singleton instance of the ``` CarrierController ``` class can be accessed fr
 CarrierController carrier = client.getCarrier();
 ```
 
-### <a name="create_carrier_lookup_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CarrierController.createCarrierLookupAsync") createCarrierLookupAsync
+### <a name="create_lookup_carrier_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CarrierController.createLookupCarrierAsync") createLookupCarrierAsync
 
 > Get the Carrier Lookup
 
 
 ```java
-void createCarrierLookupAsync(
+void createLookupCarrierAsync(
         final String phoneNumber,
         final APICallBack<String> callBack)
 ```
@@ -3641,7 +3196,7 @@ void createCarrierLookupAsync(
 ```java
 String phoneNumber = "PhoneNumber";
 // Invoking the API call with sample inputs
-carrier.createCarrierLookupAsync(phoneNumber, new APICallBack<String>() {
+carrier.createLookupCarrierAsync(phoneNumber, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3653,14 +3208,15 @@ carrier.createCarrierLookupAsync(phoneNumber, new APICallBack<String>() {
 ```
 
 
-### <a name="create_carrier_lookuplist_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.CarrierController.createCarrierLookuplistAsync") createCarrierLookuplistAsync
+### <a name="create_carrier_results_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.CarrierController.createCarrierResultsAsync") createCarrierResultsAsync
 
 > Retrieve a list of carrier lookup objects.
 
 
 ```java
-void createCarrierLookuplistAsync(
-        final CreateCarrierLookuplistInput input,
+void createCarrierResultsAsync(
+        final Integer page,
+        final Integer pageSize,
         final APICallBack<String> callBack)
 ```
 
@@ -3668,38 +3224,31 @@ void createCarrierLookuplistAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pageSize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pageSize |  ``` Optional ```  | The count of objects to return per page. |
 
 
 #### Example Usage
 
 ```java
-CreateCarrierLookuplistInput collect = new CreateCarrierLookuplistInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pageSize = 10;
-collect.setPageSize(pageSize);
-
+Integer page = 50;
+Integer pageSize = 50;
 // Invoking the API call with sample inputs
-carrier.createCarrierLookuplistAsync(collect, new APICallBack<String>() {
+carrier.createCarrierResultsAsync(page, pageSize, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="email_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.EmailController") EmailController
+## <a name="email_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.EmailController") EmailController
 
 ### Get singleton instance
 
@@ -3709,13 +3258,13 @@ The singleton instance of the ``` EmailController ``` class can be accessed from
 EmailController email = client.getEmail();
 ```
 
-### <a name="create_email_deleteinvalidemail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailDeleteinvalidemailAsync") createEmailDeleteinvalidemailAsync
+### <a name="create_remove_invalid_email_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.createRemoveInvalidEmailAsync") createRemoveInvalidEmailAsync
 
 > Remove an email from the invalid email list.
 
 
 ```java
-void createEmailDeleteinvalidemailAsync(
+void createRemoveInvalidEmailAsync(
         final String email,
         final APICallBack<String> callBack)
 ```
@@ -3732,7 +3281,7 @@ void createEmailDeleteinvalidemailAsync(
 ```java
 String email = "Email";
 // Invoking the API call with sample inputs
-email.createEmailDeleteinvalidemailAsync(email, new APICallBack<String>() {
+email.createRemoveInvalidEmailAsync(email, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3744,14 +3293,15 @@ email.createEmailDeleteinvalidemailAsync(email, new APICallBack<String>() {
 ```
 
 
-### <a name="create_email_listblockemail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailListblockemailAsync") createEmailListblockemailAsync
+### <a name="create_blocked_emails_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.createBlockedEmailsAsync") createBlockedEmailsAsync
 
 > Retrieve a list of emails that have been blocked.
 
 
 ```java
-void createEmailListblockemailAsync(
-        final CreateEmailListblockemailInput input,
+void createBlockedEmailsAsync(
+        final String offset,
+        final String limit,
         final APICallBack<String> callBack)
 ```
 
@@ -3766,36 +3316,30 @@ void createEmailListblockemailAsync(
 #### Example Usage
 
 ```java
-CreateEmailListblockemailInput collect = new CreateEmailListblockemailInput();
-
 String offset = "Offset";
-collect.setOffset(offset);
-
 String limit = "Limit";
-collect.setLimit(limit);
-
 // Invoking the API call with sample inputs
-email.createEmailListblockemailAsync(collect, new APICallBack<String>() {
+email.createBlockedEmailsAsync(offset, limit, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_email_listspamemail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailListspamemailAsync") createEmailListspamemailAsync
+### <a name="create_spam_emails_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.createSpamEmailsAsync") createSpamEmailsAsync
 
 > Retrieve a list of emails that are on the spam list.
 
 
 ```java
-void createEmailListspamemailAsync(
-        final CreateEmailListspamemailInput input,
+void createSpamEmailsAsync(
+        final String offset,
+        final String limit,
         final APICallBack<String> callBack)
 ```
 
@@ -3810,36 +3354,30 @@ void createEmailListspamemailAsync(
 #### Example Usage
 
 ```java
-CreateEmailListspamemailInput collect = new CreateEmailListspamemailInput();
-
 String offset = "Offset";
-collect.setOffset(offset);
-
 String limit = "Limit";
-collect.setLimit(limit);
-
 // Invoking the API call with sample inputs
-email.createEmailListspamemailAsync(collect, new APICallBack<String>() {
+email.createSpamEmailsAsync(offset, limit, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_email_listbounceemail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailListbounceemailAsync") createEmailListbounceemailAsync
+### <a name="create_bounced_emails_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.createBouncedEmailsAsync") createBouncedEmailsAsync
 
 > Retrieve a list of emails that have bounced.
 
 
 ```java
-void createEmailListbounceemailAsync(
-        final CreateEmailListbounceemailInput input,
+void createBouncedEmailsAsync(
+        final String offset,
+        final String limit,
         final APICallBack<String> callBack)
 ```
 
@@ -3854,35 +3392,28 @@ void createEmailListbounceemailAsync(
 #### Example Usage
 
 ```java
-CreateEmailListbounceemailInput collect = new CreateEmailListbounceemailInput();
-
 String offset = "Offset";
-collect.setOffset(offset);
-
 String limit = "Limit";
-collect.setLimit(limit);
-
 // Invoking the API call with sample inputs
-email.createEmailListbounceemailAsync(collect, new APICallBack<String>() {
+email.createBouncedEmailsAsync(offset, limit, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_email_deletebouncesemail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailDeletebouncesemailAsync") createEmailDeletebouncesemailAsync
+### <a name="create_remove_bounced_email_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.createRemoveBouncedEmailAsync") createRemoveBouncedEmailAsync
 
 > Remove an email address from the bounced list.
 
 
 ```java
-void createEmailDeletebouncesemailAsync(
+void createRemoveBouncedEmailAsync(
         final String email,
         final APICallBack<String> callBack)
 ```
@@ -3899,7 +3430,7 @@ void createEmailDeletebouncesemailAsync(
 ```java
 String email = "Email";
 // Invoking the API call with sample inputs
-email.createEmailDeletebouncesemailAsync(email, new APICallBack<String>() {
+email.createRemoveBouncedEmailAsync(email, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -3911,14 +3442,15 @@ email.createEmailDeletebouncesemailAsync(email, new APICallBack<String>() {
 ```
 
 
-### <a name="create_email_listinvalidemail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailListinvalidemailAsync") createEmailListinvalidemailAsync
+### <a name="create_invalid_emails_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.createInvalidEmailsAsync") createInvalidEmailsAsync
 
 > Retrieve a list of invalid email addresses.
 
 
 ```java
-void createEmailListinvalidemailAsync(
-        final CreateEmailListinvalidemailInput input,
+void createInvalidEmailsAsync(
+        final String offset,
+        final String limit,
         final APICallBack<String> callBack)
 ```
 
@@ -3933,36 +3465,30 @@ void createEmailListinvalidemailAsync(
 #### Example Usage
 
 ```java
-CreateEmailListinvalidemailInput collect = new CreateEmailListinvalidemailInput();
-
 String offset = "Offset";
-collect.setOffset(offset);
-
 String limit = "Limit";
-collect.setLimit(limit);
-
 // Invoking the API call with sample inputs
-email.createEmailListinvalidemailAsync(collect, new APICallBack<String>() {
+email.createInvalidEmailsAsync(offset, limit, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_email_listunsubscribedemail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailListunsubscribedemailAsync") createEmailListunsubscribedemailAsync
+### <a name="create_list_unsubscribed_emails_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.createListUnsubscribedEmailsAsync") createListUnsubscribedEmailsAsync
 
 > Retrieve a list of email addresses from the unsubscribe list.
 
 
 ```java
-void createEmailListunsubscribedemailAsync(
-        final CreateEmailListunsubscribedemailInput input,
+void createListUnsubscribedEmailsAsync(
+        final String offset,
+        final String limit,
         final APICallBack<String> callBack)
 ```
 
@@ -3977,35 +3503,28 @@ void createEmailListunsubscribedemailAsync(
 #### Example Usage
 
 ```java
-CreateEmailListunsubscribedemailInput collect = new CreateEmailListunsubscribedemailInput();
-
 String offset = "Offset";
-collect.setOffset(offset);
-
 String limit = "Limit";
-collect.setLimit(limit);
-
 // Invoking the API call with sample inputs
-email.createEmailListunsubscribedemailAsync(collect, new APICallBack<String>() {
+email.createListUnsubscribedEmailsAsync(offset, limit, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_email_deleteunsubscribedemail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailDeleteunsubscribedemailAsync") createEmailDeleteunsubscribedemailAsync
+### <a name="create_remove_unsubscribed_email_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.createRemoveUnsubscribedEmailAsync") createRemoveUnsubscribedEmailAsync
 
 > Remove an email address from the list of unsubscribed emails.
 
 
 ```java
-void createEmailDeleteunsubscribedemailAsync(
+void createRemoveUnsubscribedEmailAsync(
         final String email,
         final APICallBack<String> callBack)
 ```
@@ -4022,7 +3541,7 @@ void createEmailDeleteunsubscribedemailAsync(
 ```java
 String email = "email";
 // Invoking the API call with sample inputs
-email.createEmailDeleteunsubscribedemailAsync(email, new APICallBack<String>() {
+email.createRemoveUnsubscribedEmailAsync(email, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4034,13 +3553,13 @@ email.createEmailDeleteunsubscribedemailAsync(email, new APICallBack<String>() {
 ```
 
 
-### <a name="create_email_addunsubscribesemail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailAddunsubscribesemailAsync") createEmailAddunsubscribesemailAsync
+### <a name="add_email_unsubscribe_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.addEmailUnsubscribeAsync") addEmailUnsubscribeAsync
 
 > Add an email to the unsubscribe list
 
 
 ```java
-void createEmailAddunsubscribesemailAsync(
+void addEmailUnsubscribeAsync(
         final String email,
         final APICallBack<String> callBack)
 ```
@@ -4057,7 +3576,7 @@ void createEmailAddunsubscribesemailAsync(
 ```java
 String email = "email";
 // Invoking the API call with sample inputs
-email.createEmailAddunsubscribesemailAsync(email, new APICallBack<String>() {
+email.addEmailUnsubscribeAsync(email, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4069,13 +3588,13 @@ email.createEmailAddunsubscribesemailAsync(email, new APICallBack<String>() {
 ```
 
 
-### <a name="create_email_deleteblocksemail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailDeleteblocksemailAsync") createEmailDeleteblocksemailAsync
+### <a name="create_remove_blocked_address_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.createRemoveBlockedAddressAsync") createRemoveBlockedAddressAsync
 
 > Remove an email from blocked emails list.
 
 
 ```java
-void createEmailDeleteblocksemailAsync(
+void createRemoveBlockedAddressAsync(
         final String email,
         final APICallBack<String> callBack)
 ```
@@ -4092,7 +3611,7 @@ void createEmailDeleteblocksemailAsync(
 ```java
 String email = "Email";
 // Invoking the API call with sample inputs
-email.createEmailDeleteblocksemailAsync(email, new APICallBack<String>() {
+email.createRemoveBlockedAddressAsync(email, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4104,13 +3623,13 @@ email.createEmailDeleteblocksemailAsync(email, new APICallBack<String>() {
 ```
 
 
-### <a name="create_email_deletespamemail_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailDeletespamemailAsync") createEmailDeletespamemailAsync
+### <a name="create_remove_spam_address_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.createRemoveSpamAddressAsync") createRemoveSpamAddressAsync
 
 > Remove an email from the spam email list.
 
 
 ```java
-void createEmailDeletespamemailAsync(
+void createRemoveSpamAddressAsync(
         final String email,
         final APICallBack<String> callBack)
 ```
@@ -4127,7 +3646,7 @@ void createEmailDeletespamemailAsync(
 ```java
 String email = "Email";
 // Invoking the API call with sample inputs
-email.createEmailDeletespamemailAsync(email, new APICallBack<String>() {
+email.createRemoveSpamAddressAsync(email, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4139,14 +3658,21 @@ email.createEmailDeletespamemailAsync(email, new APICallBack<String>() {
 ```
 
 
-### <a name="create_email_sendemails_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.EmailController.createEmailSendemailsAsync") createEmailSendemailsAsync
+### <a name="create_send_email_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.EmailController.createSendEmailAsync") createSendEmailAsync
 
 > Create and submit an email message to one or more email addresses.
 
 
 ```java
-void createEmailSendemailsAsync(
-        final CreateEmailSendemailsInput input,
+void createSendEmailAsync(
+        final String to,
+        final TypeEnum type,
+        final String subject,
+        final String message,
+        final String from,
+        final String cc,
+        final String bcc,
+        final String attachment,
         final APICallBack<String> callBack)
 ```
 
@@ -4167,49 +3693,30 @@ void createEmailSendemailsAsync(
 #### Example Usage
 
 ```java
-CreateEmailSendemailsInput collect = new CreateEmailSendemailsInput();
-
 String to = "To";
-collect.setTo(to);
-
-TypeEnum type = TypeEnum.fromString("TEXT");
-collect.setType(type);
-
+TypeEnum type = TypeEnum.fromString("text");
 String subject = "Subject";
-collect.setSubject(subject);
-
 String message = "Message";
-collect.setMessage(message);
-
 String from = "From";
-collect.setFrom(from);
-
 String cc = "Cc";
-collect.setCc(cc);
-
 String bcc = "Bcc";
-collect.setBcc(bcc);
-
 String attachment = "Attachment";
-collect.setAttachment(attachment);
-
 // Invoking the API call with sample inputs
-email.createEmailSendemailsAsync(collect, new APICallBack<String>() {
+email.createSendEmailAsync(to, type, subject, message, from, cc, bcc, attachment, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="account_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.AccountController") AccountController
+## <a name="account_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.AccountController") AccountController
 
 ### Get singleton instance
 
@@ -4219,13 +3726,13 @@ The singleton instance of the ``` AccountController ``` class can be accessed fr
 AccountController account = client.getAccount();
 ```
 
-### <a name="create_accounts_viewaccount_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.AccountController.createAccountsViewaccountAsync") createAccountsViewaccountAsync
+### <a name="create_view_account_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.AccountController.createViewAccountAsync") createViewAccountAsync
 
 > Retrieve information regarding your Ytel account by a specific date. The response object will contain data such as account status, balance, and account usage totals.
 
 
 ```java
-void createAccountsViewaccountAsync(
+void createViewAccountAsync(
         final String date,
         final APICallBack<String> callBack)
 ```
@@ -4242,7 +3749,7 @@ void createAccountsViewaccountAsync(
 ```java
 String date = "Date";
 // Invoking the API call with sample inputs
-account.createAccountsViewaccountAsync(date, new APICallBack<String>() {
+account.createViewAccountAsync(date, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4256,7 +3763,7 @@ account.createAccountsViewaccountAsync(date, new APICallBack<String>() {
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="sub_account_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.SubAccountController") SubAccountController
+## <a name="sub_account_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.SubAccountController") SubAccountController
 
 ### Get singleton instance
 
@@ -4266,14 +3773,15 @@ The singleton instance of the ``` SubAccountController ``` class can be accessed
 SubAccountController subAccount = client.getSubAccount();
 ```
 
-### <a name="create_user_subaccountactivation_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SubAccountController.createUserSubaccountactivationAsync") createUserSubaccountactivationAsync
+### <a name="create_toggle_subaccount_status_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SubAccountController.createToggleSubaccountStatusAsync") createToggleSubaccountStatusAsync
 
 > Suspend or unsuspend
 
 
 ```java
-void createUserSubaccountactivationAsync(
-        final CreateUserSubaccountactivationInput input,
+void createToggleSubaccountStatusAsync(
+        final String subAccountSID,
+        final MActivateEnum mActivate,
         final APICallBack<String> callBack)
 ```
 
@@ -4288,36 +3796,30 @@ void createUserSubaccountactivationAsync(
 #### Example Usage
 
 ```java
-CreateUserSubaccountactivationInput collect = new CreateUserSubaccountactivationInput();
-
 String subAccountSID = "SubAccountSID";
-collect.setSubAccountSID(subAccountSID);
-
 MActivateEnum mActivate = MActivateEnum.fromInteger(1);
-collect.setMActivate(mActivate);
-
 // Invoking the API call with sample inputs
-subAccount.createUserSubaccountactivationAsync(collect, new APICallBack<String>() {
+subAccount.createToggleSubaccountStatusAsync(subAccountSID, mActivate, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_user_deletesubaccount_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SubAccountController.createUserDeletesubaccountAsync") createUserDeletesubaccountAsync
+### <a name="create_delete_subaccount_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SubAccountController.createDeleteSubaccountAsync") createDeleteSubaccountAsync
 
 > Delete sub account or merge numbers into parent
 
 
 ```java
-void createUserDeletesubaccountAsync(
-        final CreateUserDeletesubaccountInput input,
+void createDeleteSubaccountAsync(
+        final String subAccountSID,
+        final MergeNumberEnum mergeNumber,
         final APICallBack<String> callBack)
 ```
 
@@ -4332,36 +3834,33 @@ void createUserDeletesubaccountAsync(
 #### Example Usage
 
 ```java
-CreateUserDeletesubaccountInput collect = new CreateUserDeletesubaccountInput();
-
 String subAccountSID = "SubAccountSID";
-collect.setSubAccountSID(subAccountSID);
-
 MergeNumberEnum mergeNumber = MergeNumberEnum.fromInteger(0);
-collect.setMergeNumber(mergeNumber);
-
 // Invoking the API call with sample inputs
-subAccount.createUserDeletesubaccountAsync(collect, new APICallBack<String>() {
+subAccount.createDeleteSubaccountAsync(subAccountSID, mergeNumber, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_user_createsubaccount_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.SubAccountController.createUserCreatesubaccountAsync") createUserCreatesubaccountAsync
+### <a name="create_subaccount_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.SubAccountController.createSubaccountAsync") createSubaccountAsync
 
 > Create a sub user account under the parent account
 
 
 ```java
-void createUserCreatesubaccountAsync(
-        final CreateUserCreatesubaccountInput input,
+void createSubaccountAsync(
+        final String firstName,
+        final String lastName,
+        final String email,
+        final String friendlyName,
+        final String password,
         final APICallBack<String> callBack)
 ```
 
@@ -4379,40 +3878,27 @@ void createUserCreatesubaccountAsync(
 #### Example Usage
 
 ```java
-CreateUserCreatesubaccountInput collect = new CreateUserCreatesubaccountInput();
-
 String firstName = "FirstName";
-collect.setFirstName(firstName);
-
 String lastName = "LastName";
-collect.setLastName(lastName);
-
 String email = "Email";
-collect.setEmail(email);
-
 String friendlyName = "FriendlyName";
-collect.setFriendlyName(friendlyName);
-
 String password = "Password";
-collect.setPassword(password);
-
 // Invoking the API call with sample inputs
-subAccount.createUserCreatesubaccountAsync(collect, new APICallBack<String>() {
+subAccount.createSubaccountAsync(firstName, lastName, email, friendlyName, password, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="address_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.AddressController") AddressController
+## <a name="address_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.AddressController") AddressController
 
 ### Get singleton instance
 
@@ -4422,13 +3908,13 @@ The singleton instance of the ``` AddressController ``` class can be accessed fr
 AddressController address = client.getAddress();
 ```
 
-### <a name="address_deleteaddress_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.AddressController.addressDeleteaddressAsync") addressDeleteaddressAsync
+### <a name="create_delete_address_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.AddressController.createDeleteAddressAsync") createDeleteAddressAsync
 
 > To delete Address to your address book
 
 
 ```java
-void addressDeleteaddressAsync(
+void createDeleteAddressAsync(
         final String addressid,
         final APICallBack<String> callBack)
 ```
@@ -4445,7 +3931,7 @@ void addressDeleteaddressAsync(
 ```java
 String addressid = "addressid";
 // Invoking the API call with sample inputs
-address.addressDeleteaddressAsync(addressid, new APICallBack<String>() {
+address.createDeleteAddressAsync(addressid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4457,13 +3943,13 @@ address.addressDeleteaddressAsync(addressid, new APICallBack<String>() {
 ```
 
 
-### <a name="address_verifyaddress_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.AddressController.addressVerifyaddressAsync") addressVerifyaddressAsync
+### <a name="create_verify_address_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.AddressController.createVerifyAddressAsync") createVerifyAddressAsync
 
 > Validates an address given.
 
 
 ```java
-void addressVerifyaddressAsync(
+void createVerifyAddressAsync(
         final String addressid,
         final APICallBack<String> callBack)
 ```
@@ -4480,7 +3966,7 @@ void addressVerifyaddressAsync(
 ```java
 String addressid = "addressid";
 // Invoking the API call with sample inputs
-address.addressVerifyaddressAsync(addressid, new APICallBack<String>() {
+address.createVerifyAddressAsync(addressid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4492,13 +3978,13 @@ address.addressVerifyaddressAsync(addressid, new APICallBack<String>() {
 ```
 
 
-### <a name="address_viewaddress_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.AddressController.addressViewaddressAsync") addressViewaddressAsync
+### <a name="create_view_address_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.AddressController.createViewAddressAsync") createViewAddressAsync
 
 > View Address Specific address Book by providing the address id
 
 
 ```java
-void addressViewaddressAsync(
+void createViewAddressAsync(
         final String addressid,
         final APICallBack<String> callBack)
 ```
@@ -4515,7 +4001,7 @@ void addressViewaddressAsync(
 ```java
 String addressid = "addressid";
 // Invoking the API call with sample inputs
-address.addressViewaddressAsync(addressid, new APICallBack<String>() {
+address.createViewAddressAsync(addressid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4527,14 +4013,66 @@ address.addressViewaddressAsync(addressid, new APICallBack<String>() {
 ```
 
 
-### <a name="address_createaddress_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.AddressController.addressCreateaddressAsync") addressCreateaddressAsync
+### <a name="create_list_addresses_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.AddressController.createListAddressesAsync") createListAddressesAsync
+
+> List All Address 
+
+
+```java
+void createListAddressesAsync(
+        final Integer page,
+        final Integer pagesize,
+        final String addressid,
+        final String dateCreated,
+        final APICallBack<String> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | How many results to return, default is 10, max is 100, must be an integer |
+| addressid |  ``` Optional ```  | addresses Sid |
+| dateCreated |  ``` Optional ```  | date created address. |
+
+
+#### Example Usage
+
+```java
+Integer page = 50;
+Integer pagesize = 50;
+String addressid = "addressid";
+String dateCreated = "dateCreated";
+// Invoking the API call with sample inputs
+address.createListAddressesAsync(page, pagesize, addressid, dateCreated, new APICallBack<String>() {
+    public void onSuccess(HttpContext context, String response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
+### <a name="create_address_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.AddressController.createAddressAsync") createAddressAsync
 
 > To add an address to your address book, you create a new address object. You can retrieve and delete individual addresses as well as get a list of addresses. Addresses are identified by a unique random ID.
 
 
 ```java
-void addressCreateaddressAsync(
-        final AddressCreateaddressInput input,
+void createAddressAsync(
+        final String name,
+        final String address,
+        final String country,
+        final String state,
+        final String city,
+        final String zip,
+        final String description,
+        final String email,
+        final String phone,
         final APICallBack<String> callBack)
 ```
 
@@ -4556,104 +4094,31 @@ void addressCreateaddressAsync(
 #### Example Usage
 
 ```java
-AddressCreateaddressInput collect = new AddressCreateaddressInput();
-
 String name = "Name";
-collect.setName(name);
-
 String address = "Address";
-collect.setAddress(address);
-
 String country = "Country";
-collect.setCountry(country);
-
 String state = "State";
-collect.setState(state);
-
 String city = "City";
-collect.setCity(city);
-
 String zip = "Zip";
-collect.setZip(zip);
-
 String description = "Description";
-collect.setDescription(description);
-
 String email = "email";
-collect.setEmail(email);
-
 String phone = "Phone";
-collect.setPhone(phone);
-
 // Invoking the API call with sample inputs
-address.addressCreateaddressAsync(collect, new APICallBack<String>() {
+address.createAddressAsync(name, address, country, state, city, zip, description, email, phone, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
-
-```
-
-
-### <a name="address_listaddress_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.AddressController.addressListaddressAsync") addressListaddressAsync
-
-> List All Address 
-
-
-```java
-void addressListaddressAsync(
-        final AddressListaddressInput input,
-        final APICallBack<String> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | How many results to return, default is 10, max is 100, must be an integer |
-| addressid |  ``` Optional ```  | addresses Sid |
-| dateCreated |  ``` Optional ```  | date created address. |
-
-
-#### Example Usage
-
-```java
-AddressListaddressInput collect = new AddressListaddressInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-String addressid = "addressid";
-collect.setAddressid(addressid);
-
-String dateCreated = "dateCreated";
-collect.setDateCreated(dateCreated);
-
-// Invoking the API call with sample inputs
-address.addressListaddressAsync(collect, new APICallBack<String>() {
-    public void onSuccess(HttpContext context, String response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-}
-);
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="recording_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.RecordingController") RecordingController
+## <a name="recording_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.RecordingController") RecordingController
 
 ### Get singleton instance
 
@@ -4663,13 +4128,13 @@ The singleton instance of the ``` RecordingController ``` class can be accessed 
 RecordingController recording = client.getRecording();
 ```
 
-### <a name="create_recording_deleterecording_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.RecordingController.createRecordingDeleterecordingAsync") createRecordingDeleterecordingAsync
+### <a name="create_delete_recording_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.RecordingController.createDeleteRecordingAsync") createDeleteRecordingAsync
 
 > Remove a recording from your Ytel account.
 
 
 ```java
-void createRecordingDeleterecordingAsync(
+void createDeleteRecordingAsync(
         final String recordingsid,
         final APICallBack<String> callBack)
 ```
@@ -4686,7 +4151,7 @@ void createRecordingDeleterecordingAsync(
 ```java
 String recordingsid = "recordingsid";
 // Invoking the API call with sample inputs
-recording.createRecordingDeleterecordingAsync(recordingsid, new APICallBack<String>() {
+recording.createDeleteRecordingAsync(recordingsid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4698,13 +4163,13 @@ recording.createRecordingDeleterecordingAsync(recordingsid, new APICallBack<Stri
 ```
 
 
-### <a name="create_recording_viewrecording_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.RecordingController.createRecordingViewrecordingAsync") createRecordingViewrecordingAsync
+### <a name="create_view_recording_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.RecordingController.createViewRecordingAsync") createViewRecordingAsync
 
 > Retrieve the recording of a call by its RecordingSid. This resource will return information regarding the call such as start time, end time, duration, and so forth.
 
 
 ```java
-void createRecordingViewrecordingAsync(
+void createViewRecordingAsync(
         final String recordingsid,
         final APICallBack<String> callBack)
 ```
@@ -4721,7 +4186,7 @@ void createRecordingViewrecordingAsync(
 ```java
 String recordingsid = "recordingsid";
 // Invoking the API call with sample inputs
-recording.createRecordingViewrecordingAsync(recordingsid, new APICallBack<String>() {
+recording.createViewRecordingAsync(recordingsid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4733,14 +4198,17 @@ recording.createRecordingViewrecordingAsync(recordingsid, new APICallBack<String
 ```
 
 
-### <a name="create_recording_listrecording_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.RecordingController.createRecordingListrecordingAsync") createRecordingListrecordingAsync
+### <a name="create_list_recordings_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.RecordingController.createListRecordingsAsync") createListRecordingsAsync
 
 > Retrieve a list of recording objects.
 
 
 ```java
-void createRecordingListrecordingAsync(
-        final CreateRecordingListrecordingInput input,
+void createListRecordingsAsync(
+        final Integer page,
+        final Integer pagesize,
+        final String datecreated,
+        final String callsid,
         final APICallBack<String> callBack)
 ```
 
@@ -4748,8 +4216,8 @@ void createRecordingListrecordingAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
 | datecreated |  ``` Optional ```  | Filter results by creation date |
 | callsid |  ``` Optional ```  | The unique identifier for a call. |
 
@@ -4757,37 +4225,26 @@ void createRecordingListrecordingAsync(
 #### Example Usage
 
 ```java
-CreateRecordingListrecordingInput collect = new CreateRecordingListrecordingInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
+Integer page = 50;
+Integer pagesize = 50;
 String datecreated = "Datecreated";
-collect.setDatecreated(datecreated);
-
 String callsid = "callsid";
-collect.setCallsid(callsid);
-
 // Invoking the API call with sample inputs
-recording.createRecordingListrecordingAsync(collect, new APICallBack<String>() {
+recording.createListRecordingsAsync(page, pagesize, datecreated, callsid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="transcription_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.TranscriptionController") TranscriptionController
+## <a name="transcription_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.TranscriptionController") TranscriptionController
 
 ### Get singleton instance
 
@@ -4797,13 +4254,13 @@ The singleton instance of the ``` TranscriptionController ``` class can be acces
 TranscriptionController transcription = client.getTranscription();
 ```
 
-### <a name="create_transcriptions_audiourltranscription_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.TranscriptionController.createTranscriptionsAudiourltranscriptionAsync") createTranscriptionsAudiourltranscriptionAsync
+### <a name="create_transcribe_audio_url_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.TranscriptionController.createTranscribeAudioURLAsync") createTranscribeAudioURLAsync
 
 > Transcribe an audio recording from a file.
 
 
 ```java
-void createTranscriptionsAudiourltranscriptionAsync(
+void createTranscribeAudioURLAsync(
         final String audiourl,
         final APICallBack<String> callBack)
 ```
@@ -4820,7 +4277,7 @@ void createTranscriptionsAudiourltranscriptionAsync(
 ```java
 String audiourl = "audiourl";
 // Invoking the API call with sample inputs
-transcription.createTranscriptionsAudiourltranscriptionAsync(audiourl, new APICallBack<String>() {
+transcription.createTranscribeAudioURLAsync(audiourl, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4832,13 +4289,13 @@ transcription.createTranscriptionsAudiourltranscriptionAsync(audiourl, new APICa
 ```
 
 
-### <a name="create_transcriptions_recordingtranscription_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.TranscriptionController.createTranscriptionsRecordingtranscriptionAsync") createTranscriptionsRecordingtranscriptionAsync
+### <a name="create_transcribe_recording_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.TranscriptionController.createTranscribeRecordingAsync") createTranscribeRecordingAsync
 
 > Transcribe a recording by its RecordingSid.
 
 
 ```java
-void createTranscriptionsRecordingtranscriptionAsync(
+void createTranscribeRecordingAsync(
         final String recordingSid,
         final APICallBack<String> callBack)
 ```
@@ -4855,7 +4312,7 @@ void createTranscriptionsRecordingtranscriptionAsync(
 ```java
 String recordingSid = "recordingSid";
 // Invoking the API call with sample inputs
-transcription.createTranscriptionsRecordingtranscriptionAsync(recordingSid, new APICallBack<String>() {
+transcription.createTranscribeRecordingAsync(recordingSid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4867,13 +4324,13 @@ transcription.createTranscriptionsRecordingtranscriptionAsync(recordingSid, new 
 ```
 
 
-### <a name="create_transcriptions_viewtranscription_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.TranscriptionController.createTranscriptionsViewtranscriptionAsync") createTranscriptionsViewtranscriptionAsync
+### <a name="create_view_transcription_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.TranscriptionController.createViewTranscriptionAsync") createViewTranscriptionAsync
 
 > Retrieve information about a transaction by its TranscriptionSid.
 
 
 ```java
-void createTranscriptionsViewtranscriptionAsync(
+void createViewTranscriptionAsync(
         final String transcriptionsid,
         final APICallBack<String> callBack)
 ```
@@ -4890,7 +4347,7 @@ void createTranscriptionsViewtranscriptionAsync(
 ```java
 String transcriptionsid = "transcriptionsid";
 // Invoking the API call with sample inputs
-transcription.createTranscriptionsViewtranscriptionAsync(transcriptionsid, new APICallBack<String>() {
+transcription.createViewTranscriptionAsync(transcriptionsid, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
@@ -4902,14 +4359,17 @@ transcription.createTranscriptionsViewtranscriptionAsync(transcriptionsid, new A
 ```
 
 
-### <a name="create_transcriptions_listtranscription_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.TranscriptionController.createTranscriptionsListtranscriptionAsync") createTranscriptionsListtranscriptionAsync
+### <a name="create_list_transcriptions_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.TranscriptionController.createListTranscriptionsAsync") createListTranscriptionsAsync
 
 > Retrieve a list of transcription objects for your Ytel account.
 
 
 ```java
-void createTranscriptionsListtranscriptionAsync(
-        final CreateTranscriptionsListtranscriptionInput input,
+void createListTranscriptionsAsync(
+        final Integer page,
+        final Integer pagesize,
+        final Status12Enum status,
+        final String dateTranscribed,
         final APICallBack<String> callBack)
 ```
 
@@ -4917,8 +4377,8 @@ void createTranscriptionsListtranscriptionAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
-| pagesize |  ``` Optional ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
 | status |  ``` Optional ```  | The state of the transcription. |
 | dateTranscribed |  ``` Optional ```  | The date the transcription took place. |
 
@@ -4926,37 +4386,26 @@ void createTranscriptionsListtranscriptionAsync(
 #### Example Usage
 
 ```java
-CreateTranscriptionsListtranscriptionInput collect = new CreateTranscriptionsListtranscriptionInput();
-
-Integer page = 1;
-collect.setPage(page);
-
-Integer pagesize = 10;
-collect.setPagesize(pagesize);
-
-StatusEnum status = StatusEnum.fromString("INPROGRESS");
-collect.setStatus(status);
-
+Integer page = 50;
+Integer pagesize = 50;
+Status12Enum status = Status12Enum.fromString("inprogress");
 String dateTranscribed = "dateTranscribed";
-collect.setDateTranscribed(dateTranscribed);
-
 // Invoking the API call with sample inputs
-transcription.createTranscriptionsListtranscriptionAsync(collect, new APICallBack<String>() {
+transcription.createListTranscriptionsAsync(page, pagesize, status, dateTranscribed, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="usage_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.message360.api.controllers.UsageController") UsageController
+## <a name="usage_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.ytel.api.controllers.UsageController") UsageController
 
 ### Get singleton instance
 
@@ -4966,14 +4415,17 @@ The singleton instance of the ``` UsageController ``` class can be accessed from
 UsageController usage = client.getUsage();
 ```
 
-### <a name="create_usage_listusage_async"></a>![Method: ](https://apidocs.io/img/method.png "com.message360.api.controllers.UsageController.createUsageListusageAsync") createUsageListusageAsync
+### <a name="create_list_usage_async"></a>![Method: ](https://apidocs.io/img/method.png "com.ytel.api.controllers.UsageController.createListUsageAsync") createListUsageAsync
 
 > Retrieve usage metrics regarding your Ytel account. The results includes inbound/outbound voice calls and inbound/outbound SMS messages as well as carrier lookup requests.
 
 
 ```java
-void createUsageListusageAsync(
-        final CreateUsageListusageInput input,
+void createListUsageAsync(
+        final ProductCodeEnum productCode,
+        final String startDate,
+        final String endDate,
+        final String includeSubAccounts,
         final APICallBack<String> callBack)
 ```
 
@@ -4981,39 +4433,28 @@ void createUsageListusageAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| productCode |  ``` Optional ```  ``` DefaultValue ```  | Filter usage results by product type. |
-| startDate |  ``` Optional ```  ``` DefaultValue ```  | Filter usage objects by start date. |
-| endDate |  ``` Optional ```  ``` DefaultValue ```  | Filter usage objects by end date. |
+| productCode |  ``` Optional ```  | Filter usage results by product type. |
+| startDate |  ``` Optional ```  | Filter usage objects by start date. |
+| endDate |  ``` Optional ```  | Filter usage objects by end date. |
 | includeSubAccounts |  ``` Optional ```  | Will include all subaccount usage data |
 
 
 #### Example Usage
 
 ```java
-CreateUsageListusageInput collect = new CreateUsageListusageInput();
-
-ProductCode27Enum productCode = ProductCode27Enum.fromInteger(0);
-collect.setProductCode(productCode);
-
-String startDate = "2016-09-06";
-collect.setStartDate(startDate);
-
-String endDate = "2016-09-06";
-collect.setEndDate(endDate);
-
+ProductCodeEnum productCode = ProductCodeEnum.fromInteger(0);
+String startDate = "startDate";
+String endDate = "endDate";
 String includeSubAccounts = "IncludeSubAccounts";
-collect.setIncludeSubAccounts(includeSubAccounts);
-
 // Invoking the API call with sample inputs
-usage.createUsageListusageAsync(collect, new APICallBack<String>() {
+usage.createListUsageAsync(productCode, startDate, endDate, includeSubAccounts, new APICallBack<String>() {
     public void onSuccess(HttpContext context, String response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
